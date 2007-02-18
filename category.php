@@ -2,7 +2,7 @@
 	
 	<div id="container">
 		<div id="content" class="hfeed">
-			<h2 class="page-title"><?php _e('Category Archives:', 'sandbox') ?> <?php echo single_cat_title(); ?></h2>
+			<h2 class="page-title"><?php _e('Category Archives:', 'sandbox') ?> <span><?php echo single_cat_title(); ?></span></h2>
 			<div class="archive-meta"><?php echo apply_filters('archive_meta', category_description()); ?></div>
 
 			<div id="nav-above" class="navigation">
@@ -15,12 +15,12 @@
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
 				<h3 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('Permalink to %s', 'sandbox'), get_the_title()) ?>" rel="bookmark"><?php the_title() ?></a></h3>
 				<div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><?php unset($previousday); printf(__('%1$s &#8211; %2$s', 'sandbox'), the_date('', '', '', false), get_the_time()) ?></abbr></div>
-				<div class="entry-content">
+				<div class="entry-content entry-summary">
 <?php the_excerpt('<span class="more-link">'.__('Read More &raquo;', 'sandbox').'</span>') ?>
 
 				</div>
 				<div class="entry-meta">
-					<span class="entry-author author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>
+					<span class="entry-author author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>
 					<span class="meta-sep">|</span>
 <?php if ( $cats_meow = sandbox_cats_meow(', ') ) : /* only show categories other than the one queried */ ?>
 					<span class="entry-category"><?php printf(__('Also posted in %s', 'sandbox'), $cats_meow) ?></span>

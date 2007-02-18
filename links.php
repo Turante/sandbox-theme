@@ -15,7 +15,7 @@ Template Name: Links Page
 				<div class="entry-content">
 <?php the_content() ?>
 
-					<ul id="linkcats">
+					<ul id="linkcats" class="content-column">
 <?php if ( function_exists('wp_list_bookmarks') ) : wp_list_bookmarks(); else : ?>
 <?php
 $link_cats = $wpdb->get_results("SELECT cat_id, cat_name FROM $wpdb->linkcategories");

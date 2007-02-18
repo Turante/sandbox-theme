@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 	<div id="container">
-		<div id="content">
+		<div id="content" class="hfeed">
 			<div id="post-0" class="post">
 				<h2 class="entry-title"><?php _e('Not Found', 'sandbox') ?></h2>
 				<div class="entry-content">

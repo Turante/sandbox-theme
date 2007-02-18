@@ -16,7 +16,7 @@
 				<div class="entry-content">
 <?php the_content('<span class="more-link">'.__('Read More &raquo;', 'sandbox').'</span>'); ?>
 
-<?php link_pages('\t\t\t\t\t<div class="page-link">'.__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
+<?php link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
 				</div>
 				<div class="entry-meta">
 					<span class="entry-author author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>

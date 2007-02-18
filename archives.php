@@ -15,18 +15,23 @@ Template Name: Archives Page
 				<div class="entry-content">
 <?php the_content(); ?>
 
-					<div id="archives-by-category" class="content-column">
-					<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
-						<ul>
-							<?php wp_list_cats('sort_column=name&optioncount=1&feed=RSS') ?> 
-						</ul>
-					</div>
-					<div id="archives-by-month" class="content-column">
-					<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
-						<ul>
-							<?php wp_get_archives('type=monthly&show_post_count=1') ?>
-						</ul>
-					</div>
+					<ul class="alignleft content-column">
+						<li>
+							<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
+							<ul>
+								<?php wp_list_cats('sort_column=name&optioncount=1&feed=RSS') ?> 
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="alignleft content-column">
+						<li>
+							<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
+							<ul>
+								<?php wp_get_archives('type=monthly&show_post_count=1') ?>
+							</ul>
+						</li>
+					</ul>
 <?php edit_post_link(__('Edit this entry.', 'sandbox'),'<p class="entry-edit">','</p>') ?>
 
 				</div>

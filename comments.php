@@ -6,7 +6,7 @@
 	if ( ! empty($post->post_password) ) :
 		if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
 ?>
-	<div class="nopassword"><?php _e('This post is password protected. Enter the password to proceed.', 'sandbox') ?></div>
+	<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'sandbox') ?></div>
 </div>
 <?php
 			return;
@@ -17,7 +17,7 @@
 <?php if ( $comments ) : ?>
 <?php global $sandbox_comment_alt ?>
 
-<?php /* NUMBERS OF PINGS AND COMMENTS */
+<?php /* numbers of pings and comments */
 $ping_count = $comment_count = 0;
 foreach ( $comments as $comment )
 	get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
@@ -70,7 +70,7 @@ foreach ( $comments as $comment )
 				?>
 				<?php edit_comment_link(__('<span class="comment-edit">Edit</span>', 'sandbox'), ' ', '') ?>
 			</div>
-			<div class="comment-mod"><?php if ($comment->comment_approved == '0') _e('<em>Your trackback/pingback is awaiting moderation.</em>', 'sandbox') ?></div>
+			<div class="comment-mod"><?php if ($comment->comment_approved == '0') _e('Your trackback/pingback is awaiting moderation.', 'sandbox') ?></div>
 			<?php comment_text() ?>
 		</li>
 
@@ -126,10 +126,10 @@ foreach ( $comments as $comment )
 
 <?php do_action('comment_form', $post->ID); ?>
 
-		</form><!-- commentform -->
-	</div><!-- formcontainer -->
+		</form><!-- #commentform -->
+	</div><!-- .formcontainer -->
 
 <?php endif /* if ( get_option('comment_registration') && !$user_ID ) */ ?>
 <?php endif /* if ( 'open' == $post->comment_status ) */ ?>
 
-</div>
+</div><!-- .comments -->
