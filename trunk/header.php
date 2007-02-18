@@ -26,4 +26,3 @@
 	<?php sandbox_skipnav() ?>
 
 	<?php sandbox_globalnav() ?>
-

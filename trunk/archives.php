@@ -27,13 +27,12 @@ Template Name: Archives Page
 							<?php wp_get_archives('type=monthly&show_post_count=1') ?>
 						</ul>
 					</div>
-<?php edit_post_link(__('Edit this entry.', 'sandbox'),'<p class="edit-link">','</p>') ?>
+<?php edit_post_link(__('Edit this entry.', 'sandbox'),'<p class="entry-edit">','</p>') ?>
 
 				</div>
 			</div><!-- .post -->
 
-<?php /* Add a custom field with key "comments" (value is ignored) to turn on comments for a page! */ ?>
-<?php if ( get_post_custom_values('comments') ) comments_template() ?>
+<?php if ( get_post_custom_values('comments') ) comments_template() // Add a key/value of "comments" to enable comments on pages! ?>
 
 		</div><!-- #content .hfeed -->
 	</div><!-- #container -->

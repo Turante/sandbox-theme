@@ -21,12 +21,12 @@
 				</div>
 				<div class="entry-meta">
 					<span class="entry-author author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>
-					<span class="metasep">|</span>
+					<span class="meta-sep">|</span>
 <?php if ( $cats_meow = sandbox_cats_meow(', ') ) : /* only show categories other than the one queried */ ?>
 					<span class="entry-category"><?php printf(__('Also posted in %s', 'sandbox'), $cats_meow) ?></span>
-					<span class="metasep">|</span>
+					<span class="meta-sep">|</span>
 <?php endif ?>
-<?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class='entry-editlink'>", "</span>\n\t\t\t\t\t<span class='metasep'>|</span>\n"); ?>
+<?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class='entry-edit'>", "</span>\n\t\t\t\t\t<span class='meta-sep'>|</span>\n"); ?>
 					<span class="entry-commentlink"><?php comments_popup_link(__('Comments (0)', 'sandbox'), __('Comments (1)', 'sandbox'), __('Comments (%)', 'sandbox')) ?></span>
 				</div>
 			</div><!-- .post -->

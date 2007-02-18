@@ -23,10 +23,10 @@
 				</div>
 				<div class="entry-meta">
 					<span class="entry-author author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>
-					<span class="metasep">|</span>
+					<span class="meta-sep">|</span>
 					<span class="entry-category"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
-					<span class="metasep">|</span>
-<?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class='entry-editlink'>", "</span>\n\t\t\t\t\t<span class='metasep'>|</span>\n"); ?>
+					<span class="meta-sep">|</span>
+<?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class='entry-edit'>", "</span>\n\t\t\t\t\t<span class='meta-sep'>|</span>\n"); ?>
 					<span class="entry-commentlink"><?php comments_popup_link(__('Comments (0)', 'sandbox'), __('Comments (1)', 'sandbox'), __('Comments (%)', 'sandbox')) ?></span>
 				</div>
 			</div><!-- .post -->
@@ -45,13 +45,13 @@
 				<div class="entry-content">
 					<p class="search-error"><?php _e('Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'sandbox') ?></p>
 				</div>
+				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
+					<div>
+						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="40" />
+						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find &raquo;', 'sandbox') ?>" />
+					</div>
+				</form>
 			</div>
-			<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
-				<div>
-					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true); ?>" tabindex="1" size="40" />
-					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Search &raquo;', 'sandbox') ?>" tabindex="2" />
-				</div>
-			</form>
 
 <?php endif; ?>
 
