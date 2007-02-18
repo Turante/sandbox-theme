@@ -92,7 +92,7 @@ div.entry-meta {
 	font: 0.7em/150% verdana, geneva, sans-serif;
 	margin: 0 0 5em 0;
 }
-span.metasep {
+span.meta-sep {
 	color: #ddd;
 	margin: 0 0.2em;
 	padding: 0 0.2em;
@@ -369,7 +369,7 @@ div#footer {
 	text-align: right;
 	margin: 0 -2em 0 0;
 }
-div#footer span.metasep {
+div#footer span.meta-sep {
 	display: none;
 }
 div#footer span#generator-link {

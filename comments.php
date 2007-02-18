@@ -7,6 +7,7 @@
 		if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
 ?>
 	<div class="nopassword"><?php _e('This post is password protected. Enter the password to proceed.', 'sandbox') ?></div>
+</div>
 <?php
 			return;
 		endif;
@@ -33,11 +34,11 @@ foreach ( $comments as $comment )
 			<div class="comment-author"><?php comment_author_link() ?></div>
 			<?php if ($comment->comment_approved == '0') : ?><span class="unapproved"><?php _e('Your comment is awaiting moderation.', 'sandbox') ?></span><?php endif; ?>
 			<div class="comment-meta">
-				<?php printf(__('Posted %1$s at %2$s <span class="metasep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'sandbox'),
+				<?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'sandbox'),
 						get_comment_date(),
 						get_comment_time(),
 						'#comment-' . get_comment_ID() );
-				?> <? edit_comment_link(__('(Edit)', 'sandbox'), ' ', ''); ?>
+				?> <?php edit_comment_link(__('<span class="comment-edit">Edit</span>', 'sandbox'), ' ', ''); ?>
 
 			</div>
 			<?php comment_text() ?>
@@ -67,7 +68,7 @@ foreach ( $comments as $comment )
 					get_comment_date('d M Y'),
 					get_comment_time('g:i a'));
 				?>
-				<?php edit_comment_link(__('(Edit)', 'sandbox'), ' ', '') ?>
+				<?php edit_comment_link(__('<span class="comment-edit">Edit</span>', 'sandbox'), ' ', '') ?>
 			</div>
 			<div class="comment-mod"><?php if ($comment->comment_approved == '0') _e('<em>Your trackback/pingback is awaiting moderation.</em>', 'sandbox') ?></div>
 			<?php comment_text() ?>

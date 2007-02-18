@@ -40,7 +40,7 @@ function sandbox_skipnav() {
 	if ( !sandbox_get_option('globalnav') )
 		return;
 
-	echo '<p class="access"><a href="#content" title="'.__('Skip navigation to the content', 'sandbox').'">'.__('Skip navigation', 'sandbox').'</a></p>';
+	echo '<div class="access"><a href="#content" title="'.__('Skip navigation to the content', 'sandbox').'">'.__('Skip navigation', 'sandbox').'</a></div>';
 }
 
 // Template tag: echoes a page list for navigation if the
@@ -50,7 +50,7 @@ function sandbox_globalnav() {
 		return;
 
 	echo "<div id='globalnav'><ul id='menu'>";
-	$menu = wp_list_pages('title_li=&sort_column=menu_order&echo=0');
+	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0');
 	echo str_replace(array("\r", "\n", "\t"), '', $menu); // Strip intratag whitespace
 	echo "</ul></div>";
 }
@@ -113,7 +113,7 @@ function sandbox_body_class( $print = true ) {
 function sandbox_post_class( $print = true ) {
 	global $post, $sandbox_post_alt;
 
-	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
+	$c = array('hentry', "p-$sandbox_post_alt", $post->post_type, $post->post_status);
 
 	$c[] = 'author-' . get_the_author_login();
 

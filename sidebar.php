@@ -6,7 +6,7 @@
 					<h3><a href="<?php bloginfo('home') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>"><?php _e('&laquo; Home', 'sandbox') ?></a></h3>
 				</li>
 		<?php } ?>
-<?php wp_list_pages('title_li=<h3>'.__('Pages').'</h3>' ) ?>
+<?php wp_list_pages('title_li=<h3>'.__('Pages').'</h3>&sort_column=post_title' ) ?>
 
 				<li class="category-links">
 					<h3><?php _e('Categories', 'sandbox'); ?></h3>
