@@ -5,7 +5,7 @@
 
 <?php if (have_posts()) : ?>
 
-		<h2 class="page-title"><?php _e('Search Results for:', 'sandbox') ?> <?php echo wp_specialchars(stripslashes($_GET['s']), true); ?></h2>
+		<h2 class="page-title"><?php _e('Search Results for:', 'sandbox') ?> <span><?php echo wp_specialchars(stripslashes($_GET['s']), true); ?></span></h2>
 
 			<div id="nav-above" class="navigation">
 				<div class="nav-previous"><?php next_posts_link(__('&laquo; Older posts', 'sandbox')) ?></div>
@@ -17,12 +17,12 @@
 			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
 				<h3 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('Permalink to %s', 'sandbox'), wp_specialchars(get_the_title(), 1)) ?>" rel="bookmark"><?php the_title() ?></a></h3>
 				<div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><?php unset($previousday); printf(__('%1$s &#8211; %2$s', 'sandbox'), the_date('', '', '', false), get_the_time()) ?></abbr></div>
-				<div class="entry-content">
+				<div class="entry-content entry-summary">
 <?php the_excerpt('<span class="more-link">'.__('Read More &raquo;', 'sandbox').'</span>') ?>
 
 				</div>
 				<div class="entry-meta">
-					<span class="entry-author author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>
+					<span class="entry-author author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>
 					<span class="meta-sep">|</span>
 					<span class="entry-category"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
 					<span class="meta-sep">|</span>

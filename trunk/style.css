@@ -2,10 +2,13 @@
 THEME NAME: Sandbox
 THEME URI: http://www.plaintxt.org/themes/sandbox/
 DESCRIPTION: A theme with powerful, semantic CSS selectors and the ability to add new skins.
-VERSION: 0.6.1
+VERSION: 0.7
 AUTHOR: <a href="http://andy.wordpress.com/">Andy Skelton</a> &amp; <a href="http://www.plaintxt.org/">Scott Allan Wallick</a>
 AUTHOR URI:
 */
+/* GETS THE LAYOUT CSS FILE */
+@import url('skins/2c-l.css');
+
 /* MARGINS, PADDING, ETC., FOR ALL LAYOUT DIVS */
 div#header {
 	padding: 2em 0;
@@ -43,22 +46,25 @@ body.home abbr.published, body.archive abbr.published, div.page-link {
 div.entry-content p {
 	margin: 1em 0;
 }
-div.entry-content ul li {
+div.entry-content ul li, div.entry-content ul.content-column li ul li {
 	list-style: square;
 }
 div.entry-content ul li ul {
 	margin-bottom: 0.3em;
 }
-div.entry-content ul li ul li {
-	list-style: circle;
+div.entry-content ul li ul li, div.entry-content ul.content-column li ul li ul li {
+	list-style: disc;
 }
-div.entry-content ul#linkcats, div.entry-content ul#linkcats li {
+div.entry-content ul.content-column, div.entry-content ul.content-column li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-div.entry-content ul#linkcats li ul li {
-	list-style: square;
+div.entry-content ul li h2, div.entry-content ul li h3 {
+	margin-bottom: 0;
+}
+div.entry-content img {
+	max-width: 100%;
 }
 div.entry-content img.center {
 	display: block;
@@ -85,9 +91,6 @@ body.single div.navigation {
 }
 div.archive-meta {
 	margin: 1em 0 3em 0;
-}
-div.edit-link {
-	clear: both;
 }
 abbr, acronym {
 	border-bottom: 1px dotted blue;
@@ -132,9 +135,6 @@ body.single h3.comment-header {
 body.single h3#respond {
 	font-size: 1.2em;
 	margin: 3em 0 0.5em 0;
-}
-div.entry-content ul#linkcats li h3 {
-	margin: 1em 0 0 0;
 }
 div.entry-content h2 {
 	font-size: 1.2em;
@@ -233,13 +233,16 @@ div#footer {
 	text-align: center;
 }
 /*  COMMON MULTI-PURPOSE ELEMENTS */
-.alignleft, div.nav-previous, #archives-by-category {
+.alignleft, div.nav-previous {
 	float: left;
 }
-.alignright, div.nav-next, #archives-by-month {
+.alignright, div.nav-next {
 	float: right;
 }
-.clearer {
+.content-column {
+	width: 40%;
+}
+.clearer, p.entry-edit {
 	clear: both;
 }
 div#nav-above, body.single div#nav-below {

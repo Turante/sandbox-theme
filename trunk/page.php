@@ -10,7 +10,7 @@
 				<div class="entry-content">
 <?php the_content() ?>
 
-<?php link_pages('<div class="page-link">'.__('Pages: ', 'sandbox'), '</div>', 'number'); ?>
+<?php link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
 
 <?php edit_post_link(__('Edit this entry.', 'sandbox'),'<p class="entry-edit">','</p>') ?>
 

@@ -5,7 +5,7 @@
 
 <?php the_post() ?>
 
-			<h2 class="page-title"><?php printf(__('Author Archives: %s', 'sandbox'), "<a class='url fn' href='$authordata->user_url' title='$authordata->display_name'>$authordata->display_name</a>") ?></h2>
+			<h2 class="page-title"><?php printf(__('Author Archives: <span>%s</span>', 'sandbox'), "<span class='vcard'><a class='url fn n' href='$authordata->user_url' title='$authordata->display_name'>$authordata->display_name</a></span>") ?></h2>
 			<div class="archive-meta"><?php echo apply_filters('archive_meta', $authordata->user_description); ?></div>
 
 			<div id="nav-above" class="navigation">
@@ -18,7 +18,7 @@
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
 				<h3 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('Permalink to %s', 'sandbox'), wp_specialchars(get_the_title(), 1)) ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 				<div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><?php unset($previousday); printf(__('%1$s &#8211; %2$s', 'sandbox'), the_date('', '', '', false), get_the_time()) ?></abbr></div>
-				<div class="entry-content">
+				<div class="entry-content entry-summary">
 <?php the_excerpt('<span class="more-link">'.__('Read More &raquo;', 'sandbox').'</span>') ?>
 
 				</div>

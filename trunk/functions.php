@@ -55,6 +55,15 @@ function sandbox_globalnav() {
 	echo "</ul></div>";
 }
 
+// Adds the language function for WP 2.1 blogs. 
+function sandbox_language() {
+	if ( function_exists('language_attributes') ) {
+		language_attributes();
+	} else {
+		echo 'xml:lang="en-us" lang="en-us"';
+	}
+}
+
 // Template tag: echoes semantic classes in the <body>
 function sandbox_body_class( $print = true ) {
 	global $wp_query, $current_user;
@@ -113,7 +122,7 @@ function sandbox_body_class( $print = true ) {
 function sandbox_post_class( $print = true ) {
 	global $post, $sandbox_post_alt;
 
-	$c = array('hentry', "p-$sandbox_post_alt", $post->post_type, $post->post_status);
+	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
 
 	$c[] = 'author-' . get_the_author_login();
 

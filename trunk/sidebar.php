@@ -1,7 +1,7 @@
 		<div id="primary" class="sidebar">
 			<ul>
-		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // BEGIN PRIMARY SIDEBAR WIDGETS ?>
-		<?php if ( !is_home() || is_paged() ) { // DISPLAYS EVERYWHERE EXCEPT ON HOME PAGES ?>
+		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
+		<?php if ( !is_home() || is_paged() ) { // displays everywhere except on home pages ?>
 				<li class="home-link">
 					<h3><a href="<?php bloginfo('home') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>"><?php _e('&laquo; Home', 'sandbox') ?></a></h3>
 				</li>
@@ -22,13 +22,13 @@
 
 					</ul>
 				</li>
-		<?php endif; // END PRIMARY SIDEBAR WIDGETS  ?>
+		<?php endif; // end primary sidebar widgets  ?>
 			</ul>
 		</div><!-- #primary .sidebar -->
 
 		<div id="secondary" class="sidebar">
 			<ul>
-		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // BEGIN  SECONDARY SIDEBAR WIDGETS ?>
+		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin  secondary sidebar widgets ?>
 				<li class="blog-search">
 					<h3><label for="s"><?php _e('Search', 'sandbox') ?></label></h3>
 					<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
@@ -55,6 +55,6 @@
 						<?php wp_meta() ?>
 					</ul>
 				</li>
-		<?php endif; // END SECONDARY SIDEBAR WIDGETS  ?>
+		<?php endif; // end secondary sidebar widgets  ?>
 			</ul>
 		</div><!-- #secondary .sidebar -->
