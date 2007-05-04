@@ -6,7 +6,7 @@
 <?php the_post() ?>
 
 			<h2 class="page-title"><?php printf(__('Author Archives: <span>%s</span>', 'sandbox'), "<span class='vcard'><a class='url fn n' href='$authordata->user_url' title='$authordata->display_name'>$authordata->display_name</a></span>") ?></h2>
-			<div class="archive-meta"><?php echo apply_filters('archive_meta', $authordata->user_description); ?></div>
+			<div class="archive-meta"><?php if ( !(''== $authordata->user_description) ) : echo apply_filters('archive_meta', $authordata->user_description); endif; ?></div>
 
 			<div id="nav-above" class="navigation">
 				<div class="nav-previous"><?php next_posts_link(__('&laquo; Older posts', 'sandbox')) ?></div>

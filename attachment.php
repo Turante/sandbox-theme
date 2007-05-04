@@ -5,8 +5,8 @@
 
 <?php the_post() ?>
 
-<?php $attachment_link = get_the_attachment_link($post->ID, true, array(450, 800)); // DOES THIS, AND POPULATES THE NEXT LINE FOR SIZING ?>
-<?php $_post = &get_post($post->ID); $classname = ($_post->iconsize[0] <= 128 ? 'small' : '') . 'attachment'; // GIVES SMALL ITEMS A 'SMALL' CLASS ?>
+<?php $attachment_link = get_the_attachment_link($post->ID, true, array(450, 800)); // Finds attachment, sizes it ?>
+<?php $_post = &get_post($post->ID); $classname = ($_post->iconsize[0] <= 128 ? 'small' : '') . 'attachment'; // If it's small, give it 'small' in its class name ?>
 
 			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class() ?>">

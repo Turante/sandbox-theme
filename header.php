@@ -3,13 +3,11 @@
 <head profile="http://gmpg.org/xfn/11">
 	<title><?php bloginfo('name') ?><?php if ( is_404() ) : ?> &raquo; <?php _e('Not Found', 'sandbox') ?><?php elseif ( is_home() ) : ?> &raquo; <?php bloginfo('description') ?><?php else : ?><?php wp_title() ?><?php endif ?></title>
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-	<meta name="generator" content="WordPress <?php bloginfo('version') ?>" /><!-- LEAVE FOR STATS -->
 	<meta name="description" content="<?php bloginfo('description') ?>" />
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php bloginfo('name') ?> RSS 2.0 Feed" />
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php bloginfo('name') ?> Comments RSS 2.0 Feed" />
+	<meta name="generator" content="WordPress <?php bloginfo('version') ?>" /><!-- LEAVE FOR STATS -->
+	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('RSS 2.0 Feed', 'sandbox'); ?>" />
+	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('Comments RSS 2.0 Feed', 'sandbox'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
-	<link rel="start" href="<?php echo get_settings('home') ?>/" title="<?php bloginfo('name') ?>" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url') ?>" />
 <?php wp_head() ?>
 
 </head>
@@ -22,7 +20,8 @@
 		<h1 id="blog-title"><a href="<?php echo get_settings('home') ?>/" title="<?php bloginfo('name') ?>"><?php bloginfo('name') ?></a></h1>
 		<div id="blog-description"><?php bloginfo('description') ?></div>
 	</div><!--  #header -->
-	
-	<?php sandbox_skipnav() ?>
 
-	<?php sandbox_globalnav() ?>
+	<div class="access">
+		<div id="globalskip"><a href="#content" title="<?php _e('Skip navigation to the content', 'sandbox'); ?>"><?php _e('Skip to content', 'sandbox'); ?></a></div>
+		<?php sandbox_globalnav() ?>
+	</div><!-- #access -->

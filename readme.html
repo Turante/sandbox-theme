@@ -51,7 +51,6 @@ ul li { list-style: square; }
 		</ol>
 	</li>
 	<li><a href="#widgets" title="Skipt to Sandbox widgets">Sandbox widgets</a></li>
-	<li><a href="#skins" title="Skip to Adding skins">Adding skins</a></li>
 	<li><a href="#hatom" title="Skip to hAtom microformat">hAtom microformat</a></li>
 	<li><a href="#license" title="Skip to License information">License information</a></li>
 </ol>
@@ -63,7 +62,7 @@ ul li { list-style: square; }
 <p>The Sandbox is a lot of things. For example, it's</p>
 
 <ul>
-	<li>for WordPress 2.0+.</li>
+	<li>for WordPress 2.0.x and 2.1.x.</li>
 	<li>valid XHTML 1.0 Transitional.</li>
 	<li>widgets-friendly.</li>
 	<li>got a theme admin menu.</li>
@@ -445,52 +444,7 @@ ul li { list-style: square; }
 
 <hr/>
 
-<h2 id="skins">4. Adding skins</h2>
-
-<p>Every WordPress theme must have at least a style.css file, but why stop there? After activating the Sandbox theme, a new submenu of <i>Presentation</i> appears, <i>Sandbox Skins</i>. Within this admin menu you can choose from other stylesheets to "skin" the Sandbox.</p>
-
-<p>By default, the Sandbox comes with the following files in the /skins/ folder:</p>
-
-<ul id="default-styles">
-	<li>1c-b.css / 1c-b.png <span>One column fluid layout, with sidebars below the content</span></li>
-	<li>2c-l.css / 2c-l.png <span>Two column fluid layout, with a sidebar on the left</span></li>
-	<li>2c-r.css / 2c-r.png <span>Two column fluid layout, with a sidebar on the right</span></li>
-	<li>3c-b.css / 3c-b.png <span>Three column fluid layout, with sidebars on the left and right</span></li>
-	<li>3c-l.css / 3c-l.png <span>Three column fluid layout, with two sidebars on the left</span></li>
-	<li>3c-r.css / 3c-r.png <span>Three column fluid layout, with two sidebars on the right</span></li>
-	<li>kubrick.css / kubrick.png <span>Kubrick, based on the original, by Andy Skelton</span></li>
-	<li>spartan.css / spartan.png <span>Spartan, a new minimalist theme, by Scott Allan Wallick</span></li>
-</ul>
-
-<p>The admin menu automatically loads any file with the extension .css in the /skins/ fodler. A corresponding file with the same name and a .png extension is used as the thumbnail. To add additional skins to the admin menu, simply place a .css file and a corresponding .png file into the /skins/ folder. To display correctly, .png thumbnails should be 300px (W) by 225px (H).</p>
-
-<p>For example, I create a new stylesheet for the Sandbox called &#8220;newskin.css.&#8221; At the beginning of my newskin.css file, I add</p>
-
-<pre>
-/*
-Skin Name: New Skin
-Skin URI: http://get-this-skin.com/
-Version: 1.0
-Description: A new skin
-Author: Your Name
-Author URI: http://your-name.com/
-Global Navigation: Y
-*/
-</pre>
-
-<p>I then make a 300x225px thumbnail, which I save as &#8220;newskin.png.&#8221; <em>The file names of the .css and the .png files must be exactly the same</em>, except for the file extension. I then place both the newstyle.css and newstyle.png files in the /skins/ folder. Now my &#8220;New Skin&#8221; will appear in the admin menu.</p>
-
-<p>The &#8220;Global Navigation&#8221; option is for developers. It has two parameters: <i>Y</i> or <i>N</i>. Y adds a list of pages (with <code>wp_list_pages</code>) and a &#8220;Skip to content&#8221; link. N does not add these items. Enabling this option offers greater accessibility to mobile users (e.g., PSP, mobile phones) and is SEO-friendly. Probably. In the Kubick and Spartan skins, this option is enabled but the links are hidden with CSS from conventional browsers:</p>
-
-<div>
-	<code>div#globalnav, p.access { display: none; }</code>
-</div>
-
-<p>Please share your skins with the community. There will be a list of skins available at <a href="http://castles.plaintxt.org/" title="Sand Castles: The Sandbox Skins Depo">Sand Castles</a>, the Sandbox Skins Depo. You can also find information on how to submit your skin as well as additional information on how to use them there.</p>
-
-<hr/>
-
-<h2 id="hatom">5. hAtom microformat</h2>
+<h2 id="hatom">4. hAtom microformat</h2>
 
 <p>The Sandbox implements the hAtom 0.1 microformat. hAtom is a step towards standardized, semantic blog post markup. It's best if the Microformats people explain:</p>
 
@@ -504,7 +458,7 @@ Global Navigation: Y
 
 <hr/>
 
-<h2 id="license">6. License information</h2>
+<h2 id="license">5. License information</h2>
 
 <p>The Sandbox &copy; 2006 is licensed under the GNU General Public License:</p>
 
@@ -518,7 +472,7 @@ Global Navigation: Y
 
 </blockquote>
 
-<p>For more information on what exactly this means, please read the <cite title="GNU General Public License"><a href="http://www.gnu.org/licenses/gpl.html" title="GNU General Public License">GNU General Public License</a></cite>. For a slightly more digestable version, check out <a href="http://en.wikipedia.org/wiki/Gpl" title="GPL - Wikipedia">GPL on Wikipedia</a>.</p>
+<p>For more information on what exactly this means, please read the <cite title="GNU General Public License"><a href="http://www.gnu.org/licenses/gpl.html" title="GNU General Public License" rel="license">GNU General Public License</a></cite>. For a slightly more digestable version, check out <a href="http://en.wikipedia.org/wiki/Gpl" title="GPL - Wikipedia">GPL on Wikipedia</a>.</p>
 
 </body>
 </html>
