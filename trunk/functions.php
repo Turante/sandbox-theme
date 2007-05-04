@@ -1,61 +1,14 @@
 <?php
-// And thus begins the Sandbox guts! Registers our default
-// options, specifically loads the 2c-1.css file as default skin
-function sandbox_get_option($name) {
-	$defaults = array(
-		'skin' => '2c-l',
-		);
-
-	$options = array_merge($defaults, (array) get_option('sandbox_options'));
-
-	if ( isset($options[$name]) )
-		return $options[$name];
-
-	return false;
-}
-
-// Andy really goes nuts with arrays, which has been a good thing. Very good.
-function sandbox_set_options($new_options) {
-	$options = (array) get_option('sandbox_options');
-
-	$options = array_merge($options, (array) $new_options);
-
-	return update_option('sandbox_options', $options);
-}
-
-// Template tag: echoes a stylesheet link if one is selected
-function sandbox_stylesheets() {
-	$skin = sandbox_get_option('skin');
-
-	if ( $skin != 'none' ) {
-?>
-	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri() . "/skins/$skin.css" ?>" title="Sandbox" />
-<?php
-	}
-}
-
-// Template tag: echoes a link to skip navigation if the
-// global_navigation option is set to "Y" in the skin file
-function sandbox_skipnav() {
-	if ( !sandbox_get_option('globalnav') )
-		return;
-
-	echo '<div class="access"><a href="#content" title="'.__('Skip navigation to the content', 'sandbox').'">'.__('Skip navigation', 'sandbox').'</a></div>';
-}
-
-// Template tag: echoes a page list for navigation if the
-// global_navigation option is set to "Y" in the skin file
+// Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	if ( !sandbox_get_option('globalnav') )
-		return;
-
-	echo "<div id='globalnav'><ul id='menu'>";
+	echo "<div id=\"globalnav\"><ul id=\"menu\">";
+	if ( !is_home() || is_paged() ) { ?><li class="page_item home_page_item"><a href="<?php bloginfo('home') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>"><?php _e('Home', 'blogtxt') ?></a></li><?php }
 	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0');
-	echo str_replace(array("\r", "\n", "\t"), '', $menu); // Strip intratag whitespace
-	echo "</ul></div>";
+	echo str_replace(array("\r", "\n", "\t"), '', $menu);
+	echo "</ul></div>\n";
 }
 
-// Adds the language function for WP 2.1 blogs. 
+// Adds the language function for WP 2.1+ blogs. 
 function sandbox_language() {
 	if ( function_exists('language_attributes') ) {
 		language_attributes();
@@ -64,7 +17,7 @@ function sandbox_language() {
 	}
 }
 
-// Template tag: echoes semantic classes in the <body>
+// Template tag: echoes semantic classes in the <body> element
 function sandbox_body_class( $print = true ) {
 	global $wp_query, $current_user;
 
@@ -347,133 +300,6 @@ function widget_sandbox_links() {
 	}
 }
 
-// Sandbox skins menu: creates the array to collect
-// information from the skins currently installed
-function sandbox_skin_info($skin) {
-	$info = array(
-		'skin_name' => $skin,
-		'skin_uri' => '',
-		'description' => '',
-		'version' => '1.0',
-		'author' => __('Anonymous', 'sandbox'),
-		'author_uri' => '',
-		'global_navigation' => 'Y',
-		);
-
-	if ( !file_exists(ABSPATH."wp-content/themes/sandbox/skins/$skin.css") )
-		return array();
-
-	$css = (array) file(ABSPATH."wp-content/themes/sandbox/skins/$skin.css");
-
-	foreach ( $css as $line ) {
-		if ( strstr($line, '*/') )
-			return $info;
-
-		if ( !strstr($line, ':') )
-			continue;
-
-		list ( $k, $v ) = explode(':', $line, 2);
-
-		$k = str_replace(' ', '_', strtolower(trim($k)));
-
-		if ( array_key_exists($k, $info) )
-			$info[$k] = stripslashes(wp_filter_kses(trim($v)));
-	}
-}
-
-// Sandbox skins menu: Registers the workings of the skins menu
-function sandbox_admin_skins() {
-	$skins = array();
-	if ( isset ( $_GET['message'] ) ) {
-		switch ( $_GET['message'] ) {
-			case 'updated' :
-				echo "\n<div id='message' class='updated fade'><p>".__('Sandbox skin saved successfully.', 'sandbox')."</p></div>\n";
-				break;
-		}
-	}
-	$current_skin = sandbox_get_option('skin');
-	$_skins = glob(ABSPATH.'wp-content/themes/sandbox/skins/*.css');
-	foreach ( $_skins as $k => $v ) {
-		$info = array();
-		preg_match('/\/([^\/]+).css$/i', $v, $matches);
-		if ( !empty($matches[1]) ) {
-			$skins[$matches[1]] = sandbox_skin_info($matches[1]);
-		}
-	}
-?>
-<script type="text/javascript">
-<!-- function showme(o) { document.getElementById('show').src = o.src; } //-->
-</script>
-<div class="wrap">
-<h2><?php _e('Current Skin', 'sandbox') ?></h2>
-<div id="currenttheme">
-<?php if ( file_exists(get_template_directory() . "/skins/$current_skin.png") ) : ?>
-<img src="<?php echo get_template_directory_uri() . "/skins/$current_skin.png"; ?>" alt="<?php _e('Current skin preview', 'sandbox'); ?>" />
-<?php endif; ?>
-<?php
-	if ( is_array($skins[$current_skin]) )
-		extract($skins[$current_skin]);
-	if ( !empty($skin_uri) )
-		$skin_name = "<a href=\"$skin_uri\" title=\"$skin_name by $author\">$skin_name</a>";
-	if ( !empty($author_uri) )
-		$author =  "<a href=\"$author_uri\" title=\"$author\">$author</a>";
-?>
-<h3><?php printf(__('%1$s %2$s by %3$s'), $skin_name, $version, $author) ; ?></h3>
-<p><?php echo $description; ?></p>
-</div>
-<div class="clearer" style="clear:both;"></div>
-<h2><?php _e('Available Skins', 'sandbox') ?></h2>
-<?php
-	foreach ( $skins as $skin => $info ) :
-	if ( $skin == $current_skin || !is_array($info) )
-		continue;
-	extract($info);
-	$activate_link = "themes.php?page=skins&amp;action=activate&amp;skin=$skin";
-	// wp_nonce_url first introduced in WP 2.0.3
-	if ( function_exists('wp_nonce_url') )
-		$activate_link = wp_nonce_url($activate_link, 'switch-skin_' . $skin);
-?>
-<div class="available-theme">
-<h3><a href="<?php echo $activate_link; ?>" title="Activate the <?php echo "$skin_name"; ?> skin"><?php echo "$skin_name $version"; ?></a></h3>
-<a href="<?php echo $activate_link; ?>" class="screenshot" title="Activate the <?php echo "$skin_name"; ?> skin">
-<?php if ( file_exists(get_template_directory() . "/skins/$skin.png" ) ) : ?>
-<img src="<?php echo get_template_directory_uri() . "/skins/$skin.png"; ?>" alt="<?php echo "$skin_name"; ?>" />
-<?php endif; ?>
-</a>
-
-<p><?php echo $description; ?></p>
-</div>
-<?php endforeach; ?>
-
-<h2><?php _e('Sandbox Info', 'sandbox'); ?></h2>
-<p><?php printf(__('Check the <a href="%1$s" title="Read the Sandbox readme.html">documentation</a> for help installing new skins and information on the rich semantic markup that makes the Sandbox unique.', 'sandbox'), get_template_directory_uri() . '/readme.html'); ?></p>
-</div>
-<?php
-}
-
-// Sandbox skins menu: initializes the settings for the skins menu
-function sandbox_init() {
-	load_theme_textdomain('sandbox');
-
-	if ( $GLOBALS['pagenow'] == 'themes.php'
-			&& isset($_GET['page']) && $_GET['page'] == 'skins'
-			&& isset($_GET['action']) && $_GET['action'] == 'activate'
-			&& current_user_can('switch_themes') ) {
-		check_admin_referer('switch-skin_' . $_GET['skin']);
-		$info = sandbox_skin_info($_GET['skin']);
-		sandbox_set_options(array(
-			'skin' => wp_filter_kses($_GET['skin']),
-			'globalnav' => bool_from_yn($info['global_navigation'])
-			));
-		wp_redirect('themes.php?page=skins&message=updated');
-	}
-}
-
-// Sandbox skins menu: tells WordPress (nicely) to load the skins menu
-function sandbox_admin_menu() {
-	add_theme_page(__('Sandbox Skins', 'sandbox'), __('Sandbox Skins', 'sandbox'), 'switch_themes', 'skins', 'sandbox_admin_skins');
-}
-
 // Sandbox widgets: initializes Widgets for the Sandbox
 function sandbox_widgets_init() {
 	if ( !function_exists('register_sidebars') )
@@ -502,14 +328,11 @@ function sandbox_widgets_init() {
 }
 
 // Runs our code at the end to check that everything needed has loaded
-add_action('init', 'sandbox_init', 1);
 add_action('init', 'sandbox_widgets_init');
-add_action('admin_menu', 'sandbox_admin_menu');
 
 // Adds filters for greater compliance
 add_filter('archive_meta', 'wptexturize');
 add_filter('archive_meta', 'convert_smilies');
 add_filter('archive_meta', 'convert_chars');
 add_filter('archive_meta', 'wpautop');
-
 ?>

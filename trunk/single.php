@@ -4,7 +4,6 @@
 		<div id="content" class="hfeed">
 
 <?php the_post(); ?>
-
 			<div id="nav-above" class="navigation">
 				<div class="nav-previous"><?php previous_post_link('&laquo; %link') ?></div>
 				<div class="nav-next"><?php next_post_link('%link &raquo;') ?></div>

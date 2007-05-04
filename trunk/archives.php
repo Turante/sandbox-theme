@@ -15,7 +15,7 @@ Template Name: Archives Page
 				<div class="entry-content">
 <?php the_content(); ?>
 
-					<ul class="alignleft content-column">
+					<ul class="content-column first-column">
 						<li>
 							<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
 							<ul>
@@ -24,7 +24,7 @@ Template Name: Archives Page
 						</li>
 					</ul>
 					
-					<ul class="alignleft content-column">
+					<ul class="content-column second-column">
 						<li>
 							<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
 							<ul>
