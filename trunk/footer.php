@@ -10,4 +10,4 @@
 <?php wp_footer() ?>
 
 </body>
-</html><!-- end transmission -->
+</html>

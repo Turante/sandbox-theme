@@ -32,7 +32,7 @@ Template Name: Archives Page
 							</ul>
 						</li>
 					</ul>
-<?php edit_post_link(__('Edit this entry.', 'sandbox'),'<p class="entry-edit">','</p>') ?>
+<?php edit_post_link(__('Edit', 'sandbox'),'<span class="edit-link">','</span>') ?>
 
 				</div>
 			</div><!-- .post -->

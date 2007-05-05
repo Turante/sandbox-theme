@@ -11,7 +11,7 @@
 
 <?php link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
 
-<?php edit_post_link(__('Edit this entry.', 'sandbox'),'<div class="edit-link">','</div>') ?>
+<?php edit_post_link(__('Edit', 'sandbox'),'<span class="edit-link">','</span>') ?>
 
 				</div>
 			</div><!-- .post -->

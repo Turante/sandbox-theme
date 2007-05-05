@@ -21,7 +21,7 @@
 				</div>
 				<div class="entry-meta">
 					<?php printf(__('This entry was written by %1$s and posted on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr> and filed under %6$s. Bookmark the <a href="%7$s" title="Permalink to %8$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%9$s" title="Comments RSS to %8$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox'),
-						'<a class="url fn" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>',
+						'<span class="author vcard"><a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a></span>',
 						get_the_time('Y-m-d'),
 						get_the_time('H:i:sO'),
 						the_date('', '', '', false),
@@ -40,7 +40,7 @@
 					<?php _e('Both comments and trackbacks are currently closed.') ?>
 <?php endif; ?>
 
-<?php edit_post_link(__('Edit this entry.', 'sandbox'),'','') ?>
+<?php edit_post_link(__('Edit', 'sandbox'),'<span class="edit-link">','</span>') ?>
 				</div>
 			</div>
 
