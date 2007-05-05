@@ -4,9 +4,9 @@
 	<title><?php bloginfo('name') ?><?php if ( is_404() ) : ?> &raquo; <?php _e('Not Found', 'sandbox') ?><?php elseif ( is_home() ) : ?> &raquo; <?php bloginfo('description') ?><?php else : ?><?php wp_title() ?><?php endif ?></title>
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<meta name="description" content="<?php bloginfo('description') ?>" />
-	<meta name="generator" content="WordPress <?php bloginfo('version') ?>" /><!-- LEAVE FOR STATS -->
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('RSS 2.0 Feed', 'sandbox'); ?>" />
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('Comments RSS 2.0 Feed', 'sandbox'); ?>" />
+	<meta name="generator" content="WordPress <?php bloginfo('version') ?>" /><!-- Please leave for stats -->
+	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('Entries RSS feed', 'sandbox'); ?>" />
+	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('Comments RSS feed', 'sandbox'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 <?php wp_head() ?>
 
@@ -22,6 +22,6 @@
 	</div><!--  #header -->
 
 	<div class="access">
-		<div id="globalskip"><a href="#content" title="<?php _e('Skip navigation to the content', 'sandbox'); ?>"><?php _e('Skip to content', 'sandbox'); ?></a></div>
+		<div id="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'sandbox'); ?>"><?php _e('Skip to content', 'sandbox'); ?></a></div>
 		<?php sandbox_globalnav() ?>
 	</div><!-- #access -->

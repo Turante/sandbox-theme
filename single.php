@@ -37,7 +37,7 @@
 					<?php _e('Both comments and trackbacks are currently closed.') ?>
 <?php endif; ?>
 
-<?php edit_post_link(__('Edit this entry.', 'sandbox'),'<span class="entry-edit">','</span>') ?>
+<?php edit_post_link(__('Edit', 'sandbox'),'<span class="edit-link">','</span>') ?>
 				</div>
 			</div><!-- .post -->
 
