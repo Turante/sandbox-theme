@@ -5,7 +5,7 @@
 		<span id="theme-link"><a href="http://www.plaintxt.org/themes/sandbox/" title="<?php _e('Sandbox (v1.0) for WordPress', 'sandbox'); ?>" rel="external designer"><?php _e('Sandbox', 'sandbox'); ?></a></span>
 	</div><!-- #footer -->
 
-</div><!-- #wrapper -->
+</div><!-- #wrapper .hfeed -->
 
 <?php wp_footer() ?>
 

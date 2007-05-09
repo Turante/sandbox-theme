@@ -1,19 +1,30 @@
 <?php
+// Creates a link to the 'home' page when elsewhere; works with WP 2.1.x static page options
+function sandbox_homelink() {
+	if ( get_option('show_on_front') ) {
+		global $wp_db_version;
+		$sandbox_frontpage = get_option('show_on_front');
+		if ( !is_home() && !is_page($sandbox_front_page) || is_paged() ) { ?><li class="page_item_home"><a href="<?php bloginfo('home'); ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
+	} else {
+		if ( !is_home() || is_paged() ) { ?><li class="home-link"><a href="<?php bloginfo('home') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>"><?php _e('Home', 'sandbox') ?></a></li><?php }
+	}
+}
+
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	echo "<div id=\"navigation\"><ul id=\"menu\">";
-	if ( !is_home() || is_paged() ) { ?><li class="page_item home_page_item"><a href="<?php bloginfo('home') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>"><?php _e('Home', 'sandbox') ?></a></li><?php } // Link to home appears on non-home (ie, everywhere else) pages
+	echo '<div id="navigation"><ul id="menu">';
+	echo sandbox_homelink();
 	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0'); // Params for the page list in header.php
 	echo str_replace(array("\r", "\n", "\t"), '', $menu);
 	echo "</ul></div>\n";
 }
 
 // Checks for WP 2.1.x language_attributes() function; if 2.0.x, then 'en-us'
-function sandbox_language() {
+function sandbox_blog_lang() {
 	if ( function_exists('language_attributes') ) {
-		language_attributes();
+		return language_attributes();
 	} else {
-		echo 'xml:lang="en-us" lang="en-us"';
+		echo ' xml:lang="en-us" lang="en-us"';
 	}
 }
 
@@ -39,14 +50,12 @@ function sandbox_body_class( $print = true ) {
 	// Special classes for BODY element when a single post
 	if ( is_single() ) {
 		the_post();
-		$c[] = 'single';
+		$c[] = 'single post-' . get_the_ID();
 		if ( isset($wp_query->post->post_date) )
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
-		if ( isset($wp_query->post->post_password) )
-			$c[] = 's-protected';
 		foreach ( (array) get_the_category() as $cat )
 			$c[] = 's-category-' . $cat->category_nicename;
-			$c[] = 's-author-' . get_profile("user_nicename");
+			$c[] = 's-author-' . get_the_author_login();
 		rewind_posts();
 	}
 
@@ -54,7 +63,7 @@ function sandbox_body_class( $print = true ) {
 	else if ( is_author() ) {
 		$author = $wp_query->get_queried_object();
 		$c[] = 'author';
-		$c[] = 'author-' . get_profile("user_nicename");
+		$c[] = 'author-' . get_the_author_login();
 	}
 
 	// Category name classes for BODY on category archvies
@@ -67,10 +76,8 @@ function sandbox_body_class( $print = true ) {
 	// Page author for BODY on 'pages'
 	else if ( is_page() ) {
 		the_post();
-		$c[] = 'page';
-		$c[] = 'page-author-' . get_profile("user_nicename");
-		if ( isset($wp_query->post->post_password) )
-			$c[] = 'page-protected';
+		$c[] = 'page page-' . get_the_ID();
+		$c[] = 'page-author-' . get_the_author_login();
 		rewind_posts();
 	}
 
@@ -78,12 +85,33 @@ function sandbox_body_class( $print = true ) {
 	if ( $current_user->ID )
 		$c[] = 'loggedin';
 
+	// Paged classes; for 'page X' classes of index, single, etc.
+	if ( ( ( $page = $wp_query->get("paged") ) || ( $page = $wp_query->get("page") ) ) && $page > 1 ) {
+		$c[] = 'paged-'.$page.'';
+		if ( is_single() ) {
+			$c[] = 'single-paged-'.$page.'';
+		} else if ( is_page() ) {
+			$c[] = 'page-paged-'.$page.'';
+		} else if ( is_category() ) {
+			$c[] = 'cat-paged-'.$page.'';
+		} else if ( is_date() ) {
+			$c[] = 'date-paged-'.$page.'';
+		} else if ( is_author() ) {
+			$c[] = 'author-paged-'.$page.'';
+		} else if ( is_search() ) {
+			$c[] = 'search-paged-'.$page.'';
+		}
+	}
+
 	// Separates classes with a single space, collates classes for BODY
 	$c = join(' ', apply_filters('body_class',  $c));
 
 	// And tada!
 	return $print ? print($c) : $c;
 }
+
+// Generates page numbering classes
+
 
 // Generates semantic classes for each post DIV element
 function sandbox_post_class( $print = true ) {
@@ -93,7 +121,7 @@ function sandbox_post_class( $print = true ) {
 	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
 
 	// Author for the post queried
-	$c[] = 'author-' . get_profile("user_nicename");
+	$c[] = 'author-' . get_the_author_login();
 
 	// Category for the post queried
 	foreach ( (array) get_the_category() as $cat )
