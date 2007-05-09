@@ -85,7 +85,6 @@ foreach ( $comments as $comment )
 						<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
 <?php if ( $user_ID ) : ?>
-
 							<p id="login"><?php printf(__('<span class="loggedin">Logged in as <a href="%1$s" title="Logged in as %2$s">%2$s</a>.</span> <span class="logout"><a href="%3$s" title="Log out of this account">Log out?</a></span>', 'sandbox'),
 								get_option('siteurl') . '/wp-admin/profile.php',
 								wp_specialchars($user_identity, true),

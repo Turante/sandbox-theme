@@ -5,7 +5,7 @@
 
 <?php the_post() ?>
 
-			<h2 class="page-title"><?php printf(__('Author Archives: <span class="vcard">%s</span>', 'sandbox'), "<a class='url fn n' href='$authordata->user_url' title='$authordata->display_name' rel='me'>$authordata->display_name</a>") ?></h2>
+			<h2 class="page-title author"><?php printf(__('Author Archives: <span class="vcard">%s</span>', 'sandbox'), "<a class='url fn n' href='$authordata->user_url' title='$authordata->display_name' rel='me'>$authordata->display_name</a>") ?></h2>
 			<div class="archive-meta"><?php if ( !(''== $authordata->user_description) ) : echo apply_filters('archive_meta', $authordata->user_description); endif; ?></div>
 
 			<div id="nav-above" class="navigation">
@@ -23,7 +23,7 @@
 
 				</div>
 				<div class="entry-meta">
-					<span class="entry-cat"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
+					<span class="cat-links"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
 					<span class="meta-sep">|</span>
 <?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
 					<span class="comments-link"><?php comments_popup_link(__('Comments (0)', 'sandbox'), __('Comments (1)', 'sandbox'), __('Comments (%)', 'sandbox')) ?></span>
