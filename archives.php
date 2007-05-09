@@ -6,7 +6,7 @@ Template Name: Archives Page
 <?php get_header() ?>
 	
 	<div id="container">
-		<div id="content" class="hfeed">
+		<div id="content">
 
 <?php the_post() ?>
 
@@ -15,7 +15,7 @@ Template Name: Archives Page
 				<div class="entry-content">
 <?php the_content(); ?>
 
-					<ul class="content-column first-column">
+					<ul class="first-column xoxo">
 						<li>
 							<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
 							<ul>
@@ -24,7 +24,7 @@ Template Name: Archives Page
 						</li>
 					</ul>
 					
-					<ul class="content-column second-column">
+					<ul class="second-column xoxo">
 						<li>
 							<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
 							<ul>
@@ -39,7 +39,7 @@ Template Name: Archives Page
 
 <?php if ( get_post_custom_values('comments') ) comments_template() // Add a key/value of "comments" to enable comments on pages! ?>
 
-		</div><!-- #content .hfeed -->
+		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php get_sidebar(); ?>

@@ -1,9 +1,10 @@
 <?php get_header() ?>
 	
 	<div id="container">
-		<div id="content" class="hfeed">
-			<h2 class="page-title"><?php _e('Category Archives:', 'sandbox') ?> <span><?php echo single_cat_title(); ?></span></h2>
-			<div class="archive-meta"><?php echo apply_filters('archive_meta', category_description()); ?></div>
+		<div id="content">
+
+		<h2 class="page-title"><?php _e('Category Archives:', 'sandbox') ?> <span class="page-title-meta"><?php echo single_cat_title(); ?></span></h2>
+			<div class="archive-meta"><?php if ( !(''== category_description()) ) : echo apply_filters('archive_meta', category_description()); endif; ?></div>
 
 			<div id="nav-above" class="navigation">
 				<div class="nav-previous"><?php next_posts_link(__('&laquo; Older posts', 'sandbox')) ?></div>
@@ -16,7 +17,7 @@
 				<h3 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('Permalink to %s', 'sandbox'), get_the_title()) ?>" rel="bookmark"><?php the_title() ?></a></h3>
 				<div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><?php unset($previousday); printf(__('%1$s &#8211; %2$s', 'sandbox'), the_date('', '', '', false), get_the_time()) ?></abbr></div>
 				<div class="entry-content entry-summary">
-<?php the_excerpt('<span class="more-link">'.__('Read More &raquo;', 'sandbox').'</span>') ?>
+<?php the_excerpt(''.__('Read More &raquo;', 'sandbox').'') ?>
 
 				</div>
 				<div class="entry-meta">
@@ -26,7 +27,7 @@
 					<span class="entry-category"><?php printf(__('Also posted in %s', 'sandbox'), $cats_meow) ?></span>
 					<span class="meta-sep">|</span>
 <?php endif ?>
-<?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class='edit-link'>", "</span>\n\t\t\t\t\t<span class='meta-sep'>|</span>\n"); ?>
+<?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
 					<span class="comment-link"><?php comments_popup_link(__('Comments (0)', 'sandbox'), __('Comments (1)', 'sandbox'), __('Comments (%)', 'sandbox')) ?></span>
 				</div>
 			</div><!-- .post -->
@@ -38,7 +39,7 @@
 				<div class="nav-next"><?php previous_posts_link(__('Newer posts &raquo;', 'sandbox')) ?></div>
 			</div>
 
-		</div><!-- #content .hfeed -->
+		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php get_sidebar() ?>

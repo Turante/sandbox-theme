@@ -6,7 +6,7 @@ Template Name: Links Page
 <?php get_header() ?>
 	
 	<div id="container">
-		<div id="content" class="hfeed">
+		<div id="content">
 
 <?php the_post() ?>
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class() ?>">
@@ -14,7 +14,7 @@ Template Name: Links Page
 				<div class="entry-content">
 <?php the_content() ?>
 
-					<ul id="linkcats" class="content-column">
+					<ul id="linkcats" class="xoxo">
 <?php if ( function_exists('wp_list_bookmarks') ) : wp_list_bookmarks(); else : ?>
 <?php
 $link_cats = $wpdb->get_results("SELECT cat_id, cat_name FROM $wpdb->linkcategories");
@@ -29,14 +29,14 @@ foreach ($link_cats as $link_cat) :
 <?php endforeach ?>
 <?php endif ?>
 					</ul>
-<?php edit_post_link(__('Edit this entry.', 'sandbox'),'<p class="entry-edit">','</p>') ?>
+<?php edit_post_link(__('Edit', 'sandbox'),'<span class="edit-link">','</span>') ?>
 
 				</div>
 			</div><!-- .post -->
 
 <?php if ( get_post_custom_values('comments') ) comments_template() // Add a key/value of "comments" to enable comments on pages! ?>
 
-		</div><!-- #content .hfeed -->
+		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php get_sidebar() ?>
