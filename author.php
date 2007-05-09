@@ -5,7 +5,7 @@
 
 <?php the_post() ?>
 
-			<h2 class="page-title"><?php printf(__('Author Archives: <span class="page-title-meta">%s</span>', 'sandbox'), "<span class='vcard'><a class='url fn n' href='$authordata->user_url' title='$authordata->display_name'>$authordata->display_name</a></span>") ?></h2>
+			<h2 class="page-title"><?php printf(__('Author Archives: <span class="vcard">%s</span>', 'sandbox'), "<a class='url fn n' href='$authordata->user_url' title='$authordata->display_name' rel='me'>$authordata->display_name</a>") ?></h2>
 			<div class="archive-meta"><?php if ( !(''== $authordata->user_description) ) : echo apply_filters('archive_meta', $authordata->user_description); endif; ?></div>
 
 			<div id="nav-above" class="navigation">
@@ -18,15 +18,15 @@
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
 				<h3 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('Permalink to %s', 'sandbox'), wp_specialchars(get_the_title(), 1)) ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 				<div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><?php unset($previousday); printf(__('%1$s &#8211; %2$s', 'sandbox'), the_date('', '', '', false), get_the_time()) ?></abbr></div>
-				<div class="entry-content entry-summary">
+				<div class="entry-content ">
 <?php the_excerpt(''.__('Read More &raquo;', 'sandbox').'') ?>
 
 				</div>
 				<div class="entry-meta">
-					<span class="entry-category"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
+					<span class="entry-cat"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
 					<span class="meta-sep">|</span>
 <?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
-					<span class="comment-link"><?php comments_popup_link(__('Comments (0)', 'sandbox'), __('Comments (1)', 'sandbox'), __('Comments (%)', 'sandbox')) ?></span>
+					<span class="comments-link"><?php comments_popup_link(__('Comments (0)', 'sandbox'), __('Comments (1)', 'sandbox'), __('Comments (%)', 'sandbox')) ?></span>
 				</div>
 			</div><!-- .post -->
 

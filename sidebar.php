@@ -13,6 +13,7 @@
 
 				</ul>
 			</li>
+
 			<li class="archive-links">
 				<h3><?php _e('Archives', 'sandbox') ?></h3>
 				<ul>
@@ -36,6 +37,7 @@
 					</div>
 				</form>
 			</li>
+
 <?php widget_sandbox_links() ?>
 
 			<li class="feed-links">
@@ -45,6 +47,7 @@
 					<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> Comments RSS Feed" rel="alternate" type="application/rss+xml"><?php _e('All comments', 'sandbox') ?></a></li>
 				</ul>
 			</li>
+
 			<li class="meta-links">
 				<h3><?php _e('Meta', 'sandbox') ?></h3>
 				<ul>
