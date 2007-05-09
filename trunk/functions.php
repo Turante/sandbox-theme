@@ -12,7 +12,7 @@ function sandbox_homelink() {
 
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	echo '<div id="navigation"><ul id="menu">';
+	echo '<div class="navigation"><ul id="menu">';
 	echo sandbox_homelink();
 	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0'); // Params for the page list in header.php
 	echo str_replace(array("\r", "\n", "\t"), '', $menu);
@@ -50,12 +50,12 @@ function sandbox_body_class( $print = true ) {
 	// Special classes for BODY element when a single post
 	if ( is_single() ) {
 		the_post();
-		$c[] = 'single post-' . get_the_ID();
+		$c[] = 'single postid-' . get_the_ID();
 		if ( isset($wp_query->post->post_date) )
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
 		foreach ( (array) get_the_category() as $cat )
 			$c[] = 's-category-' . $cat->category_nicename;
-			$c[] = 's-author-' . get_the_author_login();
+			$c[] = 's-author-' . $author->user_nicename;
 		rewind_posts();
 	}
 
@@ -63,7 +63,7 @@ function sandbox_body_class( $print = true ) {
 	else if ( is_author() ) {
 		$author = $wp_query->get_queried_object();
 		$c[] = 'author';
-		$c[] = 'author-' . get_the_author_login();
+		$c[] = 'author-' . $author->user_nicename;
 	}
 
 	// Category name classes for BODY on category archvies
@@ -76,8 +76,8 @@ function sandbox_body_class( $print = true ) {
 	// Page author for BODY on 'pages'
 	else if ( is_page() ) {
 		the_post();
-		$c[] = 'page page-' . get_the_ID();
-		$c[] = 'page-author-' . get_the_author_login();
+		$c[] = 'page pageid-' . get_the_ID();
+		$c[] = 'page-author-' . strtolower(get_the_author('login'));
 		rewind_posts();
 	}
 
@@ -121,7 +121,7 @@ function sandbox_post_class( $print = true ) {
 	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
 
 	// Author for the post queried
-	$c[] = 'author-' . get_the_author_login();
+	$c[] = 'author-' . strtolower(get_the_author('login'));
 
 	// Category for the post queried
 	foreach ( (array) get_the_category() as $cat )
