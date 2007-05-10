@@ -55,7 +55,7 @@ function sandbox_body_class( $print = true ) {
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
 		foreach ( (array) get_the_category() as $cat )
 			$c[] = 's-category-' . $cat->category_nicename;
-			$c[] = 's-author-' . $author->user_nicename;
+			$c[] = 's-author-' . strtolower(get_the_author('login'));
 		rewind_posts();
 	}
 
