@@ -40,7 +40,7 @@
 
 <?php else : ?>
 
-			<div id="post-0" class="post search noresults">
+			<div id="post-0" class="post noresults">
 				<h2 class="entry-title"><?php _e('Nothing Found', 'sandbox') ?></h2>
 				<div class="entry-content">
 					<p><?php _e('Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'sandbox') ?></p>
