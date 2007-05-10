@@ -49,8 +49,9 @@ function sandbox_body_class( $print = true ) {
 
 	// Special classes for BODY element when a single post
 	if ( is_single() ) {
+		$postID = $wp_query->post->ID;
 		the_post();
-		$c[] = 'single postid-' . get_the_ID();
+		$c[] = 'single postid-' . $postID;
 		if ( isset($wp_query->post->post_date) )
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
 		foreach ( (array) get_the_category() as $cat )
@@ -75,8 +76,9 @@ function sandbox_body_class( $print = true ) {
 
 	// Page author for BODY on 'pages'
 	else if ( is_page() ) {
+		$pageID = $wp_query->post->ID;
 		the_post();
-		$c[] = 'page pageid-' . get_the_ID();
+		$c[] = 'page pageid-' . $pageID;
 		$c[] = 'page-author-' . strtolower(get_the_author('login'));
 		rewind_posts();
 	}
