@@ -38,15 +38,7 @@
 					</ol>
 				</li>
 				<li><a href="#standards" title="Skip to Web standards">Web standards</a></li>
-				<li><a href="#microformats" title="Skip to Microformats">Microformats</a>
-					<ol>
-						<li><a href="#hatom" title="Skip to Microformats: hAtom">hAtom</a></li>
-						<li><a href="#hcard" title="Skip to Microformats: hCard">hCard</a></li>
-						<li><a href="#xfn" title="Skip to Microformats: XFN">XFN</a></li>
-						<li><a href="#xoxo" title="Skip to Microformats: XOXO">XOXO</a></li>
-						<li><a href="#rel-home" title="Skip to Microformats: rel-home">rel-home</a></li>
-					</ol>
-				</li>
+				<li><a href="#microformats" title="Skip to Microformats">Microformats</a></li>
 				<li><a href="#features" title="Skip to Other features">Other features</a>
 					<ol>
 						<li><a href="#comments" title="Skip to Other features: Comments on pages">Comments on pages</a></li>
@@ -146,6 +138,11 @@
 								<td>When a specific author archive page is displayed, where <i>[name]</i> is the author's login name, e.g., author-admin</td>
 							</tr>
 							<tr>
+								<td scope="row">author-paged-[n]</td>
+								<td><code>is_author()</code> &amp; <code>is_paged()</code></td>
+								<td>Displays the "paged" number of author archive, where <i>[n]</i> is the paginated number</td>
+							</tr>
+							<tr>
 								<td scope="row">category</td>
 								<td><code>is_category()</code></td>
 								<td>When a category archive page is displayed</td>
@@ -156,6 +153,11 @@
 								<td>For a specific category, where <i>[name]</i> is the category slug, e.g., category-useful-links</td>
 							</tr>
 							<tr>
+								<td scope="row">category-paged-[n]</td>
+								<td><code>is_category()</code> &amp; <code>is_paged()</code></td>
+								<td>Displays the "paged" number of category archive, where <i>[n]</i> is the paginated number</td>
+							</tr>
+							<tr>
 								<td scope="row">d01&ndash;31</td>
 								<td><code>gmdate('d')</code></td>
 								<td>The current day of when the page is displayed (Offset to GMT)</td>
@@ -164,6 +166,11 @@
 								<td scope="row">date</td>
 								<td><code>is_date()</code></td>
 								<td>When a date archive page is displayed, e.g., by month, by year</td>
+							</tr>
+							<tr>
+								<td scope="row">date-paged-[n]</td>
+								<td><code>is_date()</code> &amp; <code>is_paged()</code></td>
+								<td>Displays the "paged" number of date-based archive, where <i>[n]</i> is the paginated number</td>
 							</tr>
 							<tr>
 								<td scope="row">h00&ndash;24</td>
@@ -199,6 +206,11 @@
 								<td scope="row">page-author-[name]</td>
 								<td><code>is_page()</code></td>
 								<td>For a page by a specific author, where <i>[name]</i> is the user's login name, e.g., page-author-admin</td>
+							</tr>
+							<tr>
+								<td scope="row">page-paged-[n]</td>
+								<td><code>is_page()</code> &amp; <code>is_paged()</code></td>
+								<td>Displays the "paged" number of pages, where <i>[n]</i> is the paginated number</td>
 							</tr>
 							<tr>
 								<td scope="row">paged</td>
@@ -449,6 +461,11 @@
 								<td>For a comment by a specific registered user, where <i>[name]</i> is the user's login name, e.g., comment-author-john</td>
 							</tr>
 							<tr>
+								<td scope="row">t[n]</td>
+								<td>n/a</td>
+								<td>For counting trackbacks relative to the first, where <i>[n]</i> is the number, e.g., t1 for the first trackback, t2 for the second trackback, t3 for the third trackback, etc.</td>
+							</tr>
+							<tr>
 								<td scope="row">trackback</td>
 								<td>is_trackback()</td>
 								<td>When a comment is a trackback/pingback</td>
@@ -472,40 +489,22 @@
 		<li id="microformats">
 			<h2>Microformats</h2>
 			<p><a href="http://microformats.org/" title="Microformats.org" rel="external">Microformats</a> are markup that express semantic information in your blog, for example. People and machines similarly can extract information from webpages marked up in a microformat much like feed readers extract information from Atom or RSS syndicated feeds. Essentially it's about making content more accessible.</p>
-				<blockquote cite="http://en.wikipedia.org/wiki/Microformats" title="Microformat - Wikipedia">
-					<p>Adding a microformat to a regular HTML webpage allows machines to process HTML text and load data. This allows programs, such as web crawlers, to find information, such as contact information, events, or blog entries, on web pages.</p>
-					<p><cite title="Microformat - Wikipedia"><a href="http://en.wikipedia.org/wiki/Microformats" title="Microformat - Wikipedia" rel="external">Microformat - Wikipedia</a></cite></p>
-				</blockquote>
-			<p>Various microformats have been implemented in the Sandbox theme. In the most basic, practical terms, this means that certain standardized classes have been placed here and there in the theme files so that services, such as Technorati, can understand your blog.</p>
-			<p>The <a href="https://addons.mozilla.org/en-US/firefox/addon/4106" title="Operator for Firefox" rel="external">Operator extension</a> for Firefox, by <a href="http://www.kaply.com/weblog/" title="Michael Kaply" rel="external">Michael Kaply</a>, shows the power and usefulness of Microformats in action.</p>
+			<p>Microformats that have been implemented in the Sandbox theme include (less <a href="http://gmpg.org/xfn/" title="XHTML Friends Network" rel="external"><abbr title="XHTML Friends Network">XFN</abbr></a>, which is built into WordPress):</p>
+			<ul>
+				<li><a href="http://microformats.org/wiki/hatom" title="hAtom - Microformats" rel="external">hAtom</a>: For all blog posts and pages</li>
+				<li><a href="http://microformats.org/wiki/hcard" title="hCard - Microformats" rel="external">hCard</a>: For all post and comment authors</li>
+				<li><a href="http://microformats.org/wiki/rel-home" title="rel-home - Microformats" rel="external">rel="home"</a>: For marking links pointing to the blog home page</li>
+				<li><a href="http://microformats.org/wiki/xoxo" title="XOXO - Microformats" rel="external">XOXO</a>: For menu, blogroll, archive, and sidebar lists</li>
+			</ul>
+			<p>Microformats help the Sandbox be an especially <abbr title="Plain old semantic HTML">POSH</abbr> WordPress theme. POSH stands for "plain old semantic HTML." It is a term used to refer to best practices of semantic HTML development. The Microformats Wiki <a href="http://microformats.org/wiki/posh" title="POSH - Microformats" rel="external">POSH article</a> has a working copy of these best practices:</p>
 			<ol>
-				<li id="hatom">
-					<h3>hAtom</h3>
-					<p><a href="http://microformats.org/wiki/hatom" title="hAtom - Microformats Wiki" rel="external">HAtom</a> helps semantically structure a weblog. It allows your blog itself to become like a feed, where people and machines can view and access the content of your blog posts as if they were viewing an Atom or RSS feed. It provides a flexible basis for a standardized blog template structure.</p>
-					<p>While still officially a draft spec, hAtom has grown tremendously in popularity and currently there are many hAtom-enabled WordPress templates. Having an hAtom-compliant blog increases your visibility on search engines and especially on Technorati.</p>
-				</li><!-- #hatom -->
-
-				<li id="hcard">
-					<h3>hCard</h3>
-					<p><a href="http://microformats.org/wiki/hcard" title="hCard - Microformats Wiki" rel="external">HCard</a> is a way </p>
-				</li><!-- #hcard -->
-
-				<li id="xfn">
-					<h3>XFN</h3>
-					<p>Dyummy Tyext</p>
-				</li><!-- #xfn -->
-
-				<li id="xoxo">
-					<h3>XOXO</h3>
-					<p>Possibly the most basic microformat, XOXO is simply a way of indicating a list as an outline; per the <a href="http://microformats.org/wiki/xoxo" title="xoxo - Microformats">XOXO draft specification</a>, XOXO can be used to express outline and blogroll-like lists in an XML-like format.</p>
-					<p>It is as simple as adding <code>class="xoxo"</code> to any appropriate <code>ul</code> and <code>ol</code> elements to denote a blogroll, an informational list, or practically any other semantic list.</p>
-				</li><!-- #xoxo -->
-
-				<li id="rel-home">
-					<h3>rel-home</h3>
-					<p>Dyummy Tyext</p>
-				</li><!-- #rel-home -->
+				<li>Validate your markup, meaning it should <em>be</em> valid, not just validated</li>
+				<li>No use of tables for presentational purposes&mdash;only for tabular data</li>
+				<li>Correct any "<b>B</b>ed and <b>BR</b>eakfast" markup, ie, no presentational elements, like <code>b</code>, and no <code>&lt;br /&gt;</code></li>
+				<li>Correct any "Anorexic Anchors," eg, an <code>a</code> element with only a <code>name</code> attribute</li>
+				<li>Use well-formed, semantic class names (Sandbox does this for you)</li>
 			</ol>
+			<p>So the Sandbox can be highly POSH, but the semantic use of HTML elements is completely up to you.</p>
 		</li><!-- #microformats -->
 
 		<li id="features">
@@ -547,16 +546,7 @@
 			<blockquote title="How to use the GPL or LPGL" cite="http://www.gnu.org/licenses/gpl-howto.html">
 				<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 				<p>This program is distributed in the hope that it will be useful, but <strong>without any warranty</strong>; without even the implied warranty of <strong>merchantability</strong> or <strong>fitness for a particular purpose</strong>. See the GNU General Public License for more details.</p>
-				<p>You should have received a copy of the GNU General Public License along with this program; if not, write to the <span class="vcard">
-						<a class="url fn org" href="http://www.fsf.org/">Free Software Foundation, Inc</a>,
-						<span class="adr">
-							<span class="street-address">51 Franklin Street, Fifth Floor</span>,
-							<span class="locality">Boston</span>,
-							<span class="region">MA</span>
-							<span class="postal-code">02110-1301</span>,
-							<span class="country-name">USA</span>
-						</span>
-				</span>.</p>
+				<p>You should have received a copy of the GNU General Public License along with this program; if not, write to the <span class="vcard"><a class="url fn org" href="http://www.fsf.org/" rel="external">Free Software Foundation, Inc</a>, <span class="adr"><span class="street-address">51 Franklin Street, Fifth Floor</span>, <span class="locality">Boston</span>, <span class="region">MA</span> <span class="postal-code">02110-1301</span>, <span class="country-name">USA</span></span></span>.</p>
 			</blockquote>
 		</li><!-- #license -->
 
