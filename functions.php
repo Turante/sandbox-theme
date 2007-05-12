@@ -225,7 +225,7 @@ function widget_sandbox_search($args) {
 			<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 				<div>
 					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" />
-					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find &raquo;', 'sandbox') ?>" />
+					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
 				</div>
 			</form>
 		<?php echo $after_widget ?>
@@ -254,7 +254,7 @@ function widget_sandbox_meta($args) {
 function widget_sandbox_homelink($args) {
 	extract($args);
 	$options = get_option('widget_sandbox_homelink');
-	$title = empty($options['title']) ? __('&laquo; Home') : $options['title'];
+	$title = empty($options['title']) ? __('Home') : $options['title'];
 ?>
 <?php if ( !is_home() || is_paged() ) { ?>
 		<?php echo $before_widget; ?>

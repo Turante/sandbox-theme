@@ -5,14 +5,14 @@
 
 <?php the_post(); ?>
 			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php previous_post_link('&laquo; %link') ?></div>
-				<div class="nav-next"><?php next_post_link('%link &raquo;') ?></div>
+				<div class="nav-previous"><?php previous_post_link('%link') ?></div>
+				<div class="nav-next"><?php next_post_link('%link') ?></div>
 			</div>
 
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
 				<h2 class="entry-title"><?php the_title(); ?></h2>
 				<div class="entry-content">
-<?php the_content(''.__('Read More &raquo;', 'sandbox').''); ?>
+<?php the_content(''.__('Read More', 'sandbox').''); ?>
 
 <?php link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
 				</div>
@@ -43,8 +43,8 @@
 			</div><!-- .post -->
 
 			<div id="nav-below" class="navigation">
-				<div class="nav-previous"><?php previous_post_link('&laquo; %link') ?></div>
-				<div class="nav-next"><?php next_post_link('%link &raquo;') ?></div>
+				<div class="nav-previous"><?php previous_post_link('%link') ?></div>
+				<div class="nav-next"><?php next_post_link('%link') ?></div>
 			</div>
 
 <?php comments_template(); ?>
