@@ -7,8 +7,8 @@
 			<div class="archive-meta"><?php if ( !(''== category_description()) ) : echo apply_filters('archive_meta', category_description()); endif; ?></div>
 
 			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php next_posts_link(__('&laquo; Older posts', 'sandbox')) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__('Newer posts &raquo;', 'sandbox')) ?></div>
+				<div class="nav-previous"><?php next_posts_link(__('Older posts', 'sandbox')) ?></div>
+				<div class="nav-next"><?php previous_posts_link(__('Newer posts', 'sandbox')) ?></div>
 			</div>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -17,7 +17,7 @@
 				<h3 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf(__('Permalink to %s', 'sandbox'), get_the_title()) ?>" rel="bookmark"><?php the_title() ?></a></h3>
 				<div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><?php unset($previousday); printf(__('%1$s &#8211; %2$s', 'sandbox'), the_date('', '', '', false), get_the_time()) ?></abbr></div>
 				<div class="entry-content">
-<?php the_excerpt(''.__('Read More &raquo;', 'sandbox').'') ?>
+<?php the_excerpt(''.__('Read More', 'sandbox').'') ?>
 
 				</div>
 				<div class="entry-meta">
@@ -35,8 +35,8 @@
 <?php endwhile; ?>
 
 			<div id="nav-below" class="navigation">
-				<div class="nav-previous"><?php next_posts_link(__('&laquo; Older posts', 'sandbox')) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__('Newer posts &raquo;', 'sandbox')) ?></div>
+				<div class="nav-previous"><?php next_posts_link(__('Older posts', 'sandbox')) ?></div>
+				<div class="nav-next"><?php previous_posts_link(__('Newer posts', 'sandbox')) ?></div>
 			</div>
 
 		</div><!-- #content -->
