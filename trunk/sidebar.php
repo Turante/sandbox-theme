@@ -2,11 +2,16 @@
 		<ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
 
-<?php sandbox_homelink(); // Displays a link to the home when not there ?>
+			<?php sandbox_homelink(); // Displays a link to the home when not there ?>
 
-<?php wp_list_pages('title_li=<h3>'.__('Pages').'</h3>&sort_column=post_title' ) ?>
+			<li id="pages">
+				<h3><?php _e('Pages', 'sandbox') ?></h3>
+				<ul>
+<?php wp_list_pages('title_li=&sort_column=post_title' ) ?>
+				</ul>
+			</li>
 
-			<li class="category-links">
+			<li id="categories">
 				<h3><?php _e('Categories', 'sandbox'); ?></h3>
 				<ul>
 <?php wp_list_cats('sort_column=name&hierarchical=1') ?>
@@ -14,7 +19,7 @@
 				</ul>
 			</li>
 
-			<li class="archive-links">
+			<li id="archives">
 				<h3><?php _e('Archives', 'sandbox') ?></h3>
 				<ul>
 <?php wp_get_archives('type=monthly') ?>
@@ -28,7 +33,7 @@
 	<div id="secondary" class="sidebar">
 		<ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin  secondary sidebar widgets ?>
-			<li class="blog-search">
+			<li id="search">
 				<h3><label for="s"><?php _e('Search', 'sandbox') ?></label></h3>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
@@ -40,7 +45,7 @@
 
 <?php widget_sandbox_links() ?>
 
-			<li class="feed-links">
+			<li id="rss-links">
 				<h3><?php _e('RSS Feeds', 'sandbox') ?></h3>
 				<ul>
 					<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> Posts RSS Feed" rel="alternate" type="application/rss+xml"><?php _e('All posts', 'sandbox') ?></a></li>
@@ -48,7 +53,7 @@
 				</ul>
 			</li>
 
-			<li class="meta-links">
+			<li id="meta">
 				<h3><?php _e('Meta', 'sandbox') ?></h3>
 				<ul>
 					<?php wp_register() ?>

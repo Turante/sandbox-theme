@@ -1,30 +1,22 @@
 <?php
-// Creates a link to the 'home' page when elsewhere; works with WP 2.1.x static page options
+// Creates a link to the 'home' page when elsewhere
 function sandbox_homelink() {
-	if ( get_option('show_on_front') ) {
-		global $wp_db_version;
-		$sandbox_frontpage = get_option('show_on_front');
-		if ( !is_home() && !is_page($sandbox_front_page) || is_paged() ) { ?><li class="page_item_home"><a href="<?php bloginfo('home'); ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
-	} else {
-		if ( !is_home() || is_paged() ) { ?><li class="home-link"><a href="<?php bloginfo('home') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>"><?php _e('Home', 'sandbox') ?></a></li><?php }
-	}
+	if ( !is_home() || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
 }
 
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	echo '<div class="navigation"><ul id="menu">';
+	echo '<div id="menu"><ul class="xoxo">';
 	echo sandbox_homelink();
 	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0'); // Params for the page list in header.php
 	echo str_replace(array("\r", "\n", "\t"), '', $menu);
 	echo "</ul></div>\n";
 }
 
-// Checks for WP 2.1.x language_attributes() function; if 2.0.x, then 'en-us'
+// Checks for WP 2.1.x language_attributes() function
 function sandbox_blog_lang() {
 	if ( function_exists('language_attributes') ) {
 		return language_attributes();
-	} else {
-		echo ' xml:lang="en-us" lang="en-us"';
 	}
 }
 
@@ -119,7 +111,7 @@ function sandbox_body_class( $print = true ) {
 function sandbox_post_class( $print = true ) {
 	global $post, $sandbox_post_alt;
 
-	// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type
+	// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type and p[n]
 	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
 
 	// Author for the post queried
@@ -154,8 +146,15 @@ $sandbox_post_alt = 1;
 function sandbox_comment_class( $print = true ) {
 	global $comment, $post, $sandbox_comment_alt;
 
-	// Collects the comment type (comment, trackback), gives 'alt' classes to every other
-	$c = array($comment->comment_type, "c$sandbox_comment_alt");
+	// Collects the comment type (comment, trackback),
+	$c = array($comment->comment_type);
+
+	// Counts trackbacks (t[n]) or comments (c[n])
+	if ($comment->comment_type == 'trackback') {
+		$c[] = "t$sandbox_comment_alt";
+	} else {
+		$c[] = "c$sandbox_comment_alt";
+	}
 
 	// If the comment author has an id (registered), then print the log in name
 	if ( $comment->user_id > 0 ) {
@@ -173,11 +172,6 @@ function sandbox_comment_class( $print = true ) {
 	sandbox_date_classes(mysql2date('U', $comment->comment_date), $c, 'c-');
 	if ( ++$sandbox_comment_alt % 2 )
 		$c[] = 'alt';
-
-	// For trackbacks only, thank you
-	if ( is_trackback() ) {
-		$c[] = 'trackback';
-	}
 
 	// Separates classes with a single space, collates classes for comment LI
 	$c = join(' ', apply_filters('comment_class', $c));
@@ -225,7 +219,7 @@ function widget_sandbox_search($args) {
 			<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 				<div>
 					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" />
-					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
+					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find &raquo;', 'sandbox') ?>" />
 				</div>
 			</form>
 		<?php echo $after_widget ?>
@@ -254,31 +248,10 @@ function widget_sandbox_meta($args) {
 function widget_sandbox_homelink($args) {
 	extract($args);
 	$options = get_option('widget_sandbox_homelink');
-	$title = empty($options['title']) ? __('Home') : $options['title'];
 ?>
 <?php if ( !is_home() || is_paged() ) { ?>
-		<?php echo $before_widget; ?>
-			<?php echo $before_title ?><a href="<?php bloginfo('home') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>"><?php echo $title ?></a><?php echo $after_title ?>
-		<?php echo $after_widget; ?>
+			<?php sandbox_homelink(); ?>
 <?php } ?>
-<?php
-}
-
-// Widget: Home link; element controls for customizing text within Widget plugin
-function widget_sandbox_homelink_control() {
-	$options = $newoptions = get_option('widget_sandbox_homelink');
-	if ( $_POST["homelink-submit"] ) {
-		$newoptions['title'] = strip_tags(stripslashes($_POST["homelink-title"]));
-	}
-	if ( $options != $newoptions ) {
-		$options = $newoptions;
-		update_option('widget_sandbox_homelink', $options);
-	}
-	$title = htmlspecialchars($options['title'], ENT_QUOTES);
-?>
-		<p style="text-align:left;"><?php _e('Adds a link to the home page on every page <em>except</em> the home.', 'sandbox'); ?></p>
-		<p><label for="homelink-title"><?php _e('Link Text:'); ?> <input style="width: 175px;" id="homelink-title" name="homelink-title" type="text" value="<?php echo $title; ?>" /></label></p>
-		<input type="hidden" id="homelink-submit" name="homelink-submit" value="1" />
 <?php
 }
 
@@ -383,7 +356,6 @@ function sandbox_widgets_init() {
 	register_sidebar_widget(__('Links', 'sandbox'), 'widget_sandbox_links', null, 'links');
 	unregister_widget_control('links');
 	register_sidebar_widget(array('Home Link', 'widgets'), 'widget_sandbox_homelink');
-	register_widget_control(array('Home Link', 'widgets'), 'widget_sandbox_homelink_control', 300, 125);
 	register_sidebar_widget(array('RSS Links', 'widgets'), 'widget_sandbox_rsslinks');
 	register_widget_control(array('RSS Links', 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
 }
