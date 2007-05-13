@@ -1,7 +1,15 @@
 <?php
-// Creates a link to the 'home' page when elsewhere
+// Creates a link to the 'home' page when elsewhere; credit to Adam , http://sunburntkamel.archgfx.net/
 function sandbox_homelink() {
-	if ( !is_home() || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
+	global $wp_db_version;
+	$sandbox_frontpage = get_option('show_on_front');
+	$sandbox_is_front = get_option('page_on_front');
+
+	if ( $sandbox_frontpage == 'page' ) {
+		if ( !is_page($sandbox_is_front) || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>/" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
+	} else {
+		if ( !is_home() || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
+	}
 }
 
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
@@ -87,7 +95,7 @@ function sandbox_body_class( $print = true ) {
 		} else if ( is_page() ) {
 			$c[] = 'page-paged-'.$page.'';
 		} else if ( is_category() ) {
-			$c[] = 'cat-paged-'.$page.'';
+			$c[] = 'category-paged-'.$page.'';
 		} else if ( is_date() ) {
 			$c[] = 'date-paged-'.$page.'';
 		} else if ( is_author() ) {
@@ -161,7 +169,7 @@ function sandbox_comment_class( $print = true ) {
 		$user = get_userdata($comment->user_id);
 
 		// For all registered users, 'byuser'; to specificy the registered user, 'commentauthor+[log in name]'
-		$c[] = "byuser comment-author-$user->user_login";
+		$c[] = "byuser comment-author-".strtolower($user->user_login);
 
 		// For comment authors who are the author of the post
 		if ( $comment->user_id === $post->post_author )
