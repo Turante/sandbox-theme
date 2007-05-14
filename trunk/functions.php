@@ -8,13 +8,13 @@ function sandbox_homelink() {
 	if ( $sandbox_frontpage == 'page' ) {
 		if ( !is_page($sandbox_is_front) || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>/" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
 	} else {
-		if ( !is_home() || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
+		if ( !is_home() || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>/" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
 	}
 }
 
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	echo '<div id="menu"><ul class="xoxo">';
+	echo '<div id="menu"><ul>';
 	echo sandbox_homelink();
 	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0'); // Params for the page list in header.php
 	echo str_replace(array("\r", "\n", "\t"), '', $menu);
@@ -256,11 +256,7 @@ function widget_sandbox_meta($args) {
 function widget_sandbox_homelink($args) {
 	extract($args);
 	$options = get_option('widget_sandbox_homelink');
-?>
-<?php if ( !is_home() || is_paged() ) { ?>
-			<?php sandbox_homelink(); ?>
-<?php } ?>
-<?php
+	sandbox_homelink(); // Returns the home link function from very beginning
 }
 
 // Widget: RSS links; to match the Sandbox style
