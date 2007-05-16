@@ -36,7 +36,7 @@ foreach ( $comments as $comment )
 							<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'sandbox'),
 										get_comment_date(),
 										get_comment_time(),
-										'#comment-' . get_comment_ID() ); edit_comment_link(__('Edit', 'sandbox'), ' <span class="edit-link">', '</span>'); ?></div>
+										'#comment-' . get_comment_ID() ); edit_comment_link(__('Edit', 'sandbox'), ' <span class="edit-link"><span class="meta-sep">|</span> ', '</span>'); ?></div>
 							<?php comment_text() ?>
 						</li>
 <?php endif; /* if ( get_comment_type() == "comment" ) */ ?>
@@ -92,12 +92,12 @@ foreach ( $comments as $comment )
 
 <?php else : ?>
 
-							<p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'sandbox') ?> <?php if ($req) _e('Required fields are marked <span class="req-field">*</span>', 'sandbox') ?></p>
+							<p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'sandbox') ?> <?php if ($req) _e('Required fields are marked <span class="required">*</span>', 'sandbox') ?></p>
 
-							<div class="form-label"><label for="author"><?php _e('Name', 'sandbox') ?></label> <?php if ($req) _e('<span class="req-field">*</span>', 'sandbox') ?></div>
+							<div class="form-label"><label for="author"><?php _e('Name', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
 							<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
 
-							<div class="form-label"><label for="email"><?php _e('Email', 'sandbox') ?></label> <?php if ($req) _e('<span class="req-field">*</span>', 'sandbox') ?></div>
+							<div class="form-label"><label for="email"><?php _e('Email', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
 							<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
 
 							<div class="form-label"><label for="url"><?php _e('Website', 'sandbox') ?></label></div>
