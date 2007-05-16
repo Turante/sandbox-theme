@@ -15,7 +15,7 @@
 	body div#readme div#footer{margin:3em auto 1em;text-align:center;}
 	body div#readme div#footer p{background:#ffd;color:#666;display:inline;padding:0.2em 0.5em;}
 	body div#readme div#header{margin:0 auto;text-align:center;}
-	body div#readme div#header div.readme-version{font-size:0.9em;margin:0 0 0.5em;text-transform:uppercase;}
+	body div#readme div#header div.readme-version{font-size:0.9em;margin:0 0 0.5em;text-transform:uppercase;letter-spacing:0.1em;}
 	body h1{font-size:3.2em;}
 	body h1,body h2,body h3{font-family:garamond,georgia,times,serif;font-weight:400;}
 	body h2{font-size:2em;margin-top:3em;}
@@ -328,7 +328,7 @@
 									<th colspan="3" scope="colgroup">CSS example</th>
 								</tr>
 								<tr>
-									<td colspan="3" scope="row" abbr="CSS example"><code>div.category-news .entry-title { background: url(news.png); }</code></td>
+									<td colspan="3" scope="row" abbr="CSS example"><code>div.category-news .entry-title { background: url('images/news.png'); }</code></td>
 								</tr>
 							</tfoot>
 							<tbody>
@@ -544,7 +544,7 @@
 				<ol>
 					<li id="comments">
 						<h3>Comments on pages</h3>
-						<p>Comments are not displayed on pages by default, but are displayed on posts, per the current convention. You can enable comments on a per page basis by adding a custom key/value with the text "comments."</p>
+						<p>Comments are not displayed on pages by default, but are displayed on posts, per the current convention. You can enable comments on a per page basis by adding a custom key/value with only the text <code>comments</code>.</p>
 						<p>To enable comments on a page:</p>
 						<ol>
 							<li>In the <i>Write &rsaquo; Page</i> menu, expand the <a href="http://codex.wordpress.org/Using_Custom_Fields" title="Custom Fields - WordPress Codex" rel="external">Custom Fields</a> box</li>
