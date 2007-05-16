@@ -20,11 +20,6 @@ To use the Kubrick design with the Sandbox, simply replace everything after the 
 
 	@import url('sandbox-kubrick/style.css');
 
-Or you may simply replace the default style.css file with /sandbox-kubrick/style.css.
-
-You might want to backup the default style.css file, though. But that's up to you. 
-
-
 
 ==LICENSE==
 
