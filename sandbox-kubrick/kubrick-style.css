@@ -1,10 +1,3 @@
-/*
-SANDBOX DESIGN: Kubrick
-VERSION: 1.2
-DESCRIPTION: The default WordPress theme; based on the famous Kubrick, http://binarybonsai.com/wordpress/kubrick/
-DESIGNER: Andy Skelton
-DESIGNER URI: http://andy.wordpress.com/
-*/
 body {
 	background: #d5d6d7 url('../../default/images/kubrickbgcolor.jpg');
 	color: #333;
@@ -461,3 +454,7 @@ div#menu ul ul, div.skip-link, body.single div.sidebar, hr {
 #linkcats>li:before {
 	content: "";
 }
+/*
+KUBRICK v1.1 for SANDBOX
+by ANDY SKELTON, http://andy.wordpress.com/
+*/

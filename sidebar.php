@@ -57,6 +57,7 @@
 				<h3><?php _e('Meta', 'sandbox') ?></h3>
 				<ul>
 					<?php wp_register() ?>
+
 					<li><?php wp_loginout() ?></li>
 					<?php wp_meta() ?>
 
