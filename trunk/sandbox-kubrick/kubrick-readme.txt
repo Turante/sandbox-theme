@@ -1,11 +1,11 @@
-=KUBRICK=
+= KUBRICK =
 
 Version 1.1
 Updated 17 May 2007
 by ANDY SKELTON, http://andy.wordpress.com/
 
 
-==ABOUT==
+== ABOUT ==
 
 Pulled from http://andy.wordpress.com/2006/07/20/generated-semantic-classes-2/ by SCOTT on ANDY's behalf. ;-)
 
@@ -14,16 +14,16 @@ Although I do consider myself style-blind, I did tackle the problem of creating 
 This theme is a modification of the default WordPress theme, also known as Kubrick. Original design by Michael Heilemann, http://binarybonsai.com/wordpress/kubrick/.
 
 
-==USING THIS DESIGN==
+== USING THIS DESIGN ==
 
 To use the Kubrick design with the Sandbox, simply replace everything after the commented-out header in the root style.css file with
 
-	@import url('sandbox-kubrick/style.css');
+	@import url('sandbox-kubrick/kubrick-style.css');
 
 
-==LICENSE==
+== LICENSE ==
 
-The Kubrick Skin for Sandbox, by Andy Skelton, is licensed under the GNU General Public License:
+The Kubrick design for Sandbox, by Andy Skelton, is licensed under the GNU General Public License:
 
     This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 

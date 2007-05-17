@@ -10,7 +10,7 @@
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('Comments RSS feed', 'sandbox'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<link rel="home" href="<?php echo get_settings('home') ?>/" title="<?php bloginfo('name') ?>" />
-<?php wp_head() ?>
+<?php wp_head() // Includes Atom API link for WP 2.2+ ?>
 
 </head>
 

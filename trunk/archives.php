@@ -15,17 +15,14 @@ Template Name: Archives Page
 				<div class="entry-content">
 <?php the_content(); ?>
 
-					<ul class="first-column xoxo">
-						<li>
+					<ul id="archives-page" class="xoxo">
+						<li id="category-archives" class="content-column">
 							<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
 							<ul>
 								<?php wp_list_cats('sort_column=name&optioncount=1&feed=RSS') ?> 
 							</ul>
 						</li>
-					</ul>
-					
-					<ul class="second-column xoxo">
-						<li>
+						<li id="monthly-archives" class="content-column">
 							<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
 							<ul>
 								<?php wp_get_archives('type=monthly&show_post_count=1') ?>
@@ -42,5 +39,5 @@ Template Name: Archives Page
 		</div><!-- #content -->
 	</div><!-- #container -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_sidebar() ?>
+<?php get_footer() ?>

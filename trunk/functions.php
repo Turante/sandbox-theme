@@ -23,9 +23,15 @@ function sandbox_globalnav() {
 
 // Checks for WP 2.1.x language_attributes() function
 function sandbox_blog_lang() {
-	if ( function_exists('language_attributes') ) {
+	if ( function_exists('language_attributes') )
 		return language_attributes();
-	}
+}
+
+// Adds Atom API discovery LINK to wp_head() when running WP 2.2+
+function sandbox_head() {
+	global $wp_version;
+	if ( version_compare($wp_version, '2.1.10', '>') )
+		echo "\t"; '<link rel="introspection" type="application/atomserv+xml" title="' .__("Atom API"). '" href="' . get_bloginfo('url') . '/wp-app.php" />'; "\n";
 }
 
 // Generates semantic classes for BODY element
@@ -227,7 +233,7 @@ function widget_sandbox_search($args) {
 			<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 				<div>
 					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" />
-					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find &raquo;', 'sandbox') ?>" />
+					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
 				</div>
 			</form>
 		<?php echo $after_widget ?>
@@ -366,6 +372,7 @@ function sandbox_widgets_init() {
 
 // Runs our code at the end to check that everything needed has loaded
 add_action('init', 'sandbox_widgets_init');
+add_action('wp_head', 'sandbox_head');
 
 // Adds filters so that things run smoothly
 add_filter('archive_meta', 'wptexturize');
