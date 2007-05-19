@@ -118,9 +118,6 @@ function sandbox_body_class( $print = true ) {
 	return $print ? print($c) : $c;
 }
 
-// Generates page numbering classes
-
-
 // Generates semantic classes for each post DIV element
 function sandbox_post_class( $print = true ) {
 	global $post, $sandbox_post_alt;
