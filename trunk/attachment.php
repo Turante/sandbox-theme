@@ -14,7 +14,7 @@
 				<div class="entry-content">
 					<p class="<?php echo $classname ?>"><?php echo $attachment_link ?></p>
 					<p class="<?php echo $classname ?>-name"><?php echo basename($post->guid) ?></p>
-<?php the_content(''.__('Read More &raquo;', 'sandbox').''); ?>
+<?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'sandbox').''); ?>
 
 <?php link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
 
