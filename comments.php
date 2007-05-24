@@ -59,8 +59,8 @@ foreach ( $comments as $comment )
 						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
 							<div class="comment-meta"><?php printf(__('By %1$s on %2$s at %3$s', 'sandbox'),
 									get_comment_author_link(),
-									get_comment_date('d M Y'),
-									get_comment_time('g:i a') ); edit_comment_link(__('Edit', 'sandbox'), ' <span class="edit-link">', '</span>'); ?></div>
+									get_comment_date(),
+									get_comment_time() ); edit_comment_link(__('Edit', 'sandbox'), ' <span class="edit-link">', '</span>'); ?></div>
 <?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'sandbox') ?>
 							<?php comment_text() ?>
 						</li>
