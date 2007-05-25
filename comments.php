@@ -1,4 +1,4 @@
-			<div class="comments">
+			<div id="comments">
 <?php
 	$req = get_settings('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-)
 	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
@@ -24,7 +24,7 @@ foreach ( $comments as $comment )
 <?php if ( $comment_count ) : ?>
 <?php $sandbox_comment_alt = 0 ?>
 
-				<div id="comments" class="commentlist">
+				<div id="comments-list" class="comments">
 					<h3><?php printf(__($comment_count > 1 ? '<span>%d</span> Comments' : '<span>One</span> Comment', 'sandbox'), $comment_count) ?></h3>
 
 					<ol class="xoxo">
@@ -43,13 +43,13 @@ foreach ( $comments as $comment )
 <?php endforeach; ?>
 
 					</ol>
-				</div><!-- #comments .commentlist -->
+				</div><!-- #comments-list .comments -->
 
 <?php endif; /* if ( $comment_count ) */ ?>
 <?php if ( $ping_count ) : ?>
 <?php $sandbox_comment_alt = 0 ?>
 
-				<div id="trackbacks" class="commentlist">
+				<div id="trackbacks-list" class="comments">
 					<h3><?php printf(__($ping_count > 1 ? '<span>%d</span> Trackbacks' : '<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h3>
 
 					<ol class="xoxo">
@@ -68,7 +68,7 @@ foreach ( $comments as $comment )
 <?php endforeach; ?>
 
 					</ol>
-				</div><!-- #trackbacks .commentlist -->
+				</div><!-- #trackbacks-list .comments -->
 
 <?php endif /* if ( $ping_count ) */ ?>
 <?php endif /* if ( $comments ) */ ?>
@@ -119,4 +119,4 @@ foreach ( $comments as $comment )
 				</div><!-- #respond -->
 <?php endif /* if ( 'open' == $post->comment_status ) */ ?>
 
-			</div><!-- .comments -->
+			</div><!-- #comments -->
