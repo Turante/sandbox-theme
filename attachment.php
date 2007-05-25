@@ -5,7 +5,7 @@
 
 <?php the_post() ?>
 
-<?php $attachment_link = get_the_attachment_link($post->ID, true, array(450, 800)); // Finds attachment, sizes it ?>
+<?php $attachment_link = get_the_attachment_link($post->ID, true, array(600, 800)); // Finds attachment, sizes it ?>
 <?php $_post = &get_post($post->ID); $classname = ($_post->iconsize[0] <= 128 ? 'small' : '') . 'attachment'; // If it's small, give it 'small' in its class name ?>
 
 			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
