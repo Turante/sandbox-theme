@@ -197,7 +197,7 @@ function sandbox_date_classes($t, &$c, $p = '') {
 	$c[] = $p . 'y' . gmdate('Y', $t); // Year
 	$c[] = $p . 'm' . gmdate('m', $t); // Month
 	$c[] = $p . 'd' . gmdate('d', $t); // Day
-	$c[] = $p . 'h' . gmdate('h', $t); // Hour
+	$c[] = $p . 'h' . gmdate('H', $t); // Hour
 }
 
 // For category lists on category archives, returns other categorys except the current one (redundant)
