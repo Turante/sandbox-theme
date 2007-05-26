@@ -27,7 +27,7 @@ foreach ( $comments as $comment )
 				<div id="comments-list" class="comments">
 					<h3><?php printf(__($comment_count > 1 ? '<span>%d</span> Comments' : '<span>One</span> Comment', 'sandbox'), $comment_count) ?></h3>
 
-					<ol class="xoxo">
+					<ol>
 <?php foreach ($comments as $comment) : ?>
 <?php if ( get_comment_type() == "comment" ) : ?>
 						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
@@ -52,12 +52,12 @@ foreach ( $comments as $comment )
 				<div id="trackbacks-list" class="comments">
 					<h3><?php printf(__($ping_count > 1 ? '<span>%d</span> Trackbacks' : '<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h3>
 
-					<ol class="xoxo">
+					<ol>
 <?php foreach ( $comments as $comment ) : ?>
 <?php if ( get_comment_type() != "comment" ) : ?>
 
 						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
-							<div class="comment-meta"><?php printf(__('By %1$s on %2$s at %3$s', 'sandbox'),
+							<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'sandbox'),
 									get_comment_author_link(),
 									get_comment_date(),
 									get_comment_time() ); edit_comment_link(__('Edit', 'sandbox'), ' <span class="edit-link">', '</span>'); ?></div>

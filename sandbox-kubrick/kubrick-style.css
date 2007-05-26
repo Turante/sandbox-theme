@@ -37,7 +37,7 @@ div#menu ul li a:hover,div#menu ul li.current_page_item a,div#menu ul li.current
 	color:#06c;
 }
 div#wrapper {
-	background: #dfdfff url('../../default/images/kubrickbg.jpg') repeat-y top left;
+	background: #dfdfff url('../../default/images/kubrickbg-ltr.jpg') repeat-y top left;
 	margin: 20px auto;
 	padding: 0;
 	text-align: left;
@@ -89,7 +89,7 @@ body.single .entry-meta {
 body.archive .entry-meta {
 	text-align: left;
 }
-div.commentlist ol li.alt, body.single .entry-meta {
+div.comments ol li.alt, body.single .entry-meta {
 	background: #f8f8f8;
 	border-bottom: 1px solid #ddd;
 	border-top: 1px solid #ddd;
@@ -168,29 +168,36 @@ h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, .sidebar
 div.entry-content p a:visited {
 	color: #b85b5a;
 }
-div.commentlist ol li, form#commentform input, form#commentform textarea {
+div.comments ol li, form#commentform input, form#commentform textarea {
 	font: 0.9em "lucida grande", verdana, arial, sans-serif;
 }
-div.commentlist ol .comment-author {
+div.comments ol .comment-author {
 	font-weight: bold;
 	font-size:110%;
 }
-div.commentlist ol li, div.commentlist ol li.alt {
+div#trackbacks-list ol .comment-author {
+	font-weight: normal;
+	font-size:100%;
+}
+div#trackbacks-list ol .comment-author a{
+	font-weight:bold;
+}
+div.comments ol li, div.comments-list ol li.alt {
 	list-style: none;
 	margin: 0;
 	padding: 15px 10px 6px;
 }
-div.commentlist ol li.bypostauthor {
+div.comments ol li.bypostauthor {
 	background:#dbe8f2;
 	margin: 0;
 	padding: 15px 10px 6px;
 }
-div.commentlist ol cite, div.commentlist ol cite a {
+div.comments ol cite, div.comments ol cite a {
 	font-weight: bold;
 	font-style: normal;
 	font-size: 1.1em;
 }
-div.commentlist ol p {
+div.comments ol p {
 	line-height: 1.5em;
 	margin: 10px 5px 10px 0;
 	text-transform: none;
@@ -284,7 +291,7 @@ div.protected .entry-content,.nopassword {
 	font-size:0.9em;
 	text-align:center;
 }
-div.commentlist h3 {
+div.comments h3 {
 	margin: 40px auto 20px;
 	padding: 0;
 }
@@ -377,7 +384,7 @@ form#commentform #submit {
 	float: right;
 	margin: 5px 0 0 0;
 }
-div.commentlist ol {
+div.comments ol {
 	padding: 0;
 	text-align: justify;
 }

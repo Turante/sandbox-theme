@@ -31,13 +31,13 @@
 						wp_specialchars(get_the_title(), 'double'),
 						comments_rss() ) ?>
 
-<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // COMMENTS & PINGS OPEN ?>
+<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // Comments and trackbacks open ?>
 					<?php printf(__('<a href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox'), get_trackback_url()) ?>
-<?php elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // PINGS ONLY OPEN ?>
+<?php elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // Only trackbacks open ?>
 					<?php printf(__('Comments are closed, but you can leave a trackback: <a href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox'), get_trackback_url()) ?>
-<?php elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // COMMENTS OPEN ?>
+<?php elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // Only comments open ?>
 					<?php printf(__('Trackbacks are closed, but you can <a href="#respond" title="Post a comment">post a comment</a>.', 'sandbox')) ?>
-<?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // NOTHING OPEN ?>
+<?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // Comments and trackbacks closed ?>
 					<?php _e('Both comments and trackbacks are currently closed.') ?>
 <?php endif; ?>
 <?php edit_post_link(__('Edit', 'sandbox'), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>"); ?>

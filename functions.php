@@ -1,21 +1,7 @@
 <?php
-// Creates a link to the 'home' page when elsewhere; credit to Adam , http://sunburntkamel.archgfx.net/
-function sandbox_homelink() {
-	global $wp_db_version;
-	$sandbox_frontpage = get_option('show_on_front');
-	$sandbox_is_front = get_option('page_on_front');
-
-	if ( $sandbox_frontpage == 'page' ) {
-		if ( !is_page($sandbox_is_front) || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>/" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
-	} else {
-		if ( !is_home() || is_paged() ) { ?><li class="page_item_home home-link"><a href="<?php bloginfo('home'); ?>/" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?>" rel="home"><?php _e('Home', 'sandbox') ?></a></li><?php }
-	}
-}
-
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
 	echo '<div id="menu"><ul>';
-	echo sandbox_homelink();
 	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0'); // Params for the page list in header.php
 	echo str_replace(array("\r", "\n", "\t"), '', $menu);
 	echo "</ul></div>\n";
@@ -25,13 +11,6 @@ function sandbox_globalnav() {
 function sandbox_blog_lang() {
 	if ( function_exists('language_attributes') )
 		return language_attributes();
-}
-
-// Adds Atom API discovery LINK to wp_head() when running WP 2.2+
-function sandbox_head() {
-	global $wp_version;
-	if ( version_compare($wp_version, '2.1.10', '>') )
-		echo "\t"; '<link rel="introspection" type="application/atomserv+xml" title="' .__("Atom API"). '" href="' . get_bloginfo('url') . '/wp-app.php" />'; "\n";
 }
 
 // Generates semantic classes for BODY element
@@ -229,8 +208,8 @@ function widget_sandbox_search($args) {
 			<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
 			<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 				<div>
-					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" />
-					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
+					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" tabindex="1" />
+					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
 				</div>
 			</form>
 		<?php echo $after_widget ?>
@@ -253,13 +232,6 @@ function widget_sandbox_meta($args) {
 			</ul>
 		<?php echo $after_widget; ?>
 <?php
-}
-
-// Widget: Home link; to match the Sandbox style
-function widget_sandbox_homelink($args) {
-	extract($args);
-	$options = get_option('widget_sandbox_homelink');
-	sandbox_homelink(); // Returns the home link function from very beginning
 }
 
 // Widget: RSS links; to match the Sandbox style
@@ -362,14 +334,12 @@ function sandbox_widgets_init() {
 	unregister_widget_control('meta');
 	register_sidebar_widget(__('Links', 'sandbox'), 'widget_sandbox_links', null, 'links');
 	unregister_widget_control('links');
-	register_sidebar_widget(array('Home Link', 'widgets'), 'widget_sandbox_homelink');
 	register_sidebar_widget(array('RSS Links', 'widgets'), 'widget_sandbox_rsslinks');
 	register_widget_control(array('RSS Links', 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
 }
 
 // Runs our code at the end to check that everything needed has loaded
 add_action('init', 'sandbox_widgets_init');
-add_action('wp_head', 'sandbox_head');
 
 // Adds filters so that things run smoothly
 add_filter('archive_meta', 'wptexturize');
