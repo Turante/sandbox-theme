@@ -253,12 +253,12 @@ font-size:1.3em;
 margin:0;
 }
 
-body.single div.commentlist h3,body.page div.commentlist h3 {
+body.single div.comments h3,body.page div.comments h3 {
 font-size:1.4em;
 margin:3em 0 1em;
 }
 
-body div.commentlist h3 span {
+body div.comments h3 span {
 font-size:2em;
 }
 
@@ -282,29 +282,29 @@ font-size:1em;
 margin:1.5em 0 -1.1em;
 }
 
-ol.commentlist li {
+div.comments ol li {
 font-size:1.2em;
 margin:0 0 2em;
 }
 
-ol.commentlist li div,ol.commentlist li p {
+div.comments ol li div,div.comments ol li p {
 font-size:0.8em;
 }
 
-ol.commentlist div.comment-author {
+div.comments ol li div.comment-author {
 font:0.8em/130% arial, helvetica, sans-serif;
 margin:0 0 0.2em;
 }
 
-ol.commentlist li div.comment-meta {
+div.comments ol li div.comment-meta {
 font:0.5em/130% verdana, geneva, sans-serif;
 }
 
-ol.commentlist li p {
+div.comments ol li p {
 margin:0.5em 0;
 }
 
-ol.commentlist li.bypostauthor {
+div.comments ol li.bypostauthor {
 border-left:10px solid #eeefef;
 padding:0 0 0 0.5em;
 }

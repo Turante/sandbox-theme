@@ -2,8 +2,6 @@
 		<ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
 
-			<?php sandbox_homelink(); // Displays a link to the home when not there ?>
-
 			<li id="pages">
 				<h3><?php _e('Pages', 'sandbox') ?></h3>
 				<ul>
@@ -37,8 +35,8 @@
 				<h3><label for="s"><?php _e('Search', 'sandbox') ?></label></h3>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" />
-						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
+						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" tabindex="1" />
+						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
 					</div>
 				</form>
 			</li>
