@@ -325,8 +325,11 @@ html>body div.entry-content ul {
 html>body div.entry-content li {
 	margin: 7px 0 8px 10px;
 }
-div.entry-content ul li:before, div.sidebar ul ul li:before {
+div.entry-content ul li:before, div.sidebar ul ul li:before,div.entry-content ul#archives-page li ul li:before,div.entry-content ul#links-page li ul li:before {
 	content: "\00BB \0020";
+}
+div.entry-content ul#archives-page li:before,div.entry-content ul#links-page li:before {
+	content:"";
 }
 div.entry-content ol {
 	margin: 0;
