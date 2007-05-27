@@ -347,5 +347,5 @@ add_filter('archive_meta', 'convert_smilies');
 add_filter('archive_meta', 'convert_chars');
 add_filter('archive_meta', 'wpautop');
 
-// Remember: a Sandbox is for play. Enjoy.
+// Remember: a Sandbox is for play.
 ?>
