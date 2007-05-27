@@ -21,6 +21,13 @@ To use the Kubrick design with the Sandbox, simply replace everything after the 
 	@import url('sandbox-kubrick/kubrick-style.css');
 
 
+== IMPORTANT FOR WORDPRESS 2.0.X USERS ==
+
+If you intend to use this design with the Sandbox running WordPress 2.0.x, please note you will need to update the name of an image in the design CSS: kubrickbg-ltr.jpg => kubrickbg.jpg.
+
+This is because of language support introduced in WordPress 2.2 and left-to-right vs. right-to-left variables.
+
+
 == LICENSE ==
 
 The Kubrick design for Sandbox, by Andy Skelton, is licensed under the GNU General Public License:

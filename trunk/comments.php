@@ -36,7 +36,7 @@ foreach ( $comments as $comment )
 										get_comment_date(),
 										get_comment_time(),
 										'#comment-' . get_comment_ID() );
-										edit_comment_link(__('Edit', 'sandbox'), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
+										edit_comment_link(__('Edit', 'sandbox'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
 <?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'sandbox') ?>
 							<?php comment_text() ?>
 						</li>
@@ -62,7 +62,7 @@ foreach ( $comments as $comment )
 									get_comment_author_link(),
 									get_comment_date(),
 									get_comment_time() );
-									edit_comment_link(__('Edit', 'sandbox'), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
+									edit_comment_link(__('Edit', 'sandbox'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
 <?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'sandbox') ?>
 							<?php comment_text() ?>
 						</li>
