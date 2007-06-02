@@ -1,4 +1,4 @@
-#summary Below is an example CSS file with empty selectors
+#summary Below is an example CSS file with empty selectors for INDEX.PHP
 #labels Featured,Phase-Support
 
 ==Selector Rich, Descriptor Empty==
