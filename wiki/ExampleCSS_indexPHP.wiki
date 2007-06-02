@@ -1,4 +1,5 @@
 #summary An selector rich, descriptor empty example for index.php
+#labels Featured,Phase-Support
 
 = About this CSS =
 
