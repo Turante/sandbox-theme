@@ -1,0 +1,85 @@
+#summary An selector rich, descriptor empty example for index.php
+
+= About this CSS =
+
+The CSS below is to be used as a reference tool for designing for the Sandbox. It is not complete as the Sandbox creates a great number of dynamic classes, so this list is purposely incomplete. But it should be useful as a reference.
+
+== Based on *index.php* ==
+
+{{{
+/*	SAMPLE OF SELECTORS FOR HOME, eg, INDEX.PHP VIEWS */
+body {}	body.home {} /* IMPORTANT, DYNAMIC CLASSES HERE */
+	div#wrapper {}	.hfeed {}
+		div#header {}
+			h1#blog-title {}
+			div#blog-description {}
+		div#access {}
+			div.skip-link{}
+				div.skip-link a{}
+			div#menu {}
+				div#menu ul {}
+					div#menu ul li {}
+		div#container {}
+			div#content {}
+				div#nav-above {}	.navigation {}
+					div.nav-previous {}
+						div.nav-previous a {}
+							div.nav-previous a span.meta-nav {}
+					div.nav-next {}
+						div.nav-next a {}
+							div.nav-next a span.meta-nav {}
+				div.hentry	/* IMPORTANT, DYNAMIC CLASSES HERE */
+					h2.entry-title {}
+					div.entry-date {}
+						abbr.published {}
+					div.entry-content {}
+						a.more-link {}
+						div.page-link {}
+					div.entry-meta {}
+						span.author {}
+						span.meta-sep {}
+						span.cat-links {}
+						span.meta-sep {}
+						span.comments-link {}
+				div#nav-below {}	.navigation {}
+					div.nav-previous {}
+						div.nav-previous a {}
+							div.nav-previous a span.meta-nav {}
+					div.nav-next {}
+						div.nav-next a {}
+							div.nav-next a span.meta-nav {}
+		div#primary {}	.sidebar {}
+			div.sidebar ul.xoxo {}
+				div.sidebar ul.xoxo li {}
+					div.sidebar ul.xoxo li h3 {}
+					div.sidebar ul.xoxo li ul
+						div.sidebar ul.xoxo li ul li
+							div.sidebar ul.xoxo li ul li ul
+								div.sidebar ul.xoxo li ul li ul li
+			div#primary ul.xoxo {}
+				div#primary ul.xoxo li {}
+					div#primary ul.xoxo li h3 {}
+					div#primary ul.xoxo li ul
+						div#primary ul.xoxo li ul li
+							div#primary ul.xoxo li ul li ul
+								div#primary ul.xoxo li ul li ul li
+		div#secondary {}	.sidebar {}
+			div.sidebar ul.xoxo {}
+				div.sidebar ul.xoxo li {}
+					div.sidebar ul.xoxo li h3 {}
+					div.sidebar ul.xoxo li ul
+						div.sidebar ul.xoxo li ul li
+							div.sidebar ul.xoxo li ul li ul
+								div.sidebar ul.xoxo li ul li ul li
+			div#secondary ul.xoxo {}
+				div#secondary ul.xoxo li {}
+					div#secondary ul.xoxo li h3 {}
+					div#secondary ul.xoxo li ul
+						div#secondary ul.xoxo li ul li
+							div#secondary ul.xoxo li ul li ul
+								div#secondary ul.xoxo li ul li ul li
+		div#footer {}
+			div#generator-link {}
+			div.meta-sep {}
+			div#theme-link {}
+}}}
