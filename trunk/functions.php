@@ -238,7 +238,7 @@ function widget_sandbox_meta($args) {
 function widget_sandbox_rsslinks($args) {
 	extract($args);
 	$options = get_option('widget_sandbox_rsslinks');
-	$title = empty($options['title']) ? __('RSS Links') : $options['title'];
+	$title = empty($options['title']) ? __('RSS Links', 'sandbox') : $options['title'];
 ?>
 		<?php echo $before_widget; ?>
 			<?php echo $before_title . $title . $after_title; ?>
@@ -334,9 +334,12 @@ function sandbox_widgets_init() {
 	unregister_widget_control('meta');
 	register_sidebar_widget(__('Links', 'sandbox'), 'widget_sandbox_links', null, 'links');
 	unregister_widget_control('links');
-	register_sidebar_widget(array('RSS Links', 'widgets'), 'widget_sandbox_rsslinks');
-	register_widget_control(array('RSS Links', 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
+	register_sidebar_widget(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks');
+	register_widget_control(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
 }
+
+// Translate, if applicable
+load_theme_textdomain('sandbox');
 
 // Runs our code at the end to check that everything needed has loaded
 add_action('init', 'sandbox_widgets_init');
