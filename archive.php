@@ -6,7 +6,7 @@
 <?php the_post() ?>
 
 <?php if ( is_day() ) : ?>
-			<h2 class="page-title"><?php printf(__('Daily Archives: <span>%s</span>', 'sandbox'), get_the_time('F jS, Y')) ?></h2>
+			<h2 class="page-title"><?php printf(__('Daily Archives: <span>%s</span>', 'sandbox'), get_the_time(get_settings('date_format'))) ?></h2>
 <?php elseif ( is_month() ) : ?>
 			<h2 class="page-title"><?php printf(__('Monthly Archives: <span>%s</span>', 'sandbox'), get_the_time('F Y')) ?></h2>
 <?php elseif ( is_year() ) : ?>
@@ -32,7 +32,7 @@
 
 				</div>
 				<div class="entry-meta">
-					<span class="author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="View all posts by ' . $authordata->display_name . '">'.get_the_author().'</a>') ?></span>
+					<span class="author vcard"><?php printf(__('By %s', 'sandbox'), '<a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="' . sprintf(__('View all posts by %', 'sandbox'), $authordata->display_name) . '">'.get_the_author().'</a>') ?></span>
 					<span class="meta-sep">|</span>
 					<span class="cat-links"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
 					<span class="meta-sep">|</span>
