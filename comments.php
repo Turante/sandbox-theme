@@ -51,7 +51,7 @@ foreach ( $comments as $comment )
 <?php $sandbox_comment_alt = 0 ?>
 
 				<div id="trackbacks-list" class="comments">
-					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'sandbox') : __('<span>One</span> Trackbacks', 'sandbox'), $ping_count) ?></h3>
+					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'sandbox') : __('<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h3>
 
 					<ol>
 <?php foreach ( $comments as $comment ) : ?>
