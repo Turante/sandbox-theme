@@ -41,7 +41,7 @@ function sandbox_body_class( $print = true ) {
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
 		foreach ( (array) get_the_category() as $cat )
 			$c[] = 's-category-' . $cat->category_nicename;
-			$c[] = 's-author-' . strtolower(get_the_author('login'));
+			$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		rewind_posts();
 	}
 
@@ -64,7 +64,7 @@ function sandbox_body_class( $print = true ) {
 		$pageID = $wp_query->post->ID;
 		the_post();
 		$c[] = 'page pageid-' . $pageID;
-		$c[] = 'page-author-' . strtolower(get_the_author('login'));
+		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		rewind_posts();
 	}
 
@@ -105,7 +105,7 @@ function sandbox_post_class( $print = true ) {
 	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
 
 	// Author for the post queried
-	$c[] = 'author-' . strtolower(get_the_author('login'));
+	$c[] = 'author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 
 	// Category for the post queried
 	foreach ( (array) get_the_category() as $cat )
