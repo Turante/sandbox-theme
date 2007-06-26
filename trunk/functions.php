@@ -35,21 +35,22 @@ function sandbox_body_class( $print = true ) {
 	// Special classes for BODY element when a single post
 	if ( is_single() ) {
 		$postID = $wp_query->post->ID;
+		$author = sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		the_post();
 		$c[] = 'single postid-' . $postID;
 		if ( isset($wp_query->post->post_date) )
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
 		foreach ( (array) get_the_category() as $cat )
 			$c[] = 's-category-' . $cat->category_nicename;
-			$c[] = 's-author-' . strtolower(get_the_author('login'));
+			$c[] = 's-author-' . $author;
 		rewind_posts();
 	}
 
 	// Author name classes for BODY on author archives
 	else if ( is_author() ) {
-		$author = $wp_query->get_queried_object();
+		$author = sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		$c[] = 'author';
-		$c[] = 'author-' . $author->user_nicename;
+		$c[] = 'author-' . $author;
 	}
 
 	// Category name classes for BODY on category archvies
@@ -62,9 +63,10 @@ function sandbox_body_class( $print = true ) {
 	// Page author for BODY on 'pages'
 	else if ( is_page() ) {
 		$pageID = $wp_query->post->ID;
+		$author = sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		the_post();
 		$c[] = 'page pageid-' . $pageID;
-		$c[] = 'page-author-' . strtolower(get_the_author('login'));
+		$c[] = 'page-author-' . $author;
 		rewind_posts();
 	}
 
@@ -105,7 +107,7 @@ function sandbox_post_class( $print = true ) {
 	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
 
 	// Author for the post queried
-	$c[] = 'author-' . strtolower(get_the_author('login'));
+	$c[] = 'author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));;
 
 	// Category for the post queried
 	foreach ( (array) get_the_category() as $cat )
