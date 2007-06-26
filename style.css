@@ -2,7 +2,7 @@
 THEME NAME: Sandbox
 THEME URI: http://www.plaintxt.org/themes/sandbox/
 DESCRIPTION: A theme rich with powerful and dynamic semantic class selectors; a canvas for CSS artists
-VERSION: 0.9.4
+VERSION: 0.9.5
 AUTHOR: <a href="http://andy.wordpress.com/">Andy Skelton</a> &amp; <a href="http://www.plaintxt.org/">Scott Allan Wallick</a>
 AUTHOR URI:
 */
@@ -36,7 +36,7 @@ form#commentform span.req-field{background:#fff;color:red;}
 form#commentform,form#commentform p{padding:0;}
 input#author,input#email,input#url{width:50%;}
 input#author,input#email,input#url,textarea#comment{padding:0.2em;}
-ol.commentlist li{margin:0 0 3.5em;}
+div.comments ol li{margin:0 0 3.5em;}
 textarea#comment{height:13em;margin:0 0 0.5em;overflow:auto;width:66%;}
 
 div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
