@@ -4,11 +4,11 @@ DESCRIPTION: Two-column fluid layout with one sidebars right of content
 */
 div#container {
 	float: left;
-	margin: 0 0 0 -200px;
+	margin: 0 -200px 0 0;
 	width: 100%;
 }
 div#content {
-	margin: 0 0 0 200px;
+	margin: 0 200px 0 0;
 }
 div.sidebar {
 	float: right;

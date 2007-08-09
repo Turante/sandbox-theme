@@ -2,7 +2,7 @@
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
 	echo '<div id="menu"><ul>';
-	$menu = wp_list_pages('title_li=&sort_column=post_title&echo=0'); // Params for the page list in header.php
+	$menu = wp_list_pages('title_li=&sort_column=menu_order&echo=0'); // Params for the page list in header.php
 	echo str_replace(array("\r", "\n", "\t"), '', $menu);
 	echo "</ul></div>\n";
 }
@@ -151,8 +151,7 @@ function sandbox_comment_class( $print = true ) {
 		$user = get_userdata($comment->user_id);
 
 		// For all registered users, 'byuser'; to specificy the registered user, 'commentauthor+[log in name]'
-		$c[] = "byuser comment-author-".strtolower($user->user_login);
-
+		$c[] = "byuser comment-author-" . sanitize_title_with_dashes(strtolower($user->user_login));
 		// For comment authors who are the author of the post
 		if ( $comment->user_id === $post->post_author )
 			$c[] = 'bypostauthor';
