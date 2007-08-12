@@ -33,10 +33,13 @@ function sandbox_body_class( $print = true ) {
 		$c[] = 'single postid-' . $postID;
 		if ( isset($wp_query->post->post_date) )
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
-		foreach ( (array) get_the_category() as $cat )
-			$c[] = 's-category-' . $cat->slug;
-			$c[] = 's-tag-' . $tag->slug;
-			$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
+		if ( $cats = get_the_category() )
+			foreach ( $cats as $cat )
+				$c[] = 's-category-' . $cat->slug;
+		if ( $tags = get_the_tags() )
+			foreach ( $tags as $tag )
+				$c[] = 's-tag-' . $tag->slug;
+		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		rewind_posts();
 	}
 
