@@ -7,12 +7,6 @@ function sandbox_globalnav() {
 	echo "</ul></div>\n";
 }
 
-// Checks for WP 2.1.x language_attributes() function
-function sandbox_blog_lang() {
-	if ( function_exists('language_attributes') )
-		return language_attributes();
-}
-
 // Generates semantic classes for BODY element
 function sandbox_body_class( $print = true ) {
 	global $wp_query, $current_user;
@@ -56,7 +50,14 @@ function sandbox_body_class( $print = true ) {
 	else if ( is_category() ) {
 		$cat = $wp_query->get_queried_object();
 		$c[] = 'category';
-		$c[] = 'category-' . $cat->category_nicename;
+		$c[] = 'category-' . $cat->slug;
+	}
+
+	// Tag name classes for BODY on tag archives
+	else if ( is_tag() ) {
+		$tag = $wp_query->get_queried_object();
+		$c[] = 'tag';
+		$c[] = 'tag-' . $tag->slug;
 	}
 
 	// Page author for BODY on 'pages'
@@ -81,6 +82,8 @@ function sandbox_body_class( $print = true ) {
 			$c[] = 'page-paged-'.$page.'';
 		} else if ( is_category() ) {
 			$c[] = 'category-paged-'.$page.'';
+		} else if ( is_tag() ) {
+			$c[] = 'tag-paged-'.$page.'';
 		} else if ( is_date() ) {
 			$c[] = 'date-paged-'.$page.'';
 		} else if ( is_author() ) {
@@ -109,7 +112,11 @@ function sandbox_post_class( $print = true ) {
 
 	// Category for the post queried
 	foreach ( (array) get_the_category() as $cat )
-		$c[] = 'category-' . $cat->category_nicename;
+		$c[] = 'category-' . $cat->slug;
+
+	// Tags for the post queried
+	foreach ( (array) get_the_tags() as $tag )
+		$c[] = 'tag-' . $tag->slug;
 
 	// For password-protected posts
 	if ( $post->post_password )
@@ -266,52 +273,6 @@ function widget_sandbox_rsslinks_control() {
 <?php
 }
 
-// Widget and Sandbox function: creates bookmark links (blogrolls) for WP 2.0.x or WP 2.1.x
-function widget_sandbox_links() {
-	// Checks for WP 2.1.x bookmarks function
-	if ( function_exists('wp_list_bookmarks') ) {
-		wp_list_bookmarks(array('title_before'=>'<h3>', 'title_after'=>'</h3>', 'show_images'=>true));
-	} else {
-		// If not WP 2.1.x, then on the database . . .
-		global $wpdb;
-
-		// Nasty bit of code to make pretty WP 2.0.x blogrolls
-		$cats = $wpdb->get_results("
-			SELECT DISTINCT link_category, cat_name, show_images, 
-				show_description, show_rating, show_updated, sort_order, 
-				sort_desc, list_limit
-			FROM `$wpdb->links` 
-			LEFT JOIN `$wpdb->linkcategories` ON (link_category = cat_id)
-			WHERE link_visible =  'Y'
-				AND list_limit <> 0
-			ORDER BY cat_name ASC", ARRAY_A);
-
-		// Sorts blogroll categorys by name
-		if ($cats) {
-			foreach ($cats as $cat) {
-				$orderby = $cat['sort_order'];
-				$orderby = (bool_from_yn($cat['sort_desc'])?'_':'') . $orderby;
-
-				// Display the category name
-				echo '	<li id="linkcat-' . $cat['link_category'] . '"><h3>' . $cat['cat_name'] . "</h3>\n\t<ul>\n";
-
-				// Call get_links() with all the appropriate params
-				get_links($cat['link_category'],
-					'<li>',"</li>","\n",
-					bool_from_yn($cat['show_images']),
-					$orderby,
-					bool_from_yn($cat['show_description']),
-					bool_from_yn($cat['show_rating']),
-					$cat['list_limit'],
-					bool_from_yn($cat['show_updated']));
-	
-				// Closes any oustanding accounts
-				echo "\n\t</ul>\n</li>\n";
-			}
-		}
-	}
-}
-
 // Widgets plugin: intializes the plugin after the widgets above have passed snuff
 function sandbox_widgets_init() {
 	if ( !function_exists('register_sidebars') )
@@ -331,8 +292,6 @@ function sandbox_widgets_init() {
 	unregister_widget_control('search');
 	register_sidebar_widget(__('Meta', 'sandbox'), 'widget_sandbox_meta', null, 'meta');
 	unregister_widget_control('meta');
-	register_sidebar_widget(__('Links', 'sandbox'), 'widget_sandbox_links', null, 'links');
-	unregister_widget_control('links');
 	register_sidebar_widget(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks');
 	register_widget_control(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
 }
@@ -349,5 +308,5 @@ add_filter('archive_meta', 'convert_smilies');
 add_filter('archive_meta', 'convert_chars');
 add_filter('archive_meta', 'wpautop');
 
-// Remember: a Sandbox is for play.
+// Remember: the Sandbox is for play.
 ?>

@@ -12,7 +12,7 @@
 			<li id="categories">
 				<h3><?php _e('Categories', 'sandbox'); ?></h3>
 				<ul>
-<?php wp_list_cats('sort_column=name&hierarchical=1') ?>
+<?php wp_list_categories('title_li=&show_count=0&hierarchical=1') ?> 
 
 				</ul>
 			</li>
@@ -41,7 +41,7 @@
 				</form>
 			</li>
 
-<?php widget_sandbox_links() ?>
+<?php wp_list_bookmarks('title_before=<h3>&title_after=</h3>&show_images=1') ?>
 
 			<li id="rss-links">
 				<h3><?php _e('RSS Feeds', 'sandbox') ?></h3>
