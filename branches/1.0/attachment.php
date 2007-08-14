@@ -23,7 +23,7 @@
 						the_date('', '', '', false),
 						get_the_time(),
 						get_the_category_list(', '),
-						get_the_tags(),
+						get_the_tag_list(' and tagged ', ', ', ''),
 						get_permalink(),
 						wp_specialchars(get_the_title(), 'double'),
 						comments_rss() ) ?>
