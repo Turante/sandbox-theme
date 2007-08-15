@@ -6,7 +6,7 @@ Template Name: Archives Page
 <?php get_header() ?>
 	
 	<div id="container">
-		<div id="content">
+		<div id="content" class="hfeed">
 
 <?php the_post() ?>
 
@@ -15,29 +15,28 @@ Template Name: Archives Page
 				<div class="entry-content">
 <?php the_content(); ?>
 
-					<ul id="archives-page" class="xoxo">
-						<li id="category-archives" class="content-column">
-							<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
-							<ul>
-								<?php wp_list_cats('sort_column=name&optioncount=1&feed=RSS') ?> 
-							</ul>
-						</li>
-						<li id="monthly-archives" class="content-column">
-							<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
-							<ul>
-								<?php wp_get_archives('type=monthly&show_post_count=1') ?>
-							</ul>
-						</li>
-					</ul>
-<?php edit_post_link(__('Edit', 'sandbox'),'<span class="edit-link">','</span>') ?>
+					<div id="archives-by-category" class="content-column">
+					<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
+						<ul>
+							<?php wp_list_cats('sort_column=name&optioncount=1&feed=RSS') ?> 
+						</ul>
+					</div>
+					<div id="archives-by-month" class="content-column">
+					<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
+						<ul>
+							<?php wp_get_archives('type=monthly&show_post_count=1') ?>
+						</ul>
+					</div>
+<?php edit_post_link(__('Edit this entry.', 'sandbox'),'<p class="edit-link">','</p>') ?>
 
 				</div>
 			</div><!-- .post -->
 
-<?php if ( get_post_custom_values('comments') ) comments_template() // Add a key/value of "comments" to enable comments on pages! ?>
+<?php /* Add a custom field with key "comments" (value is ignored) to turn on comments for a page! */ ?>
+<?php if ( get_post_custom_values('comments') ) comments_template() ?>
 
-		</div><!-- #content -->
+		</div><!-- #content .hfeed -->
 	</div><!-- #container -->
 
-<?php get_sidebar() ?>
-<?php get_footer() ?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

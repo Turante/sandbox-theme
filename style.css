@@ -1,52 +1,259 @@
 /*
 THEME NAME: Sandbox
 THEME URI: http://www.plaintxt.org/themes/sandbox/
-DESCRIPTION: A theme rich with powerful and dynamic semantic class selectors; a canvas for CSS artists
-VERSION: 0.9.7
+DESCRIPTION: A theme with powerful, semantic CSS selectors and the ability to add new skins.
+VERSION: 0.6.1
 AUTHOR: <a href="http://andy.wordpress.com/">Andy Skelton</a> &amp; <a href="http://www.plaintxt.org/">Scott Allan Wallick</a>
 AUTHOR URI:
 */
-
-/* Two-column with sidebar on left from the /sandbox-layouts/ folder  */
-@import url('sandbox-layouts/2c-l.css');
-
-/* Just some example content */
-div#header{text-align:center;margin-bottom:2em;}
-div#access div.skip-link{position:absolute;top:1em;right:1em;}
-div#menu{font-size:0.9em;height:1.5em;padding-top:0.3em;background:#eee;width:100%;}
-div#menu ul a{font-weight:700;text-decoration:none;}
-div#menu ul,div#menu ul ul,div#menu ul li{list-style:none;margin:0;padding:0;}
-div#menu ul li{float:left;}
-div#menu ul li a{background:#eee;padding:0.3em 0.5em;}
-div#menu ul ul{display:none;}
-div#menu ul ul li{float:none;}
-div#menu ul ul li a{margin:0;padding:0;}
-div#menu ul li:hover ul{display:block;font-size:0.9em;padding-top:0.5em;position:absolute;}
-div#menu ul li:hover ul li a{background:#f5f5f5;border:none;display:block;padding:0.1em;width:10em;}
-
-.entry-title{clear:both;}
-div#container,div.sidebar{margin-top:2em;}
-div#nav-above,div#nav-below{width:100%;height:1em;}
-div#nav-above{margin-bottom:1em;}
-div#nav-below{margin-top:1em;}
-.alignleft,div.nav-previous{float: left;}
-.alignright,div.nav-next{float: right;}
-form#commentform .form-label{margin:1em 0 0;}
-form#commentform span.required{background:#fff;color:red;}
-form#commentform,form#commentform p{padding:0;}
-input#author,input#email,input#url{width:50%;}
-input#author,input#email,input#url,textarea#comment{padding:0.2em;}
-div.comments ol li{margin:0 0 3.5em;}
-textarea#comment{height:13em;margin:0 0 0.5em;overflow:auto;width:66%;}
-
-div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
-div.sidebar h3{font-size:1.2em;}
-div.sidebar input#s{width:7em;}
-div.sidebar li{list-style:none;margin:0 0 1em;}
-div.sidebar li form{margin:0.2em 0 0;padding:0;}
-div.sidebar ul ul{margin:0 0 0 1em;}
-div.sidebar ul ul li{list-style:disc;margin:0;}
-div.sidebar ul ul ul{margin:0 0 0 0.5em;}
-div.sidebar ul ul ul li{list-style:circle;}
-
-div#footer{text-align:center;}
+/* MARGINS, PADDING, ETC., FOR ALL LAYOUT DIVS */
+div#header {
+	padding: 2em 0;
+}
+div#content, div.sidebar {
+	padding: 0 10px;
+}
+div#footer {
+	margin: 2em 0;
+	padding: 3em 0 0 0;
+}
+/* HEADER STUFF */
+div#header {
+	text-align: center;
+}
+div#header h1#blog-title {
+	font-size: 3em;
+	margin: 0;
+}
+div#header p#blog-description {
+	margin: 1.5em 0;
+}
+div#header p.access {
+	display: none;
+}
+/* GENERAL TAGS FOR CONTENT, MOSTLY */
+abbr.published {
+	border: 0;
+	cursor: default;
+	margin: 0;
+}
+body.home abbr.published, body.archive abbr.published, div.page-link {
+	font-weight: bold;
+}
+div.entry-content p {
+	margin: 1em 0;
+}
+div.entry-content ul li {
+	list-style: square;
+}
+div.entry-content ul li ul {
+	margin-bottom: 0.3em;
+}
+div.entry-content ul li ul li {
+	list-style: circle;
+}
+div.entry-content ul#linkcats, div.entry-content ul#linkcats li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+div.entry-content ul#linkcats li ul li {
+	list-style: square;
+}
+div.entry-content img.center {
+	display: block;
+	margin: 0.4em auto;
+}
+div.entry-content img.alignright {
+	margin: 0.4em 0 0.4em 1.1em
+}
+div.entry-content img.alignleft {
+	margin: 0.4em 1.1em 0.4em 0;
+}
+div.entry-meta {
+	font-style: italic;
+	line-height: 140%;
+}
+body.home .entry-meta, body.archive .entry-meta {
+	margin: 0 0 4em 0;
+}
+body.single .entry-meta {
+	font-size: 0.9em;
+}
+body.single div.navigation {
+	padding: 0 0 3em 0;
+}
+div.archive-meta {
+	margin: 1em 0 3em 0;
+}
+div.edit-link {
+	clear: both;
+}
+abbr, acronym {
+	border-bottom: 1px dotted blue;
+	cursor: help;
+}
+blockquote {
+	border-left: 1em solid #e6e6fe;
+	padding: 0 0 0 1em;
+}
+code, pre {
+	font-family: "courier new", courier, monospace;
+}
+/* HEADINGS */
+h2, h3, h4 , h5, h6 {
+	line-height: 125%;
+}
+body.home h2.entry-title {
+	clear: both;
+	font-size: 1.6em;
+	margin: 0;
+}
+body.single h2.entry-title, body.page h2.entry-title {
+	font-size: 1.6em;
+	margin: 0 0 -0.4em 0;
+}
+body.category h2.page-title, body.author h2.page-title {
+	font-size: 1.6em;
+	margin: 0;
+}
+body.date h2.page-title, body.single h2.page-title {
+	font-size: 1.6em;
+	margin: 0 0 2em 0;
+}
+body.archive h3.entry-title, body.single h3.entry-title {
+	font-size: 1.3em;
+	margin: 0;
+}
+body.single h3.comment-header {
+	font-size: 1.4em;
+	margin: 3em 0 1em 0;
+}
+body.single h3#respond {
+	font-size: 1.2em;
+	margin: 3em 0 0.5em 0;
+}
+div.entry-content ul#linkcats li h3 {
+	margin: 1em 0 0 0;
+}
+div.entry-content h2 {
+	font-size: 1.2em;
+	margin: 1.5em 0 -0.7em;
+}
+div.entry-content h3 {
+	font-size: 1.1em;
+	margin: 1.5em 0 -0.9em;
+}
+div.entry-content h4, div.entry-content h5, div.entry-content h6 {
+	font-size: 1em;
+	margin: 1.5em 0 -1.1em;
+}
+/* COMMENTS STUFF */
+ol.commentlist li {
+	margin: 0 0 3.5em 0;
+}
+ol.commentlist .comment-meta {
+	font-style: italic;
+}
+form#commentform, form#commentform p {
+	padding: 0;
+}
+form#commentform span.req-field {
+	background: #fff;
+	color: red;
+}
+form#commentform .form-label {
+	margin: 1em 0 0 0;
+}
+input#author, input#email, input#url, textarea#comment {
+	font-family: "courier new", courier, monospace;
+	font-size: 1em;
+	padding: 0.2em;
+}
+input#author, input#email, input#url {
+	width: 50%;
+}
+textarea#comment {
+	height: 13em;
+	margin: 0 0 0.5em 0;
+	overflow: auto;
+	width: 66%;
+}
+/* SIDEBAR STUFF */
+div.sidebar div, div.sidebar h3, div.sidebar h4, div.sidebar ul, div.sidebar li {
+	margin: 0;
+	padding: 0;
+}
+div.sidebar li {
+	list-style: none;
+}
+div.sidebar li form {
+	margin: 0.2em 0 0 0;
+	padding: 0;
+}
+div.sidebar h3 {
+	font-size: 1.2em;
+}
+div.sidebar h4 {
+	font-size: 1.0em;
+}
+div.sidebar li {
+	margin: 0 0 1em 0;
+}
+div.sidebar ul ul {
+	margin: 0 0 0 1.0em;
+}
+div.sidebar ul ul ul {
+	margin: 0 0 0 0.5em;
+}
+div.sidebar ul ul li {
+	margin: 0;
+	list-style: disc;
+}
+div.sidebar ul ul ul li {
+	list-style: circle;
+}
+div.sidebar ul#bookmarks {
+	margin: 0 0 0.5em 0.5em;
+}
+div.sidebar ul#bookmarks li {
+	list-style: none;
+}
+div.sidebar ul#bookmarks ul {
+	margin: 0 0 .5em 1.0em;
+}
+div.sidebar ul#bookmarks ul li {
+	list-style: disc;
+}
+div.sidebar input#s {
+	width: 7em;
+}
+/* FOOTER STUFF */
+div#footer {
+	text-align: center;
+}
+/*  COMMON MULTI-PURPOSE ELEMENTS */
+.alignleft, div.nav-previous, #archives-by-category {
+	float: left;
+}
+.alignright, div.nav-next, #archives-by-month {
+	float: right;
+}
+.clearer {
+	clear: both;
+}
+div#nav-above, body.single div#nav-below {
+	display: none;
+}
+body.single div#nav-above {
+	display: block;
+}
+body.home div.nav-next, body.home div.nav-previous, body.archive div.nav-next, body.archive div.nav-previous,  #archives-by-category, #archives-by-month {
+	width: 48%;
+}
+body.home div.nav-next, body.archive div.nav-next {
+	text-align: left;
+}
+body.home div.nav-previous, body.archive div.nav-previous {
+	text-align: right;
+}
