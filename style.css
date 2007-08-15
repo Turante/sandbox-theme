@@ -1,52 +1,235 @@
-/*
-THEME NAME: Sandbox
-THEME URI: http://www.plaintxt.org/themes/sandbox/
-DESCRIPTION: A theme rich with powerful and dynamic semantic class selectors; a canvas for CSS artists
-VERSION: 0.9.7
-AUTHOR: <a href="http://andy.wordpress.com/">Andy Skelton</a> &amp; <a href="http://www.plaintxt.org/">Scott Allan Wallick</a>
-AUTHOR URI:
+/*  
+THEME NAME: Minimalist Sandbox
+THEME URI: http://www.plaintxt.org/themes/minimalist-sandbox/
+DESCRIPTION: A minimalistic theme for WordPress designed for varying layout based on the Layout Gala 40.
+VERSION: 0.1 BETA
+AUTHOR: Scott Allan Wallick
+AUTHOR URI: http://scottwallick.com/
 */
-
-/* Two-column with sidebar on left from the /sandbox-layouts/ folder  */
-@import url('sandbox-layouts/2c-l.css');
-
-/* Just some example content */
-div#header{text-align:center;margin-bottom:2em;}
-div#access div.skip-link{position:absolute;top:1em;right:1em;}
-div#menu{font-size:0.9em;height:1.5em;padding-top:0.3em;background:#eee;width:100%;}
-div#menu ul a{font-weight:700;text-decoration:none;}
-div#menu ul,div#menu ul ul,div#menu ul li{list-style:none;margin:0;padding:0;}
-div#menu ul li{float:left;}
-div#menu ul li a{background:#eee;padding:0.3em 0.5em;}
-div#menu ul ul{display:none;}
-div#menu ul ul li{float:none;}
-div#menu ul ul li a{margin:0;padding:0;}
-div#menu ul li:hover ul{display:block;font-size:0.9em;padding-top:0.5em;position:absolute;}
-div#menu ul li:hover ul li a{background:#f5f5f5;border:none;display:block;padding:0.1em;width:10em;}
-
-.entry-title{clear:both;}
-div#container,div.sidebar{margin-top:2em;}
-div#nav-above,div#nav-below{width:100%;height:1em;}
-div#nav-above{margin-bottom:1em;}
-div#nav-below{margin-top:1em;}
-.alignleft,div.nav-previous{float: left;}
-.alignright,div.nav-next{float: right;}
-form#commentform .form-label{margin:1em 0 0;}
-form#commentform span.required{background:#fff;color:red;}
-form#commentform,form#commentform p{padding:0;}
-input#author,input#email,input#url{width:50%;}
-input#author,input#email,input#url,textarea#comment{padding:0.2em;}
-div.comments ol li{margin:0 0 3.5em;}
-textarea#comment{height:13em;margin:0 0 0.5em;overflow:auto;width:66%;}
-
-div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
-div.sidebar h3{font-size:1.2em;}
-div.sidebar input#s{width:7em;}
-div.sidebar li{list-style:none;margin:0 0 1em;}
-div.sidebar li form{margin:0.2em 0 0;padding:0;}
-div.sidebar ul ul{margin:0 0 0 1em;}
-div.sidebar ul ul li{list-style:disc;margin:0;}
-div.sidebar ul ul ul{margin:0 0 0 0.5em;}
-div.sidebar ul ul ul li{list-style:circle;}
-
-div#footer{text-align:center;}
+/*
+"Minimalist Sandbox" theme for WordPress (C) 2006 Scott Allan Wallick - http://scottwallick.com/ - and distributed under the terms of the GNU General Public License v2
+*/
+html, body {
+	margin: 0;
+	padding: 0;
+}
+/* UNIVERSAL MARGINS, PADDING, ETC., FOR ALL LAYOUT DIVS */
+div#header {
+	margin: 2em 0;
+}
+div#content {
+	padding: 0 2em;
+}
+div.sidebar {
+	padding: 0 1em;
+}
+div#footer {
+	padding: 3em 0 0 0;
+}
+div#header, div#footer {
+	text-align: center;
+}
+/* HEADER STUFF */
+h1#blog-title {
+	font-size: 3em;
+	margin: 0;
+}
+p#blog-description {
+	margin: 1.5em 0 0 0;
+}
+/* GENERAL CONTENT / POST STUFF */
+div.narrowcolumn h2.post-title {
+	font-size: 1.6em;
+	line-height: 120%;
+	margin: 0 0 0.2em 0;
+}
+p.post-date {
+	font-weight: bold;
+	margin: 0;
+}
+p.page-link {
+	font-weight: bold;
+}
+div.post-entry p {
+	margin: 1em 0;
+}
+div.post-entry p.attachment, div.post-entry p.attachment-filename {
+	margin: 0 auto;
+	text-align: center;
+}
+div.post-entry p.attachment-filename {
+	font-style: italic;
+	margin: -0.5em 0 1em 0 !important;
+}
+div.post-entry ul, div.post-entry ol {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+div.post-entry ul li {
+	list-style: square;
+}
+div.post-entry ul li ul {
+	margin-bottom: 0.3em;
+}
+div.post-entry ul li ul li {
+	list-style: circle;
+}
+abbr, acronym {
+	border-bottom: 1px dotted blue;
+	cursor: help;
+}
+blockquote {
+	border-left: 1em solid #e6e6fe;
+	padding: 0 0 0 1em;
+}
+code, pre {
+	font: 1em/150% "courier new", courier, monospace;
+}
+p.post-footer {
+	margin: 0 0 4em 0;
+}
+p.post-footer, p#single-post-footer {
+	font-style: italic;
+}
+/* POST BODY HEADINGS */
+div.post-entry h2 {
+	font-size: 1.2em;
+	margin: 1.5em 0 -0.7em;
+}
+div.post-entry h3 {
+	font-size: 1.1em;
+	margin: 1.5em 0 -0.9em;
+}
+div.post-entry h4 {
+	font-size: 1em;
+	margin: 1.5em 0 -1.1em;
+}
+div.post-entry h5 {
+	font-size: 0.9em;
+	margin: 1.5em 0 -1.3em;
+}
+div.post-entry h6 {
+	font-size: 0.8em;
+	margin: 1.5em 0 -1.5em;
+}
+/* SINGLE POST / ARCHIVES STUFF */
+div.widecolumn div.navigation {
+	padding: 0 0 3em 0;
+}
+div.widecolumn h2.post-title {
+	clear: both;
+	margin: 0 0 -0.2em 0;
+}
+div.widecolumn h2.page-title {
+	font-size: 1.4em;
+	margin: 0 0 3em 0;
+}
+div.widecolumn h3.post-title {
+	margin: -1em 0 0.2em 0;
+	font-size: 1.2em;
+}
+p#single-post-footer {
+	font-size: 0.9em;
+}
+/* COMMENTS STUFF */
+h3.comment-header {
+	font-size: 1.4em;
+	margin: 3em 0 1em 0;
+}
+ol.commentlist li {
+	margin: 0 0 3.5em 0;
+}
+ol.commentlist li p {
+	margin: 1em 0 0 0;
+}
+ol.commentlist p.comment-author, ol.commentlist p.comment-metadata {
+	margin: 0;
+}
+ol.commentlist p.comment-metadata {
+	font-style: italic;
+}
+h3#respond {
+	font-size: 1.2em;
+	margin: 3em 0 0.5em 0;
+}
+form#commentform {
+	margin: 0;
+	padding: 0;
+}
+form#commentform p.form-label {
+	margin: 1em 0 0 0;
+}
+form#commentform p {
+	margin: 0;
+}
+input#author, input#email, input#url {
+	font-family: "courier new", courier, monospace;
+	font-size: 1em;
+	padding: 0.2em;
+	width: 20em;
+}
+textarea#comment {
+	font-family: "courier new", courier, monospace;
+	font-size: 1em;
+	height: 12em;
+	margin: 0 0 0.5em 0;
+	overflow: auto;
+	padding: 0.2em;
+	width: 30em;
+}
+/* SIDEBAR STUFF */
+div.sidebar ul, div.sidebar ul li ul li {
+	margin: 0;
+	padding: 0;
+}
+div.sidebar ul li h2 {
+	font-size: 1em;
+	margin: 0;
+}
+div.sidebar ul li {
+	list-style: none;
+	margin: 0 0 1em 0;
+}
+div.sidebar ul li ul {
+	margin: 0 0 0 1.5em;
+}
+div.sidebar ul li ul li {
+	list-style: disc;
+}
+div.sidebar ul li ul li ul li {
+	list-style: circle;
+}
+div.sidebar form {
+	margin: 0.2em 0 0 0;
+	padding: 0;
+}
+/* GLOBAL, FUNCTIONAL DECLARATIONS */
+.clearer {
+	clear: both;
+	height: 0;
+}
+.alignright, .nav-right {
+	float: right;
+}
+.alignleft, .nav-left {
+	float: left;
+}
+/* IMAGE ELEMENTS, INCLUDING LINKS */
+img.center {
+	display: block;
+	margin: 0.4em auto;
+}
+img.alignright {
+	margin: 0.4em 0 0.4em 1.1em
+}
+img.alignleft {
+	margin: 0.4em 1.1em 0.4em 0;
+}
+/* EZ LINKS */
+a, a:link, a:active, a:visited {
+	outline: none;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}

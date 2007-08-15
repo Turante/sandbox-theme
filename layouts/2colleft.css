@@ -1,0 +1,19 @@
+div#container {
+	float: right;
+	margin: 0 0 0 -200px;
+	width: 100%;
+}
+div#content {
+	margin: 0 0 0 200px;
+}
+div.sidebar {
+	float: left;
+	width: 150px;
+}
+div#col2 {
+	clear: left;
+}
+div#footer {
+	clear: both;
+	width: 100%;
+}

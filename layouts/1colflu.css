@@ -1,0 +1,8 @@
+div.sidebar {
+	float: left;
+	width: 48%;
+}
+div#footer {
+	clear: left;
+	width: 100%;
+}

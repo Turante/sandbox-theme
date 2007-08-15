@@ -1,43 +1,36 @@
 <?php
 /*
-Template Name: Archives Page
+TEMPLATE NAME: Archives
 */
 ?>
-<?php get_header() ?>
+<?php get_header(); ?>
 	
 	<div id="container">
-		<div id="content">
 
-<?php the_post() ?>
+		<div id="content" class="widecolumn">
 
-			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-				<h2 class="entry-title"><?php the_title() ?></h2>
-				<div class="entry-content">
-<?php the_content(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<ul id="archives-page" class="xoxo">
-						<li id="category-archives" class="content-column">
-							<h3><?php _e('Archives by Category', 'sandbox') ?></h3>
-							<ul>
-								<?php wp_list_cats('sort_column=name&optioncount=1&feed=RSS') ?> 
-							</ul>
-						</li>
-						<li id="monthly-archives" class="content-column">
-							<h3><?php _e('Archives by Month', 'sandbox') ?></h3>
-							<ul>
-								<?php wp_get_archives('type=monthly&show_post_count=1') ?>
-							</ul>
-						</li>
+			<div id="post-<?php the_ID(); ?>" class="post">
+				<h2 class="post-title"><?php the_title(); ?></h2>
+				<div class="post-entry">
+					<?php the_content(); ?>
+					<h3 style="margin-bottom:0;">By Category</h3>
+					<ul>
+						<?php wp_list_cats(); ?>
 					</ul>
-<?php edit_post_link(__('Edit', 'sandbox'),'<span class="edit-link">','</span>') ?>
+					<h3 style="margin-bottom:0;">By Month</h3>
+					<ul>
+						<?php wp_get_archives('type=monthly'); ?>
+					</ul>
+					<!-- <?php trackback_rdf(); ?> -->
+				</div><!-- END POST-ENTRY -->
+			</div><!-- END POST -->
 
-				</div>
-			</div><!-- .post -->
+<?php endwhile; endif; ?>
 
-<?php if ( get_post_custom_values('comments') ) comments_template() // Add a key/value of "comments" to enable comments on pages! ?>
+		</div><!-- END CONTENT -->
+	</div><!-- END CONTAINER  -->
 
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php get_sidebar() ?>
-<?php get_footer() ?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

@@ -1,0 +1,21 @@
+div#container {
+	float: left;
+	width: 100%;
+}
+div#content {
+	margin: 0 200px;
+}
+div.sidebar {
+	float: left;
+	width: 150px;
+}
+div#col1 {
+	margin: 0 0 0 -100%;
+}
+div#col2 {
+	margin: 0 0 0 -200px;
+}
+div#footer { 
+	clear: left;
+	width: 100%;
+}
