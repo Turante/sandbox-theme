@@ -1,0 +1,15 @@
+/* One column - sidebars below */
+@import url('../style.css');
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	padding: 10px 1.9%;
+	width: 46%;
+}
+div#primary {
+	clear: both;
+}
+div#footer {
+	clear: left;
+	width: 100%;
+}
