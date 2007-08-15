@@ -8,10 +8,10 @@
 				<div class="entry-content">
 					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'sandbox') ?></p>
 				</div>
-				<form id="error404_searchform" method="get" action="<?php bloginfo('home') ?>">
+				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="error404-s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="40" />
-						<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
+						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="40" />
+						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
 					</div>
 				</form>
 			</div><!-- .post -->

@@ -1,4 +1,4 @@
-			<div id="comments">
+			<div class="comments">
 <?php
 	$req = get_settings('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-)
 	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
@@ -24,45 +24,43 @@ foreach ( $comments as $comment )
 <?php if ( $comment_count ) : ?>
 <?php $sandbox_comment_alt = 0 ?>
 
-				<div id="comments-list" class="comments">
-					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'sandbox') : __('<span>One</span> Comment', 'sandbox'), $comment_count) ?></h3>
+				<div id="comments" class="commentlist">
+					<h3><?php printf(__($comment_count > 1 ? '<span>%d</span> Comments' : '<span>One</span> Comment', 'sandbox'), $comment_count) ?></h3>
 
-					<ol>
+					<ol class="xoxo">
 <?php foreach ($comments as $comment) : ?>
 <?php if ( get_comment_type() == "comment" ) : ?>
 						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
 							<div class="comment-author vcard"><span class="fn n"><?php comment_author_link() ?></span></div>
+<?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your comment is awaiting moderation.</span>\n', 'sandbox') ?>
 							<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'sandbox'),
 										get_comment_date(),
 										get_comment_time(),
-										'#comment-' . get_comment_ID() );
-										edit_comment_link(__('Edit', 'sandbox'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
-<?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'sandbox') ?>
+										'#comment-' . get_comment_ID() ); edit_comment_link(__('Edit', 'sandbox'), ' <span class="edit-link">', '</span>'); ?></div>
 							<?php comment_text() ?>
 						</li>
 <?php endif; /* if ( get_comment_type() == "comment" ) */ ?>
 <?php endforeach; ?>
 
 					</ol>
-				</div><!-- #comments-list .comments -->
+				</div><!-- #comments .commentlist -->
 
 <?php endif; /* if ( $comment_count ) */ ?>
 <?php if ( $ping_count ) : ?>
 <?php $sandbox_comment_alt = 0 ?>
 
-				<div id="trackbacks-list" class="comments">
-					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'sandbox') : __('<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h3>
+				<div id="trackbacks" class="commentlist">
+					<h3><?php printf(__($ping_count > 1 ? '<span>%d</span> Trackbacks' : '<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h3>
 
-					<ol>
+					<ol class="xoxo">
 <?php foreach ( $comments as $comment ) : ?>
 <?php if ( get_comment_type() != "comment" ) : ?>
 
 						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
-							<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'sandbox'),
+							<div class="comment-meta"><?php printf(__('By %1$s on %2$s at %3$s', 'sandbox'),
 									get_comment_author_link(),
-									get_comment_date(),
-									get_comment_time() );
-									edit_comment_link(__('Edit', 'sandbox'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
+									get_comment_date('d M Y'),
+									get_comment_time('g:i a') ); edit_comment_link(__('Edit', 'sandbox'), ' <span class="edit-link">', '</span>'); ?></div>
 <?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'sandbox') ?>
 							<?php comment_text() ?>
 						</li>
@@ -70,7 +68,7 @@ foreach ( $comments as $comment )
 <?php endforeach; ?>
 
 					</ol>
-				</div><!-- #trackbacks-list .comments -->
+				</div><!-- #trackbacks .commentlist -->
 
 <?php endif /* if ( $ping_count ) */ ?>
 <?php endif /* if ( $comments ) */ ?>
@@ -94,12 +92,12 @@ foreach ( $comments as $comment )
 
 <?php else : ?>
 
-							<p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'sandbox') ?> <?php if ($req) _e('Required fields are marked <span class="required">*</span>', 'sandbox') ?></p>
+							<p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'sandbox') ?> <?php if ($req) _e('Required fields are marked <span class="req-field">*</span>', 'sandbox') ?></p>
 
-							<div class="form-label"><label for="author"><?php _e('Name', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
+							<div class="form-label"><label for="author"><?php _e('Name', 'sandbox') ?></label> <?php if ($req) _e('<span class="req-field">*</span>', 'sandbox') ?></div>
 							<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
 
-							<div class="form-label"><label for="email"><?php _e('Email', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
+							<div class="form-label"><label for="email"><?php _e('Email', 'sandbox') ?></label> <?php if ($req) _e('<span class="req-field">*</span>', 'sandbox') ?></div>
 							<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
 
 							<div class="form-label"><label for="url"><?php _e('Website', 'sandbox') ?></label></div>
@@ -121,4 +119,4 @@ foreach ( $comments as $comment )
 				</div><!-- #respond -->
 <?php endif /* if ( 'open' == $post->comment_status ) */ ?>
 
-			</div><!-- #comments -->
+			</div><!-- .comments -->
