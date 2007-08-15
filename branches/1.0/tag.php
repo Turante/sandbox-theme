@@ -3,7 +3,7 @@
 	<div id="container">
 		<div id="content">
 
-		<h2 class="page-title"><?php _e('Tag Archives:', 'sandbox') ?> <span><?php echo get_the_tags(); ?></span></h2>
+		<h2 class="page-title"><?php _e('Tag Archives:', 'sandbox') ?> <span><?php the_tags('', '', ''); // Me no worky, Wah, wah. ?></span></h2>
 
 			<div id="nav-above" class="navigation">
 				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'sandbox')) ?></div>
@@ -24,7 +24,10 @@
 					<span class="meta-sep">|</span>
 					<span class="cat-links"><?php printf(__('Posted in %s', 'sandbox'), get_the_category_list(', ')) ?></span>
 					<span class="meta-sep">|</span>
-					<span class="tag-links"><?php the_tags(__('Tagged ', 'sandbox'), ', ') ?></span>
+<?php if ( $tag_ur_it = sandbox_tag_ur_it(', ') ) : // This would be sweet if it worked. Grmpf. ?>
+					<span class="tag-links"><?php printf(__('Also tagged %s', 'sandbox'), $tag_ur_it) ?></span>
+					<span class="meta-sep">|</span>
+<?php endif ?>
 					<span class="meta-sep">|</span>
 <?php edit_post_link(__('Edit', 'sandbox'), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n"); ?>
 					<span class="comments-link"><?php comments_popup_link(__('Comments (0)', 'sandbox'), __('Comments (1)', 'sandbox'), __('Comments (%)', 'sandbox')) ?></span>

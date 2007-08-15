@@ -30,15 +30,31 @@ function sandbox_body_class( $print = true ) {
 	if ( is_single() ) {
 		$postID = $wp_query->post->ID;
 		the_post();
+
+		// Adds 'single' class and class with the post ID
 		$c[] = 'single postid-' . $postID;
+
+		// Adds classes for the month, day, and hour when the post was published
 		if ( isset($wp_query->post->post_date) )
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
+
+		// Adds category classes for each category on single posts
 		if ( $cats = get_the_category() )
 			foreach ( $cats as $cat )
 				$c[] = 's-category-' . $cat->slug;
+
+		// Adds tag classes for each tags on single posts
 		if ( $tags = get_the_tags() )
 			foreach ( $tags as $tag )
 				$c[] = 's-tag-' . $tag->slug;
+
+		// Adds MIME-specific classes for attachments
+		if ( is_attachment() )
+			$the_mime = get_post_mime_type();
+			$boring_stuff = array("application/", "image/", "text/", "audio/", "video/", "music/");
+				$c[] = 'attachment-' . str_replace($boring_stuff, "", "$the_mime");
+
+		// Adds author class for the post author
 		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		rewind_posts();
 	}
@@ -59,9 +75,9 @@ function sandbox_body_class( $print = true ) {
 
 	// Tag name classes for BODY on tag archives
 	else if ( is_tag() ) {
-		$tag = $wp_query->get_queried_object();
+		$tags = $wp_query->get_queried_object();
 		$c[] = 'tag';
-		$c[] = 'tag-' . $tag->slug;
+		$c[] = 'tag-' . $tags->slug; // Does not work; however I try to return the tag I get a false. Grrr.
 	}
 
 	// Page author for BODY on 'pages'
@@ -189,7 +205,7 @@ function sandbox_date_classes($t, &$c, $p = '') {
 	$c[] = $p . 'h' . gmdate('H', $t); // Hour
 }
 
-// For category lists on category archives, returns other categorys except the current one (redundant)
+// For category lists on category archives: Returns other categories except the current one (redundant)
 function sandbox_cats_meow($glue) {
 	$current_cat = single_cat_title('', false);
 	$separator = "\n";
@@ -207,6 +223,27 @@ function sandbox_cats_meow($glue) {
 
 	return trim(join($glue, $cats));
 }
+
+// For tag lists on tag archives: Returns other tags except the current one (redundant)
+function sandbox_tag_ur_it($glue) {
+	$current_tag = get_the_tags('', false);
+	// $current_tag = single_tag_title('', false); Doesn't exist, so is there an existing way to accomplish this? re: tag-foo-bar in BODY too . . .
+	$separator = "\n";
+	$tags = explode($separator, get_the_tag_list($separator));
+
+	foreach ( $tags as $i => $str ) {
+		if ( strstr($str, ">$current_tag<") ) {
+			unset($tags[$i]);
+			break;
+		}
+	}
+
+	if ( empty($tags) )
+		return false;
+
+	return trim(join($glue, $tags));
+}
+
 
 // Widget: Search; to match the Sandbox style and replace Widget plugin default
 function widget_sandbox_search($args) {

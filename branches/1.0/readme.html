@@ -154,176 +154,181 @@
 									<td>When the post subpage containing an attachment is displayed, as set with "Linked to Page" in the post editor</td>
 								</tr>
 								<tr class="alt">
+									<td scope="row">attachment-[mime]</td>
+									<td><code>is_attachment()</code></td>
+									<td>For attachment posts (see above), where <i>[mime]</i> is the abbreviated <abbr title="Multipurpose Internet Mail Extensions">MIME</abbr> type, e.g., attachment-jpeg</td>
+								</tr>
+								<tr>
 									<td scope="row">author</td>
 									<td><code>is_author()</code></td>
 									<td>When a author archive page is displayed</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">author-[name]</td>
 									<td><code>is_author()</code></td>
 									<td>When a specific author archive page is displayed, where <i>[name]</i> is the author's login name, e.g., author-admin</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">author-paged-[n]</td>
 									<td><code>is_author()</code> &amp; <code>is_paged()</code></td>
 									<td>Displays the "paged" number of author archive, where <i>[n]</i> is the paginated number</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">category</td>
 									<td><code>is_category()</code></td>
 									<td>When a category archive page is displayed</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">category-[name]</td>
 									<td><code>is_category()</code></td>
 									<td>For a specific category, where <i>[name]</i> is the category slug, e.g., category-useful-links</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">category-paged-[n]</td>
 									<td><code>is_category()</code> &amp; <code>is_paged()</code></td>
 									<td>Displays the "paged" number of category archive, where <i>[n]</i> is the paginated number</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">d01&ndash;31</td>
 									<td><code>gmdate('d')</code></td>
 									<td>The current day of when the page is displayed (Offset to GMT)</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">date</td>
 									<td><code>is_date()</code></td>
 									<td>When a date archive page is displayed, e.g., by month, by year</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">date-paged-[n]</td>
 									<td><code>is_date()</code> &amp; <code>is_paged()</code></td>
 									<td>Displays the "paged" number of date-based archive, where <i>[n]</i> is the paginated number</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">h00&ndash;24</td>
 									<td><code>gmdate('h')</code></td>
 									<td>The current hour of when the page is displayed (Offset to GMT)</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">four04</td>
 									<td><code>is_404()</code></td>
 									<td>When a request results in zero posts, i.e., a 404 error page</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">home</td>
 									<td><code>is_home()</code></td>
 									<td>When the home page is displayed</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">m00&ndash;12</td>
 									<td><code>gmdate('m')</code></td>
 									<td>The current month of when the page is displayed (Offset to GMT)</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">loggedin</td>
 									<td>n/a</td>
 									<td>When the page is displayed by a logged-in user</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">page</td>
 									<td><code>is_page()</code></td>
 									<td>When a page is displayed</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">page-author-[name]</td>
 									<td><code>is_page()</code></td>
 									<td>For a page by a specific author, where <i>[name]</i> is the user's login name, e.g., page-author-admin</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">page-paged-[n]</td>
 									<td><code>is_page()</code> &amp; <code>is_paged()</code></td>
 									<td>Displays the "paged" number of pages, where <i>[n]</i> is the paginated number</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">paged</td>
 									<td><code>is_paged()</code></td>
 									<td>When whatever is displayed is "paged," e.g., page 2 of the index</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">paged-[n]</td>
 									<td><code>is_paged()</code></td>
 									<td>Displays the "paged" number, where <i>[n]</i> is the paginated number, e.g., paged-3 for third page of index</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">pageid-[n]</td>
 									<td><code>is_page()</code></td>
 									<td>Displays the page ID number of queried page, where <i>[n]</i> is the page ID, e.g., pageid-20</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">postid-[n]</td>
 									<td><code>is_single()</code></td>
 									<td>Displays the post ID number of queried post, where <i>[n]</i> is the post ID, e.g., postid-20</td>
-								</tr>
-								<tr>
+								<tr class="alt">
+								<tr class="alt">
 									<td scope="row">search</td>
 									<td><code>is_search()</code></td>
 									<td>When the results of a search are displayed</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">single</td>
 									<td><code>is_single()</code></td>
 									<td>When a single post is displayed</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">s-author-[name]</td>
 									<td><code>is_single()</code> &amp; <code>is_author()</code></td>
 									<td>For a single post published by a specific author, where <i>[name]</i> is the user's login name, e.g., s-author-admin</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">s-category-[name]</td>
 									<td><code>is_single()</code> &amp; <code>is_category()</code></td>
 									<td>For a single post published in a specific category, where <i>[name]</i> is the category slug, e.g., s-category-news</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">s-d01&ndash;31</td>
 									<td><code>gmdate('d')</code></td>
 									<td>For a single post published on a specific day (Offset to GMT)</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">s-h00&ndash;24</td>
 									<td><code>gmdate('h')</code></td>
 									<td>For a single post published at a specific hour (Offset to GMT)</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">s-m00&ndash;12</td>
 									<td><code>gmdate('m')</code></td>
 									<td>For a single post published in a specific month (Offset to GMT)</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">s-tag-[name]</td>
 									<td><code>is_single()</code> &amp; <code>is_tag()</code></td>
 									<td>For a single post published with a specific tag, where <i>[name]</i> is the tag slug, e.g., s-category-foo-bar</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">s-y2007</td>
 									<td><code>gmdate('Y')</code></td>
 									<td>For a single post published in a specific year (Offset to GMT)</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">tag</td>
 									<td><code>is_tag()</code></td>
 									<td>When a tag archive page is displayed</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">tag-[name]</td>
 									<td><code>is_tag()</code></td>
 									<td>For a specific tag, where <i>[name]</i> is the tag slug, e.g., tag-foo-bar</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">tag-paged-[n]</td>
 									<td><code>is_tag()</code> &amp; <code>is_paged()</code></td>
 									<td>Displays the "paged" number of tag archive, where <i>[n]</i> is the paginated number</td>
 								</tr>
-								<tr>
+								<tr class="alt">
 									<td scope="row">wordpress</td>
 									<td>n/a</td>
 									<td>When anything is displayed; a class that is always applied</td>
 								</tr>
-								<tr class="alt">
+								<tr>
 									<td scope="row">y2007</td>
 									<td><code>gmdate('Y')</code></td>
 									<td>The current year of when the page is display (Offset to GMT)</td>
