@@ -1,0 +1,32 @@
+/* CSS STOLEN FROM ALA: http://www.alistapart.com/articles/holygrail AND THEN SOMEWHAT MOLESTED */
+body {
+	min-width: 760px;
+}
+#container {
+	padding: 0 240px 0 200px;
+}
+div#content, div.sidebar {
+	float: left;
+	padding: 0 20px;
+	position: relative;
+}
+div#content {
+	width: 100%;
+}
+div.sidebar {
+	width: 160px;
+}
+div#primary {
+	margin: 0 0 0 -100%;
+	right: 240px;
+}
+div#secondary {
+	margin: 0 -240px 0 0;
+}
+div#footer {
+	clear: both;
+}
+/*** IE6 HACK. APOLOGIES. ***/
+* html div#primary {
+	left: 200px;
+}

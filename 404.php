@@ -1,23 +1,29 @@
-<?php get_header() ?>
-
+<?php header("HTTP/1.1 404 Not Found"); ?>
+<?php get_header(); ?>
+	
 	<div id="container">
 		<div id="content">
+			<div id="post-404" class="post">
+				<h2 class="post-title"><?php the_title(); ?></h2>
+				<div class="post-entry">
+					<p>There's been a problem finding the page you're looking for. Apologies. Perhaps . . .</p>
+					<ul>
+						<li>the page you're looking for was moved;</li>
+						<li>a referring site gave you an incorrect address; or</li>
+						<li>something just went terribly wrong.</li>
+					</ul>
+					<p>Use the search box and see if you can't find what you're looking for.</p>
+					<form id="searchform-404" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+						<p>
+							<label for="s-404">Search:</label>
+							<input id="s-404" name="s" type="text" value="<?php echo wp_specialchars($s, 1); ?>" size="30" />
+							<input id="searchsubmit-404" name="searchsubmit" type="submit" value="Find" />
+						</p>
+					</form>
+				</div><!-- END POST-ENTRY -->
+			</div><!-- END POST -->
+		</div><!-- END CONTENT -->
+	</div><!-- END CONTAINER  -->
 
-			<div id="post-0" class="post error404">
-				<h2 class="entry-title"><?php _e('Not Found', 'sandbox') ?></h2>
-				<div class="entry-content">
-					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'sandbox') ?></p>
-				</div>
-				<form id="error404_searchform" method="get" action="<?php bloginfo('home') ?>">
-					<div>
-						<input id="error404-s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="40" />
-						<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
-					</div>
-				</form>
-			</div><!-- .post -->
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php get_sidebar() ?>
-<?php get_footer() ?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

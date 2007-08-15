@@ -1,124 +1,128 @@
-			<div id="comments">
+<div id="comments">
+
+<?php if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+	die ('Please do not load this page directly. Thanks!');
+	if (!empty($post->post_password)) {
+		if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {
+?>
+	<p class="password">This post is password protected. Enter the password to proceed.<p>
 <?php
-	$req = get_settings('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-)
-	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
-		die ( 'Please do not load this page directly. Thanks!' );
-	if ( ! empty($post->post_password) ) :
-		if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
+	return;
+		}
+	}
+	$oddcomment = 'alt';
 ?>
-				<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'sandbox') ?></div>
-			</div><!-- .comments -->
-<?php
-		return;
-	endif;
-endif;
-?>
-<?php if ( $comments ) : ?>
-<?php global $sandbox_comment_alt ?>
 
-<?php /* numbers of pings and comments */
-$ping_count = $comment_count = 0;
-foreach ( $comments as $comment )
-	get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
-?>
-<?php if ( $comment_count ) : ?>
-<?php $sandbox_comment_alt = 0 ?>
+<?php if ($comments) : ?>
 
-				<div id="comments-list" class="comments">
-					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'sandbox') : __('<span>One</span> Comment', 'sandbox'), $comment_count) ?></h3>
+<?php /* NUMBERS OF PINGS AND COMMENTS */
+	$numPingBacks = 0;
+	$numComments  = 0;
+foreach ($comments as $comment) {
+	if (get_comment_type() != "comment") {
+		$numPingBacks++;
+	} else {
+		$numComments++;
+	}
+} ?>
 
-					<ol>
+<?php if ($numComments != 0) : ?>
+
+	<h3 class="comment-header" id="commentz">Comments</h3>
+
+	<ol class="commentlist">
+
 <?php foreach ($comments as $comment) : ?>
-<?php if ( get_comment_type() == "comment" ) : ?>
-						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
-							<div class="comment-author vcard"><span class="fn n"><?php comment_author_link() ?></span></div>
-							<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'sandbox'),
-										get_comment_date(),
-										get_comment_time(),
-										'#comment-' . get_comment_ID() );
-										edit_comment_link(__('Edit', 'sandbox'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
-<?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'sandbox') ?>
-							<?php comment_text() ?>
-						</li>
-<?php endif; /* if ( get_comment_type() == "comment" ) */ ?>
-<?php endforeach; ?>
+<?php if (get_comment_type() == "comment"){ ?>
 
-					</ol>
-				</div><!-- #comments-list .comments -->
+		<li id="comment-<?php comment_ID() ?>" class="<?php echo $oddcomment; ?>">
+			<p class="comment-author"><strong><?php comment_author_link() ?></strong></p>
+			<?php if ($comment->comment_approved == '0') : ?><em>Your comment is awaiting moderation.</em><?php endif; ?>
+			<p class="comment-metadata">Posted <?php comment_date('d M Y') ?> at <?php comment_time('g:i a') ?> | <a href="#comment-<?php comment_ID() ?>" title="Permalink to this comment" rel="permalink">Permalink</a> <?php edit_comment_link('(Edit)', ' ', ''); ?></p>
+			<?php comment_text() ?>
+		</li>
 
-<?php endif; /* if ( $comment_count ) */ ?>
-<?php if ( $ping_count ) : ?>
-<?php $sandbox_comment_alt = 0 ?>
+<?php /* ALTERNATES ALT CLASS */ if ('alt' == $oddcomment) $oddcomment = ''; else $oddcomment = 'alt'; ?>
+<?php } ?>
+<?php endforeach; /* END FOR EACH COMMENT */ ?>
 
-				<div id="trackbacks-list" class="comments">
-					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'sandbox') : __('<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h3>
+	</ol>
 
-					<ol>
-<?php foreach ( $comments as $comment ) : ?>
-<?php if ( get_comment_type() != "comment" ) : ?>
+<?php endif; ?>
 
-						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
-							<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'sandbox'),
-									get_comment_author_link(),
-									get_comment_date(),
-									get_comment_time() );
-									edit_comment_link(__('Edit', 'sandbox'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
-<?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'sandbox') ?>
-							<?php comment_text() ?>
-						</li>
-<?php endif /* if ( get_comment_type() != "comment" ) */ ?>
-<?php endforeach; ?>
+<?php if ($numPingBacks != 0) : ?>
 
-					</ol>
-				</div><!-- #trackbacks-list .comments -->
+	<h3 class="comment-header" id="trackbackz">Trackbacks &amp; Pings</h3>
 
-<?php endif /* if ( $ping_count ) */ ?>
-<?php endif /* if ( $comments ) */ ?>
-<?php if ( 'open' == $post->comment_status ) : ?>
-				<div id="respond">
-					<h3><?php _e('Post a Comment', 'sandbox') ?></h3>
+	<ol class="commentlist">
 
+<?php foreach ($comments as $comment) : ?>
+<?php if (get_comment_type() != "comment"){ ?>
+
+		<li id="comment-<?php comment_ID() ?>" class="<?php echo $oddcomment; ?> trackback">
+			<p class="comment-author"><strong><?php comment_author_link() ?></strong> on <?php comment_date('d M Y') ?> at <?php comment_time('g:i a') ?> <?php edit_comment_link('(Edit)', ' ', ''); ?></p>
+			<?php if ($comment->comment_approved == '0') : ?><em>Your trackback/pingback is awaiting moderation.</em><?php endif; ?>
+		</li>
+
+<?php /* ALTERNATES ALT CLASS */ if ('alt' == $oddcomment) $oddcomment = ''; else $oddcomment = 'alt'; ?>
+<?php } ?>
+<?php endforeach; /* END FOR EACH COMMENT */ ?>
+
+	</ol>
+
+<?php endif; ?>
+
+<?php else : // NO COMMENTS, TRACKBACKS, OR PINGS ?>
+
+<?php if ('open' == $post->comment_status) : ?>
+	
+<?php else : // COMMENTS ARE CLOSED ?>
+
+<?php endif; ?>
+
+<?php endif; ?>
+
+<?php if ('open' == $post->comment_status) : ?>
+	
+	<h3 id="respond">Post a Comment</h3>
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-					<p id="login-req"><?php printf(__('You must be <a href="%s" title="Log in">logged in</a> to post a comment.', 'sandbox'),
-					get_option('siteurl') . '/wp-login.php?redirect_to=' . get_permalink() ) ?></p>
-
+	<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>" title="Log in">logged in</a> to post a comment.</p>
 <?php else : ?>
-					<div class="formcontainer">	
-						<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+
+	<div class="formcontainer">	
+
+		<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
 <?php if ( $user_ID ) : ?>
-							<p id="login"><?php printf(__('<span class="loggedin">Logged in as <a href="%1$s" title="Logged in as %2$s">%2$s</a>.</span> <span class="logout"><a href="%3$s" title="Log out of this account">Log out?</a></span>', 'sandbox'),
-								get_option('siteurl') . '/wp-admin/profile.php',
-								wp_specialchars($user_identity, true),
-								get_option('siteurl') . '/wp-login.php?action=logout&amp;redirect_to=' . get_permalink() ) ?></p>
+
+			<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php" title="Logged in as <?php echo $user_identity; ?>"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log off?</a></p>
 
 <?php else : ?>
 
-							<p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'sandbox') ?> <?php if ($req) _e('Required fields are marked <span class="required">*</span>', 'sandbox') ?></p>
+			<p>Your email is <em>never</em> published nor shared. <?php if ($req) echo "Required fields are marked <span class='req-field'>*</span>"; ?></p>
 
-							<div class="form-label"><label for="author"><?php _e('Name', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
-							<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
+			<p class="form-label"><label for="author">Name</label> <?php if ($req) echo "<span class='req-field'>*</span>"; ?></p>
+			<p><input id="author" name="author" type="text" value="<?php echo $comment_author; ?>" size="30" maxlength="20" tabindex="3" /></p>
 
-							<div class="form-label"><label for="email"><?php _e('Email', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
-							<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
+			<p class="form-label"><label for="email">Email</label> <?php if ($req) echo "<span class='req-field'>*</span>"; ?></p>
+			<p><input id="email" name="email" type="text" value="<?php echo $comment_author_email; ?>" size="30" maxlength="50" tabindex="4" /></p>
 
-							<div class="form-label"><label for="url"><?php _e('Website', 'sandbox') ?></label></div>
-							<div class="form-input"><input id="url" name="url" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" /></div>
+			<p class="form-label"><label for="url">Website</label></p>
+			<p><input id="url" name="url" type="text" value="<?php echo $comment_author_url; ?>" size="30" maxlength="50" tabindex="5" /></p>
 
-<?php endif /* if ( $user_ID ) */ ?>
+<?php endif; ?>
 
-							<div class="form-label"><label for="comment"><?php _e('Comment', 'sandbox') ?></label></div>
-							<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
+			<p class="form-label"><label for="comment">Comment</label></p>
+			<p><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></p>
 
-							<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e('Post Comment', 'sandbox') ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
+			<p class="form-submit"><input id="submit" name="submit" type="submit" value="Post" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></p>
 
-							<?php do_action('comment_form', $post->ID); ?>
+<?php do_action('comment_form', $post->ID); ?>
 
-						</form><!-- #commentform -->
-					</div><!-- .formcontainer -->
-<?php endif /* if ( get_option('comment_registration') && !$user_ID ) */ ?>
+		</form><!-- END COMMENTFORM -->
+	</div><!-- END FORMCONTAINER -->
 
-				</div><!-- #respond -->
-<?php endif /* if ( 'open' == $post->comment_status ) */ ?>
+<?php endif; ?>
+<?php endif; ?>
 
-			</div><!-- #comments -->
+</div>

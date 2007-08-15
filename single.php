@@ -1,56 +1,51 @@
-<?php get_header() ?>
-
+<?php get_header(); ?>
+	
 	<div id="container">
 		<div id="content">
 
-<?php the_post(); ?>
-			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php previous_post_link('%link', '<span class="meta-nav">&laquo;</span> %title') ?></div>
-				<div class="nav-next"><?php next_post_link('%link', '%title <span class="meta-nav">&raquo;</span>') ?></div>
-			</div>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
+			<div class="navigation">
+				<div class="nav-previous"><?php previous_post_link('&laquo; %link') ?></div>
+				<div class="nav-next"><?php next_post_link('%link &raquo;') ?></div>
+			</div><!-- END NAVIGATION -->
 
-			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
-				<h2 class="entry-title"><?php the_title(); ?></h2>
-				<div class="entry-content">
-<?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'sandbox').''); ?>
-
-<?php link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
-				</div>
-				<div class="entry-meta">
-					<?php printf(__('This entry was written by %1$s and posted on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr> and filed under %6$s. Bookmark the <a href="%7$s" title="Permalink to %8$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%9$s" title="Comments RSS to %8$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox'),
-						'<span class="author vcard"><a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="' . sprintf(__('View all posts by %s', 'sandbox'), $authordata->display_name) . '">'.get_the_author().'</a></span>',
-						get_the_time('Y-m-d'),
-						get_the_time('H:i:sO'),
-						the_date('', '', '', false),
-						get_the_time(),
-						get_the_category_list(', '),
-						get_permalink(),
-						wp_specialchars(get_the_title(), 'double'),
-						comments_rss() ) ?>
-
-<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // Comments and trackbacks open ?>
-					<?php printf(__('<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox'), get_trackback_url()) ?>
-<?php elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // Only trackbacks open ?>
-					<?php printf(__('Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox'), get_trackback_url()) ?>
-<?php elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // Only comments open ?>
-					<?php printf(__('Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'sandbox')) ?>
-<?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // Comments and trackbacks closed ?>
-					<?php _e('Both comments and trackbacks are currently closed.') ?>
-<?php endif; ?>
-<?php edit_post_link(__('Edit', 'sandbox'), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>"); ?>
-
-				</div>
-			</div><!-- .post -->
-
-			<div id="nav-below" class="navigation">
-				<div class="nav-previous"><?php previous_post_link('%link', '<span class="meta-nav">&laquo;</span> %title') ?></div>
-				<div class="nav-next"><?php next_post_link('%link', '%title <span class="meta-nav">&raquo;</span>') ?></div>
-			</div>
+			<div id="post-<?php the_ID(); ?>" class="post <?php post_category_class(); ?>">
+				<h2 class="post-title"><?php the_title(); ?></h2>
+				<div class="post-entry">
+					<?php the_content('<span class="more-link">Continue Reading &raquo;</span>'); ?>
+					<?php link_pages('<p class="page-link">Pages: ', '</p>', 'number'); ?>
+					<!-- <?php trackback_rdf(); ?> -->
+				</div><!-- END POST-ENTRY -->
+				<p class="post-footer">
+					This entry was written by <?php the_author_posts_link(); ?> and posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?> and is filed under <?php the_category(', ') ?>. Bookmark the <a href="<?php the_permalink() ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">permalink</a>. Follow any comments here with the <?php comments_rss_link('RSS feed for this post'); ?>.
+<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) { // COMMENTS & PINGS OPEN ?>
+					<a href="#respond">Post a comment</a> or leave a trackback: <a href="<?php trackback_url(true); ?>" rel="trackback">Trackback URI</a>.
+<?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) { // PINGS ONLY OPEN ?>
+					Comments are closed, but you can leave a trackback: <a href="<?php trackback_url(true); ?>" rel="trackback">Trackback URI</a>.
+<?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) { // COMMENTS OPEN ?>
+					Trackbacks are closed, but you can <a href="#respond">post a comment</a>.
+<?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) { // NOTHING OPEN ?>
+					Both comments and trackbacks are currently closed.			
+<?php } edit_post_link('Edit this entry.','',''); ?>
+				</p>
+			</div><!-- END POST -->
 
 <?php comments_template(); ?>
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+<?php endwhile; else: ?>
 
-<?php get_sidebar() ?>
-<?php get_footer() ?>
+			<div id="post-error" class="post">
+				<h2 class="post-title">Not Found</h2>
+				<div class="post-entry">
+					<p>Apologies. But something you were looking for just can't be found. Please have a look around or try searching for what you're looking for.</p>
+				</div><!-- END POST-ENTRY  -->
+			</div><!-- END POST -->
+
+<?php endif; ?>
+
+		</div><!-- END CONTENT -->
+	</div><!-- END CONTAINER  -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
