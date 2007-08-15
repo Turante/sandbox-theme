@@ -36,12 +36,26 @@ function sandbox_body_class( $print = true ) {
 	if ( is_single() ) {
 		$postID = $wp_query->post->ID;
 		the_post();
+
+		// Adds 'single' class and class with the post ID
 		$c[] = 'single postid-' . $postID;
+
+		// Adds classes for the month, day, and hour when the post was published
 		if ( isset($wp_query->post->post_date) )
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
+
+		// Adds category classes for each category on single posts
 		foreach ( (array) get_the_category() as $cat )
 			$c[] = 's-category-' . $cat->category_nicename;
-			$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
+
+		// Adds MIME-specific classes for attachments
+		if ( is_attachment() )
+			$the_mime = get_post_mime_type();
+			$boring_stuff = array("application/", "image/", "text/", "audio/", "video/", "music/");
+				$c[] = 'attachment-' . str_replace($boring_stuff, "", "$the_mime");
+
+		// Adds author class for the post author
+		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		rewind_posts();
 	}
 
