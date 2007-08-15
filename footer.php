@@ -1,13 +1,12 @@
-
 	<div id="footer">
-		<span id="generator-link"><a href="http://wordpress.org/" title="<?php _e('WordPress', 'sandbox'); ?>" rel="generator"><?php _e('WordPress', 'sandbox'); ?></a></span>
-		<span class="meta-sep">|</span>
-		<span id="theme-link"><a href="http://www.plaintxt.org/themes/sandbox/" title="<?php _e('Sandbox for WordPress', 'sandbox'); ?>" rel="designer"><?php _e('Sandbox', 'sandbox'); ?></a></span>
-	</div><!-- #footer -->
-
-</div><!-- #wrapper .hfeed -->
-
+		<p>
+			A <a href="http://wordpress.org/" title="WordPress">WordPress</a> Blog
+			|
+			<a href="http://www.plaintxt.org/themes/minimalist-sandbox/" title="Minimalist Sandbox theme for WordPress" rel="follow">Minimalist Sandbox</a> theme by <a href="http://scottwallick.com/" title="scottwallick.com" rel="follow">Scott</a>
+		</p>
+	</div>
 <?php wp_footer() ?>
+</div><!-- wrapper -->
 
 </body>
 </html>

@@ -1,353 +1,263 @@
 <?php
-// Produces a list of pages in the header without whitespace -- er, I mean negative space.
+
+function sandbox_stylesheets() {
+	$options = get_option('sandbox_options');
+	$style = empty($options['style']) ? '2c-r' : $options['style'];
+	if ( $style != 'none' ) {
+?>
+	<?php /* <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" title="Sandbox" /> */ ?>
+	<?php /* <style type="text/css">@import url(<?php echo get_template_directory_uri() . "/styles/$style.css" ?>);</style> */ ?>
+	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri() . "/styles/$style.css" ?>" title="Sandbox" />
+<?php
+	}
+}
+
+function sandbox_skipnav() {
+	$options = get_option('sandbox_options');
+	if ( empty($options['globalnav']) )
+		return;
+	echo "		<p class='access'><a href='#content'>Skip navigation</a></p>\n";
+}
+
 function sandbox_globalnav() {
-	echo '<div id="menu"><ul>';
-	$menu = wp_list_pages('title_li=&sort_column=menu_order&echo=0'); // Params for the page list in header.php
-	echo str_replace(array("\r", "\n", "\t"), '', $menu);
-	echo "</ul></div>\n";
+	$options = get_option('sandbox_options');
+	if ( empty($options['globalnav']) )
+		return;
+	if ( function_exists('wp_list_pages') ) {
+		echo '		<div id="menu" class="globalnav"><ul class="nav">';
+		$menu = wp_list_pages( array('title_li'=>'', 'echo'=>false, 'sort_column'=>'menu_order') );
+		echo str_replace(array("\r", "\n", "\t"), '', $menu);
+		echo "</ul><div class='clearer'></div></div>\n";
+	} else {
+		// OTHER NAV CODE, WAIT, WHAT 'OTHER' NAV CODE? ;-)
+	}
 }
 
-// Checks for WP 2.1.x language_attributes() function
-function sandbox_blog_lang() {
-	if ( function_exists('language_attributes') )
-		return language_attributes();
-}
+function sandbox_body_class() {
+	global $wp_query;
 
-// Generates semantic classes for BODY element
-function sandbox_body_class( $print = true ) {
-	global $wp_query, $current_user;
-	
-	// It's surely a WordPress blog, right?
 	$c = array('wordpress');
 
-	// Applies the time- and date-based classes (below) to BODY element
 	sandbox_date_classes(time(), $c);
 
-	// Generic semantic classes for what type of content is displayed
-	is_home()       ? $c[] = 'home'       : null;
-	is_archive()    ? $c[] = 'archive'    : null;
-	is_date()       ? $c[] = 'date'       : null;
-	is_search()     ? $c[] = 'search'     : null;
-	is_paged()      ? $c[] = 'paged'      : null;
-	is_attachment() ? $c[] = 'attachment' : null;
-	is_404()        ? $c[] = 'four04'     : null; // CSS does not allow a digit as first character
+	is_home()     ? $c[] = 'home'     : null;
+	is_page()     ? $c[] = 'page'     : null;
+	is_archive()  ? $c[] = 'archive'  : null;
+	is_date()     ? $c[] = 'date'     : null;
+	is_search()   ? $c[] = 'search'   : null;
+	is_paged()    ? $c[] = 'paged'    : null;
+	is_attachment()    ? $c[] = 'attachment'    : null;
+	is_404()      ? $c[] = 'four04'   : null; // CSS does not allow a digit as first character
 
-	// Special classes for BODY element when a single post
-	if ( is_single() ) {
-		$postID = $wp_query->post->ID;
-		the_post();
-		$c[] = 'single postid-' . $postID;
-		if ( isset($wp_query->post->post_date) )
-			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
-		foreach ( (array) get_the_category() as $cat )
-			$c[] = 's-category-' . $cat->category_nicename;
-			$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
-		rewind_posts();
-	}
-
-	// Author name classes for BODY on author archives
-	else if ( is_author() ) {
+	if ( is_author() ) {
+		global $wp_query;
 		$author = $wp_query->get_queried_object();
 		$c[] = 'author';
 		$c[] = 'author-' . $author->user_nicename;
 	}
-
-	// Category name classes for BODY on category archvies
-	else if ( is_category() ) {
+	
+	if ( is_category() ) {
+		global $wp_query;
 		$cat = $wp_query->get_queried_object();
 		$c[] = 'category';
 		$c[] = 'category-' . $cat->category_nicename;
 	}
 
-	// Page author for BODY on 'pages'
-	else if ( is_page() ) {
-		$pageID = $wp_query->post->ID;
-		the_post();
-		$c[] = 'page pageid-' . $pageID;
-		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
-		rewind_posts();
+	if ( is_single() ) {
+		$c[] = 'single';
+		if ( isset($wp_query->post->post_date) )
+			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
 	}
 
-	// For when a visitor is logged in while browsing
-	if ( $current_user->ID )
-		$c[] = 'loggedin';
-
-	// Paged classes; for 'page X' classes of index, single, etc.
-	if ( ( ( $page = $wp_query->get("paged") ) || ( $page = $wp_query->get("page") ) ) && $page > 1 ) {
-		$c[] = 'paged-'.$page.'';
-		if ( is_single() ) {
-			$c[] = 'single-paged-'.$page.'';
-		} else if ( is_page() ) {
-			$c[] = 'page-paged-'.$page.'';
-		} else if ( is_category() ) {
-			$c[] = 'category-paged-'.$page.'';
-		} else if ( is_date() ) {
-			$c[] = 'date-paged-'.$page.'';
-		} else if ( is_author() ) {
-			$c[] = 'author-paged-'.$page.'';
-		} else if ( is_search() ) {
-			$c[] = 'search-paged-'.$page.'';
-		}
-	}
-
-	// Separates classes with a single space, collates classes for BODY
-	$c = join(' ', apply_filters('body_class',  $c));
-
-	// And tada!
-	return $print ? print($c) : $c;
+	echo join(' ', apply_filters('body_class',  $c));
 }
 
-// Generates semantic classes for each post DIV element
-function sandbox_post_class( $print = true ) {
+function sandbox_post_class() {
 	global $post, $sandbox_post_alt;
 
-	// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type and p[n]
-	$c = array('hentry', "p$sandbox_post_alt", $post->post_type, $post->post_status);
+	$c = array($post->post_type, $post->post_status);
+	$c[] = 'author-' . get_the_author_login();
 
-	// Author for the post queried
-	$c[] = 'author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
-
-	// Category for the post queried
 	foreach ( (array) get_the_category() as $cat )
 		$c[] = 'category-' . $cat->category_nicename;
 
-	// For password-protected posts
-	if ( $post->post_password )
-		$c[] = 'protected';
-
-	// Applies the time- and date-based classes (below) to post DIV
 	sandbox_date_classes(mysql2date('U', $post->post_date), $c);
 
-	// If it's the other to the every, then add 'alt' class
 	if ( ++$sandbox_post_alt % 2 )
 		$c[] = 'alt';
 
-	// Separates classes with a single space, collates classes for post DIV
-	$c = join(' ', apply_filters('post_class', $c));
+	echo 'hentry post';
 
-	// And tada!
-	return $print ? print($c) : $c;
+	echo join(' ', apply_filters('post_class', $c));
 }
-
-// Define the num val for 'alt' classes (in post DIV and comment LI)
 $sandbox_post_alt = 1;
 
-// Generates semantic classes for each comment LI element
-function sandbox_comment_class( $print = true ) {
+function sandbox_comment_class() {
 	global $comment, $post, $sandbox_comment_alt;
 
-	// Collects the comment type (comment, trackback),
 	$c = array($comment->comment_type);
 
-	// Counts trackbacks (t[n]) or comments (c[n])
-	if ($comment->comment_type == 'trackback') {
-		$c[] = "t$sandbox_comment_alt";
-	} else {
-		$c[] = "c$sandbox_comment_alt";
-	}
-
-	// If the comment author has an id (registered), then print the log in name
 	if ( $comment->user_id > 0 ) {
 		$user = get_userdata($comment->user_id);
 
-		// For all registered users, 'byuser'; to specificy the registered user, 'commentauthor+[log in name]'
-		$c[] = "byuser comment-author-" . sanitize_title_with_dashes(strtolower($user->user_login));
-		// For comment authors who are the author of the post
-		if ( $comment->user_id === $post->post_author )
-			$c[] = 'bypostauthor';
+		$c[] = "byuser commentauthor-$user->user_login";
 	}
 
-	// If it's the other to the every, then add 'alt' class; collects time- and date-based classes
+	if ( $comment->user_id > 0 && $comment->user_id === $post->post_author )
+		$c[] = 'bypostauthor';
+
 	sandbox_date_classes(mysql2date('U', $comment->comment_date), $c, 'c-');
 	if ( ++$sandbox_comment_alt % 2 )
 		$c[] = 'alt';
+		
+	if ( is_trackback() ) {
+		$c[] = 'trackback';
+	}
 
-	// Separates classes with a single space, collates classes for comment LI
-	$c = join(' ', apply_filters('comment_class', $c));
-
-	// Tada again!
-	return $print ? print($c) : $c;
+	echo join(' ', apply_filters('comment_class', $c));
 }
 
-// Generates time- and date-based classes for BODY, post DIVs, and comment LIs; relative to GMT (UTC)
 function sandbox_date_classes($t, &$c, $p = '') {
 	$t = $t + (get_settings('gmt_offset') * 3600);
 	$c[] = $p . 'y' . gmdate('Y', $t); // Year
 	$c[] = $p . 'm' . gmdate('m', $t); // Month
 	$c[] = $p . 'd' . gmdate('d', $t); // Day
-	$c[] = $p . 'h' . gmdate('H', $t); // Hour
+	$c[] = $p . 'h' . gmdate('h', $t); // Hour
 }
 
-// For category lists on category archives, returns other categorys except the current one (redundant)
-function sandbox_cats_meow($glue) {
-	$current_cat = single_cat_title('', false);
-	$separator = "\n";
-	$cats = explode($separator, get_the_category_list($separator));
-
-	foreach ( $cats as $i => $str ) {
-		if ( strstr($str, ">$current_cat<") ) {
-			unset($cats[$i]);
-			break;
-		}
-	}
-
-	if ( empty($cats) )
-		return false;
-
-	return trim(join($glue, $cats));
-}
-
-// Widget: Search; to match the Sandbox style and replace Widget plugin default
 function widget_sandbox_search($args) {
 	extract($args);
 	if ( empty($title) )
 		$title = __('Search', 'sandbox');
 ?>
 		<?php echo $before_widget ?>
+
 			<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
 			<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
-				<div>
-					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" tabindex="1" />
-					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
-				</div>
-			</form>
+				<input id="s" name="s" type="text" value="<?php echo wp_specialchars($s, 1); ?>" size="7" tabindex="1" />
+				<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Search &raquo;', 'sandbox') ?>" tabindex="2" />
+			</form> 
 		<?php echo $after_widget ?>
 
 <?php
 }
+register_sidebar_widget(__('Search', 'sandbox'), 'widget_sandbox_search');
 
-// Widget: Meta; to match the Sandbox style and replace Widget plugin default
-function widget_sandbox_meta($args) {
-	extract($args);
-	if ( empty($title) )
-		$title = __('Meta', 'sandbox');
-?>
-		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
-			<ul>
-				<?php wp_register() ?>
-				<li><?php wp_loginout() ?></li>
-				<?php wp_meta() ?>
-			</ul>
-		<?php echo $after_widget; ?>
-<?php
+function widget_sandbox_links() {
+	if ( function_exists('wp_list_bookmarks') ) {
+		wp_list_bookmarks(array('title_before'=>'<h3>', 'title_after'=>'</h3>'));
+	} else { 
+		// I don't like WP 2.0x links.
+	}
 }
+register_sidebar_widget(__('Links', 'sandbox'), 'widget_sandbox_links');
 
-// Widget: RSS links; to match the Sandbox style
-function widget_sandbox_rsslinks($args) {
-	extract($args);
-	$options = get_option('widget_sandbox_rsslinks');
-	$title = empty($options['title']) ? __('RSS Links', 'sandbox') : $options['title'];
-?>
-		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
-			<ul>
-				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'sandbox'); ?>" rel="alternate" type="application/rss+xml"><?php _e('All posts', 'sandbox') ?></a></li>
-				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'sandbox'); ?>" rel="alternate" type="application/rss+xml"><?php _e('All comments', 'sandbox') ?></a></li>
-			</ul>
-		<?php echo $after_widget; ?>
-<?php
-}
-
-// Widget: RSS links; element controls for customizing text within Widget plugin
-function widget_sandbox_rsslinks_control() {
-	$options = $newoptions = get_option('widget_sandbox_rsslinks');
-	if ( $_POST["rsslinks-submit"] ) {
-		$newoptions['title'] = strip_tags(stripslashes($_POST["rsslinks-title"]));
+function widget_links_control() {
+	$options = $newoptions = get_option('widget_links');
+	if ( $_POST["links-submit"] ) {
+		$newoptions['title'] = strip_tags(stripslashes($_POST["links-title"]));
 	}
 	if ( $options != $newoptions ) {
 		$options = $newoptions;
-		update_option('widget_sandbox_rsslinks', $options);
+		update_option('widget_links', $options);
 	}
 	$title = htmlspecialchars($options['title'], ENT_QUOTES);
 ?>
-			<p><label for="rsslinks-title"><?php _e('Title:'); ?> <input style="width: 250px;" id="rsslinks-title" name="rsslinks-title" type="text" value="<?php echo $title; ?>" /></label></p>
-			<input type="hidden" id="rsslinks-submit" name="rsslinks-submit" value="1" />
+			<p><label for="links-title"><?php _e('Title:'); ?> <input style="width: 250px;" id="links-title" name="links-title" type="text" value="<?php echo $title; ?>" /></label></p>
+			<input type="hidden" id="links-submit" name="links-submit" value="1" />
 <?php
 }
 
-// Widget and Sandbox function: creates bookmark links (blogrolls) for WP 2.0.x or WP 2.1.x
-function widget_sandbox_links() {
-	// Checks for WP 2.1.x bookmarks function
-	if ( function_exists('wp_list_bookmarks') ) {
-		wp_list_bookmarks(array('title_before'=>'<h3>', 'title_after'=>'</h3>', 'show_images'=>true));
-	} else {
-		// If not WP 2.1.x, then on the database . . .
-		global $wpdb;
+function sandbox_init() {
+	load_theme_textdomain('sandbox');
 
-		// Nasty bit of code to make pretty WP 2.0.x blogrolls
-		$cats = $wpdb->get_results("
-			SELECT DISTINCT link_category, cat_name, show_images, 
-				show_description, show_rating, show_updated, sort_order, 
-				sort_desc, list_limit
-			FROM `$wpdb->links` 
-			LEFT JOIN `$wpdb->linkcategories` ON (link_category = cat_id)
-			WHERE link_visible =  'Y'
-				AND list_limit <> 0
-			ORDER BY cat_name ASC", ARRAY_A);
-
-		// Sorts blogroll categorys by name
-		if ($cats) {
-			foreach ($cats as $cat) {
-				$orderby = $cat['sort_order'];
-				$orderby = (bool_from_yn($cat['sort_desc'])?'_':'') . $orderby;
-
-				// Display the category name
-				echo '	<li id="linkcat-' . $cat['link_category'] . '"><h3>' . $cat['cat_name'] . "</h3>\n\t<ul>\n";
-
-				// Call get_links() with all the appropriate params
-				get_links($cat['link_category'],
-					'<li>',"</li>","\n",
-					bool_from_yn($cat['show_images']),
-					$orderby,
-					bool_from_yn($cat['show_description']),
-					bool_from_yn($cat['show_rating']),
-					$cat['list_limit'],
-					bool_from_yn($cat['show_updated']));
-	
-				// Closes any oustanding accounts
-				echo "\n\t</ul>\n</li>\n";
-			}
-		}
-	}
-}
-
-// Widgets plugin: intializes the plugin after the widgets above have passed snuff
-function sandbox_widgets_init() {
-	if ( !function_exists('register_sidebars') )
-		return;
-
-	// Uses H3-level headings with all widgets to match Sandbox style
-	$p = array(
-		'before_title' => "<h3 class='widgettitle'>",
+	$p = $s = array(
+		'before_title' => '<h3 class="widgettitle">',
 		'after_title' => "</h3>\n",
 	);
 
-	// Table for how many? Two? This way, please.
-	register_sidebars(2, $p);
+	$p['name'] = __('Primary Sidebar', 'sandbox');
+	$s['name'] = __('Secondary Sidebar', 'sandbox');
+	
+	if ( function_exists('register_sidebar') ) {
+		register_sidebar($p);
+		register_sidebar($s);
+	}
 
-	// Finished intializing Widgets plugin, now let's load the Sandbox default widgets
-	register_sidebar_widget(__('Search', 'sandbox'), 'widget_sandbox_search', null, 'search');
-	unregister_widget_control('search');
-	register_sidebar_widget(__('Meta', 'sandbox'), 'widget_sandbox_meta', null, 'meta');
-	unregister_widget_control('meta');
-	register_sidebar_widget(__('Links', 'sandbox'), 'widget_sandbox_links', null, 'links');
-	unregister_widget_control('links');
-	register_sidebar_widget(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks');
-	register_widget_control(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
+	if ( function_exists('register_sidebar_widget') )
+		register_sidebar_widget(__('Search'), 'widget_sandbox_search');
+}
+add_action('init', 'sandbox_init');
+
+function sandbox_admin_menu() {
+	add_theme_page(__('Sandbox Options', 'sandbox'), __('Sandbox Options', 'sandbox'), 'edit_themes', basename(__FILE__), 'sandbox_options_page');
+}
+add_action('admin_menu', 'sandbox_admin_menu');
+
+function sandbox_options_page() {
+	$styles = array();
+	$defaults = array('style' => '2c-r');
+	$options = array_merge($defaults, (array) get_option('sandbox_options'));
+	if ( $GLOBALS['pagenow'] == 'themes.php' && $_GET['page'] == basename(__FILE__) && isset($_POST['sandbox_submit']) ) {
+		$options['style'] = wp_filter_kses($_POST['style']);
+		$options['globalnav'] = empty($_POST['globalnav']) ? false : true;
+		if ( update_option('sandbox_options', $options) )
+			echo "\n<div id='message' class='updated fade'><p>".__('Options saved successfully.', 'sandbox')."</p></div>\n";
+	}
+	$_styles = glob(ABSPATH.'wp-content/themes/sandbox/styles/*.css');
+	foreach ( $_styles as $k => $v ) {
+		$info = array();
+		preg_match('/\/([^\/]+).css$/i', $v, $matches);
+		if ( !empty($matches[1]) )
+			$style = file($v);
+			$info['desc'] = stripslashes(wp_filter_kses(trim($style[0], "\r\n\t/* ")));
+			$png = str_replace('.css', '.png', $v);
+			if ( file_exists($png) ) {
+				$png_url = get_template_directory_uri() . '/styles/' . $matches[1] . '.png';
+				$info['img'] = "<img src='$png_url' alt='' style='width:40px;height:32px;' onmouseover='showme(this)' />";
+			} else {
+				$info['img'] = false;
+			}
+			$styles[$matches[1]] = $info;
+	}
+?>
+<script type="text/javascript">
+function showme(o) { document.getElementById('show').src = o.src; }
+</script>
+<div class="wrap">
+	<h2><?php _e('Choose a Style', 'sandbox') ?></h2>
+	<p><?php _e('Below are styles available for the Miniamlist Sandbox, as installed in the <code>/styles/</code> folder', 'sandbox') ?></p>
+	<form action="" method="post">
+		<table cellspacing="8">
+<?php $i = 0; foreach ( $styles as $style => $info ) : extract($info); ?>
+			<tr style="height:35px;">
+				<td><input name="style" id="style-<?php echo $style ?>" type="radio" value="<?php echo $style ?>" <?php checked($options['style'], $style) ?> /></td>
+				<td><?php if ($img) : ?><label for="style-<?php echo $style ?>"><?php echo $img ?></label><?php endif ?></td>
+				<td><label for="style-<?php echo $style ?>"><?php _e($desc, 'sandbox') ?></label></td>
+<?php if ( ++$i == 1 ) : ?>
+				<td width="300px" rowspan="<?php echo count($styles) + 1; ?>"><img alt="Mouseover thumbnails for a larger preview" src="" id="show" width="250px" height="200px" align="right" style="border:1px inset #999;padding:10px;" /></td>
+<?php endif ?>
+
+			</tr>
+<?php endforeach; ?>
+			<tr>
+				<td><input name="style" id="style-none" type="radio" value="none" <?php checked($options['style'], 'none') ?> /></td>
+				<td></td>
+				<td><label for="style-none"><?php _e('No stylesheet', 'sandbox') ?></label></td>
+			</tr>
+			<tr>
+				<td colspan="4"><h3><?php _e('Extra Options', 'sandbox') ?></h3></td>
+			</tr>
+			<tr>
+				<td colspan="4"><label for="globalnav"><input type="checkbox" id="globalnav" name="globalnav" <?php checked($options['globalnav'], true) ?> /> <?php _e('Add a navigation menu (page list) between the header and content.', 'sandbox') ?></label></td>
+			</tr>
+			<tr>
+				<td colspan="4"><p class="submit"><input type="submit" name="sandbox_submit" id="sandbox_submit" value="<?php _e("Save Options &raquo;", 'sandbox') ?>" /></p></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<?php
 }
 
-// Translate, if applicable
-load_theme_textdomain('sandbox');
-
-// Runs our code at the end to check that everything needed has loaded
-add_action('init', 'sandbox_widgets_init');
-
-// Adds filters so that things run smoothly
-add_filter('archive_meta', 'wptexturize');
-add_filter('archive_meta', 'convert_smilies');
-add_filter('archive_meta', 'convert_chars');
-add_filter('archive_meta', 'wpautop');
-
-// Remember: a Sandbox is for play.
 ?>
