@@ -1,0 +1,15 @@
+div.sidebar {
+	width: 40%;
+	margin-top: 3em;
+}
+div#primary {
+	clear: both;
+	float: left;
+}
+div#secondary {
+	float: right;
+}
+div#footer {
+	clear: left;
+	width: 100%;
+}
