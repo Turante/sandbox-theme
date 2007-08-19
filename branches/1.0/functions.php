@@ -226,10 +226,10 @@ function sandbox_cats_meow($glue) {
 
 // For tag lists on tag archives: Returns other tags except the current one (redundant)
 function sandbox_tag_ur_it($glue) {
-	$current_tag = get_the_tags('', false);
+	$current_tag = get_the_tag_list('', '',  false);
 	// $current_tag = single_tag_title('', false); Doesn't exist, so is there an existing way to accomplish this? re: tag-foo-bar in BODY too . . .
 	$separator = "\n";
-	$tags = explode($separator, get_the_tag_list($separator));
+	$tags = explode($separator, get_the_tag_list("", "$separator", ""));
 
 	foreach ( $tags as $i => $str ) {
 		if ( strstr($str, ">$current_tag<") ) {
