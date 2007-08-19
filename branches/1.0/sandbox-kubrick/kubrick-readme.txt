@@ -1,7 +1,7 @@
 = KUBRICK =
 
-Version 1.1
-Updated 17 May 2007
+Version 1.2
+Updated 19 August 2007
 by ANDY SKELTON, http://andy.wordpress.com/
 
 
@@ -19,13 +19,6 @@ This theme is a modification of the default WordPress theme, also known as Kubri
 To use the Kubrick design with the Sandbox, simply replace everything after the commented-out header in the root style.css file with
 
 	@import url('sandbox-kubrick/kubrick-style.css');
-
-
-== IMPORTANT FOR WORDPRESS 2.0.X USERS ==
-
-If you intend to use this design with the Sandbox running WordPress 2.0.x, please note you will need to update the name of an image in the design CSS: kubrickbg-ltr.jpg => kubrickbg.jpg.
-
-This is because of language support introduced in WordPress 2.2 and left-to-right vs. right-to-left variables.
 
 
 == LICENSE ==
