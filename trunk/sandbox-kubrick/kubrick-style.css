@@ -77,14 +77,20 @@ div.entry-content p {
 }
 div.entry-meta {
 	clear: left;
-	font-size: 90%;
+	font-size: 95%;
 	line-height: 1.4em;
 	padding-top: 5px;
 	text-align: center;
 }
+div.entry-meta span.comments-link a:after {
+	content:"\0020\00BB";
+}
 body.single .entry-meta {
 	margin: 30px 0;
 	text-align: justify;
+}
+body.single .entry-meta abbr.published {
+	font-size:1em;
 }
 body.archive .entry-meta {
 	text-align: left;
@@ -227,7 +233,7 @@ div.sidebar {
 div#primary {
 	margin-top: 50px;
 }
-small, div.sidebar ul ul li, div.sidebar ul ol li, .nocomments, .entry-meta, blockquote, strike {
+small, div.sidebar ul ul li, div.sidebar ul ol li, .nocomments, .entry-meta, blockquote, strike, div.archive-meta{
 	color: #777;
 }
 code, pre {
