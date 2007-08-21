@@ -3,7 +3,7 @@
 	<div id="container">
 		<div id="content">
 
-	<h2 class="page-title"><?php _e('Tag Archives:', 'sandbox') ?> <span><?php echo get_the_tag_list('', '', ''); // Me no worky, Wah, wah. ?></span></h2>
+	<h2 class="page-title"><?php _e('Tag Archives:', 'sandbox') ?> <span><?php single_tag_title(); ?></span></h2>
 
 			<div id="nav-above" class="navigation">
 				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'sandbox')) ?></div>
