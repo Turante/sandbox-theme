@@ -1,5 +1,14 @@
+/*
+THEME NAME: Sandbox Kubrick
+THEME URI: http://wordpress.org/
+DESCRIPTION: Modification of the default WordPress theme, Kubrick, originally designed by <a href="http://binarybonsai.com/wordpress/kubrick/">Michael Heilemann</a>.
+AUTHOR: Andy Skelton
+AUTHOR URI: http://andy.wordpress.com/
+TEMPLATE: sandbox
+*/
+
 body {
-	background: #d5d6d7 url('../../default/images/kubrickbgcolor.jpg');
+	background: #d5d6d7 url('../default/images/kubrickbgcolor.jpg');
 	color: #333;
 	font-family: "lucida grande", verdana, arial, sans-serif;
 	font-size: 62.5%;
@@ -37,17 +46,17 @@ div#menu ul li a:hover,div#menu ul li.current_page_item a,div#menu ul li.current
 	color:#06c;
 }
 div#wrapper {
-	background: #dfdfff url('../../default/images/kubrickbg-ltr.jpg') repeat-y top left;
+	background: #dfdfff url('../default/images/kubrickbg-ltr.jpg') repeat-y top left;
 	margin: 20px auto;
 	padding: 0;
 	text-align: left;
 	width: 760px;
 }
 body.single #wrapper {
-	background: #fff url('../../default/images/kubrickbgwide.jpg') repeat-y top left;
+	background: #fff url('../default/images/kubrickbgwide.jpg') repeat-y top left;
 }
 div#header {
-	background: #73a0c5 url('../../default/images/kubrickheader.jpg') no-repeat bottom center;
+	background: #73a0c5 url('../default/images/kubrickheader.jpg') no-repeat bottom center;
 	height: 200px;
 	margin: 0;
 	padding: 0;
@@ -103,7 +112,7 @@ div.comments ol li.alt, body.single .entry-meta {
 	padding: 10px;
 }
 div#footer {
-	background: #e7e7e7 url('../../default/images/kubrickfooter.jpg') no-repeat top;
+	background: #e7e7e7 url('../default/images/kubrickfooter.jpg') no-repeat top;
 	border: none;
 	clear: both;
 	height: 38px;
