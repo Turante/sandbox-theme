@@ -1,3 +1,12 @@
+/*
+THEME NAME: SNDBX
+THEME URI: http://www.sndbx.org/
+DESCRIPTION: The original design of the first <a href="http://www.sndbx.org/">Sandbox Designs Competition</a> blog.
+AUTHOR: Scott Allan Wallick
+AUTHOR URI: http://scottwallick.com/
+TEMPLATE: sandbox
+*/
+
 * {
 margin:0;
 padding:0;
@@ -707,8 +716,3 @@ span.edit-link {
 background:url('images/edit.png') no-repeat left center;
 padding:0 0.5em 0 13px;
 }
-
-/*
-SNDBX v1.0 for SANDBOX
-by SCOTT ALLAN WALLICK, http://www.plaintxt.org/
-*/
