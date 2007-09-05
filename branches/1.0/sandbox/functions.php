@@ -26,13 +26,6 @@ function sandbox_body_class( $print = true ) {
 	is_attachment() ? $c[] = 'attachment' : null;
 	is_404()        ? $c[] = 'four04'     : null; // CSS does not allow a digit as first character
 
-	// Adds MIME-specific classes for attachments
-	if ( is_attachment() ) {
-		$the_mime = get_post_mime_type();
-		$boring_stuff = array("application/", "image/", "text/", "audio/", "video/", "music/");
-			$c[] = 'attachment-' . str_replace($boring_stuff, "", "$the_mime");
-	}
-
 	// Special classes for BODY element when a single post
 	else if ( is_single() ) {
 		$postID = $wp_query->post->ID;
@@ -54,6 +47,13 @@ function sandbox_body_class( $print = true ) {
 		if ( $tags = get_the_tags() )
 			foreach ( $tags as $tag )
 				$c[] = 's-tag-' . $tag->slug;
+
+		// Adds MIME-specific classes for attachments
+		if ( is_attachment() ) {
+			$the_mime = get_post_mime_type();
+			$boring_stuff = array("application/", "image/", "text/", "audio/", "video/", "music/");
+				$c[] = 'attachment-' . str_replace($boring_stuff, "", "$the_mime");
+		}
 
 		// Adds author class for the post author
 		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
