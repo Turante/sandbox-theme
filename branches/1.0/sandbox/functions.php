@@ -27,7 +27,7 @@ function sandbox_body_class( $print = true ) {
 	is_404()        ? $c[] = 'four04'     : null; // CSS does not allow a digit as first character
 
 	// Special classes for BODY element when a single post
-	else if ( is_single() ) {
+	if ( is_single() ) {
 		$postID = $wp_query->post->ID;
 		the_post();
 
