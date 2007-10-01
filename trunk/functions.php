@@ -7,12 +7,6 @@ function sandbox_globalnav() {
 	echo "</ul></div>\n";
 }
 
-// Checks for WP 2.1.x language_attributes() function
-function sandbox_blog_lang() {
-	if ( function_exists('language_attributes') )
-		return language_attributes();
-}
-
 // Generates semantic classes for BODY element
 function sandbox_body_class( $print = true ) {
 	global $wp_query, $current_user;
@@ -45,8 +39,14 @@ function sandbox_body_class( $print = true ) {
 			sandbox_date_classes(mysql2date('U', $wp_query->post->post_date), $c, 's-');
 
 		// Adds category classes for each category on single posts
-		foreach ( (array) get_the_category() as $cat )
-			$c[] = 's-category-' . $cat->category_nicename;
+		if ( $cats = get_the_category() )
+			foreach ( $cats as $cat )
+				$c[] = 's-category-' . $cat->slug;
+
+		// Adds tag classes for each tags on single posts
+		if ( $tags = get_the_tags() )
+			foreach ( $tags as $tag )
+				$c[] = 's-tag-' . $tag->slug;
 
 		// Adds MIME-specific classes for attachments
 		if ( is_attachment() ) {
@@ -71,7 +71,14 @@ function sandbox_body_class( $print = true ) {
 	else if ( is_category() ) {
 		$cat = $wp_query->get_queried_object();
 		$c[] = 'category';
-		$c[] = 'category-' . $cat->category_nicename;
+		$c[] = 'category-' . $cat->slug;
+	}
+
+	// Tag name classes for BODY on tag archives
+	else if ( is_tag() ) {
+		$tags = $wp_query->get_queried_object();
+		$c[] = 'tag';
+		$c[] = 'tag-' . $tags->slug; // Does not work; however I try to return the tag I get a false. Grrr.
 	}
 
 	// Page author for BODY on 'pages'
@@ -96,6 +103,8 @@ function sandbox_body_class( $print = true ) {
 			$c[] = 'page-paged-'.$page.'';
 		} else if ( is_category() ) {
 			$c[] = 'category-paged-'.$page.'';
+		} else if ( is_tag() ) {
+			$c[] = 'tag-paged-'.$page.'';
 		} else if ( is_date() ) {
 			$c[] = 'date-paged-'.$page.'';
 		} else if ( is_author() ) {
@@ -124,7 +133,11 @@ function sandbox_post_class( $print = true ) {
 
 	// Category for the post queried
 	foreach ( (array) get_the_category() as $cat )
-		$c[] = 'category-' . $cat->category_nicename;
+		$c[] = 'category-' . $cat->slug;
+
+	// Tags for the post queried
+	foreach ( (array) get_the_tags() as $tag )
+		$c[] = 'tag-' . $tag->slug;
 
 	// For password-protected posts
 	if ( $post->post_password )
@@ -193,7 +206,7 @@ function sandbox_date_classes($t, &$c, $p = '') {
 	$c[] = $p . 'h' . gmdate('H', $t); // Hour
 }
 
-// For category lists on category archives, returns other categorys except the current one (redundant)
+// For category lists on category archives: Returns other categories except the current one (redundant)
 function sandbox_cats_meow($glue) {
 	$current_cat = single_cat_title('', false);
 	$separator = "\n";
@@ -211,6 +224,26 @@ function sandbox_cats_meow($glue) {
 
 	return trim(join($glue, $cats));
 }
+
+// For tag lists on tag archives: Returns other tags except the current one (redundant)
+function sandbox_tag_ur_it($glue) {
+	$current_tag = single_tag_title('', '',  false);
+	$separator = "\n";
+	$tags = explode($separator, get_the_tag_list("", "$separator", ""));
+
+	foreach ( $tags as $i => $str ) {
+		if ( strstr($str, ">$current_tag<") ) {
+			unset($tags[$i]);
+			break;
+		}
+	}
+
+	if ( empty($tags) )
+		return false;
+
+	return trim(join($glue, $tags));
+}
+
 
 // Widget: Search; to match the Sandbox style and replace Widget plugin default
 function widget_sandbox_search($args) {
@@ -281,52 +314,6 @@ function widget_sandbox_rsslinks_control() {
 <?php
 }
 
-// Widget and Sandbox function: creates bookmark links (blogrolls) for WP 2.0.x or WP 2.1.x
-function widget_sandbox_links() {
-	// Checks for WP 2.1.x bookmarks function
-	if ( function_exists('wp_list_bookmarks') ) {
-		wp_list_bookmarks(array('title_before'=>'<h3>', 'title_after'=>'</h3>', 'show_images'=>true));
-	} else {
-		// If not WP 2.1.x, then on the database . . .
-		global $wpdb;
-
-		// Nasty bit of code to make pretty WP 2.0.x blogrolls
-		$cats = $wpdb->get_results("
-			SELECT DISTINCT link_category, cat_name, show_images, 
-				show_description, show_rating, show_updated, sort_order, 
-				sort_desc, list_limit
-			FROM `$wpdb->links` 
-			LEFT JOIN `$wpdb->linkcategories` ON (link_category = cat_id)
-			WHERE link_visible =  'Y'
-				AND list_limit <> 0
-			ORDER BY cat_name ASC", ARRAY_A);
-
-		// Sorts blogroll categorys by name
-		if ($cats) {
-			foreach ($cats as $cat) {
-				$orderby = $cat['sort_order'];
-				$orderby = (bool_from_yn($cat['sort_desc'])?'_':'') . $orderby;
-
-				// Display the category name
-				echo '	<li id="linkcat-' . $cat['link_category'] . '"><h3>' . $cat['cat_name'] . "</h3>\n\t<ul>\n";
-
-				// Call get_links() with all the appropriate params
-				get_links($cat['link_category'],
-					'<li>',"</li>","\n",
-					bool_from_yn($cat['show_images']),
-					$orderby,
-					bool_from_yn($cat['show_description']),
-					bool_from_yn($cat['show_rating']),
-					$cat['list_limit'],
-					bool_from_yn($cat['show_updated']));
-	
-				// Closes any oustanding accounts
-				echo "\n\t</ul>\n</li>\n";
-			}
-		}
-	}
-}
-
 // Widgets plugin: intializes the plugin after the widgets above have passed snuff
 function sandbox_widgets_init() {
 	if ( !function_exists('register_sidebars') )
@@ -346,8 +333,6 @@ function sandbox_widgets_init() {
 	unregister_widget_control('search');
 	register_sidebar_widget(__('Meta', 'sandbox'), 'widget_sandbox_meta', null, 'meta');
 	unregister_widget_control('meta');
-	register_sidebar_widget(__('Links', 'sandbox'), 'widget_sandbox_links', null, 'links');
-	unregister_widget_control('links');
 	register_sidebar_widget(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks');
 	register_widget_control(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
 }
@@ -364,5 +349,5 @@ add_filter('archive_meta', 'convert_smilies');
 add_filter('archive_meta', 'convert_chars');
 add_filter('archive_meta', 'wpautop');
 
-// Remember: a Sandbox is for play.
+// Remember: the Sandbox is for play.
 ?>
