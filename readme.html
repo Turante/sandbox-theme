@@ -44,7 +44,7 @@
 	<div id="readme">
 		<div id="header">
 			<h1 id="title">The Sandbox</h1>
-			<div class="readme-version">Version 0.9.8</div>
+			<div class="readme-version">Version 1.0</div>
 			<div class="readme-subtitle">A theme rich and powerful with dynamic semantic class selectors</div>
 		</div><!-- #header -->
 		<ol id="menu" class="xoxo">
@@ -81,7 +81,7 @@
 				<p>The Sandbox is a lot of things:</p>
 				<ul>
 					<li>Beautiful on the inside</li>
-					<li>For WordPress 2.0.2 through 2.2.x</li>
+					<li>For WordPress 2.3.x</li>
 					<li>Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> 1.0 Transitional</li>
 					<li>Widgets friendly</li>
 					<li>The basis for your new, <abbr title="GNU Public Licence">GPL</abbr>-licensed theme</li>
@@ -113,26 +113,26 @@
 			</li><!-- #installing -->
 			<li id="started">
 				<h2>Getting started</h2>
-				<p>To help beginners get started, example layouts in <code>/sandbox-layouts/</code> have been included. Additionally, two full designs have also been included: Kubrick in <code>/sandbox-kubrick/</code>, ported to the Sandbox by Andy; SNDBX in <code>/sndbx-sandbox/</code>, created by Scott.</p>
-				<p>Instructions for using the included layouts and designs can be found in the respetive folders.</p>
+				<p>To help beginners get started, example layouts in <code>/sandbox-layouts/</code> have been included. Instructions for using the included layouts and designs can be found in the folder.</p>
 				<p>The simplest way to get started with the Sandbox is to jump right in to <code>style.css</code>, using <abbr title="Cascading Style Sheets">CSS</abbr> to design the appearence of the Sandbox.</p>
 				<p>For help learning <abbr title="Cascading Style Sheets">CSS</abbr>, visit:</p>
 				<ul>
 					<li><a href="http://www.cssbasics.com/" title="CSS Basics.com" rel="external"><abbr title="Cascading Style Sheets">CSS</abbr> Basics.com</a></li>
 					<li><a href="http://www.html.net/tutorials/css/" title="HTML.net's CSS Tutorial" rel="external">HTML.net's <abbr title="Cascading Style Sheets">CSS</abbr> Tutorial</a></li>
 					<li><a href="http://www.htmldog.com/guides/cssbeginner/" title="HTML Dog's CSS Beginner Tutorial" rel="external">HTML Dog's <abbr title="Cascading Style Sheets">CSS</abbr> Beginner Tutorial</a></li>
-					<li><a href="http://www.w3schools.com/css/default.asp" title="W3's CSS School" rel="external">W3's <abbr title="Cascading Style Sheets">CSS</abbr> School</a></li>
 					<li><a href="http://www.stylegala.com/features/css-reference/" title="Stylegala's CSS Reference" rel="external">Stylegala's <abbr title="Cascading Style Sheets">CSS</abbr> Reference</a></li>
+					<li><a href="http://www.w3schools.com/css/default.asp" title="W3's CSS School" rel="external">W3's <abbr title="Cascading Style Sheets">CSS</abbr> School</a></li>
 				</ul>
-				<p>For Sandbox-related resources, visit:</p>
+				<p>For Sandbox-related resources, including how-tos, Sandbox-based theme templates, and more, visit:</p>
 				<ul>
-					<li><a href="http://www.sndbx.org/forums/" title="Sandbox Forums" rel="me">Sandbox Forums</a></li>
 					<li><a href="http://archgfx.net/" title="archGFX" rel="external">archGFX</a></li>
 					<li><a href="http://internetducttape.com/" title="InternetDuctTape" rel="external">Internet Duct Tape</a></li>
-					<li><a href="http://www.sndbx.org/" title="Sandbox Designs Competition" rel="me">Sandbox Designs Competition</a></li>
 					<li><a href="http://ntuat.wordpress.com/" title="Not (That) Ugly" rel="external">Sandbox Styles at <abbr title="Not (That) Ugly">NTU</abbr></a></li>
+					<li><a href="http://www.plaintxt.org/" title="plaintxt.org" rel="me">plaintxt.org</a></li>
+					<li><a href="http://www.sndbx.org/" title="Sandbox Designs Competition" rel="me">Sandbox Designs Competition</a></li>
+					<li><a href="http://www.sndbx.org/forums/" title="Sandbox Forums" rel="me">Sandbox Forums</a></li>
 				</ul>
-				<p>If you are interested in developing theme templates based on the Sandbox, see <a href="#customizing" title="Creating theme templates">Creating theme templates</a> in this document.</p>
+				<p>If you are interested in developing theme templates based on the Sandbox, see <a href="#creating" title="Creating theme templates">Creating theme templates</a> in this document.</p>
 			</li><!-- #started -->
 			<li id="functions">
 				<h2>Class functions</h2>
@@ -318,10 +318,30 @@
 									<td><code>gmdate('m')</code></td>
 									<td>For a single post published in a specific month (Offset to GMT)</td>
 								</tr>
+								<tr>
+									<td scope="row">s-tag-[name]</td>
+									<td><code>is_single()</code> &amp; <code>is_tag()</code></td>
+									<td>For a single post published with a specific tag, where <i>[name]</i> is the tag slug, e.g., <code>s-category-foo-bar</code></td>
+								</tr>
 								<tr class="alt">
 									<td scope="row">s-y2007</td>
 									<td><code>gmdate('Y')</code></td>
 									<td>For a single post published in a specific year (Offset to GMT)</td>
+								</tr>
+								<tr>
+									<td scope="row">tag</td>
+									<td><code>is_tag()</code></td>
+									<td>When a tag archive page is displayed</td>
+								</tr>
+								<tr class="alt">
+									<td scope="row">tag-[name]</td>
+									<td><code>is_tag()</code></td>
+									<td>For a specific tag, where <i>[name]</i> is the tag slug, e.g., <code>tag-foo-bar</code></td>
+								</tr>
+								<tr>
+									<td scope="row">tag-paged-[n]</td>
+									<td><code>is_tag()</code> &amp; <code>is_paged()</code></td>
+									<td>Displays the "paged" number of tag archive, where <i>[n]</i> is the paginated number</td>
 								</tr>
 								<tr class="alt">
 									<td scope="row">wordpress</td>
@@ -430,6 +450,11 @@
 									<td scope="row">publish</td>
 									<td>n/a</td>
 									<td>For any published post, as contrasted with an unpublished draft</td>
+								</tr>
+								<tr class="alt">
+									<td scope="row">tag-[name]</td>
+									<td><code>is_tag()</code></td>
+									<td>For any specific tag, where <i>[name]</i> is the tag slug, e.g., <code>tag-foo-bar</code></td>
 								</tr>
 								<tr>
 									<td scope="row">y2007</td>
@@ -577,7 +602,7 @@ TEMPLATE: sandbox
 */</pre>
 				<p>The line <code>TEMPLATE: sandbox</code> tells WordPress to use the theme files installed in the <code>/sandbox/</code> folder with the &quot;My Design&quot; <code>style.css</code> style sheet.</p>
 				<p>You can read more detailed information about developing <a href="http://codex.wordpress.org/Theme_Development#Theme_Style_Sheet" title="WordPress Theme Development - Theme Style Sheets" rel="external">WordPress Theme Style Sheets</a> on the WordPress Codex.</p>
-			</li><!-- #customizing -->
+			</li><!-- #creating -->
 			<li id="standards">
 				<h2>Web standards</h2>
 				<p>The Sandbox is compliant with both <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> standards. What does this mean? An explanation of web standards from <a href="http://webstandards.org" title="Web Standards Project" rel="external">The Web Standards Project</a>:</p>
@@ -639,7 +664,7 @@ TEMPLATE: sandbox
 			</li><!-- #extra -->
 			<li id="license">
 				<h2>License</h2>
-				<p>The Sandbox &copy; 2006&ndash;2007 is licensed under the <a href="http://www.gnu.org/licenses/gpl.html" title="GNU General Public License" rel="license"><abbr title="GNU is Not Unix">GNU</abbr> General Public License</a>:</p>
+				<p>The Sandbox &copy; 2006&ndash;2008 is licensed under the <a href="http://www.gnu.org/licenses/gpl.html" title="GNU General Public License" rel="license"><abbr title="GNU is Not Unix">GNU</abbr> General Public License</a>:</p>
 				<blockquote title="How to use the GPL or LPGL" cite="http://www.gnu.org/licenses/gpl-howto.html">
 					<p>This program is free software; you can redistribute it and/or modify it under the terms of the <abbr title="GNU is Not Unix">GNU</abbr> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 					<p>This program is distributed in the hope that it will be useful, but <strong>without any warranty</strong>; without even the implied warranty of <strong>merchantability</strong> or <strong>fitness for a particular purpose</strong>. See the <abbr title="GNU is Not Unix">GNU</abbr> General Public License for more details.</p>
@@ -648,7 +673,7 @@ TEMPLATE: sandbox
 			</li><!-- #license -->
 		</ol><!-- #readme .xoxo -->
 		<div id="footer">
-			<p>Last updated 20 August 2007</p>
+			<p>Last updated 25 August 2007</p>
 		</div><!-- #footer -->
 	</div><!-- #readme -->
 </body>
