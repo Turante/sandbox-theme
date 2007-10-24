@@ -12,3 +12,4 @@ This is an in-progress list of design templates, ordered by Sandbox Version.  De
   * [SandboxDesigns061Wpcom Sandbox 0.6.1-wpcom]
   * [SandboxDesigns10Wpcom Sandbox 1.0-wpcom]
   * [SandboxDesignsStandalone Sandbox Standalone]
+  * [SandboxDesignsMods Sandbox Mods]
