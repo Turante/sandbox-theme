@@ -9,4 +9,7 @@ This list has been pulled out of the ether.
 = Details =
 
 || *Info* || *Screenshot* ||
-|| [Author][License][Link][Demo]|| [Screenshot] ||
+|| [http://sandbox-theme.googlecode.com/files/sandbox_v061.zip Kubrick] by [http://binarybonsai.com/ Michael Heilemann], ported by [http://andy.wordpress.com Andy Skelton], Licence: [http://www.gnu.org/copyleft/gpl.html GPL]. _N/A_ || http://sandbox-theme.googlecode.com/svn/tags/0.6/skins/kubrick.png ||
+
+Contribute your own theme using the following format
+|| [Name] by [Author]. License: [License]. [Demo]|| Screenshot ||
