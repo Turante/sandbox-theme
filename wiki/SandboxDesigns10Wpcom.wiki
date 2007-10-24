@@ -10,7 +10,3 @@ This list has been culled from the customCSS tag on [http://wordpress.com/tag/cu
 
 || *Info* || *Screenshot* ||
 || [http://ntuat.wordpress.com/2007/10/20/picnic/ Picnic] by [http://ntuat.wordpress.com not (that) ugly].  License: [http://www.gnu.org/copyleft/gpl.html GPL]. [http://www.sndbx.org/live-preview/index.php?wptheme=Picnic Demo] || http://ntutest.files.wordpress.com/2007/10/screenshot.png || 
-
-Contribute your own design using the following format
-
-|| [Name] by [Author].  License: [License].  [Demo] || Screenshot ||
