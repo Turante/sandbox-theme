@@ -9,4 +9,8 @@ This list has been culled from trackbacks to [http://www.plaintxt.org/themes/san
 = Details =
 
 || *Info* || *Screenshot* ||
+|| [http://wordpress-tuto.fr/theme-wordpress-bus-full-hippies-145 Bus Full of Hippies] by [http://johnoxton.co.uk/ John Oxton], french translation by [ Libretto].  License: [http://creativecommons.org/licenses/by-nc/2.5/ CC-by-nc]. || http://wordpress-tuto.fr/wp-content/uploads/2007/themes/buss_full_hippies_joshuainkhead.jpg ||
+|| [http://zeo.unic.net.my/notes/sandboxk2-theme/ Sandbox K2] by [http://zeo.unic.net.my/ Zeo]. License: [http://www.gnu.org/copyleft/gpl.html GPL] || http://zeo.googlecode.com/svn/wordpress/themes/sandboxk2/screenshot.png ||
+
+
 || [Author][License][Link][Demo]|| [Screenshot] ||
