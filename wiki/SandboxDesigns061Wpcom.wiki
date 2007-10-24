@@ -9,4 +9,12 @@ This list has been culled from the customCSS tag on [http://wordpress.com/tag/cu
 = Details =
 
 || *Info* || *Screenshot* ||
-|| [Author][License][Link][Demo]|| [Screenshot] ||
+|| [http://ntuat.wordpress.com/2007/10/01/the-blue-butterfly-layout/ Blue Butterfly] by [http://ntuat.wordpress.com/ not (that) ugly], [http://www.gnu.org/copyleft/gpl.html GPL Licensed].  [http://www.sndbx.org/live-preview/index.php?wptheme=The%20Blue%20Butterfly%20Layout Demo]|| http://ntuat.files.wordpress.com/2007/07/screenshot.png ||
+|| [http://archgfx.net/blog/2007/geek/blogging/bus-full-of-hippies-for-wordpresscom Bus Full of Hippies] by [http://johnoxton.co.uk/ John Oxton], ported to Sandbox by [http://archgfx.net/ Adam Freetly], [http://creativecommons.org/licenses/by-nc/2.5/ CC-by-nc]. _N/A_ || http://archgfx.net/wp-content/uploads/2006/12/joshuainkhead.jpg ||
+|| [http://ntuat.wordpress.com/2007/02/21/meadow/ Meadow] by [http://ntuat.wordpress.com/ not (that) ugly], _N/A_. _N/A_ || http://ntuat.files.wordpress.com/2007/02/meadowshot1.jpg ||
+|| [http://en.forums.wordpress.com/topic.php?id=3287&page&replies=18 Spartan] by [http://plaintxt.org Scott Allan Wallick], [http://www.gnu.org/copyleft/gpl.html GPL Licensed]. _N/A_ || http://sandbox-theme.googlecode.com/svn/tags/0.6/skins/spartan.png ||
+|| [http://sunburntkamel.archgfx.net/2007/02/14/wip-the-late-show/ The Late Show] by [http://killsmedead.com/ Liz Lubowitz], ported to Sandbox by [http://archgfx.net/ Adam Freetly], , _N/A_. _N/A_ || http://sunburntkamel.wordpress.com/files/2007/02/bannerinner.jpg ||
+
+Contribute your own theme, using the following format:
+
+|| [Name] by [Author], [License]. [Demo] || Screenshot ||
