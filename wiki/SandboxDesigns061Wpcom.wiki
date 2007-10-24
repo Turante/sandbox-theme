@@ -23,9 +23,3 @@ This list has been culled from the customCSS tag on [http://wordpress.com/tag/cu
 || [http://archgfx.net/blog/2006/geek/blogging/the-thin-line The Thin Line], by [http://archgfx.net/ Adam Freetly]. License: [http://creativecommons.org/licenses/by-sa/2.5/ CC-by-sa].|| http://archgfx.net/wp-content/uploads/2007/05/twopointoh.jpg ||
 || [http://en.forums.wordpress.com/topic.php?id=3436&page&replies=15 X-Greenery] by [http://www.fullahead.org/ Pat Heard], ported by [http://www.reaper-x.com/ Reaper-X].  License: [http://www.openwebdesign.org/faq/index.php?action=artikel&cat=6&id=3&artlang=en CC-by].|| http://www.negative99.com/images/wp_themes/greenery.png ||
 || [http://ntuat.wordpress.com/2006/08/22/x-blog/ X-blog] by [http://me.mywebsight.ws/ R.J. Kaplan], ported by [http://ntuat.wordpress.com/ not (that) ugly].  License: [http://www.openwebdesign.org/faq/index.php?action=artikel&cat=6&id=3&artlang=en CC-by]. Demo _N/A_ || http://ntuat.files.wordpress.com/2006/08/x-blog.png ||
-
-
-Contribute your own theme, using the following format:
-{{{
-|| [Name] by [Author]. License: [License]. [Demo] || Screenshot ||
-}}}
