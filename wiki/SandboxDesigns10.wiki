@@ -9,7 +9,8 @@ This list has been culled from the [SandboxDesignsCompetition] and other sources
 = Details =
 
 || *Info* || *Screenshot* ||
-|| [http://sandbox-theme.googlecode.com/files/Sandbox-Kubrick_v12.zip Kubrick 1.2] by [http://binarybonsai.com Michael Heilemann], ported by [http://andy.wordpress.com Andy Skelton].  License: [http://www.gnu.org/copyleft/gpl.html GPL].  Demo _N/A_ || http://sandbox-theme.googlecode.com/svn/branches/1.0/sandbox-kubrick/screenshot.png ||
+|| [http://homesby.net/blog/2007/10/23/homes-by-net-wordpress-skin/ Homes By Net] by Homes by Net.  License: [http://creativecommons.org/licenses/by-sa/2.0/ CC-by-sa]. || http://homesby.net/blog/wp-content/uploads/2007/10/screenshot.png ||
+|| [http://sandbox-theme.googlecode.com/files/Sandbox-Kubrick_v12.zip Kubrick 1.2] by [http://binarybonsai.com Michael Heilemann], ported by [http://andy.wordpress.com Andy Skelton].  License: [http://www.gnu.org/copyleft/gpl.html GPL].|| http://sandbox-theme.googlecode.com/svn/branches/1.0/sandbox-kubrick/screenshot.png ||
 || [http://sandbox-theme.googlecode.com/files/SNDBX_v10.zip SNDBX] by [http://scottwallick.com/ Scott Allan Wallick].  License: [http://www.gnu.org/copyleft/gpl.html GPL].  [http://sndbx.org Demo] || http://sandbox-theme.googlecode.com/svn/branches/1.0/sndbx/screenshot.png ||
 
 Contribute your own designs in the following format: 
