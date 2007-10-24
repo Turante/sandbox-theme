@@ -1,0 +1,12 @@
+#labels Phase-Deploy,Phase-Support
+#New Designs.
+
+= Introduction =
+
+This list has been culled from the [SandboxDesignsCompetition] and other sources.
+
+
+= Details =
+
+|| *Info* || *Screenshot* ||
+|| [Author][License][Link][Demo]|| [Screenshot] ||
