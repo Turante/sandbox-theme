@@ -10,5 +10,4 @@ Standalone, Sandbox-based themes that modify or improve the basic sandbox functi
 
 || Info || Screenshot ||
 || [http://www.archgfx.net/graphics/themes/dream-in-infrared/ Dream in Infrared] by [http://archgfx.net/ Adam Freetly].  [http://wp-iodiir.sf.net Demo] || http://archgfx.net/wordpress/wp-content/themes/IODIIr/screenshot.png ||
-|| [http://thedesigncanopy.com/downloads/trevilian-way/ Trevailian Way] by [http://thedesigncanopy.com/ David Yeiser].  [http://davidyeiser.com/ Demo] || http://thedesigncanopy.com/wp-content/themes/designcanopy/images/theme-tw-single.jpg ||
 || [http://www.wpdesigner.com/2007/07/20/wrath-wordpress-theme/ Wrath] by[http://www.wpdesigner.com/ Small Potato].  [http://www.wpdesigner.com/demo/index.php?preview=Wrath Demo] || http://www.wpdesigner.com/wp-content/files/2007/07/wrath.gif ||
