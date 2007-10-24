@@ -1,0 +1,12 @@
+#labels Phase-Deploy,Phase-Support
+#Old wordpress.com skins.
+
+= Introduction =
+
+This list has been culled from the customCSS tag on [http://wordpress.com/tag/customcss/ Wordpress.com], as well as from the [http://en.forums.wordpress.com/tags.php?tag=customcss forums].
+
+
+= Details =
+
+|| *Info* || *Screenshot* ||
+|| [Author][License][Link][Demo]|| [Screenshot] ||
