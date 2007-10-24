@@ -13,3 +13,10 @@ This is an in-progress list of design templates, ordered by Sandbox Version.  De
   * [SandboxDesigns10Wpcom Sandbox 1.0-wpcom]
   * [SandboxDesignsStandalone Sandbox Standalone]
   * [SandboxDesignsMods Sandbox Mods]
+
+= Contribute =
+
+Contribute your own design by leaving a comment using the following format:
+{{{
+|| [Name] by [Author].  License: [License].  [Demo] || Screenshot ||
+}}}
