@@ -1,0 +1,17 @@
+#labels Phase-Deploy
+= Introduction =
+
+Instructions based on [http://codex.wordpress.org/Using_Themes Wordpress Codex "Using Themes"]
+
+
+= Details =
+
+  # Download the theme archive and extract the files it contains.  You may need to preserve the directory structure in the archive when extracting these files.  Follow the guidelines provided by your theme author.
+  # Using an FTP client to access your host web server, create a directory to contain your theme in the `wp-content/themes` directory provided by WordPress.  For example, a theme named '''Test''' should be in `wp-content/themes/test`.  Your theme may provide this directory as part of the archive.
+  # Upload the theme files to the new directory on your host server.
+  # Log in to the WordPress Administration Panels.
+  # Select the Presentation subpanel.
+  # From the *Available Themes* section, click on theme title (or theme screenshot) for the theme you wish to activate.
+  # To view the new look, click *View Site* at the top of the Panel's screen.
+
+Your selection should immediately become active.
