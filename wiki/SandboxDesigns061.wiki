@@ -1,5 +1,5 @@
 #labels Phase-Deploy,Phase-Support
-#Old Proof-of-Concept Skins.
+#Old Skins from the initial release of Sandbox.
 
 = Introduction =
 
@@ -9,9 +9,7 @@ This list has been pulled out of the ether.
 = Details =
 
 || *Info* || *Screenshot* ||
-|| [http://ntuat.wordpress.com/2006/08/05/hello-world/ The Literary Life] by [http://ntuat.wordpress.com/ not (that) ugly].  License: _N/A_.|| http://ntuat.files.wordpress.com/2006/08/screenshot.gif || 
-|| [http://www.almosteffortless.com/wordpress/k2-lite-for-sandbox/ K2 Lite] by [http://binarybonsai.com/ Michael Heilemann], ported by [http://www.almosteffortless.com/ Trevor Turk]. Licence: [http://www.gnu.org/copyleft/gpl.html GPL]. || http://www.almosteffortless.com/files/k2lite.png ||
+|| [http://www.almosteffortless.com/wordpress/k2-lite-for-sandbox/ K2 Lite] by [http://binarybonsai.com/ Michael Heilemann], ported by [http://www.almosteffortless.com/ Trevor Turk]. Licence: [http://www.gnu.org/copyleft/gpl.html GPL]. || http://sandbox-theme.googlecode.com/svn/wiki/attachments/SandboxDesigns/Screenshots/sandbox-061/k2lite.png ||
 || [http://sandbox-theme.googlecode.com/files/sandbox_v061.zip Kubrick] by [http://binarybonsai.com/ Michael Heilemann], ported by [http://andy.wordpress.com Andy Skelton], Licence: [http://www.gnu.org/copyleft/gpl.html GPL]. || http://sandbox-theme.googlecode.com/svn/tags/0.6/skins/kubrick.png ||
-
-Contribute your own theme using the following format
-|| [Name] by [Author]. License: [License]. [Demo]|| Screenshot ||
+|| [http://ntuat.wordpress.com/2006/08/05/hello-world/ The Literary Life] by [http://ntuat.wordpress.com/ not (that) ugly].  License: _N/A_.|| http://ntuat.files.wordpress.com/2006/08/screenshot.gif || 
+|| [http://archgfx.net/blog/2006/geek/blogging/sandbox-unsleepable Unsleepable] by [http://openswitch.org Ben Gray] ported by [http://archgfx.net/ Adam Freetly].  Licence: [http://www.gnu.org/copyleft/gpl.html GPL]. || http://sandbox-theme.googlecode.com/svn/wiki/attachments/SandboxDesigns/Screenshots/sandbox-061/unsleepable.jpg ||
