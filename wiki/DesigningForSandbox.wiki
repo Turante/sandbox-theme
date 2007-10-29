@@ -53,7 +53,7 @@ function footer_mytheme() { // PUTS STUFF IN THE FOOTER ?>
 <?php } // END footer_mytheme
 
 add_action('wp_head', 'header_mytheme');
-add_action('wp_head', wp_enqueue_script('jquery'));
+add_action('wp_head', wp_enqueue_script('jquery')); // ADDS JQUERY TO THE HEADER
 add_action('wp_footer', 'footer_mytheme');
 ?>
 }}}
