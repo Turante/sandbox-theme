@@ -43,7 +43,7 @@ Anyhow, here's an example `functions.php`, stripped down, that I am using for my
 
 function header_mytheme() { // PUTS STUFF IN THE HEADER ?>
 
-	<script src="<?php echo get_settings('home') ?>/wp-includes/js/jquery/jquery.js" type="text/javascript"></script>
+	<?php enqueue_script('jquery'); ?>
 	<script src="<?php echo bloginfo('stylesheet_directory') ?>/js/scottyScripts.js" type="text/javascript"></script>
 
 <?php } // END header_mytheme
