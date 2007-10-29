@@ -3,7 +3,7 @@
 
 = Introduction =
 
-How to customize your sandbox installation, while keeping the sandbox intact for upgrading.
+How to customize your sandbox installation, while keeping the sandbox intact for upgrading.  Originally posted by Scott in [http://www.sndbx.org/forums/viewtopic.php?pid=640#p640 The SDC forums]
 
 
 = Details =
