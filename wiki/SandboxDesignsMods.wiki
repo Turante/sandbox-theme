@@ -9,6 +9,8 @@ Standalone, Sandbox-based themes that modify or improve the basic sandbox functi
 = Details =
 
 || Info || Screenshot ||
+|| [http://svn.automattic.com/wpcom-themes/chaostheory/ ChaosTheory] from [http://automattic.com Automattic] || http://svn.automattic.com/wpcom-themes/chaostheory/screenshot.png ||
 || [http://www.archgfx.net/graphics/themes/dream-in-infrared/ Dream in Infrared] by [http://archgfx.net/ Adam Freetly].  [http://wp-iodiir.sf.net Demo] || http://archgfx.net/wordpress/wp-content/themes/IODIIr/screenshot.png ||
 || [http://www.upstartblogger.com/wordpress-theme-upstart-blogger-futurosity-magazine Futurosity] by [http://www.upstartblogger.com/ Upstart Blogger] [http://www.upstartblogger.com/wpthemes/index.php?wptheme=Upstart+Blogger+Futurosity+Magazine+Theme Demo] || http://www.upstartblogger.com/images/futurositymagscreenshot.png ||
+|| [http://blogosquare.com/2007/06/18/myjournal-meets-sandbox-providing-you-the-best-theme-ever/ My Journal] by [http://blogosquare.com/ Blogosquare] || http://farm2.static.flickr.com/1285/563959926_4e86fe2833_o.png ||
 || [http://www.wpdesigner.com/2007/07/20/wrath-wordpress-theme/ Wrath] by[http://www.wpdesigner.com/ Small Potato].  [http://www.wpdesigner.com/demo/index.php?preview=Wrath Demo] || http://www.wpdesigner.com/wp-content/files/2007/07/wrath.gif ||
