@@ -12,7 +12,7 @@
 					<div class="entry-attachment"><?php the_attachment_link($post->post_ID, true) ?></div>
 <?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'sandbox').''); ?>
 
-<?php link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
+<?php wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'sandbox'), "</div>\n", 'number'); ?>
 
 				</div>
 				<div class="entry-meta">

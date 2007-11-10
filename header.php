@@ -18,7 +18,7 @@
 <div id="wrapper" class="hfeed">
 
 	<div id="header">
-		<h1 id="blog-title"><a href="<?php echo get_settings('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></h1>
+		<h1 id="blog-title"><a href="<?php echo get_option('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></h1>
 		<div id="blog-description"><?php bloginfo('description') ?></div>
 	</div><!--  #header -->
 
