@@ -56,7 +56,7 @@ function sandbox_body_class( $print = true ) {
 		}
 
 		// Adds author class for the post author
-		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author_login()));
+		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		rewind_posts();
 	}
 
@@ -199,7 +199,7 @@ function sandbox_comment_class( $print = true ) {
 
 // Generates time- and date-based classes for BODY, post DIVs, and comment LIs; relative to GMT (UTC)
 function sandbox_date_classes($t, &$c, $p = '') {
-	$t = $t + (get_option('gmt_offset') * 3600);
+	$t = $t + (get_settings('gmt_offset') * 3600);
 	$c[] = $p . 'y' . gmdate('Y', $t); // Year
 	$c[] = $p . 'm' . gmdate('m', $t); // Month
 	$c[] = $p . 'd' . gmdate('d', $t); // Day
