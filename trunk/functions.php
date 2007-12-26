@@ -1,10 +1,9 @@
 <?php
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	echo '<div id="menu"><ul>';
-	$menu = wp_list_pages('title_li=&sort_column=menu_order&echo=0'); // Params for the page list in header.php
-	echo str_replace(array("\r", "\n", "\t"), '', $menu);
-	echo "</ul></div>\n";
+	echo "<div id=\"menu\">\n\t\t\t<ul>\n";
+	wp_list_pages('title_li=&sort_column=menu_order');
+	echo "\t\t\t</ul>\n\t\t</div>\n";
 }
 
 // Generates semantic classes for BODY element
@@ -251,15 +250,15 @@ function widget_sandbox_search($args) {
 	if ( empty($title) )
 		$title = __('Search', 'sandbox');
 ?>
-		<?php echo $before_widget ?>
-			<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
-			<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
-				<div>
-					<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" tabindex="1" />
-					<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
-				</div>
-			</form>
-		<?php echo $after_widget ?>
+			<?php echo $before_widget ?>
+				<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
+				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
+					<div>
+						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" tabindex="1" />
+						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
+					</div>
+				</form>
+			<?php echo $after_widget ?>
 
 <?php
 }
@@ -270,14 +269,14 @@ function widget_sandbox_meta($args) {
 	if ( empty($title) )
 		$title = __('Meta', 'sandbox');
 ?>
-		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
-			<ul>
-				<?php wp_register() ?>
-				<li><?php wp_loginout() ?></li>
-				<?php wp_meta() ?>
-			</ul>
-		<?php echo $after_widget; ?>
+			<?php echo $before_widget; ?>
+				<?php echo $before_title . $title . $after_title; ?>
+				<ul>
+					<?php wp_register() ?>
+					<li><?php wp_loginout() ?></li>
+					<?php wp_meta() ?>
+				</ul>
+			<?php echo $after_widget; ?>
 <?php
 }
 
