@@ -1,9 +1,10 @@
 <?php
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	echo "<div id=\"menu\">\n\t\t\t<ul>\n";
-	wp_list_pages('title_li=&sort_column=menu_order');
-	echo "\t\t\t</ul>\n\t\t</div>\n";
+	echo '<div id="menu"><ul>';
+	$menu = wp_list_pages('title_li=&sort_column=menu_order&echo=0'); // Params for the page list in header.php
+	echo str_replace(array("\r", "\n", "\t"), '', $menu);
+	echo "</ul></div>\n";
 }
 
 // Generates semantic classes for BODY element
