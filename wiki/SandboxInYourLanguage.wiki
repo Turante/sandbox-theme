@@ -16,7 +16,7 @@ If you are experienced use the provided sandbox.pot file in trunk or correspondi
 
 ==How to translate to your own language?==
 
-  #See the general Wordpress instructions at: http://codex.wordpress.org/Translating_WordPress
-  #The file you need to translate in this case is called sandbox.pot, this file is included in the plugin download zip package
-  #Use this file to create you own human readable file (*.po) and machine readable file (*.mo) with the correct country code in the name (e.g. subscribe2-fr_FR.mo)
-  #Once you have finalized your translation please inform the project!
+  # See the general Wordpress instructions at: http://codex.wordpress.org/Translating_WordPress
+  # The file you need to translate in this case is called sandbox.pot, this file is included in the plugin download zip package
+  # Use this file to create you own human readable file (*.po) and machine readable file (*.mo) with the correct country code in the name (e.g. subscribe2-fr_FR.mo)
+  # Once you have finalized your translation please inform the project!
