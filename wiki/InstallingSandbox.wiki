@@ -1,4 +1,6 @@
+#summary How to install the Sandbox theme
 #labels Phase-Deploy,Featured
+
 = Introduction =
 
 Instructions based on [http://codex.wordpress.org/Using_Themes Wordpress Codex "Using Themes"]
