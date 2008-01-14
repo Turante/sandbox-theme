@@ -1,14 +1,22 @@
-#summary One-sentence summary of this page.
+#summary How to use existing translations and create your own.
 #labels Phase-Deploy
 
 = Introduction =
 
-Translations from http://www.mederel.fr/2007/08/11/sandbox-en-francais/
+Existing translations are included with stable releases.
+To use the translations follow the general Wordpress instructions for using another language. Once you have set the desired language, the corresponding language should apply on the Sandbox theme as well (if provided).
+
+The following provides information on how to create your own translations. 
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+For the unexperienced: the following rough guide is provided. 
+If you are experienced use the provided sandbox.pot file in trunk or corresponding version from the SVN/Source section here.
+
+=How to translate to your own language?=
+
+   1. See the general Wordpress instructions at: http://codex.wordpress.org/Translating_WordPress
+   2. The file you need to translate in this case is called sandbox.pot, this file is included in the plugin download zip package
+   3. Use this file to create you own human readable file (*.po) and machine readable file (*.mo) with the correct country code in the name (e.g. subscribe2-fr_FR.mo)
+   4. Once you have finalized your translation please inform the project!
