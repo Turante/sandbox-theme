@@ -1,4 +1,6 @@
-#labels Phase-Deploy,Phase-Support
+#summary How to create a Sandbox theme template
+#labels Phase-Implementation,Phase-Support,Featured
+
 #creating `Template: sandbox` themes.
 
 = Introduction =
