@@ -4,7 +4,7 @@
 = Introduction =
 
 Existing translations are included with stable releases.
-To use the translations follow the general Wordpress[http://codex.wordpress.org/WordPress_in_Your_Language] instructions for using another language. Once you have set the desired language, the corresponding language should apply on the Sandbox theme as well (if provided).
+To use the translations follow the general Wordpress [http://codex.wordpress.org/WordPress_in_Your_Language instructions for using another language]. Once you have set the desired language, the corresponding language should apply on the Sandbox theme as well (if provided).
 
 The following provides information on how to create your own translations. 
 
