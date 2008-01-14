@@ -1,5 +1,5 @@
 #summary An selector rich, descriptor empty example for index.php
-#labels Featured,Phase-Support
+#labels Phase-Implementation,Phase-Support
 
 = About this CSS =
 
@@ -144,4 +144,3 @@ body {}	body.single {} /* IMPORTANT, DYNAMIC CLASSES HERE */
 			div.meta-sep {}
 			div#theme-link {}
 }}}
-
