@@ -1,5 +1,5 @@
 #summary How to use existing translations and create your own.
-#labels Phase-Deploy
+#labels Phase-Deploy,Featured,Phase-Support
 
 = Introduction =
 
