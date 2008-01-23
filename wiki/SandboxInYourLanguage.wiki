@@ -11,7 +11,7 @@ The following provides information on how to create your own translations. You m
 *Please submit your translations when finished!*
 
 For the unexperienced: the following rough guide is provided. 
-If you are experienced use the provided sandbox.pot file in trunk or corresponding version from the SVN/Source section here.
+If you are experienced use the provided sandbox.pot file in http://sandbox-theme.googlecode.com/svn/trunk/.
 
 ==How to translate to your own language?==
 
