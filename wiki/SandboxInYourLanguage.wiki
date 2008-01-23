@@ -17,6 +17,6 @@ If you are experienced use the provided sandbox.pot file in trunk or correspondi
 
   # Read up on and refer to the general Wordpress instructions at: http://codex.wordpress.org/Translating_WordPress
   # The file you need to translate is called sandbox.pot, it is included in the plugin download or found in http://sandbox-theme.googlecode.com/svn/trunk/ if you plan to help out for the next version of Sandbox
-  # Use this file to create you own human readable file (*.po) and machine readable file (*.mo) with the correct country code in the name (e.g. fr_FR.mo). (One easy to use tool for this is Poedit - http://www.poedit.net) 
+  # Use this file to create you own human readable file ({{{*}}}.po) and machine readable file ({{{*}}}.mo) with the correct country code in the name (e.g. fr_FR.mo). (One easy to use tool for this is Poedit - http://www.poedit.net) 
   # Place the translation file in the Sandbox theme directory.
-  # Once you have finalized your translation please inform the project!
+  # Once you have finalized your translation please inform the project so we can include for others to use!
