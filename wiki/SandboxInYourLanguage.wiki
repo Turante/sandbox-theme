@@ -21,4 +21,4 @@ If you are experienced use the provided sandbox.pot file in http://sandbox-theme
   # Place the translation file in the Sandbox theme directory.
   # Once you have finalized your translation please inform the project so we can include for others to use!
 ----
-^References: http://wordpress.dk/2007/06/12/sandbox-tema-pa-dansk/ and http://en.dahnielson.com/2006/08/gettext.html^
+References: [http://wordpress.dk/2007/06/12/sandbox-tema-pa-dansk/ Danish Sandbox] and [http://en.dahnielson.com/2006/08/gettext.html Swedish Sandbox]
