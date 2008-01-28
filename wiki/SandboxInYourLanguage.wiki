@@ -3,27 +3,27 @@
 
 = Introduction =
 
-Existing translations are included with stable releases.
+Existing translations are included with stable releases from 1.3 (until it is released you can copy the corresponding language files found in [http://sandbox-theme.googlecode.com/svn/trunk/ the trunk] for 1.2).
 To use the translations follow the general Wordpress [http://codex.wordpress.org/Installing_WordPress_in_Your_Language instructions for setting another language]. Once you have set the desired language, the corresponding language should apply on the Sandbox theme as well (if language files were provided in our zip).
 
 The following provides information on how to create your own translations. You might want to check with us or the trunk (next version) before you start translating to make sure that a translation is not forthcoming.
 
-*Please submit your translations when finished!*
+*Please submit your translations as an Issue when finalised!*
 
 For the unexperienced: the following rough guide is provided. 
-If you are experienced use the provided sandbox.pot file in http://sandbox-theme.googlecode.com/svn/trunk/.
+If you are experienced use the provided [http://sandbox-theme.googlecode.com/svn/trunk/sandbox-translation/sandbox.pot sandbox.pot ] from the forthcoming version.
 
 ==How to translate to your own language?==
 
   # Read up on and refer to the general Wordpress instructions at: http://codex.wordpress.org/Translating_WordPress
-  # The file you need to translate is called sandbox.pot, it is included in the plugin download or found in http://sandbox-theme.googlecode.com/svn/trunk/ if you plan to help out for the next version of Sandbox
+  # The file you need to translate is called sandbox.pot, it is included in the plugin download or found in http://sandbox-theme.googlecode.com/svn/trunk/sandbox-translation/sandbox.pot if you plan to help out for the next version of Sandbox
   # Use this file to create you own human readable file ({{{*}}}.po) and machine readable file ({{{*}}}.mo) with the correct country code in the name (e.g. fr_FR.mo). (One easy to use tool for this is Poedit - http://www.poedit.net) 
   # Place the translation file ({{{*}}}.mo) in the main Sandbox theme directory.
   # Once you have finalized your translation please inform the project by opening an issue/ticket so we can include for others to use!
 
 ==How to update an existing translation?==
 
-Not happy with the quality of the translation provided or it is of a different country variation than yours? Download the corresponding .po file in  the /sandbox-translation/ subfolder and edit away like described above.
+Not happy with the quality of the translation provided or is it of a different country variation than yours? Download the corresponding .po file in  the /sandbox-translation/ subfolder and edit away like described above.
 
 If you feel that your translation is of significantly better quality, please open a ticket and we'll see if we change and talk to the previous translator about his opinions. 
 
