@@ -23,7 +23,7 @@ If you are experienced use the provided [http://sandbox-theme.googlecode.com/svn
 
 ==How to update an existing translation?==
 
-Not happy with the quality of the translation provided or is it of a different country variation than yours? Download the corresponding .po file in  the /sandbox-translation/ subfolder and edit away like described above.
+Not happy with the quality of the translation provided or is it of a different country variation than yours? Download the closest .po file in  the /sandbox-translation/ subfolder and edit away like described above.
 
 If you feel that your translation is of significantly better quality, please open a ticket and we'll see if we change and talk to the previous translator about his opinions. 
 
