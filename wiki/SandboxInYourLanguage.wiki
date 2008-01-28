@@ -20,3 +20,5 @@ If you are experienced use the provided sandbox.pot file in http://sandbox-theme
   # Use this file to create you own human readable file ({{{*}}}.po) and machine readable file ({{{*}}}.mo) with the correct country code in the name (e.g. fr_FR.mo). (One easy to use tool for this is Poedit - http://www.poedit.net) 
   # Place the translation file in the Sandbox theme directory.
   # Once you have finalized your translation please inform the project so we can include for others to use!
+----
+^References: http://wordpress.dk/2007/06/12/sandbox-tema-pa-dansk/ and http://en.dahnielson.com/2006/08/gettext.html^
