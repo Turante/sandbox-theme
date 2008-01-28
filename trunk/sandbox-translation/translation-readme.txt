@@ -11,5 +11,7 @@ For more information on creating a Sandbox translation in your language, please 
 
 Translations have been graciously provided by the following individuals:
 
+* CHINESE (Simplified) by WORDPRESS CHINESE GROUP, http://www.wpcng.com/
 * ITALIAN by NOKAO, http://www.nokao.com/
+* JAPANESE by TAKAYUKI MIYOSHI, http://ideasilo.wordpress.com/
 * NORWEGIAN by KJELL KNUDSEN, http://kjell.langvass.org/
