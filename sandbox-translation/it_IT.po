@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: Sandbox 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-23 02:38-0700\n"
-"PO-Revision-Date: 2008-01-27 21:14+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2008-01-30 19:35+0100\n"
+"Last-Translator: Jan Reister <jan@seul.org>\n"
 "Language-Team: Nokao (http://www.nokao.com) <info@nokao.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr "Non trovato"
 
 #: 404.php:9
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Siamo spiacenti, ma non siamo riuscito a trovare quello che cercavi. Forse una ricerca ti aiuterà."
+msgstr "Siamo spiacenti, ma non siamo riusciti a trovare quello che cercavi. Forse una ricerca ti aiuterà."
 
 #: 404.php:14
 #: functions.php:259
@@ -36,17 +36,17 @@ msgstr "Trova"
 #: archive.php:9
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
-msgstr "Archivio per Giorni: <span>%s</span>"
+msgstr "Archivio per giorni: <span>%s</span>"
 
 #: archive.php:11
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
-msgstr "Archivio per Mese: <span>%s</span>"
+msgstr "Archivio per mese: <span>%s</span>"
 
 #: archive.php:13
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
-msgstr "Archivio per Anno: <span>%s</span>"
+msgstr "Archivio per anno: <span>%s</span>"
 
 #: archive.php:15
 msgid "Blog Archives"
@@ -65,7 +65,7 @@ msgstr "Archivi"
 #: tag.php:9
 #: tag.php:39
 msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Articoli più Vecchi"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Articoli più vecchi"
 
 #: archive.php:22
 #: archive.php:49
@@ -80,7 +80,7 @@ msgstr "<span class=\"meta-nav\">&laquo;</span> Articoli più Vecchi"
 #: tag.php:10
 #: tag.php:40
 msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Articoli più Recenti <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Articoli più recenti <span class=\"meta-nav\">&raquo;</span>"
 
 #: archive.php:28
 #: author.php:19
@@ -181,7 +181,7 @@ msgstr "Nessun Commento"
 #: search.php:32
 #: tag.php:32
 msgid "Comments (1)"
-msgstr "Commento (1)"
+msgstr "Commenti (1)"
 
 #: archive.php:41
 #: author.php:30
@@ -194,11 +194,11 @@ msgstr "Commenti (%)"
 
 #: archives.php:20
 msgid "Archives by Category"
-msgstr "Archivi per Categoria"
+msgstr "Archivi per categoria"
 
 #: archives.php:26
 msgid "Archives by Month"
-msgstr "Archivi per Mese"
+msgstr "Archivi per mese"
 
 #: attachment.php:15
 #: index.php:18
@@ -209,7 +209,7 @@ msgstr "Pagine:"
 #: attachment.php:18
 #, php-format
 msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s and tagged %7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
-msgstr "Questo articolo è stato scritto da %1$s, pubblicato nel <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s alle %5$s</abbr>, archiviato in %6$s e taggato %7$s. Salvalo nei <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">segnalibri</a>. Segui qualsiasi commento a questo articolo con l'<a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed</a>."
+msgstr "Questo articolo è stato scritto da %1$s, pubblicato il <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s alle %5$s</abbr>, archiviato in %6$s e taggato %7$s. Salvalo nei <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">segnalibri</a>. Segui i commenti a questo articolo con il<a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">feed RSS</a>."
 
 #: attachment.php:25
 #: single.php:27
@@ -226,12 +226,12 @@ msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Pub
 #: single.php:35
 #, php-format
 msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "I Commenti sono chiusi,  ma puoi <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">pubblicare un trackback</a>."
+msgstr "I commenti sono chiusi,  ma puoi <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">pubblicare un trackback</a>."
 
 #: attachment.php:35
 #: single.php:37
 msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
-msgstr "I Trackback sono chiusi,  ma puoi <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">pubblicare un commento</a>."
+msgstr "I trackback sono chiusi,  ma puoi <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">pubblicare un commento</a>."
 
 #: attachment.php:37
 #: single.php:39
@@ -241,11 +241,11 @@ msgstr "Commenti e trackback sono attualmente chiusi."
 #: author.php:8
 #, php-format
 msgid "Author Archives: <span class=\"vcard\">%s</span>"
-msgstr "Archivi per Autore: <span class=\"vcard\">%s</span>"
+msgstr "Archivi per autore: <span class=\"vcard\">%s</span>"
 
 #: category.php:6
 msgid "Category Archives:"
-msgstr "Archivi delle Categorie"
+msgstr "Archivi delle categorie"
 
 #: category.php:27
 #, php-format
@@ -259,11 +259,11 @@ msgstr "Questo articolo è protetto da password. Inserisci la password per legge
 #: comments.php:28
 #, php-format
 msgid "<span>%d</span> Comments"
-msgstr "<span>%d</span> Commenti"
+msgstr "<span>%d</span> commenti"
 
 #: comments.php:28
 msgid "<span>One</span> Comment"
-msgstr "<span>Un</span> Commento"
+msgstr "<span>Un</span> commento"
 
 #: comments.php:35
 #, php-format
@@ -277,38 +277,38 @@ msgstr "\t\t\t\t\t<span class='unapproved'>Il tuo commento è attesa di moderazi
 #: comments.php:54
 #, php-format
 msgid "<span>%d</span> Trackbacks"
-msgstr "<span>%d</span> Trackback"
+msgstr "<span>%d</span> trackback"
 
 #: comments.php:54
 msgid "<span>One</span> Trackback"
-msgstr "<span>Un</span> Trackback"
+msgstr "<span>Un</span> trackback"
 
 #: comments.php:61
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
-msgstr "By %1$s su %2$s alle %3$s"
+msgstr "Di %1$s su %2$s alle %3$s"
 
 #: comments.php:66
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Il tuo trackback è in attesa di essere approvato.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Il tuo trackback è in attesa di moderazione.</span>\\n"
 
 #: comments.php:79
 msgid "Post a Comment"
-msgstr "Invia un Commento"
+msgstr "Invia un commento"
 
 #: comments.php:82
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Devi essere <a href=\"%s\" title=\"Log in\">loggato</a> per fare un commento."
+msgstr "Devi fare <a href=\"%s\" title=\"Log in\">login</a> per scrivere un commento."
 
 #: comments.php:90
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Loggato come <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Hai fatto login come <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
 
 #: comments.php:97
 msgid "Your email is <em>never</em> published nor shared."
-msgstr "La tua e-mail non sarà <em>mai</em> pubblicata o condivisa."
+msgstr "La tua e-mail non sarà <em>mai</em> pubblicata o ceduta ad altri."
 
 #: comments.php:97
 msgid "Required fields are marked <span class=\"required\">*</span>"
@@ -329,7 +329,7 @@ msgstr "Email"
 
 #: comments.php:105
 msgid "Website"
-msgstr "Sito Web"
+msgstr "Sito web"
 
 #: comments.php:110
 msgid "Comment"
@@ -337,7 +337,7 @@ msgstr "Commenta"
 
 #: comments.php:113
 msgid "Post Comment"
-msgstr "Invia un Commento"
+msgstr "Invia un commento"
 
 #: footer.php:3
 msgid "WordPress"
@@ -367,18 +367,18 @@ msgstr "Meta"
 #: functions.php:336
 #: functions.php:337
 msgid "RSS Links"
-msgstr "Link agli RSS"
+msgstr "Link ai feed RSS"
 
 #: functions.php:293
 #: header.php:9
 #: sidebar.php:49
 msgid "Posts RSS feed"
-msgstr "RSS Feed degli Articoli"
+msgstr "Feed RSS degli articoli"
 
 #: functions.php:293
 #: sidebar.php:49
 msgid "All posts"
-msgstr "Tutti i Post"
+msgstr "Tutti i post"
 
 #: functions.php:294
 #: header.php:10
@@ -405,7 +405,7 @@ msgstr "Salta direttamente al contenuto"
 
 #: header.php:26
 msgid "Skip to content"
-msgstr "Salta al Contenuto"
+msgstr "Salta al contenuto"
 
 #: page.php:12
 msgid "Pages: "
@@ -441,7 +441,7 @@ msgstr "Archivi"
 
 #: sidebar.php:47
 msgid "RSS Feeds"
-msgstr "Feeds RSS"
+msgstr "Feed RSS"
 
 #: single.php:20
 #, php-format
@@ -450,7 +450,7 @@ msgstr "Questo articolo è stato scritto da %1$s, e pubblicato come <abbr class=
 
 #: tag.php:6
 msgid "Tag Archives:"
-msgstr "Archivi dei Tags:"
+msgstr "Archivi dei tag:"
 
 #: tag.php:28
 #, php-format
