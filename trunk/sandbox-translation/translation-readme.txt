@@ -14,6 +14,7 @@ Translations have been graciously provided by the following individuals:
 * BRAZILIAN PORTUGUESE by ADRIANO CORREIA, 
 * CHILEAN SPANISH by DAIDAROS, http://daidaros.com/
 * DANISH by CARL ANDERSEN, http://danish-wordpress.dk/
+* FRENCH by EMILE DE WEERD, http://www.mederel.fr/
 * GERMAN by DANIEL NETZER and LARS PIECHOWIAK, http://blog.piecho.de/
 * ITALIAN by NOKAO, http://www.nokao.com/, and JAN REISTER
 * JAPANESE by TAKAYUKI MIYOSHI, http://ideasilo.wordpress.com/
