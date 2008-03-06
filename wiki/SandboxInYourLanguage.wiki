@@ -8,7 +8,7 @@ To use the translations follow the general Wordpress [http://codex.wordpress.org
 
 The following provides information on how to create your own translations. You might want to check with us or the trunk (next version) before you start translating to make sure that a translation is not forthcoming.
 
-*Please submit your translations as an [http://code.google.com/p/sandbox-theme/issues/entry Issue] when finalised!*
+*Please send your translations to swallick AT gmail DOT com when finished. Remember to include both the .mo and .po file!*
 
 For the unexperienced: the following rough guide is provided. 
 If you are experienced use the provided [http://sandbox-theme.googlecode.com/svn/trunk/sandbox-translation/sandbox.pot sandbox.pot ] from the forthcoming version.
@@ -19,7 +19,8 @@ If you are experienced use the provided [http://sandbox-theme.googlecode.com/svn
   # The file you need to translate is called sandbox.pot, it is included in the plugin download or found in http://sandbox-theme.googlecode.com/svn/trunk/sandbox-translation/sandbox.pot if you plan to help out for the next version of Sandbox
   # Use this file to create you own human readable file ({{{*}}}.po) and machine readable file ({{{*}}}.mo) with the correct country code in the name (e.g. fr_FR.mo). (One easy to use tool for this is Poedit - http://www.poedit.net) 
   # Place the translation file ({{{*}}}.mo) in the main Sandbox theme directory.
-  # Once you have finalized your translation please inform the project by opening an issue/ticket so we can include for others to use!
+
+Once you have finalized your translation please send both files as attachments to swallick AT gmail DOT com!
 
 ==How to enhance an existing translation?==
 
