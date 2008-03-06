@@ -21,7 +21,7 @@ If you are experienced use the provided [http://sandbox-theme.googlecode.com/svn
   # Place the translation file ({{{*}}}.mo) in the main Sandbox theme directory.
   # Once you have finalized your translation please inform the project by opening an issue/ticket so we can include for others to use!
 
-==How to update an existing translation?==
+==How to enhance an existing translation?==
 
 Not happy with the quality of the translation provided or is it of a different country variation than yours? Download the closest .po file in  the /sandbox-translation/ subfolder and edit away like described above.
 
@@ -29,5 +29,16 @@ If you feel that your translation is of significantly better quality, please ope
 
 If you have a local variation of your language (e.g. Colombian Spanish) which we don't have, then that will of course be added as a separate file. Just remember to change to the appropriate language code or tell us your country and language and we will try.
 
+==How to update a translation to the latest version of sandbox==
+
+Translations can easily be updated to be valid for the latest version of Sandbox. First obtain a copy of the translation you want to update and the sandbox.pot file from the Sandbox version you wish to use (preferably trunk if you're updating for a new Sandbox release).
+ # Open the old translated file in PoEdit (eg. fr_FR.mo)
+ # Go to Catalog > Update from POT file ...
+ # PoEdit will add new items to translate and remove what's no longer in use.
+ # Translate the new items and follow the procedures as for a new translation. 
+
+Don't forget to submit your translation to make sure it's included in the distribution and on this site.
 ----
 References: [http://wordpress.dk/2007/06/12/sandbox-tema-pa-dansk/ Danish Sandbox] and [http://en.dahnielson.com/2006/08/gettext.html Swedish Sandbox]
+
+Thanks to Jan Reister for tip on updating translations.
