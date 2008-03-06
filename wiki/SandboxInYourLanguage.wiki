@@ -8,7 +8,7 @@ To use the translations follow the general Wordpress [http://codex.wordpress.org
 
 The following provides information on how to create your own translations. You might want to check with us or the trunk (next version) before you start translating to make sure that a translation is not forthcoming.
 
-*Please send your translations to swallick AT gmail DOT com when finished. Remember to include both the .mo and .po file!*
+*Translations can be added to this project by starting a new issue (the Issues tab) and attaching your .mo and .po files.*
 
 For the unexperienced: the following rough guide is provided. 
 If you are experienced use the provided [http://sandbox-theme.googlecode.com/svn/trunk/sandbox-translation/sandbox.pot sandbox.pot ] from the forthcoming version.
