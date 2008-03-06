@@ -20,7 +20,9 @@ If you are experienced use the provided [http://sandbox-theme.googlecode.com/svn
   # Use this file to create you own human readable file ({{{*}}}.po) and machine readable file ({{{*}}}.mo) with the correct country code in the name (e.g. fr_FR.mo). (One easy to use tool for this is Poedit - http://www.poedit.net) 
   # Place the translation file ({{{*}}}.mo) in the main Sandbox theme directory.
 
-Once you have finalized your translation please send both files as attachments to swallick AT gmail DOT com!
+Once you have finalized your translation, open a new issue (the Issues tab) and attach the .po and .mo files. It will then be included in the next Sandbox release!
+
+Please remember to state the version of Sandbox on which you based your localization.
 
 ==How to enhance an existing translation?==
 
