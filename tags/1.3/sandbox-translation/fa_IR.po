@@ -7,49 +7,49 @@ msgstr ""
 "Project-Id-Version: Sandbox 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-23 02:38-0700\n"
-"PO-Revision-Date: 2008-03-08 11:46+0100\n"
-"Last-Translator: Raul Fernandez Illana <raul.fernandez.illana@gmail.com>\n"
-"Language-Team: es_ES <raul.fernandez.illana@gmail.com>\n"
+"PO-Revision-Date: 2008-03-20 22:06+0330\n"
+"Last-Translator: sajjad ebrahimi (webneshim.com) <sajjad.eb@gmail.com>\n"
+"Language-Team: webneshon <sajjad.eb@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Spanish\n"
-"X-Poedit-Country: SPAIN\n"
+"X-Poedit-Language: Persian\n"
+"X-Poedit-Country: IRAN, ISLAMIC REPUBLIC OF\n"
 
 #: 404.php:7
 #: header.php:4
 msgid "Not Found"
-msgstr "No encontrado"
+msgstr "پیدا نشد"
 
 #: 404.php:9
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Lo sentimos, pero no se encuentra lo que buscabas. Una busqueda m&aacute;s precisa puede ayudarte."
+msgstr "با عرض پوزش، آنچه را که شما برای جستحو تلاش کرده اید ما بسته ایم. گویا جستجو کردن به کمک احتیاج دارد."
 
 #: 404.php:14
 #: functions.php:259
 #: search.php:53
 #: sidebar.php:39
 msgid "Find"
-msgstr "Encontrar"
+msgstr "جستجو"
 
 #: archive.php:9
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
-msgstr "Archivos diarios: <span>%s</span>"
+msgstr "آرشیو روزانه: <span>%s</span>"
 
 #: archive.php:11
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
-msgstr "Archivos mensuales: <span>%s</span>"
+msgstr "آرشیو ماهیانه: <span>%s</span>"
 
 #: archive.php:13
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
-msgstr "Archivos anuales: <span>%s</span>"
+msgstr "آرشیو سالانه: <span>%s</span>"
 
 #: archive.php:15
 msgid "Blog Archives"
-msgstr "Archivos del blog"
+msgstr "آرشیو وبلاگ"
 
 #: archive.php:21
 #: archive.php:48
@@ -64,7 +64,7 @@ msgstr "Archivos del blog"
 #: tag.php:9
 #: tag.php:39
 msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Entradas menos recientes"
+msgstr "پست های قدیمی تر<span class=\"meta-nav\">&raquo;</span>"
 
 #: archive.php:22
 #: archive.php:49
@@ -79,7 +79,7 @@ msgstr "<span class=\"meta-nav\">&laquo;</span> Entradas menos recientes"
 #: tag.php:10
 #: tag.php:40
 msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Entradas m&aacute;s recientes <span class=\"meta-nav\">&raquo;</span>"
+msgstr "<span class=\"meta-nav\">&laquo;</span> پست های جدید تر"
 
 #: archive.php:28
 #: author.php:19
@@ -89,7 +89,7 @@ msgstr "Entradas m&aacute;s recientes <span class=\"meta-nav\">&raquo;</span>"
 #: tag.php:16
 #, php-format
 msgid "Permalink to %s"
-msgstr "Enlace permanente a %s"
+msgstr "لینک مستقیم به %s"
 
 #: archive.php:29
 #: author.php:20
@@ -110,7 +110,7 @@ msgstr "%1$s &#8211; %2$s"
 #: single.php:15
 #: tag.php:19
 msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Leer el resto de la entrada <span class=\"meta-nav\">&raquo;</span>"
+msgstr "بیشتر ... <span class=\"meta-nav\">&مaquo;</span>"
 
 #: archive.php:35
 #: category.php:24
@@ -119,7 +119,7 @@ msgstr "Leer el resto de la entrada <span class=\"meta-nav\">&raquo;</span>"
 #: tag.php:23
 #, php-format
 msgid "By %s"
-msgstr "Por %s"
+msgstr "نوشته شده توسط %s"
 
 #: archive.php:35
 #: attachment.php:19
@@ -130,7 +130,7 @@ msgstr "Por %s"
 #: tag.php:23
 #, php-format
 msgid "View all posts by %s"
-msgstr "Ver todas las entradas de %s"
+msgstr "نمایش تمامی پست های ارسالی از %s"
 
 #: archive.php:37
 #: author.php:26
@@ -139,14 +139,14 @@ msgstr "Ver todas las entradas de %s"
 #: tag.php:25
 #, php-format
 msgid "Posted in %s"
-msgstr "Publicado en %s"
+msgstr "تحت عنوان %s"
 
 #: archive.php:39
 #: author.php:28
 #: category.php:30
 #: index.php:25
 msgid "<span class=\"tag-links\">Tagged "
-msgstr "<span class=\"tag-links\">Etiquetado como "
+msgstr "<span class=\"tag-links\">تگ دار شده در "
 
 #: archive.php:40
 #: archives.php:32
@@ -162,7 +162,7 @@ msgstr "<span class=\"tag-links\">Etiquetado como "
 #: single.php:41
 #: tag.php:31
 msgid "Edit"
-msgstr "Editar"
+msgstr "ویرایش"
 
 #: archive.php:41
 #: author.php:30
@@ -171,7 +171,7 @@ msgstr "Editar"
 #: search.php:32
 #: tag.php:32
 msgid "Comments (0)"
-msgstr "Comentarios (0)"
+msgstr "نظرات (0)"
 
 #: archive.php:41
 #: author.php:30
@@ -180,7 +180,7 @@ msgstr "Comentarios (0)"
 #: search.php:32
 #: tag.php:32
 msgid "Comments (1)"
-msgstr "Comentarios (1)"
+msgstr "نظرات (1)"
 
 #: archive.php:41
 #: author.php:30
@@ -189,133 +189,133 @@ msgstr "Comentarios (1)"
 #: search.php:32
 #: tag.php:32
 msgid "Comments (%)"
-msgstr "Comentarios (%)"
+msgstr "نظرات (%)"
 
 #: archives.php:20
 msgid "Archives by Category"
-msgstr "Archivos por categor&iacute;a"
+msgstr "آرشیو به وسیله دسته بندی ها"
 
 #: archives.php:26
 msgid "Archives by Month"
-msgstr "Archivos por mes"
+msgstr "آرشیو به وسیله ماه"
 
 #: attachment.php:15
 #: index.php:18
 #: single.php:17
 msgid "Pages:"
-msgstr "P&aacute;ginas:"
+msgstr "صفحات:"
 
 #: attachment.php:18
 #, php-format
 msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s and tagged %7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
-msgstr "Esta entrada fue escrita por %1$s, publicada el <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s a las %5$s</abbr>, categorizada como %6$s y etiquetada como %7$s. Este es el <a href=\"%8$s\" title=\"Enlace permanente a %9$s\" rel=\"bookmark\">enlace permanente</a>. Sigue los <a href=\"%10$s\" title=\"RSS de comentarios para la entrada %9$s\" rel=\"alternate\" type=\"application/rss+xml\">comentarios v&iacute;a RSS</a>."
+msgstr "نوشته شده توسط %1$s , در تاریخ <abbr class=\"published\" title=\"%2$sT%3$s\"> %4$s ساعت %5$s </abbr> , تحت عنوان %6$s و تگ دار شده در %7$s. ذخیره <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">لینک مستقیم</a>. پیگیری نظرات از طریق <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">فید نظرات</a>."
 
 #: attachment.php:25
 #: single.php:27
 msgid "and tagged"
-msgstr "y etiquetado como"
+msgstr "و تگ دار شده در"
 
 #: attachment.php:31
 #: single.php:33
 #, php-format
 msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Publicar un comentario\">Publicar un comentario</a> o dejar una <a class=\"trackback-link\" href=\"%s\" title=\"URL para la huella de tu entrada\" rel=\"trackback\">huella para tu entrada</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">نظر دهید</a> و یا یک دنبالک بفرستید: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">لینک دنبالک</a>."
 
 #: attachment.php:33
 #: single.php:35
 #, php-format
 msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "Los comentarios est&aacute;n cerrados, pero a&uacute;n puedes dejar <a class=\"trackback-link\" href=\"%s\" title=\"URL para la huella de tu entrada\" rel=\"trackback\">tu huella</a>."
+msgstr "سیستم نظرات درحال حاظر قطع می باشد، ولی شما قادر به <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">ارسال دنبالک</a> می باشید."
 
 #: attachment.php:35
 #: single.php:37
 msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
-msgstr "Las huellas est&aacute;n desactivadas, pero puedes <a class=\"comment-link\" href=\"#respond\" title=\"Publicar un comentario\">publicar un comentario</a>."
+msgstr "سیستم دنبالک ها درحال حاظر قطع می باشد، ولی شما قادر به <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">ارسال نظر</a> می باشید."
 
 #: attachment.php:37
 #: single.php:39
 msgid "Both comments and trackbacks are currently closed."
-msgstr "Los comentarios est&aacute;n cerrados y las huellas desactivadas."
+msgstr "سیستم نظرات و دنبالک ها در حال خاضر قطع می باشد."
 
 #: author.php:8
 #, php-format
 msgid "Author Archives: <span class=\"vcard\">%s</span>"
-msgstr "Archivos del autor: <span class=\"vcard\">%s</span>"
+msgstr "آرشیو نویسنده: <span class=\"vcard\">%s</span>"
 
 #: category.php:6
 msgid "Category Archives:"
-msgstr "Archivos de las categor&iacute;as:"
+msgstr "آرشیو دسته بندی ها:"
 
 #: category.php:27
 #, php-format
 msgid "Also posted in %s"
-msgstr "Publicado tambi&eacute;n en %s"
+msgstr "همچنین در دسته بندی های: "
 
 #: comments.php:9
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr "Esta entrada est&aacute; protegida por contrase&ntilde;a. Introd&uacute;cela para ver los comentarios."
+msgstr "این مطلب توسط رمز عبور محافظت می شود. رمز عبور را برای دیدن نظرات وارد کنید."
 
 #: comments.php:28
 #, php-format
 msgid "<span>%d</span> Comments"
-msgstr "<span>%d</span> comentarios"
+msgstr "<span>%d</span> نظر"
 
 #: comments.php:28
 msgid "<span>One</span> Comment"
-msgstr "<span>1</span> comentario"
+msgstr "<span>یک</span> نظر"
 
 #: comments.php:35
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Publicado el %1$s a las %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Enlace permanente a este comentario\">Enlace permanente</a>"
+msgstr "در تاریخ %1$s ساعت %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">لینک مستقیم</a>"
 
 #: comments.php:40
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
-msgstr "\t\t\t\t\t<span class='unapproved'>Tu comentario est&aacute; esperando moderaci&oacute;n.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>نظر شما برای تایید شدن در انتظار است.</span>\n"
 
 #: comments.php:54
 #, php-format
 msgid "<span>%d</span> Trackbacks"
-msgstr "<span>%d</span> huellas"
+msgstr "<span>%d</span> دنبالک"
 
 #: comments.php:54
 msgid "<span>One</span> Trackback"
-msgstr "<span>1</span> huella"
+msgstr "<span>یک</span> دنبالک"
 
 #: comments.php:61
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
-msgstr "Por %1$s, el %2$s a las %3$s"
+msgstr "نوشته شده توسط %1$s در %2$s ساعت %3$s"
 
 #: comments.php:66
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Tu huella est&aacute; esperando moderaci&oacute;n.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">دنبالک شما برای تایید شدن در انتظار است.</span>\\n"
 
 #: comments.php:79
 msgid "Post a Comment"
-msgstr "Publicar un comentario"
+msgstr "ارسال یک نظر"
 
 #: comments.php:82
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Debes estar <a href=\"%s\" title=\"Log in\">identificado</a> para publicar un comentario."
+msgstr "برای ارسال یک نظر باید <a href=\"%s\" title=\"Log in\">وارد شوید</a>."
 
 #: comments.php:90
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Identificado como <a href=\"%1$s\" title=\"Identificado como %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Salir de tu cuenta\">&iquest;Salir?</a></span>"
+msgstr "<span class=\"loggedin\">وارد شد توسط <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">خروج؟</a></span>"
 
 #: comments.php:97
 msgid "Your email is <em>never</em> published nor shared."
-msgstr "Tu correo electr&oacute;nico <strong>nunca</strong> ser&aacute; publicado o compartido."
+msgstr "پست الکترونیکی شما <em>هرگز</em> منتشر نخواهد شد."
 
 #: comments.php:97
 msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Los campos requeridos est&aacute;n marcados con <span class=\"required\">*</span>"
+msgstr "پر کردن قسمت های نشانه دار (<span class=\"required\">*</span>) الزامیست."
 
 #: comments.php:99
 msgid "Name"
-msgstr "Nombre"
+msgstr "نام"
 
 #: comments.php:99
 #: comments.php:102
@@ -324,75 +324,75 @@ msgstr "<span class=\"required\">*</span>"
 
 #: comments.php:102
 msgid "Email"
-msgstr "Correo electr&oacute;nico"
+msgstr "پست الکترونیکی"
 
 #: comments.php:105
 msgid "Website"
-msgstr "Sitio web"
+msgstr "وب سایت"
 
 #: comments.php:110
 msgid "Comment"
-msgstr "Comentario"
+msgstr "نظر"
 
 #: comments.php:113
 msgid "Post Comment"
-msgstr "Publicar comentario"
+msgstr "ارسال نظر"
 
 #: footer.php:3
 msgid "WordPress"
-msgstr "WordPress"
+msgstr "وردپرس"
 
 #: footer.php:5
 msgid "Sandbox for WordPress"
-msgstr "Sandbox para WordPress"
+msgstr "سندباکس برای وردپرس"
 
 #: footer.php:5
 msgid "Sandbox"
-msgstr "Sandbox"
+msgstr "سندباکس"
 
 #: functions.php:252
 #: functions.php:332
 #: sidebar.php:35
 msgid "Search"
-msgstr "Busqueda"
+msgstr "جستجو"
 
 #: functions.php:271
 #: functions.php:334
 #: sidebar.php:55
 msgid "Meta"
-msgstr "Metadatos"
+msgstr "متا"
 
 #: functions.php:288
 #: functions.php:336
 #: functions.php:337
 msgid "RSS Links"
-msgstr "Enlaces RSS"
+msgstr "لینک های فید"
 
 #: functions.php:293
 #: header.php:9
 #: sidebar.php:49
 msgid "Posts RSS feed"
-msgstr "Sindicaci&oacute;n RSS de entradas"
+msgstr "| فید پست ها"
 
 #: functions.php:293
 #: sidebar.php:49
 msgid "All posts"
-msgstr "Todas las entradas"
+msgstr "همه پست ها"
 
 #: functions.php:294
 #: header.php:10
 #: sidebar.php:50
 msgid "Comments RSS feed"
-msgstr "Sindicaci&oacute;n RSS de comentarios"
+msgstr "| فید نظرات"
 
 #: functions.php:294
 #: sidebar.php:50
 msgid "All comments"
-msgstr "Todos los comentarios"
+msgstr "همه نظرات"
 
 #: functions.php:312
 msgid "Title:"
-msgstr "T&iacute;tulo:"
+msgstr "عنوان:"
 
 #: header.php:4
 msgid " &raquo; "
@@ -400,59 +400,59 @@ msgstr " &raquo; "
 
 #: header.php:26
 msgid "Skip navigation to the content"
-msgstr "Saltar de la navegaci&oacute;n al contenido"
+msgstr "پرش از منو به محتویات این صفحه"
 
 #: header.php:26
 msgid "Skip to content"
-msgstr "Saltar al contenido"
+msgstr "پرش به محتویات این صفحه"
 
 #: page.php:12
 msgid "Pages: "
-msgstr "P&aacute;ginas:"
+msgstr "صفحات:"
 
 #: search.php:8
 msgid "Search Results for:"
-msgstr "Resultados de busqueda para:"
+msgstr "نتیجه جستجو برای:"
 
 #: search.php:29
 msgid "Tagged "
-msgstr "Etiquetado"
+msgstr "تگ دار شده در"
 
 #: search.php:46
 msgid "Nothing Found"
-msgstr "Nada encontrado"
+msgstr "چیزی پیدا نشد"
 
 #: search.php:48
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Lo sentimos, pero no encontramos nada relacionado con su busqueda. Pruebe de nuevo con otras palabras clave,"
+msgstr "متاسفانه در رابطه با موضوع درخواستی شما مطلبی یافت نشد. لطفا با کلمات دیگر سعی کنید."
 
 #: sidebar.php:6
 msgid "Pages"
-msgstr "P&aacute;ginas"
+msgstr "صفحات"
 
 #: sidebar.php:13
 msgid "Categories"
-msgstr "Categor&iacute;as"
+msgstr "دسته بندی ها"
 
 #: sidebar.php:21
 msgid "Archives"
-msgstr "Archivos"
+msgstr "آرشیو"
 
 #: sidebar.php:47
 msgid "RSS Feeds"
-msgstr "Sindicaci&oacute;n RSS"
+msgstr "فیدها"
 
 #: single.php:20
 #, php-format
 msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s%7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
-msgstr "Esta entrada fue escrita por %1$s, publicada el <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s a las %5$s</abbr>, categorizada como %6$s%7$s. Este es el <a href=\"%8$s\" title=\"Enlace permanente a %9$s\" rel=\"bookmark\">enlace permanente</a>. Sigue los <a href=\"%10$s\" title=\"RSS de comentarios para la entrada %9$s\" rel=\"alternate\" type=\"application/rss+xml\">comentarios v&iacute;a RSS</a>."
+msgstr "نوشته شده توسط %1$s , در تاریخ <abbr class=\"published\" title=\"%2$sT%3$s\"> %4$s ساعت %5$s </abbr> , تحت عنوان %6$s%7$s. ذخیره <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">لینک مستقیم</a>. پیگیری نظرات از طریق <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">فید نظرات</a>."
 
 #: tag.php:6
 msgid "Tag Archives:"
-msgstr "Archivos por etiquetas:"
+msgstr "آرشیو تگ ها:"
 
 #: tag.php:28
 #, php-format
 msgid "Also tagged %s"
-msgstr "Tambi&eacute;n etiquetado como %s"
+msgstr "همچنین در تگ های: %s"
 
