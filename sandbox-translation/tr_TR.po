@@ -1,0 +1,459 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sandbox 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-23 02:38-0700\n"
+"PO-Revision-Date: 2008-02-17 16:33+0200\n"
+"Last-Translator: Abdullah ARIK <mail@abdullaharik.com>\n"
+"Language-Team: abdullaharik.com <mail@abdullaharik.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Turkish\n"
+"X-Poedit-Country: TURKEY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: 404.php:7
+#: header.php:4
+msgid "Not Found"
+msgstr "Bulunamadı"
+
+#: 404.php:9
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Üzgünüz, baktığınızı bulamıyoruz. Tabii ki arama yardımcı olacaktır."
+
+#: 404.php:14
+#: functions.php:259
+#: search.php:53
+#: sidebar.php:39
+msgid "Find"
+msgstr "Bul"
+
+#: archive.php:9
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Günlük Arşivler: <span>%s</span>"
+
+#: archive.php:11
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Aylık Arşivler: <span>%s</span>"
+
+#: archive.php:13
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Yıllık Arşivler: <span>%s</span>"
+
+#: archive.php:15
+msgid "Blog Archives"
+msgstr "Blog Arşivleri"
+
+#: archive.php:21
+#: archive.php:48
+#: author.php:12
+#: author.php:37
+#: category.php:10
+#: category.php:39
+#: index.php:7
+#: index.php:35
+#: search.php:11
+#: search.php:39
+#: tag.php:9
+#: tag.php:39
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Eski iletiler"
+
+#: archive.php:22
+#: archive.php:49
+#: author.php:13
+#: author.php:38
+#: category.php:11
+#: category.php:40
+#: index.php:8
+#: index.php:36
+#: search.php:12
+#: search.php:40
+#: tag.php:10
+#: tag.php:40
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Yeni iletiler <span class=\"meta-nav\">&raquo;</span>"
+
+#: archive.php:28
+#: author.php:19
+#: category.php:17
+#: index.php:13
+#: search.php:18
+#: tag.php:16
+#, php-format
+msgid "Permalink to %s"
+msgstr "%s'e Permalink"
+
+#: archive.php:29
+#: author.php:20
+#: category.php:18
+#: index.php:14
+#: search.php:19
+#: tag.php:17
+#, php-format
+msgid "%1$s &#8211; %2$s"
+msgstr "%1$s &#8211; %2$s"
+
+#: archive.php:31
+#: attachment.php:13
+#: author.php:22
+#: category.php:20
+#: index.php:16
+#: search.php:21
+#: single.php:15
+#: tag.php:19
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Daha Çok Oku <span class=\"meta-nav\">&raquo;</span>"
+
+#: archive.php:35
+#: category.php:24
+#: index.php:21
+#: search.php:25
+#: tag.php:23
+#, php-format
+msgid "By %s"
+msgstr "%s tarafından"
+
+#: archive.php:35
+#: attachment.php:19
+#: category.php:24
+#: index.php:21
+#: search.php:25
+#: single.php:21
+#: tag.php:23
+#, php-format
+msgid "View all posts by %s"
+msgstr "%s tarafından yazılan bütün iletiler"
+
+#: archive.php:37
+#: author.php:26
+#: index.php:23
+#: search.php:27
+#: tag.php:25
+#, php-format
+msgid "Posted in %s"
+msgstr "%s kategorisinde iletilmiş"
+
+#: archive.php:39
+#: author.php:28
+#: category.php:30
+#: index.php:25
+msgid "<span class=\"tag-links\">Tagged "
+msgstr "<span class=\"tag-links\">Etiketlenmiş "
+
+#: archive.php:40
+#: archives.php:32
+#: attachment.php:39
+#: author.php:29
+#: category.php:31
+#: comments.php:39
+#: comments.php:65
+#: index.php:26
+#: links.php:20
+#: page.php:14
+#: search.php:31
+#: single.php:41
+#: tag.php:31
+msgid "Edit"
+msgstr "Düzenle"
+
+#: archive.php:41
+#: author.php:30
+#: category.php:32
+#: index.php:27
+#: search.php:32
+#: tag.php:32
+msgid "Comments (0)"
+msgstr "(0) Yorum"
+
+#: archive.php:41
+#: author.php:30
+#: category.php:32
+#: index.php:27
+#: search.php:32
+#: tag.php:32
+msgid "Comments (1)"
+msgstr "(1) Yorum"
+
+#: archive.php:41
+#: author.php:30
+#: category.php:32
+#: index.php:27
+#: search.php:32
+#: tag.php:32
+msgid "Comments (%)"
+msgstr "(%) Yorum"
+
+#: archives.php:20
+msgid "Archives by Category"
+msgstr "Kategorilere Göre Arşivler"
+
+#: archives.php:26
+msgid "Archives by Month"
+msgstr "Aylara Göre Arşivler"
+
+#: attachment.php:15
+#: index.php:18
+#: single.php:17
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: attachment.php:18
+#, php-format
+msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s and tagged %7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
+msgstr "Bu ileti %1$s tarafından yazıldı, <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s tarihinde saat %5$s</abbr>  de yayınlandı, %6$s kategorisinde dosyalanıp, %7$s kelimeleriyle etiketlendi. Kısayol için <a href=\"%8$s\" title=\"%9$s için Permalink\" rel=\"bookmark\">permalink</a>. Bu yazıya ait yorumları takip edebilmeniz için <a href=\"%10$s\" title=\"%9$s için RSS Beslemesi\" rel=\"alternate\" type=\"application/rss+xml\">bu iletinin RSS beslemesi</a>."
+
+#: attachment.php:25
+#: single.php:27
+msgid "and tagged"
+msgstr "ve etiketlenmiş"
+
+#: attachment.php:31
+#: single.php:33
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Yorum yazın\">Yorum yazın</a> veya geribesleme için: <a class=\"trackback-link\" href=\"%s\" title=\"İletiniz için Geri Besleme URL'si\" rel=\"trackback\">Geri Besleme URL'si</a>."
+
+#: attachment.php:33
+#: single.php:35
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Yorum yapılamıyor ama geri besleme bırakabilirsiniz: <a class=\"trackback-link\" href=\"%s\" title=\"Yazınız için geri besleme URL'si\" rel=\"trackback\">Geri besleme URL'si</a>."
+
+#: attachment.php:35
+#: single.php:37
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Geri besleme özelliği kapalı, ama <a class=\"comment-link\" href=\"#respond\" title=\"Yorum yazın\">yorum yazabilirsiniz</a>."
+
+#: attachment.php:37
+#: single.php:39
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Şu anda bütün yorumlar ve geri beslemeler kapalı."
+
+#: author.php:8
+#, php-format
+msgid "Author Archives: <span class=\"vcard\">%s</span>"
+msgstr "Yazar Arşivleri: <span class=\"vcard\">%s</span>"
+
+#: category.php:6
+msgid "Category Archives:"
+msgstr "Kategori Arşivleri:"
+
+#: category.php:27
+#, php-format
+msgid "Also posted in %s"
+msgstr "Aynı zamanda %s de iletilmiş"
+
+#: comments.php:9
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Bu ileti şifre korumalı. Yorumları görebilmek için şifre giriniz."
+
+#: comments.php:28
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> Yorum"
+
+#: comments.php:28
+msgid "<span>One</span> Comment"
+msgstr "<span>Bir</span> Yorum"
+
+#: comments.php:35
+#, php-format
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "%1$s, %2$s'de yazılmış. <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Bu yorum için Permalink\">Permalink</a>"
+
+#: comments.php:40
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>Yorumunuz yöneticinin onayı için bekliyor.</span>\n"
+
+#: comments.php:54
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> Geri Besleme"
+
+#: comments.php:54
+msgid "<span>One</span> Trackback"
+msgstr "<span>Bir</span> Geri Besleme"
+
+#: comments.php:61
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "%1$s tarafından %2$s tarihinde, saat %3$s de yazıldı."
+
+#: comments.php:66
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Geri beslemeniz yöneticinin onayı için bekliyor.</span>\\n"
+
+#: comments.php:79
+msgid "Post a Comment"
+msgstr "Bir İleti Gönderin"
+
+#: comments.php:82
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Bir ileti göndermek için <a href=\"%s\" title=\"Log in\">Giriş</a> yapmalısınız."
+
+#: comments.php:90
+#, php-format
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\"><a href=\"%1$s\" title=\"%2$s olarak giriş yapılmış.\">%2$s</a> olarak giriş yapılmış.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Bu hesaptan çıkmak istiyor musunuz?\">Çıkış?</a></span>"
+
+#: comments.php:97
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Email adresiniz <em>hiçbirzaman</em> yayınlanmayacak ve paylaşılmayacak."
+
+#: comments.php:97
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Gerekli alanlar <span class=\"required\">*</span> ile işaretlenmiş."
+
+#: comments.php:99
+msgid "Name"
+msgstr "Adı"
+
+#: comments.php:99
+#: comments.php:102
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: comments.php:102
+msgid "Email"
+msgstr "Email"
+
+#: comments.php:105
+msgid "Website"
+msgstr "Websitesi"
+
+#: comments.php:110
+msgid "Comment"
+msgstr "Yorum"
+
+#: comments.php:113
+msgid "Post Comment"
+msgstr "İleti Yorumu"
+
+#: footer.php:3
+msgid "WordPress"
+msgstr "Wordpress"
+
+#: footer.php:5
+msgid "Sandbox for WordPress"
+msgstr "Wordpress için Sandbox"
+
+#: footer.php:5
+msgid "Sandbox"
+msgstr "Sandbow"
+
+#: functions.php:252
+#: functions.php:332
+#: sidebar.php:35
+msgid "Search"
+msgstr "Ara"
+
+#: functions.php:271
+#: functions.php:334
+#: sidebar.php:55
+msgid "Meta"
+msgstr "Meta"
+
+#: functions.php:288
+#: functions.php:336
+#: functions.php:337
+msgid "RSS Links"
+msgstr "RSS Bağlantıları"
+
+#: functions.php:293
+#: header.php:9
+#: sidebar.php:49
+msgid "Posts RSS feed"
+msgstr "İletiler için RSS beslemesi"
+
+#: functions.php:293
+#: sidebar.php:49
+msgid "All posts"
+msgstr "Bütün iletiler"
+
+#: functions.php:294
+#: header.php:10
+#: sidebar.php:50
+msgid "Comments RSS feed"
+msgstr "Yorumlar için RSS beslemesi"
+
+#: functions.php:294
+#: sidebar.php:50
+msgid "All comments"
+msgstr "Bütün yorumlar"
+
+#: functions.php:312
+msgid "Title:"
+msgstr "Başlık:"
+
+#: header.php:4
+msgid " &raquo; "
+msgstr " &raquo; "
+
+#: header.php:26
+msgid "Skip navigation to the content"
+msgstr "İçeriğe geç"
+
+#: header.php:26
+msgid "Skip to content"
+msgstr "İçeriğe geç"
+
+#: page.php:12
+msgid "Pages: "
+msgstr "Sayfalar: "
+
+#: search.php:8
+msgid "Search Results for:"
+msgstr "Arama sonuçları:"
+
+#: search.php:29
+msgid "Tagged "
+msgstr "Etiketlenmiş"
+
+#: search.php:46
+msgid "Nothing Found"
+msgstr "Birşey Bulunamadı"
+
+#: search.php:48
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Ü<günüz, aradığınız kriterlere uygun sonuç bulunamadı. Lütfen farklı kelimelerle tekrar deneyiniz."
+
+#: sidebar.php:6
+msgid "Pages"
+msgstr "Sayfalar"
+
+#: sidebar.php:13
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: sidebar.php:21
+msgid "Archives"
+msgstr "Arşivler"
+
+#: sidebar.php:47
+msgid "RSS Feeds"
+msgstr "RSS Beslemeleri"
+
+#: single.php:20
+#, php-format
+msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s%7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
+msgstr "Bu ileti %1$s tarafından, <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s tarihinde saat %5$s</abbr> de yazılmış, %6$s%7$s de kategorilenmiş. Favorilere eklemek için<a href=\"%8$s\" title=\"%9$s için Permalink\" rel=\"bookmark\">permalink</a>. Bu yazıya ait yorumları takip edebilmek için <a href=\"%10$s\" title=\"%9$s için Yorum RSS adresi\" rel=\"alternate\" type=\"application/rss+xml\">Yorum RSS adresi</a>."
+
+#: tag.php:6
+msgid "Tag Archives:"
+msgstr "Etiket Arşivleri"
+
+#: tag.php:28
+#, php-format
+msgid "Also tagged %s"
+msgstr "Ayrıca %s olarak etiketlenmiş"
+
