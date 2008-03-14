@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sandbox 1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-11 17:23-0700\n"
-"PO-Revision-Date: 2008-01-12 02:03+0100\n"
+"POT-Creation-Date: 2008-03-10 00:53-0500\n"
+"PO-Revision-Date: 2008-03-10 14:31+0100\n"
 "Last-Translator: Kjell Knudsen <kjellkk@gmail.com>\n"
 "Language-Team: Norwegian Bokmal <kjellkk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgid "Apologies, but we were unable to find what you were looking for. Perhaps 
 msgstr "Desverre, men vi fant ikke det du forsøkte å lese. Kanskje det vil hjelpe å søke."
 
 #: 404.php:14
-#: functions.php:258
+#: functions.php:271
 #: search.php:53
 #: sidebar.php:39
 msgid "Find"
@@ -154,10 +154,10 @@ msgstr "<span class=\"tag-links\">Merket"
 #: attachment.php:39
 #: author.php:29
 #: category.php:31
-#: comments.php:39
-#: comments.php:65
+#: comments.php:41
+#: comments.php:67
 #: index.php:26
-#: links.php:20
+#: links.php:21
 #: page.php:14
 #: search.php:31
 #: single.php:41
@@ -252,158 +252,177 @@ msgstr "Kategori arkiv:"
 msgid "Also posted in %s"
 msgstr "Også arkivert under %s"
 
-#: comments.php:9
-msgid "This post is password protected. Enter the password to view any comments."
-msgstr "Dette innlegget er passord beskyttet. Skriv in passordet for å se kommentarer."
+#: comments.php:11
+msgid "This post is protected. Enter the password to view any comments."
+msgstr "Dette innlegget er passordbeskyttet. Skriv in passordet for å se kommentarer."
 
-#: comments.php:28
+#: comments.php:30
 #, php-format
 msgid "<span>%d</span> Comments"
 msgstr "<span>%d</span> Kommentarer"
 
-#: comments.php:28
+#: comments.php:30
 msgid "<span>One</span> Comment"
 msgstr "<span>En</span> kommentar"
 
-#: comments.php:35
+#: comments.php:37
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
 msgstr "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink til denne kommentaren\">Permalink</a>"
 
-#: comments.php:40
+#: comments.php:42
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
 msgstr "\t\t\t\t\t<span class='unapproved'>Din kommentar avventer godkjennelse.</span>\n"
 
-#: comments.php:54
+#: comments.php:56
 #, php-format
 msgid "<span>%d</span> Trackbacks"
 msgstr "<span>%d</span> tilbaketråkk"
 
-#: comments.php:54
+#: comments.php:56
 msgid "<span>One</span> Trackback"
 msgstr "<span>Ett</span> tilbaketråkk"
 
-#: comments.php:61
+#: comments.php:63
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
 msgstr "Av %1$s den %2$s kl %3$s"
 
-#: comments.php:66
+#: comments.php:68
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
 msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Ditt tilbaketråkk avventer godkjenning.</span>\\n"
 
-#: comments.php:79
+#: comments.php:81
 msgid "Post a Comment"
 msgstr "Legg inn en kommentar"
 
-#: comments.php:82
+#: comments.php:84
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
 msgstr "Du må være <a href=\"%s\" title=\"Log in\">pålogget</a> for å kommentere."
 
-#: comments.php:90
+#: comments.php:92
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
 msgstr "<span class=\"loggedin\">Pålogget som <a href=\"%1$s\" title=\"Pålogget som  %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Logg ut fra denne kontoen?\">Logg ut?</a></span>"
 
-#: comments.php:97
+#: comments.php:99
 msgid "Your email is <em>never</em> published nor shared."
 msgstr "Din e-post vil <em>aldri</em> bli vist eller videreformidlet."
 
-#: comments.php:97
+#: comments.php:99
 msgid "Required fields are marked <span class=\"required\">*</span>"
 msgstr "Obligatoriske felter er merket med <span class=\"required\">*</span>"
 
-#: comments.php:99
+#: comments.php:101
 msgid "Name"
 msgstr "Navn"
 
-#: comments.php:99
-#: comments.php:102
+#: comments.php:101
+#: comments.php:104
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
-#: comments.php:102
+#: comments.php:104
 msgid "Email"
 msgstr "E-post"
 
-#: comments.php:105
+#: comments.php:107
 msgid "Website"
 msgstr "Nettsted"
 
-#: comments.php:110
+#: comments.php:112
 msgid "Comment"
 msgstr "Kommentar"
 
-#: comments.php:113
+#: comments.php:115
 msgid "Post Comment"
 msgstr "Legg til kommentar"
 
 #: footer.php:3
 msgid "WordPress"
-msgstr ""
+msgstr "WordPress"
 
 #: footer.php:5
 msgid "Sandbox for WordPress"
-msgstr ""
+msgstr "Sandbox for WordPress"
 
 #: footer.php:5
 msgid "Sandbox"
-msgstr ""
+msgstr "Sandbox"
 
-#: functions.php:251
-#: functions.php:331
+#: functions.php:270
+#: functions.php:378
+#: functions.php:380
 #: sidebar.php:35
 msgid "Search"
 msgstr "Søk"
 
-#: functions.php:270
-#: functions.php:333
+#: functions.php:299
+#: functions.php:352
+msgid "Title:"
+msgstr "Tittel:"
+
+#: functions.php:300
+msgid "Button Text:"
+msgstr "Knappe tekst:"
+
+#: functions.php:309
+#: functions.php:387
+#: functions.php:389
 #: sidebar.php:55
 msgid "Meta"
 msgstr "Meta"
 
-#: functions.php:287
-#: functions.php:335
-#: functions.php:336
+#: functions.php:328
+#: functions.php:396
+#: functions.php:397
 msgid "RSS Links"
 msgstr "RSS Linker"
 
-#: functions.php:292
-#: header.php:9
+#: functions.php:333
+#: header.php:8
 #: sidebar.php:49
 msgid "Posts RSS feed"
 msgstr "Innlegg RSS feed"
 
-#: functions.php:292
+#: functions.php:333
 #: sidebar.php:49
 msgid "All posts"
 msgstr "Alle innlegg"
 
-#: functions.php:293
-#: header.php:10
+#: functions.php:334
+#: header.php:9
 #: sidebar.php:50
 msgid "Comments RSS feed"
 msgstr "Kommentar RSS feed"
 
-#: functions.php:293
+#: functions.php:334
 #: sidebar.php:50
 msgid "All comments"
 msgstr "Alle kommentarer"
 
-#: functions.php:311
-msgid "Title:"
-msgstr "Tittel:"
+#: functions.php:376
+msgid "A search form for your blog (Sandbox)"
+msgstr "En søkeboks til din blog (Sandbox)"
+
+#: functions.php:385
+msgid "Log in/out and administration links (Sandbox)"
+msgstr "Log inn/ut og administrasjons linker (Sandbox)"
+
+#: functions.php:394
+msgid "RSS links for both posts and comments <small>(Sandbox)</small>"
+msgstr "RSS linker for både artikler og kommentarer <small>(Sandbox)</small>"
 
 #: header.php:4
 msgid " &raquo; "
 msgstr " &raquo; "
 
-#: header.php:26
+#: header.php:25
 msgid "Skip navigation to the content"
 msgstr "Hopp over navigasjon og gå til innhold"
 
-#: header.php:26
+#: header.php:25
 msgid "Skip to content"
 msgstr "Gå til innhold"
 

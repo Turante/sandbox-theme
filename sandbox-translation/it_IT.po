@@ -3,10 +3,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Sandbox 1.3\n"
+"Project-Id-Version: Sandbox 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-23 02:38-0700\n"
-"PO-Revision-Date: 2008-02-02 15:41+0100\n"
+"POT-Creation-Date: 2008-03-10 00:53-0500\n"
+"PO-Revision-Date: 2008-03-10 11:15+0100\n"
 "Last-Translator: Jan Reister <jan@seul.org>\n"
 "Language-Team: Nokao <info@nokao.com>, Jan <jan@seul.org>, Brigitte bwat.it\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Apologies, but we were unable to find what you were looking for. Perhaps 
 msgstr "Siamo spiacenti, ma non siamo riusciti a trovare quello che cercavi. Prova a fare una ricerca."
 
 #: 404.php:14
-#: functions.php:259
+#: functions.php:271
 #: search.php:53
 #: sidebar.php:39
 msgid "Find"
@@ -153,10 +153,10 @@ msgstr "<span class=\"tag-links\">Contrassegnato con i tag "
 #: attachment.php:39
 #: author.php:29
 #: category.php:31
-#: comments.php:39
-#: comments.php:65
+#: comments.php:41
+#: comments.php:67
 #: index.php:26
-#: links.php:20
+#: links.php:21
 #: page.php:14
 #: search.php:31
 #: single.php:41
@@ -251,90 +251,90 @@ msgstr "Archivi delle categorie"
 msgid "Also posted in %s"
 msgstr "Pubblicato anche in %s"
 
-#: comments.php:9
-msgid "This post is password protected. Enter the password to view any comments."
-msgstr "Questo articolo è protetto da password. Inserisci la password per leggerlo."
+#: comments.php:11
+msgid "This post is protected. Enter the password to view any comments."
+msgstr "Questo post &egrave; riservato. Per leggere i commenti inserisci la tua password:"
 
-#: comments.php:28
+#: comments.php:30
 #, php-format
 msgid "<span>%d</span> Comments"
 msgstr "<span>%d</span> commenti"
 
-#: comments.php:28
+#: comments.php:30
 msgid "<span>One</span> Comment"
 msgstr "<span>Un</span> commento"
 
-#: comments.php:35
+#: comments.php:37
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
 msgstr "Pubblicato %1$s alle %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink a questo commento\">Permalink</a>"
 
-#: comments.php:40
+#: comments.php:42
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
 msgstr "\t\t\t\t\t<span class='unapproved'>Il tuo commento è attesa di moderazione.</span>\n"
 
-#: comments.php:54
+#: comments.php:56
 #, php-format
 msgid "<span>%d</span> Trackbacks"
 msgstr "<span>%d</span> trackback"
 
-#: comments.php:54
+#: comments.php:56
 msgid "<span>One</span> Trackback"
 msgstr "<span>Un</span> trackback"
 
-#: comments.php:61
+#: comments.php:63
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
 msgstr "Di %1$s il %2$s alle %3$s"
 
-#: comments.php:66
+#: comments.php:68
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
 msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Il tuo trackback è in attesa di moderazione.</span>\\n"
 
-#: comments.php:79
+#: comments.php:81
 msgid "Post a Comment"
 msgstr "Scrivi un commento"
 
-#: comments.php:82
+#: comments.php:84
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
 msgstr "Devi fare <a href=\"%s\" title=\"Fai login\">login</a> per scrivere un commento."
 
-#: comments.php:90
+#: comments.php:92
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
 msgstr "<span class=\"loggedin\">Hai fatto login come <a href=\"%1$s\" title=\"Autenticato come %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Fai log out da questo account\">Fai log out?</a></span>"
 
-#: comments.php:97
+#: comments.php:99
 msgid "Your email is <em>never</em> published nor shared."
 msgstr "La tua e-mail non sarà <em>mai</em> pubblicata o ceduta ad altri."
 
-#: comments.php:97
+#: comments.php:99
 msgid "Required fields are marked <span class=\"required\">*</span>"
 msgstr "I campi obbligatori sono contrassegnati con un <span class=\"required\">*</span>"
 
-#: comments.php:99
+#: comments.php:101
 msgid "Name"
 msgstr "Nome"
 
-#: comments.php:99
-#: comments.php:102
+#: comments.php:101
+#: comments.php:104
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
-#: comments.php:102
+#: comments.php:104
 msgid "Email"
 msgstr "Email"
 
-#: comments.php:105
+#: comments.php:107
 msgid "Website"
 msgstr "Sito web"
 
-#: comments.php:110
+#: comments.php:112
 msgid "Comment"
 msgstr "Commenta"
 
-#: comments.php:113
+#: comments.php:115
 msgid "Post Comment"
 msgstr "Scrivi un commento"
 
@@ -350,59 +350,78 @@ msgstr "Sandbox per WordPress"
 msgid "Sandbox"
 msgstr "Sandbox"
 
-#: functions.php:252
-#: functions.php:332
+#: functions.php:270
+#: functions.php:378
+#: functions.php:380
 #: sidebar.php:35
 msgid "Search"
 msgstr "Cerca"
 
-#: functions.php:271
-#: functions.php:334
+#: functions.php:299
+#: functions.php:352
+msgid "Title:"
+msgstr "Titolo:"
+
+#: functions.php:300
+msgid "Button Text:"
+msgstr "Pulsante testo:"
+
+#: functions.php:309
+#: functions.php:387
+#: functions.php:389
 #: sidebar.php:55
 msgid "Meta"
 msgstr "Meta"
 
-#: functions.php:288
-#: functions.php:336
-#: functions.php:337
+#: functions.php:328
+#: functions.php:396
+#: functions.php:397
 msgid "RSS Links"
 msgstr "Link ai feed RSS"
 
-#: functions.php:293
-#: header.php:9
+#: functions.php:333
+#: header.php:8
 #: sidebar.php:49
 msgid "Posts RSS feed"
 msgstr "Feed RSS degli articoli"
 
-#: functions.php:293
+#: functions.php:333
 #: sidebar.php:49
 msgid "All posts"
 msgstr "Tutti gli articoli"
 
-#: functions.php:294
-#: header.php:10
+#: functions.php:334
+#: header.php:9
 #: sidebar.php:50
 msgid "Comments RSS feed"
 msgstr "Feed RSS dei commenti"
 
-#: functions.php:294
+#: functions.php:334
 #: sidebar.php:50
 msgid "All comments"
 msgstr "Tutti i commenti"
 
-#: functions.php:312
-msgid "Title:"
-msgstr "Titolo:"
+#: functions.php:376
+msgid "A search form for your blog (Sandbox)"
+msgstr "Un modulo di ricerca per il tuo blog (Sandbox)"
+
+#: functions.php:385
+msgid "Log in/out and administration links (Sandbox)"
+msgstr "Link per fare login, logout e per amministrare il sito (Sandbox)"
+
+#: functions.php:394
+msgid "RSS links for both posts and comments <small>(Sandbox)</small>"
+msgstr "Feed RSS per articoli e commenti <small>(Sandbox)</small>"
 
 #: header.php:4
 msgid " &raquo; "
 msgstr " &raquo; "
 
-#: header.php:26
+#: header.php:25
 msgid "Skip navigation to the content"
 msgstr "Vai direttamente al contenuto"
 
-#: header.php:26
+#: header.php:25
 msgid "Skip to content"
 msgstr "Vai al contenuto"
 

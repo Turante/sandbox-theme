@@ -259,7 +259,7 @@ function sandbox_tag_ur_it($glue) {
 function sandbox_commenter_link() {
 	$sandbox_commenter = str_replace( "<a href", "<a class='url' href", get_comment_author_link() );
 	$email = get_comment_author_email();
-	$sandbox_avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar("$email") );
+	$sandbox_avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( "$email", "64" ) );
 	echo $sandbox_avatar . '<span class="fn n">' . $sandbox_commenter . '</span>';
 }
 
