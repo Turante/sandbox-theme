@@ -111,15 +111,13 @@
 				<p>You can read more detailed installation instructions on the <a href="http://codex.wordpress.org/Using_Themes#Adding_New_Themes" title="Adding new themes - WordPress Codex" rel="external">WordPress Codex</a>.</p>
 				<h3>Subversion Access</h3>
 				<p>Developers interested in <a href="http://en.wikipedia.org/wiki/Subversion_(software)" title="Subersion - Wikipedia" rel="external">Subversion</a> access to the Sandbox repository may visit <a href="http://code.google.com/p/sandbox-theme" title="Sandbox theme on Google Code" rel="external">code.google.com/p/sandbox-theme</a>. Please ignore if unfamiliar with Subversion.</p>
-				<p>For the latest and possibly unstable version, use the <code>/trunk/</code>:</p>
+				<p>For the latest and possibly unstable version, check out the <code>/trunk/</code>:</p>
 				<pre class="shell">svn checkout http://sandbox-theme.googlecode.com/svn/trunk/</pre>
-				<p>A legacy version for WordPress 2.0.x users is in <code>/branches/0.9/</code>:</p>
-				<pre class="shell">svn checkout http://sandbox-theme.googlecode.com/svn/braches/0.9/</pre>
-				<p>Otherwise, please checkout tagged versions in the <code>/tags/</code> subdirectory. Tagged versions are stable and the latest release will be for the current stable version of WordPress.</p>
+				<p>A legacy version for WordPress 2.0.x is in <code>/branches/0.9/</code>. Otherwise, please check out tagged versions in the <code>/tags/</code> subdirectory. Tagged versions are stable and the latest release will be for the current stable version of WordPress.</p>
 			</li><!-- #installing -->
 			<li id="started">
 				<h2>Getting started</h2>
-				<p>To help beginners get started, example layouts in <code>/sandbox-layouts/</code> have been included. Instructions for using the included layouts and designs can be found in the folder.</p>
+				<p>For beginners getting started, see the example layouts in <code>/sandbox-layouts/</code>. Instructions for using the included layouts can be found in the folder.</p>
 				<p>The simplest way to get started with the Sandbox is to jump right in to <code>style.css</code>, using <abbr title="Cascading Style Sheets">CSS</abbr> to design the appearence of the Sandbox.</p>
 				<p>For help learning <abbr title="Cascading Style Sheets">CSS</abbr>, visit:</p>
 				<ul>
@@ -639,11 +637,11 @@
 				<p>Creating a theme template is essentially the same as creating a regular theme for WordPress, except you are not modifying any of the theme files and instead providing an alternate <code>style.css</code>.</p>
 				<pre class="css">/*
 THEME NAME: My Design
-THEME URI: http://www.sndbx.org/
+THEME URI: http://www.example.com/my-design/
 DESCRIPTION: New curtains for an old room
 VERSION: 0.1
-AUTHOR: Scott Allan Wallick
-AUTHOR Uri: http://scottwallick.com/
+AUTHOR: John Doe
+AUTHOR Uri: http://www.example.com
 TAGS: one column, two columns, three columns, awesome, blue, pink
 TEMPLATE: sandbox
 */</pre>
@@ -652,8 +650,8 @@ TEMPLATE: sandbox
 			</li><!-- #creating -->
 			<li id="translations">
 				<h2>Translations</h2>
-				<p>For more detailed information about translating for the Sandbox, you should read <a href="http://code.google.com/p/sandbox-theme/wiki/SandboxInYourLanguage" title="Sandbox in your language - Sandbox on Google Code" rel="external">Sandbox in your language</a> on the Sandbox wiki.</p>
-				<p>If you would like to submit MO/PO files for a language, please open a new ticket on the <a href="http://sandbox-theme.googlecode.com/" title="Sandbox on Google Code">Sandbox project home</a>. Shortly thereafter you'll be added as a project member and able to upload the files.</p>
+				<p>The Sandbox allows for complete localization. For detailed information about translating the Sandbox into your language, see <a href="http://code.google.com/p/sandbox-theme/wiki/SandboxInYourLanguage" title="Sandbox in your language - Sandbox on Google Code" rel="external">Sandbox in your language</a> on the Sandbox wiki.</p>
+				<p>If you would like to submit a translation for the Sandbox, please open a new issue on the <a href="http://sandbox-theme.googlecode.com/" title="Sandbox on Google Code">Sandbox project home</a>. Please include both the <code>PO</code> and <code>MO</code> files. You're also welcome to help edit existing translations.</p>
 				<p>Translations have been graciously provided by the following individuals:</p>
 				<ul>
 					<li class="vcard">Brazilian Portuguese by <a class="fn n url" href="http://adrianocorreia.com/" title="Adriano Correia"><span class="given-name">Adriano</span> <span class="family-name">Correia</span></a></li>
