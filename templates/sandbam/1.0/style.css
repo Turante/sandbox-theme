@@ -1,0 +1,646 @@
+/*
+THEME NAME: SandBAM
+THEME URI: http://www.deranged-minds.com/downloads/
+DESCRIPTION: A CSS design for the <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox</a>, brought to you by BAM, Inc.
+VERSION: 1.0
+AUTHOR: BAM, Inc. (Benneh &amp; Deranged)
+AUTHOR URI: http://www.deranged-minds.com/
+TEMPLATE: sandbox
+*/
+
+/*
+LAYOUT: Two-Column (Bottom)
+DESCRIPTION: Header at left, single content column, two sidebars at bottom
+*/
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Body<<------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
+background: #000 url('sandbam-background.jpg') repeat scroll top left;
+font-family: Georgia;
+}
+
+a{
+color: #B02B2C;
+font-weight: bold;
+text-decoration: none;
+}
+
+a:hover{
+background-color: #900;
+color: #E5E5E5;
+text-decoration: none;
+}
+
+a:visited{
+color: #E5E5E5;
+font-weight: bold;
+text-decoration: none;
+}
+
+a img{
+background-color: #333;
+}
+
+div#wrapper.hfeed{
+margin: -35px auto 0;
+width: 100%;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Header<<------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+div#header{
+background: #000 url('header-background-2.jpg') no-repeat scroll top left;
+font-size: 0.6em;
+font-weight: normal;
+height: 100%;
+margin: 0 -8px;
+padding: 3em 0pt 20px;
+position: fixed;
+text-align: left;
+width: 200px;
+}
+
+div#header div#blog-description{
+display: none;
+}
+
+div#header a{
+background-color: #E5E5E5;
+color: #900;
+display: block;
+font-weight: bold;
+padding: 0.1em 0em 0.1em 1em;
+text-decoration: none;
+width: 150px;
+}
+
+div#header a:hover{
+background-color: #900;
+color: #E5E5E5;
+display: block;
+font-weight: bold;
+padding: 0.1em 0em 0.1em 1em;
+text-decoration: none;
+width: 150px;
+}
+
+div#access div.skip-link{
+display:none;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Page Menu<<------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+div#menu{
+font-size: 0.9em;
+height: 1.5em;
+left: -1px;
+position: fixed;
+text-align: left;
+top: 100px;
+width: 150px;
+}
+
+dix#menu ul{
+background-color: transparent;
+border: 5px solid transparent;
+display: block;
+float: right;
+list-style: none;
+margin: 0;
+padding: 0.2em 0em;
+width: 150px;
+}
+
+div#menu ul ul, div#menu ul li{
+background-color: #EEE;
+display: block;
+float: right;
+list-style: none;
+margin: 5px;
+width: 150px;
+}
+
+div#menu ul li a{
+background-color: #E5E5E5;
+border-bottom: 2px solid #900;
+border-right: 28px solid #900;
+border-top: 2px solid #900;
+color: #900;
+display: block;
+font-weight: bold;
+padding: 2px 0px 2px 28px;
+text-decoration: none;
+width: 150px;
+}
+
+div#menu ul li a:hover{
+background-color: #990000;
+border-bottom: 2px solid #E5E5E5;
+border-right: 28px solid #E5E5E5;
+border-top: 2px solid #E5E5E5;
+color: #E5E5E5;
+display: block;
+font-weight: bold;
+padding: 2px 0px 2px 28px;
+text-decoration: none;
+width: 150px;
+}
+
+div#menu ul ul{
+display: none;
+}
+
+div#menu ul ul li{
+float: none;
+}
+
+div#menu ul ul li a{
+margin: 0;
+padding: 0;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Footer<<------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+div#footer{
+background-color: #900;
+bottom: 0px;
+clear: both;
+color: #E5E5E5;
+left: 0px;
+position: fixed;
+text-align: center;
+width: 200px;
+}
+
+div#footer a{
+color: #E5E5E5;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Container<<------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+div#container{
+float: left;
+margin: 0 0 0 200px;
+width: 600px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Content<<------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+div#content{
+background-color: #333;
+color: #CCC;
+font-size: 1em;
+letter-spacing: 0;
+line-height: 1.2em;
+margin: 1em 0 0;
+padding: 5px 1em;
+position: relative;
+text-align: left;
+text-decoration: none;
+top: 11px;
+word-spacing: 0;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Navigation<<------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+div#nav-above, div#nav-below{
+background-color: #900;
+height: 1.25em;
+width: 100%;
+}
+
+div#nav-above{
+margin-bottom: 1em;
+}
+
+div#nav-below{
+margin-top: 1em;
+}
+
+div.nav-previous{
+background-color: #900;
+display: block;
+float: left;
+text-align: right;
+width: 50%;
+}
+
+div.nav-next{
+background-color: #900;
+display: block;
+float: right;
+width: 50%;
+}
+
+div.nav-previous a, div.nav-next a{
+background-color: #900;
+color: #E5E5E5;
+display: block;
+height: 1.25em;
+overflow: hidden;
+padding: 0pt 5px;
+text-decoration: none;
+}
+
+div.nav-previous a:hover, div.nav-next a:hover{
+background-color: #E5E5E5;
+color: #900;
+display: block;
+padding: 0pt 5px;
+text-decoration: none;
+}
+
+body.single div.nav-previous span.meta-nav{
+color: #FFF;
+float: left;
+}
+
+body.single div.nav-next span.meta-nav{
+color: #FFFFFF;
+float: right;
+margin: -1.25em 0 0 0;
+}
+
+body.single div#nav-below{
+display: none;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Entries<<------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+.entry-title{
+background: #900 url('page.png') no-repeat scroll right center;
+clear: both;
+color: #E5E5E5;
+display: block;
+font-size: 1.2em;
+margin: 0;
+padding: 0 1em 0 5px;
+text-align: left;
+text-decoration: none;
+}
+
+.entry-title a{
+background: #900 url('page.png') no-repeat scroll right center;
+color: #E5E5E5;
+display: block;
+margin: 0 -1em 0 -5px;
+padding: 0 1em 0 5px;
+text-decoration: none;
+}
+
+.entry-title a:hover{
+background: #E5E5E5 url('page.png') no-repeat scroll right center;
+color: #900;
+display: block;
+margin: 0 -1em 0 -5px;
+padding: 0 1em 0 5px;
+text-decoration: none;
+}
+
+div.entry-date{
+background: #B02B2C url('date.png') no-repeat scroll left center;
+padding: 1px 5px 3px;
+text-align: right;
+}
+
+div.entry-date abbr{
+color:#E5E5E5;
+}
+
+div.entry-content{
+padding: 1px 5px;
+}
+
+div.entry-meta{
+background-color: #B02B2C;
+border-style: solid;
+border-color: #900;
+border-width: 1em 0 0;
+color: #EEE;
+margin: 0pt 20px 2em;
+padding: 1px 10px;
+text-align: center;
+}
+
+div.entry-meta a{
+color: #E5E5E5;
+}
+
+div.entry-meta a:hover{
+color: #B02B2C;
+background-color: #E5E5E5;
+}
+
+div.entry-meta abbr{
+color: #E5E5E5;
+}
+
+
+abbr{
+color: #900;
+}
+
+blockquote{
+background-color: #B02B2C;
+border-right: 1em #900 solid;
+padding: 5px;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Comments<<------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+form#commentform .form-label{
+background-color: #900;
+font-weight: bold;
+margin: 1em 0 0;
+padding: 0 0 2px 2px;
+}
+
+form#commentform .form-label{
+background: #900 url('comment_add.png') no-repeat scroll right center;
+}
+
+form#commentform span.req-field{
+background: #422;
+border-color: #900;
+color: #E5E5E5;
+}
+
+form#commentform, form#commentform p{
+padding: 0;
+}
+
+input#author, input#email, input#url{
+width: 98%;
+}
+
+input#author, input#email, input#url, textarea#comment{
+background-color: #322;
+border-color: #900;
+color: #E5E5E5;
+padding: 0.2em;
+}
+
+form#commentform input#submit{
+background-color: #E5E5E5;
+border-color: #900;
+border-style: solid;
+color: #900;
+}
+
+form#commentform input#submit:hover{
+background-color: #900;
+border-color: #E5E5E5;
+border-style: solid;
+color: #E5E5E5;
+}
+
+form#commentform input#submit{
+border-width: 2px 50px;
+width: 100%;
+}
+
+textarea#comment{
+height: 13em;
+margin: 0 0 0.5em;
+overflow: auto;
+width: 100%;
+}
+
+.form-textarea{
+margin: 0 10px 0 0;
+}
+
+
+ol.commentlist li{
+margin: 0 0 3.5em;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Sidebars<<------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+div.sidebar{
+background: #333;
+float: left;
+margin: 0.5em 0 0;
+overflow: hidden;
+padding: 1em 40px 0;
+width: 220px;
+}
+
+div#primary{
+border-right: 300px solid #333;
+margin: 0 0 0 200px;
+}
+
+div#secondary{
+margin: 0 0 0 -300px;
+}
+
+div.sidebar div, div.sidebar h3, div.sidebar ul, div.sidebar li{
+margin: 0;
+padding: 0;
+}
+
+div.sidebar h3, div#comments-list h3, div#respond h3{
+background-color: #900;
+color: #E5E5E5;
+font-size: 1.2em;
+padding: 0 5px 0 0;
+text-align: right;
+}
+
+div.sidebar input#s{
+width: 9.8em;
+}
+
+div.sidebar li{
+color: #E5E5E5;
+list-style: none;
+margin: 0 0 1em;
+}
+
+div.sidebar li#meta a, div.sidebar #recent-posts a, div.sidebar li#linkcat-2 a, div.sidebar li#rss-links a, div.sidebar li#archives a, div.sidebar li#meta a, div.sidebar li#pages a{
+background-color: #B02B2C;
+color: #E5E5E5;
+clear: both;
+display: block;
+padding: 0 0 0 5px;
+}
+
+div.sidebar li#meta a:hover, div.sidebar #recent-posts a:hover, div.sidebar li#linkcat-2 a:hover, div.sidebar li#rss-links a:hover, div.sidebar li#archives a:hover, div.sidebar li#meta a:hover, div.sidebar li#pages a:hover, div.sidebar li#categories a:hover{
+background-color: #E5E5E5;
+color: #B02B2C;
+}
+
+div.sidebar li#categories a{
+background-color: #B02B2C;
+color: #E5E5E5;
+padding: 0 10px 0 5px;
+
+}
+
+div.sidebar li#categories ul li{
+background-color: #B02B2C;
+color: #B02B2C;
+}
+
+div.sidebar li#categories ul li:hover{
+background-color: #E5E5E5;
+}
+
+div.sidebar li#categories ul ul li{
+padding: 0 0 0 0.5em;
+}
+
+div.sidebar li#categories ul ul li:hover{
+background-color: #E5E5E5;
+}
+
+div.sidebar li form{
+margin: 0.2em 0 0;
+padding: 0;
+}
+
+div.sidebar ul ul{
+margin: 0;
+}
+
+div.sidebar ul ul li{
+list-style: none;
+margin: 0;
+}
+
+div.sidebar ul ul ul{
+margin: 0 0 0 0;
+}
+
+div.sidebar ul ul ul li{
+list-style: none;
+}
+
+div.sidebar #calendar_wrap a{
+background-color: #E5E5E5;
+color: #B02B2C;
+}
+
+div.sidebar #calendar_wrap a:hover{
+background-color: #B02B2C;
+color: #E5E5E5;
+}
+
+div.sidebar table#wp-calendar{
+margin: 0 auto;
+}
+
+div.sidebar table#wp-calendar caption{
+margin: 0 auto;
+}
+
+div.sidebar ul li{
+background-color: #B02B2C;
+}
+
+div.sidebar li#recent-comments ul, div.sidebar li.widget_text div{
+padding: 0 5px;
+}
+
+div.sidebar li#recent-comments a, div.sidebar li.widget_text div a{
+color: #E5E5E5;
+}
+
+div.sidebar li#recent-comments a:hover, div.sidebar li.widget_text div a:hover{
+color: #B02B2C;
+background-color: #E5E5E5;
+}
+
+form#searchform input#searchsubmit{
+background-color: #E5E5E5;
+border-color: #900;
+border-style: solid;
+color: #900;
+}
+
+form#searchform input#searchsubmit:hover{
+background-color: #900;
+border-color: #E5E5E5;
+border-style: solid;
+color: #E5E5E5;
+}
+
+form#searchform input#searchsubmit{
+border-width: 2px;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------>>Pages<<------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+span.edit-link{
+text-align: right;
+}

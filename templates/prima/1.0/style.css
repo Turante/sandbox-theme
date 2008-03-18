@@ -1,0 +1,130 @@
+/*
+THEME NAME: Prima
+THEME URI: http://prima.web.id/blog/sandbox-prima.htm
+DESCRIPTION: Prima is a CSS design for use with the <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox</a>
+VERSION: 1.0
+AUTHOR: Sunaryo Hadi
+AUTHOR URI: http://www.sunaryohadi.info/
+TEMPLATE: sandbox
+*/
+
+/* GENERAL DEFINITION */
+body {height:100%; margin: 0 auto; padding:0;background: #F1EFE2 url(bg.jpg) repeat-x top left; 
+font: 14px "Trebuchet MS", Arial, Tahoma, Helvetica, sans-serif; color: #000; text-align:center;}
+p {margin: 7px 0; padding:0;}
+a {color: #1F70A5;outline: none;cursor: hand;}
+a:hover {color: #f60;}
+img.left, img.alignleft {float:left; margin-right: 10px;}
+img.right, img.alignright {float:right; margin-left: 10px;}
+
+/* LAYOUT SETTING */
+#wrapper, #header, #access, #container, #primary, #secondary, #footer {display:inline-block;overflow:hidden; text-align: left;}
+#wrapper {width:770px; margin:0 auto; padding-left: 10px;}
+#container {width: 550px; float:left; margin-bottom: 20px; }
+#header {width:770px; height: 96px; background: transparent url(header-bg.jpg) no-repeat 0 0;}
+.skip-link {display:none;}
+#access {height: 28px; margin-bottom: 15px;background: transparent url(header-bg.jpg) no-repeat bottom left; line-height:1em;}
+#menu {width:770px;}
+#menu ul {list-style:none; margin:0;padding:0;}
+#menu ul li {display:inline; font-size: 13px; font-weight: bold;}
+#menu ul li a {display:inline-block; overflow:hidden; height:28px; float:left; padding: 8px 13px 0 17px;
+        border-right: 2px solid #C1BDA2; margin: 0 5px 0 0; text-decoration: none;
+        background: transparent url(menu-bg.png) no-repeat top left; }
+#menu ul li a:hover {background: transparent url(menu-bg-hover.png) no-repeat top left;} 
+
+/* HEADER SECTION */
+#header a {color: #D2CCA2; text-decoration: none;}
+#header a:hover {color: #fc0;}
+#blog-title {font-size: 36px Helvetica, "Trebuchet MS", Arial, Tahoma, sans-serif;; margin:0;padding:27px 0 0 0; font-weight: bold;letter-spacing: 2px;  line-height:1.0em;}
+#blog-description {font-size: 16px; margin:5px 0 0 0;padding:0 0 0 0; font-weight: bold; line-height:1.0em; color:#EBE9D6;}
+
+/* CONTENT SECTION */
+.post {margin:0; padding-bottom: 30px; background: transparent url(hrbg.gif) no-repeat bottom center;}
+.entry-title {font-size: 20px; font-weight:normal;line-height: 1.3em; margin:5px 0 0 0; padding:0; color: #433;}
+.entry-title a {text-decoration: none; color: #f60;margin:0; padding: 0;}
+.entry-title a:hover {color: red;}
+.entry-date {font-size:11px;border:none; margin:3px 0; padding:0 0 0 20px; color: #766; 
+      background: transparent url(cal.png) no-repeat 0 0; line-height: 16px;}
+.entry-content {line-height:1.5em; color: #433; margin:5px 0; padding: 10px 17px; background: #F7F5EE;
+              border-top: 1px solid #fff; border-left: 1px solid #fff; 
+              border-right: 1px solid #E2DEC5; border-bottom: 1px solid #E2DEC5;}
+.published {text-decoration: none;border:none;margin:0; padding:0;}
+.entry-meta {color: #777; font-size:12px; line-height:1.4em; padding: 5px; margin:0; padding:0; text-align:justify; display:inline-block;overflow:hidden;}
+.author, .cat-links, .comments-links {font-size:12px;line-height:1.4em;}
+.author a {background: transparent url(user.png) no-repeat 0 0; padding-left: 17px;}
+.cat-links a {background: transparent url(folder.png) no-repeat 0 0; padding-left: 18px;}
+.edit-link a {background: transparent url(edit.png) no-repeat 0 0; padding-left: 18px;}
+.comments-link {background: transparent url(comment.png) no-repeat 0 0; padding-left: 18px;}
+.page-title {color: #83783D; font-size: 16px; font-weight: bold; margin:0 0 20px 0; padding:1px 0;
+              border-top: 1px solid #C7BE8D; border-bottom: 1px solid #E2DEC5;}
+.page-title span {color: red;text-transform: uppercase; }
+#nav-above {display:inline-block;overflow:hidden; margin-bottom: 20px; }
+.meta-nav {display:none;}
+.navigation a {text-decoration: none;}
+.navigation a:hover {text-decoration: underline;}
+.nav-previous {width: 250px; float:left;display:inline-block;overflow:hidden; 
+        background: transparent url(left.png) no-repeat left 3px; padding-left: 22px;}
+.nav-next {width: 250px; float:right;display:inline-block;overflow:hidden; text-align:right;
+    background: transparent url(right.png) no-repeat right 3px; padding-right: 22px;}
+#nav-below {display: none;}
+
+/* PRIMARY SECTION */
+#primary { width: 200px; float:right; font-size:13px; color: #433; line-height:1.5em;}
+#primary ul.xoxo,#primary ul.xoxo li ul {margin:0;padding:0 0 7px 0; list-style:none;}
+#primary ul li {margin:0 0 25px 0;padding:0px; border-top: 1px solid #C7BE8D; border-bottom: 1px solid #E2DEC5;}
+#primary h3 {margin:0;padding:3px 7px 15px 7px; color: #83783D; font-size: 13px; font-weight: bold; 
+background: transparent url(hrbg.gif) no-repeat bottom center; text-align:center; letter-spacing: 1px;
+text-transform: uppercase;}
+#primary li ul li {margin-top: 1px; margin:0;padding:0 7px 0px 14px; border:0;}
+#primary ul li ul li a {margin:0; padding: 0; border-top: 0px solid #E0E8A8; text-decoration: none; outline: 0;}
+#primary ul li ul li a:hover {text-decoration: underline;}
+
+/* SECONDARY SECTION */
+#secondary { clear:both; width:770px; background: #E9E5D1 url(secondary-bg.png) no-repeat bottom left; 
+    padding-bottom: 10px; margin-bottom: 20px; line-height:1.4em; color: #433;}
+#secondary a {text-decoration: none;}
+#secondary a:hover {text-decoration: underline;}
+#secondary h3 {margin:0;padding:3px 7px 15px 7px; color: #83783D; font-size: 12px; font-weight: bold; 
+text-transform: uppercase;}
+#secondary ul.xoxo {width:770px; background: transparent url(secondary-top.png) no-repeat top right; 
+         margin:0; padding:10px 0 10px 0px; list-style: none; display: inline-block; overflow: hidden;}
+#secondary ul.xoxo li {width: 235px; float:left; padding-left:15px; display:inline-block; overflow: hidden;}
+#secondary ul.xoxo li ul { list-style: none;	margin:0; padding: 0; font-size:13px;}
+#secondary ul.xoxo li ul li {float:none;}
+#secondary ul.xoxo li h3 { margin:0; padding:5px 0;	font-size: 16px;}
+
+/* FOOTER */
+#footer { margin: 0 auto; margin-bottom: 20px; text-align: center; color: #E2DEC5; 
+            background: transparent url(hrbg.gif) no-repeat top center; padding-top: 20px}
+#footer a {text-decoration: none;}
+
+/* OTHERS : Form, Comments, Calendar*/
+input,textarea {margin: 0 14px; font: 14px/1.0em "Trebuchet MS", Arial, Tahoma, Helvetica, sans-serif;
+      background: #fff url(input-bg.jpg) repeat-x bottom left; border: 1px solid #E2DEC5; padding: 3px 5px; margin-bottom: 5px;}
+form#searchform {margin:0;padding: 5px 0; display:inline-block; overflow:hidden;}
+form#searchform input#s {width:170px;}
+form#searchform #searchsubmit {display: none;}
+
+#comments {width:550px;margin:0;padding:0;display:inline-block;overflow:hidden;}
+#comments h3 {margin:0;padding:0 0 0 18px; color: #433;}
+#comments-list, #respond {padding-bottom: 20px; background: transparent url(hrbg.gif) no-repeat bottom center;}
+#comments-list h3 {background: transparent url(comment.png) no-repeat 0 3px;}
+#respond h3 {background: transparent url(new.png) no-repeat 0 3px; }
+#comments ol { margin:10px 0 10px 20px; padding:0 0 0 20px;}
+#comments ol li {padding:5px 10px; margin-bottom: 7px;border-top: 1px solid #E2DEC5; border-left: 1px solid #E2DEC5;
+              border-right: 1px solid #FFF; border-bottom: 1px solid #FFF; background: #EDEBE0; color: #000;}
+.formcontainer {padding:5px 10px; margin:10px 0 10px 20px; border: 1px solid #fff;
+              border-top: 1px solid #E2DEC5; border-left: 1px solid #E2DEC5;
+              border-right: 1px solid #FFF; border-bottom: 1px solid #FFF;color: #433;}
+.comment-author {font-weight: bold;color: #433;}
+.comment-meta {font-size:12px;color: #433;}
+.form-label {float:left; width: 70px; display:inline-block;}
+.form-submit {padding-left: 70px;display: inline;}
+
+#wp-calendar {text-align: center; padding:0;margin:0 auto; font-size:13px;}
+#wp-calendar a {border:0;}
+#wp-calendar tr {margin:0;padding:0; border-top: 1px solid #6F6935;}
+#wp-calendar td,#wp-calendar th  {padding: 2px 5px; margin:0; line-height:1.0em; border-bottom: 1px solid #E2DEC5;}
+#wp-calendar td.pad,#wp-calendar td#prev,#wp-calendar td#next {border:0;}
+
+#secondary #wp-calendar {margin:0;}

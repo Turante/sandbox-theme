@@ -1,0 +1,262 @@
+
+/*MAKING USE OF THE SANDBOX DYNAMIC CLASSES*/
+
+
+/*Styling the first post*/
+
+.home .p1{
+margin-top:20px;
+color:#6E6F6E;
+background:#EBF6FE url(images/newpost.gif);
+background-repeat:no-repeat;
+background-position:top right;
+padding:0 5px 5px 7px;
+}
+.home .p1 .entry-content{
+padding-top:15px;
+}
+
+.home .p1 .entry-title{
+margin-top:15px;
+padding-top:10px;
+padding-bottom:5px;
+
+}
+
+.home .p1 .entry-date{
+color:#6FA32B;
+font-weight:bold;
+}
+
+
+
+/*End Styling the first post*/
+
+/*Displaying a WordPress page*/
+
+.page #header{
+background:url(images/pageheader.jpg);
+background-repeat:no-repeat;
+
+}
+.page .sidebar li#pages h3{
+font-size:1.2em;
+
+background:#84CBE2 url(images/title_current.gif);
+background-repeat:no-repeat;
+height:25px;
+background-position:top right;
+
+color:#BEE1F9;
+margin-bottom:5px;
+
+
+
+}
+
+/*End Displaying a WordPress page*/
+
+/*Displaying a single entry*/
+.single #header{
+width:780px;
+height:131px;
+background:url(images/singleheader.jpg);
+background-repeat:no-repeat;
+}
+.single h2.entry-title{
+
+}
+.single .entry-meta{
+line-height:1.5em;
+padding:5px;
+border-left: 3px solid #B2F15B;
+
+}
+.single .sidebar{
+display:none;
+}
+.single #container{
+width:700px;
+}
+
+/*End Displaying a single entry*/
+
+/*A 404 page*/
+.four04 .error404{
+background:#ECFFC4 url(images/error404.gif);
+background-repeat:no-repeat;
+background-position:top right;
+padding: 10px;
+
+}
+.error404 .entry-content{
+padding: 30px 25px 10px 5px;
+}
+/*End A 404 page*/
+
+/*A search results page*/
+.search #content{
+background:#BAE9F8 url(images/search.gif);
+background-repeat:no-repeat;
+background-position:top right;
+padding:5px;
+
+}
+.search .sidebar li#search h3{
+font-size:1.2em;
+
+background:#84CBE2 url(images/title_current.gif);
+background-repeat:no-repeat;
+height:25px;
+background-position:top right;
+
+color:#BEE1F9;
+margin-bottom:5px;
+
+
+
+}
+.search .category-asides .entry-content{
+background-image:none;
+
+}
+.search .category-news .entry-content{
+background-image:none;
+
+}
+
+/*End A search results page*/
+/*When an archive page is displayed*/
+
+.archive #content{
+background:#AFDAFC url(images/archives.gif);
+background-repeat:no-repeat;
+background-position:top right;
+padding:10px;
+}
+.archive .category-asides .entry-content{
+background-image:none;
+}
+
+.archive .category-news .entry-content{
+background-image:none;
+}
+
+.archive h2.page-title{
+color:#63A4D7;
+}
+.archive .sidebar li#archives h3{
+font-size:1.2em;
+
+background:#84CBE2 url(images/title_current.gif);
+background-repeat:no-repeat;
+height:25px;
+background-position:top right;
+
+color:#BEE1F9;
+margin-bottom:5px;
+
+
+
+}
+li#monthly-archives li{
+background:none;
+}
+
+/*End When an archive page is displayed*/
+
+
+/*When an category page is displayed*/
+
+.category h2.page-title{
+color:#78B04F;
+padding: 15px 20px 0 0;
+}
+li#category-archives li{
+background:none;
+}
+
+.category #content{
+background:#CEF893 url(images/category.gif);
+background-repeat:no-repeat;
+background-position:top right;
+}
+
+
+.category .sidebar li#categories h3{
+font-size:1.2em;
+
+background:#84CBE2 url(images/title_current.gif);
+background-repeat:no-repeat;
+height:25px;
+background-position:top right;
+
+color:#BEE1F9;
+margin-bottom:5px;
+
+}
+
+/*---Special Categories Asides and News---*/
+.category-asides #content{
+background:#CEF893 url(images/asides.gif);
+background-repeat:no-repeat;
+background-position:top right;
+padding-right:30px;
+}
+.category-asides .entry-content{
+background: url(images/asidescat.gif);
+background-repeat:no-repeat;
+background-position:top center;
+}
+
+.category .category-asides .entry-content{
+background-image:none;
+
+}
+.s-category-asides .entry-content{
+background-image:none;
+
+}
+
+.single .category-news .entry-content{
+background-image:none;
+
+}
+
+
+.category-news #content{
+background:#CEF893 url(images/news.gif);
+background-repeat:no-repeat;
+background-position:top right;
+padding-right:20px;
+}
+.category-news .entry-content{
+background:url(images/newscat.gif);
+background-repeat:no-repeat;
+background-position:top center;
+}
+
+.category .category-news .entry-content{
+background-image:none;
+
+}
+
+/*---End Special Categories Asides and News---*/
+
+/*End When an category page is displayed*/
+
+
+
+/*And if somebody is logged in...*/
+
+
+.loggedin li#meta h3{
+background:#16A4D9 url(images/loggedin.gif);
+background-repeat:no-repeat;
+height:25px;
+background-position:top right;
+
+color:#ffffff;
+
+}
+

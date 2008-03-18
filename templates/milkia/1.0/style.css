@@ -1,0 +1,598 @@
+/*
+THEME NAME: Milkia 
+THEME URI: http://www.vidablog.com/
+DESCRIPTION: Milkia design is a clean and light style for the <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox</a>.
+VERSION: 1.0
+AUTHOR: Christian Betancourt
+AUTHOR URI: http://www.vidablog.com/
+TEMPLATE: sandbox
+*/
+
+* {
+margin:0;
+padding:0;
+}
+
+body {
+font-family:'Arial', Helvetica, Georgia, Sans-Serif;
+font-size:13px;
+background:#eee;
+border-top:3px solid;
+color:#555;
+margin:0;
+padding:0;
+}
+
+div#wrapper {
+width:745px;
+background:#fff url('images/wrap.gif');
+margin:0 auto;
+border-left:1px solid #e2e2e2;
+border-right:1px solid #e2e2e2;
+}
+
+a{
+color:#80afca;
+text-decoration:none;
+}
+
+a:visited{
+color:#d15f5e;
+text-decoration:none;
+}
+
+div.entry-content a, #comments a, body.single div.entry-meta a{
+text-decoration:underline;
+}
+
+div.entry-content a:visited, #comments a:visited, body.single div.entry-meta a:visited{
+text-decoration:underline;
+}
+
+a:active{
+color:#f19857;
+}
+
+div#header {
+width:263px;
+height:78px;
+background:url('images/header.gif') repeat;
+padding-top:1px;
+border-bottom:1px solid #eee;
+}
+
+h1#blog-title,h1#blog-title a,h1#blog-title a:visited {
+font-size:16px;
+padding-left:8px;
+margin-top:22px;
+color:#f24455;
+font-weight:700;
+}
+
+div#blog-description {
+font-size:11px;
+padding-left:16px;
+margin-top:1px;
+}
+
+div#container {
+padding-right:14px;
+padding-left:17px;
+width:451px;
+float:right;
+margin-top:-75px;
+overflow:hidden;
+}
+
+div#content {
+padding-bottom:15px;
+overflow:hidden;
+}
+
+div.entry-content {
+line-height:1.5em;
+margin-top:-2px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-family:'Arial', Helvetica, Georgia, Sans-Serif;
+padding-left:5px;
+}
+
+p {
+text-align:justify;
+margin:12px 0;
+}
+
+div.entry-meta {
+margin-bottom:22px;
+}
+
+div.page-link {
+color:#888;
+font-size:11px;
+margin:-5px 0 5px;
+padding:2px 6px;
+}
+
+div.page-link a:link,div.page-link a:visited {
+background:url('images/bg-pag.gif');
+border:1px solid #ddd;
+color:#e0565d;
+font-size:11px;
+padding:1px 6px;
+}
+
+body.single div.page-link {
+border-bottom:1px solid #eee;
+padding-bottom:5px;
+margin-bottom:15px;
+}
+
+div.entry-meta a,div.entry-meta a:visited, div#footer a, div#footer a:visited, div#nav-below a, div#nav-below a:visited{
+color:#666;
+}
+
+span.cat-links a{
+border-bottom:1px dotted;
+}
+
+a.more-link{
+color:#888;
+font-size:1.1em;
+}
+
+div.entry-date {
+font-size:11px;
+color:#999;
+margin-top:2px;
+}
+
+abbr,abbr a:link,abbr a:visited{
+border-bottom:1px dotted;
+text-decoration:none;
+}
+
+acronym,abbr,span.caps {
+cursor:help;
+letter-spacing:.05em;
+}
+
+blockquote {
+border:1px solid #eee;
+color:#707070;
+margin:13px 0;
+padding:0 15px 10px;
+}
+
+blockquote p {
+margin:0;
+padding:9px 0 0;
+}
+
+blockquote cite {
+display:block;
+margin:5px 0 0;
+}
+
+code {
+background:#f7f7f7;
+color:#693;
+font:100% "courier new", courier, monospace;
+}
+
+code a, code a:visited{
+color:#693;
+text-decoration:underline;
+}
+
+div#content ul#archives-page h3,div#content ul#links-page h3 {
+margin-left:-15px;
+}
+
+div#content ul, div.entry-content ol {
+margin-left:25px;
+padding:0;
+}
+
+ul#archives-page ul, ul#links-page ul{
+margin:0;
+padding:0;
+}
+
+ul#archives-page ul.children{
+margin-left:15px;
+padding:0;
+}
+
+div.entry-content ol li{
+padding:3px;
+}
+
+div#content ul li {
+list-style-type:circle;
+padding:3px;
+}
+
+div#content ul li ul li ul {
+padding:3px;
+}
+
+div#content ul#archives-page li ul li,div#content ul#links-page li ul li {
+list-style-type:circle;
+}
+
+div#content ul.children {
+padding-top:0.3em;
+}
+
+div#content ul li ul li ul, div#content ul.children, div.sidebar ul li ul li ul li, body.home div#content ul ul li, body.single div#content ul ul li{
+list-style:url('images/sub.gif');
+}
+
+body.home div.category-asides{
+border-top:1px solid #eee;
+font-size:90%;
+width:98%;
+margin:0 auto;
+}
+
+body.home div.category-asides .edit-link a{
+padding-right:10px;
+}
+
+body.home div.entry-meta,body.archive div.entry-meta, body.search div.entry-meta {
+font-size:11px;
+color:#666;
+padding-top:5px;
+padding-left:5px;
+border-top:1px solid #eee;
+}
+
+body.single div.entry-meta {
+font-size:11px;
+color:#666;
+border:1px solid #eee;
+background:#ffffed;
+line-height:1.4em;
+margin-bottom:4px;
+padding:6px;
+}
+
+img {
+max-width:100%;
+border:0;
+padding:0;
+}
+
+a img {
+border:0;
+}
+
+.center,.centered {
+display:block;
+border:1px solid #eee;
+margin:0 auto;
+padding:3px;
+}
+
+.alignright,.right,r {
+float:right;
+padding:0 2px 0 13px;
+}
+
+.alignleft,.l,.r {
+float:left;
+padding:0 10px;
+}
+
+h3 ul li,div#content ul#archives-page li,div#content ul#links-page li {
+list-style-type:none;
+}
+
+li#monthly-archives,.hentry {
+margin-top:10px;
+}
+
+div.sidebar {
+width:235px;
+color:#69e;
+margin-left:9px;
+}
+
+div.sidebar a, div.sidebar a:visited{
+color:#525252;
+}
+
+div.sidebar ul ul {
+margin-left:20px;
+padding:5px 0 0;
+}
+
+div.sidebar li {
+list-style-type:none;
+color:#666;
+}
+
+div.sidebar ul li {
+border:0;
+list-style-type:none;
+}
+
+div.sidebar li li {
+font-size:13px;
+color:#666;
+padding:3px;
+}
+
+div.sidebar ul li ul li {
+border-bottom:1px solid #eee;
+list-style-type:circle;
+color:#888;
+}
+
+div.sidebar ul li ul li ul li {
+border:0;
+padding-top:6px;
+}
+
+div.sidebar h3 {
+text-transform:uppercase;
+background:url('images/deg.gif');
+border-top:1px solid #e5e5e5;
+color:#888;
+font-size:13px;
+font-family:tahoma, lucida grande, lucida sans unicode, arial, helvetica, sans-serif;
+width:225px;
+margin:10px 0 0;
+padding:4px 5px 6px 14px;
+}
+
+div#calendar_wrap {
+margin:-20px 0 0 3px;
+}
+
+#wp-calendar {
+width:235px;
+}
+
+#wp-calendar a {
+font-weight:700;
+}
+
+#wp-calendar td {
+padding-top:2px;
+text-align:center;
+}
+
+div#calendar_wrap caption {
+padding-bottom:8px;
+font-size:14px;
+font-weight:700;
+}
+
+#wp-calendar #prev a {
+padding-top:8px;
+text-align:left;
+}
+
+#wp-calendar #next a {
+text-align:right;
+padding-top:8px;
+}
+
+div.textwidget {
+font-size:94%;
+width:230px;
+text-align:justify;
+line-height:1.5em;
+padding-left:2px;
+margin:-1px 0 0 5px;
+}
+
+input#searchsubmit{
+width:45px;
+}
+
+input#s {
+width:150px;
+background:#fff url('images/search.gif') no-repeat 4px 3px;
+border:1px solid #bbb;
+color:#999;
+margin:6px 0 0 5px;
+padding:2px 2px 2px 27px;
+}
+
+div.entry-content h1,div.entry-content h2,div.entry-content h3,div.entry-content h4,div.entry-content h5,div.entry-content h6 {
+color:#bbb;
+border-bottom:1px dashed #eee;
+margin-bottom:8px;
+}
+
+div.entry-content h1 a,div.entry-content h2 a,div.entry-content h3 a,div.entry-content h4 a,div.entry-content h5 a,div.entry-content h6 a,div.entry-content h1 a:visited,div.entry-content h2 a:visited,div.entry-content h3 a:visited,div.entry-content h4 a:visited,div.entry-content h5 a:visited,div.entry-content h6 a:visited {
+color:#bbb;
+}
+
+div.entry-content h3 {
+font-size:1.3em;
+}
+
+div.entry-content h4 {
+font-size:1.2em;
+}
+
+div.entry-content h5 {
+font-size:1.1em;
+}
+
+div.entry-content h6 {
+font-size:1.0em;
+}
+
+h2.page-title {
+color:#bbb;
+font-size:1.2em;
+padding-top:10px;
+}
+
+h2.entry-title,h3.entry-title {
+font-size:18px;
+border-bottom:1px solid #f5f5f5;
+padding-left:8px;
+margin-left:-5px;
+color:#f19857;
+}
+
+h2.entry-title a,h2.entry-title a:visited,h3.entry-title a,h3.entry-title a:visited {
+color:#f19857;
+}
+
+body.four04 h2.entry-title, body.search h2.entry-title{
+padding-top:10px;
+}
+
+#comments h3 {
+font-size:16px;
+color:#999;
+border-bottom:2px solid #eee;
+}
+
+div.comment-meta {
+font-size:85%;
+}
+
+div.comments ol .comment-author {
+font-weight:700;
+font-size:105%;
+color:#777;
+}
+
+#comments-list {
+padding-top:10px;
+}
+
+div#respond {
+padding-top:15px;
+}
+
+div.comments ol li,div.comments ol li.bypostauthor {
+background:#fff url('images/comments.gif') top no-repeat;
+border-right:1px solid #ccc;
+border-left:1px solid #ccc;
+border-bottom:1px solid #ccc;
+list-style-type:none;
+margin-top:18px;
+padding:12px 0 2px 12px;
+font-size:95%;
+}
+
+
+div.comments ol li.alt {
+background:#fff url('images/comments-alt.gif') top no-repeat;
+}
+
+div.comments ol p {
+line-height:1.5em;
+margin:10px 15px 10px 0;
+}
+
+div.comments ol {
+margin:0 auto;
+padding:0;
+}
+
+form#commentform {
+margin-top:12px;
+border-bottom:3px solid #f5f5f5;
+border-top:1px solid #f5f5f5;
+background:#fafafa;
+margin-bottom:15px;
+padding:0 8px 5px;
+}
+
+div.form-input input,textarea#comment {
+background:#f5f5f5;
+border:1px solid #ddd;
+}
+
+div.form-input input:focus,textarea#comment:focus {
+background:#fff;
+border:1px solid #ccc;
+}
+
+textarea#comment {
+width:416px;
+margin-bottom:15px;
+padding:5px;
+}
+
+p#comment-notes {
+font-size:90%;
+}
+
+div.form-input {
+padding-bottom:5px;
+border-bottom:1px solid #eee;
+}
+
+form#commentform input {
+padding:2px;
+}
+
+span.required {
+color:#e43a46;
+}
+
+input#submit {
+width:150px;
+height:30px;
+color:#333;
+}
+
+p.attachment-name {
+text-align:center;
+color:#888;
+background:#f4f4f4;
+}
+
+li.comment,li.trackback {
+margin-bottom:20px;
+}
+
+#access,div#menu ul ul,div.skip-link,hr,body.single li#pages,body.single li#meta,body.single li.linkcat,#footer .meta-sep,#nav-above,li#archives, body.home div.category-asides h2.entry-title, body.home div.category-asides div.entry-date, body.home div.category-asides span.cat-links, body.home div.category-asides .meta-sep, body.home div.category-asides .author, body.search li#pages,body.search li#meta,body.search li.linkcat, body.four04 li#pages,body.four04 li#meta,body.four04 li.linkcat {
+display:none;
+}
+
+div#footer {
+clear:both;
+margin-left:280px;
+padding:10px 0 10px 0;
+width:451px;
+border-top:1px solid #eee;
+border-right:1px solid #eee;
+border-left:1px solid #eee;
+background:#fff url('images/deg.gif');
+text-align:center;
+}
+
+div#footer span {
+margin-right:37px;
+}
+
+div#nav-below {
+padding:10px 0 25px 0
+}
+
+body.home div#nav-below a, body.home div#nav-below a:visited, body.archive div#nav-below a, body.archive div#nav-below a:visited, body.search div#nav-below a, body.search div#nav-below a:visited {
+font-weight:700;
+font-size:1.2em;
+color:#aaa;
+}
+
+div.nav-previous {
+float:left;
+}
+
+div.nav-next {
+float:right;
+}

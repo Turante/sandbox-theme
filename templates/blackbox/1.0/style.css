@@ -1,0 +1,330 @@
+/*
+THEME NAME: Blackbox
+THEME URI: http://www.xoxiety.com/themes/blackbox
+VERSION: 1.0
+DESCRIPTION: A bold black and white sandbox theme
+AUTHOR: Hillary Louise Johnson
+AUTHOR URI: http://www.xoxiety.com
+TEMPLATE: sandbox
+*/
+
+/* Blackbox, a Sandbox template skin for WordPress, by Hillary Louise Johnson */
+
+/* default styling to "zero out" the page. 
+From Eric Meyer: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/ */
+
+html, body, wrapper, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+:focus {
+	outline: 0;
+}
+
+/* To change the color scheme, uncomment the one you want, below. */
+
+/* BLACK (default) */
+
+html {
+background: transparent url(blackwhiteheader.jpg) top left repeat-y; 
+}
+
+h1 a:link {color: #000; text-decoration: none;}
+h1 a:visited {color: #000; text-decoration: none;}
+
+
+/* BLUE */
+/*
+html { 
+background: transparent url(bluebackground.jpg) top left repeat-y; 
+}
+
+h1 a:link {color: #277a91;}
+h1 a:visited {color: #277a91;}
+*/
+
+/* BROWN */
+/*
+html{
+ background: transparent url(brownbackground.jpg) top left repeat-y; 
+}
+
+h1 a:link {color: #5c401e;}
+h1 a:visited {color: #5c401e;}
+*/
+
+body {
+font-family: helvetica, arial, sans-serif;
+line-height: 1.3;
+color: #000;
+background: transparent;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+/* end default restyle */
+
+#wrapper {
+width: 860px;
+}
+
+#header {
+width: 100%;
+height: 150px;
+background: transparent;
+
+}
+
+#menu {
+display: none;
+}
+
+h1 {
+line-height: 1;
+font-size: 800%;
+font-family: impact, helvetica, sans-serif;
+text-transform: uppercase;
+white-space: nowrap;
+padding-left: 310px;
+
+}
+
+a:link {color: #077bc3; font-weight: bold; text-decoration: none;}
+a:visited { color: #077bc3; text-decoration: none;}
+a:hover {color: #6ac3fa; text-decoration: none;}
+a:active {color: #6ac3fa; text-decoration: none;}
+
+h1 a:hover {color: #89cffb; text-decoration: none;}
+h1 a:active {color: #89cffb; text-decoration: none;}
+
+h3 {
+font-family: impact, sans-serif;
+font-size: 120%;
+font-weight: bold;
+color: #d4d4d4;
+}
+
+#blog-description {
+font-size: 120%;
+color: #b4b4b4;
+margin-left: 315px;
+}
+
+
+#access {
+display: none;
+}
+
+#container {
+float: right;
+width: 540px;
+min-height: 600px;
+}
+
+#content {
+float: right;
+margin-left: 0px;
+width: 540px;
+min-height: 200px;
+background: #fff ;
+}
+
+.entry-meta { 
+font-size: 80%;
+}
+
+blockquote {
+font-style: oblique;
+width: 400px;
+margin-left: 40px;
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 10px;
+} 
+
+.sidebar  {
+float: left;
+width: 292px;
+height: 100%;
+text-align: right;
+padding-right: 10px;
+overflow: hidden;
+background: transparent;
+}
+
+.sidebar h2 {
+font-family: impact, sans-serif;
+font-size: 120%;
+font-weight: bold;
+color: #d4d4d4;
+}
+
+#primary{
+padding-top: 50px;
+}
+
+#secondary {
+clear: left;
+}
+
+
+.navigation {
+font-style: oblique;
+}
+
+#comments{
+padding-top: 10px;
+}
+
+#comments h3 {
+color: #077bc3; 
+font-size: 120%; 
+font-family: helvetica; 
+padding-top: 30px;
+}
+
+.comment-meta{
+font-size: 80%;
+margin-bottom: 10px;
+}
+
+#respond{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
+#footer {
+clear: both;
+margin-left: 320px;
+padding-top: 40px;
+padding-bottom: 5px;
+}
+
+.entry-title {
+font-size: 150%;
+font-weight: bold;
+font-family: helvetica;
+color: #079af5;
+padding-top: 30px;
+}
+
+.entry-date {
+padding-bottom: 10px;
+}
+
+img {
+border: thick solid #fff;
+margin-right: 10px;
+}
+
+.form-textarea {
+border: thin solid #088ee2;
+}
+
+.entry-meta {
+padding-top: 20px;
+}
+
+.nav-previous {
+padding-top: 10px;
+}
+
+#comment {
+border: none;
+background: transparent;
+}
+
+input {
+background: #088ee2;
+border: medium solid #d2d2d2;
+color: #fff;
+}
+
+#author, #email, #url {
+border: thin solid #088ee2;
+background: transparent;
+}
+
+.form-submit {
+padding-top: 10px;
+}
+
+.form-label {
+padding-top: 10px;
+font-style: oblique;
+
+}
+.comment-author  {
+font-weight: bold;
+}
+
+#s {
+background: #89cffb; 
+}
+
+#calendar {
+margin-left: 130px;
+text-align: left;
+width: 140px;
+height: 190px;
+margin-top: 10px;
+margin-bottom: 10px;
+background: #088ee2;
+border: medium solid #d2d2d2;
+color: #fff;
+padding-left: 15px;
+padding-right: 10px;
+padding-bottom: 20px;
+
+}
+
+#calendar a:link {color: #000; text-decoration: none;}
+#calendar a:visited { color: #1e1e1e; text-decoration: none;}
+#calendar a:hover {color: #d4d4d4; text-decoration: none;}
+#calendar a:active {color: #d4d4d4; text-decoration: none;}
+
+.pad {
+font-size: 90%;
+padding: 2px;
+}
+
+.textwidget {
+color: #077bc3;
+text-align: right;
+}

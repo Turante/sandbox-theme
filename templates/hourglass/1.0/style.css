@@ -1,0 +1,14 @@
+/*
+THEME NAME: Hourglass
+THEME URI: http://www.morangodesign.com/
+DESCRIPTION: The Hourglass design was developed by Daniela Risse for the Sandbox Designs Competition
+VERSION: 1.0
+AUTHOR: Daniela Risse
+AUTHOR URI: http://www.morangodesign.com/
+TEMPLATE: sandbox
+*/
+
+@import url("main.css");
+@import url("links.css");
+@import url("dynamic.css");
+@import url("ie.css");

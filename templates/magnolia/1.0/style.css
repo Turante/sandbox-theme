@@ -1,0 +1,523 @@
+/*
+THEME NAME: Magnolia 
+THEME URI: http://www.pelicancourt.com/themes/sandbox/
+DESCRIPTION: Magnolia is a crisp and colorful design, a three-column layout with a black header.
+VERSION: 1.0
+AUTHOR: Andrea Daigle
+AUTHOR URI: http://www.pelicancourt.com/
+TEMPLATE: sandbox
+*/
+
+/*
+LAYOUT: Three-Column (Right)
+DESCRIPTION: Three-column fluid layout with two sidebars right of content from Sandbox
+*/
+div#container {
+	float: left;
+	width: 100%;
+}
+div#content {
+	margin: 0 400px 0 0;
+}
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	width: 180px;
+}
+div#primary {
+	margin: 0 0 0 -400px;
+}
+div#secondary {
+	margin: 0 0 0 -200px;
+}
+
+
+/* Wrapper */
+
+div#wrapper {
+	width: 938px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	background: #fff repeat-y center top
+}
+
+
+/* Body Layout */
+
+html { 
+	margin: 0; 
+	padding: 0; 
+}
+
+body {
+	clear: both;
+	background:#FFF;
+	color:#000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	padding: 0;
+    margin: 0;
+  	background-image: url(images/bg6.jpg);
+  	background-repeat: repeat-y
+}
+
+a {
+	text-decoration: none;
+  	color: #0099FF
+}
+
+a:hover {
+  	color: #0099FF;
+  	text-decoration: underline
+}
+
+p {
+	margin-left: 15px;
+	width: 90%
+}
+
+h1 {
+  	font-family: "Times New Roman", Times, serif;
+  	color: #0099FF
+}
+
+h1 a {
+	display:block;
+	text-align:left;
+	background: url(images/magnolia5.jpg) top center no-repeat;
+	height:195px;
+	width:938px;
+	text-indent: 40px;
+	margin-top: 40px
+	}
+
+h1 a:hover {
+	text-decoration: none
+}
+
+h2 {
+  	color: #09F;
+  	font-size: medium;
+  	list-style: none;
+  	border-top: thin solid;
+  	border-bottom: thin solid;
+  	text-indent: 40px;
+  	width: 95%;
+  	margin-left: 10px
+}
+
+h3 {
+  	color: #09F;
+  	font-size: medium;
+  	list-style: none;
+  	border-top: thin solid;
+  	border-bottom: thin solid;
+  	text-indent: 40px;
+  	width: 95%;
+  	margin-left: 10px
+}
+
+h4, h5, h6 {
+	color: #09F;
+	text-indent: 80px
+}
+
+ul, ol, dl {
+    position: relative; 
+}
+
+div#header{
+	float: left;
+	display: inline;
+	width: 938px;
+	background: #000;
+	border-top: 4px solid #09f;
+	border-bottom: 4px solid #09f
+}
+
+#blog-title {
+	clear:both;
+	float: left;
+	display: inline;
+	margin: 0px 10px 40px	
+}
+
+#blog-description {
+	clear:both;
+	font-family: "Times New Roman", Times, serif;
+  	float: right;
+	margin: -140px 10px 40px;
+	display: inline;
+  	color: #0099FF;
+  	background: #000;
+    font-size: 1.1em;
+    font-weight: bold
+}
+
+
+/* Skip to Content Link */
+
+div#access div.skip-link {
+	float: right;
+	margin: -40px 10px 0;
+	display: inline;
+	font-family: "Times New Roman", Times, serif
+}
+
+div#access div.skip-link a {
+	color: #666
+}
+
+/* Horizontal Menu with Drop-down SubCategories */
+
+div#menu {
+	clear:both;
+  	background: url(images/graybar.gif) repeat-x;
+  	font-size: 1em;
+	height: 1.5em;
+	width: 100%
+}
+
+div#menu ul a:hover {
+	color: #000;
+	text-decoration: none
+}
+
+div #menu ul, div #menu ul ul, div #menu ul li{
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+div #menu ul li{
+  float: left;
+  margin: 0px 10px 0px 10px
+}
+
+div #menu ul ul{
+  display: none
+}
+
+div #menu ul ul li{
+  float: none
+}
+
+div #menu ul ul li a{
+  margin: 0;
+  padding: 0.3em 0.5em
+}
+
+div #menu ul li:hover ul{
+  display: block;
+  font-size: 0.9em;
+  position: absolute
+}
+
+div #menu ul li:hover ul li a{
+  background: #EEEEEE;
+  border: none;
+  display: block;
+  padding: 0.1em;
+  width: 8em
+}
+
+/* Blog Entries and Content */
+
+.entry-title{
+  clear: both
+}
+
+div #container, div.sidebar{
+  margin-top: 10px
+}
+
+div #nav-above, div #nav-below{
+  width: 100%;
+  height: 10px
+}
+
+div #nav-above{
+  margin-bottom: 5px;
+  margin-top: 20px
+}
+
+div #nav-below{
+  margin-top: 5px;
+  margin-bottom: 5px
+}
+
+div.navigation{
+	padding: 5px 10px 6px
+}
+
+div.navigation a{
+	text-decoration: none;
+	border-bottom: 1px solid #3C3;
+	border-bottom-style: dotted
+}
+
+h2.entry-title, h3.entry-title{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	color: #0099FF
+}
+
+h2.page-title{
+	margin: 30px 10px 0;
+	border-top: 1px solid #33CC33;
+	padding-top: 10px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	background: #FFFFFF bottom;
+	color: #000000;
+	text-align: center
+}
+
+h2.entry-title a, h3.entry-title a{
+	color: #0099FF;
+	text-decoration: none
+}
+
+div.entry-date{
+	padding: 10px 10px 10px 10px;
+	color: #CC0099;
+	background: url(images/calendar.gif) no-repeat;
+  	background-position: left;
+	margin: 10px 10px;
+	text-indent: 13px
+}
+
+.alignleft, div.nav-previous{
+  float: left;
+}
+
+.alignright, div.nav-next{
+  float: right;
+  margin-right: 15px
+}
+
+form #commentform .form-label{
+  margin: 1em 0 0;
+}
+
+form #commentform span.req-field{
+  background: #fff;
+  color: red
+}
+
+form #commentform, form #commentform p{
+  padding: 0
+}
+
+input #author, input #email, input #url{
+  width: 50%
+}
+
+input #author, input #email, input #url, textarea #comment{
+  padding: 0.2em
+}
+
+ol.commentlist li{
+  margin: 0 0 3.5em
+}
+
+textarea #comment{
+  height: 13em;
+  margin: 0 0 0.5em;
+  overflow: auto;
+  width: 66%
+}
+
+div.entry-content{
+	line-height: 24px;
+	padding: 2px 0 0 10px
+}
+
+/* Entry Headings */
+
+div.entry-content h1{
+	font-size: 30px;
+	line-height: 36px
+}
+
+div.entry-content h2{
+	font-size: 24px;
+	line-height: 30px
+}
+
+div.entry-content h3{
+	font-size: 18px
+}
+
+div.entry-content h4{
+	font-size: 16px
+}
+
+div.entry-content h5{
+	line-height: 15px
+}
+
+div.entry-content h6{
+	line-height: 12px
+}
+
+/* Blockquotes */
+
+
+div.entry-content blockquote {
+	border-left: 3px solid #3C3;
+	padding: 10px;
+	background: #EEE;
+	width: 300px
+}
+
+/* Entry Meta */
+
+div.entry-meta {
+	padding: 10px 0 0 10px;
+	line-height: 24px
+}
+
+/* Comments */
+
+div#comments{
+	margin: 10px 10px 10px;
+	padding: 0 10px 10px;
+	border-top: 2px solid #DDDDDD;
+	background: #fcfcfc;
+    border-right: 2px dashed #DDDDDD
+}
+
+div#comments h3{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	padding: 10px 0 5px
+}
+
+div#comments p{
+	padding: 10px 0 5px;
+	line-height: 24px
+}
+
+div#comments ol , div#comments ol li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 24px;
+}
+
+div#comments ol{
+	padding: 0 0 10px
+}
+
+div#comments ol li{
+	padding: 10px 0 10px
+	}
+
+div.comment-meta{
+	font-size: 11px
+}
+
+div.nopassword {
+	padding: 10px 0 0;
+	line-height: 24px
+}
+
+form#commentform span.required {
+	background: #fff;
+	color: #f00
+}
+
+form#commentform .form-label, form#commentform .form-textarea {
+	margin: 10px 0 0
+}
+
+input#author,input#email,input#url {
+	width:50%
+}
+
+input#author,input#email,input#url,textarea#comment {
+	padding:0.2em
+}
+
+textarea#comment {
+	height:13em;
+	margin:0 0 0.5em;
+	overflow:auto;
+	width:66%
+}
+
+/* Sidebar */
+
+div.sidebar a{
+	text-decoration: none
+}
+
+div.sidebar ul, div.sidebar ul li{
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+div.sidebar ul{
+	margin: 0 0 10px
+}
+
+div.sidebar ul li{
+	margin: 0
+}
+
+div.sidebar ul li#search form#searchform{
+	margin: 0;
+	padding: 10px 10px 0
+}
+
+div.sidebar ul li h3{
+	font-size: 16px;
+	font-weight: bold;
+	background: #e1e1e1 repeat-x left bottom;
+	border-top: 2px solid #3c3;
+	text-align: center
+}
+
+div.sidebar ul ul{
+	margin: 0;
+	padding: 6px 10px 0;
+	line-height: 24px
+}
+
+div.sidebar ul ul li{
+	padding: 0
+}
+
+div.sidebar ul ul ul{
+	padding: 0 0 0 10px
+}
+
+div.sidebar input#s {
+    width: 150px
+}
+
+/* Footer */
+
+div#footer{
+	clear: both;
+	width: 100%;
+	padding: 22px 0;
+	border-top: 8px solid #09f;
+	text-align:center;
+	font-size: 11px;
+	line-height: 18px;
+	background: #000;
+	font-weight: bold
+}
+
+div#footer a{
+	text-decoration: none;
+}
+
+div#footer .meta-sep {
+  color: #0099FF
+}

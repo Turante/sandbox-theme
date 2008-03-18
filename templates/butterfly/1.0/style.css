@@ -1,0 +1,199 @@
+/*
+THEME NAME: Butterfly
+THEME URI: http://www.artbytech.com/
+VERSION: 1.0
+DESCRIPTION: A three-column layout with clean highlights and a minimalist touch.
+AUTHOR: Gina Badalaty
+AUTHOR URI: http://www.artbytech.com/
+TEMPLATE: sandbox
+*/
+
+/*
+LAYOUT: Three-Column (Right)
+DESCRIPTION: Three-column fluid layout with two sidebars right of content
+*/
+
+/* body elements */
+body{
+	background-color:#ffffff;
+	margin-top:1em;
+	padding-top:0;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+/*layout elements*/
+
+div#container {
+	float: left;
+	width: 100%;
+}
+
+div#access {	
+	background-color:#ffffff;
+}
+div#header{
+	background-image:url(header.gif);
+	background-position:top right;
+	background-repeat:no-repeat;
+	height:296px;
+	width:100%;
+}
+div#content {
+	margin: 0 400px 0 0;
+	padding-right:20px;
+}
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	width: 180px;
+}
+div#primary {
+	margin: 3em 0 0 -400px;
+}
+div#secondary {
+	margin: 3em 0 0 -200px;
+}
+div#footer {
+	clear: left;
+	width: 100%;
+	text-align:center;
+	color:#fff;
+	font-size:12px;
+	height:2em;
+	line-height:2em;
+	vertical-align:middle;
+	background-color:#0099ff;
+}
+
+
+/* Top menu */
+div#menu{
+	font-size:0.9em;
+	padding:0;
+	margin: 10px 0;
+	background:#FF6CFF;
+	font-weight:bold;
+	height:2em;
+	line-height:2em;
+	vertical-align:middle;
+}
+
+div#menu li{
+	list-style:none;
+}
+div#menu  ul {
+	margin:0;
+	padding:0;
+}
+div#menu li{
+	list-style:none;
+}
+div#menu  ul {
+	margin:0;
+	padding:0;
+}
+li.page_item{
+	margin:0;
+	padding:0 5px;
+	width:100px;
+}
+div#menu li a, div#menu li a:link{
+	color:#000000;
+}
+div#menu li a:hover, div#menu li a:visited{
+	color:#ffffff;
+}
+
+/*style elements*/
+h1#blog-title{
+	font-size:60px;
+	text-align:right;
+	font-family:"Times New Roman", Times, serif;
+	margin-right:250px;
+	margin-top:0;
+}
+h1#blog-title a:link, h1#blog-title a:visited{
+	color:#0099ff;
+}
+h1#blog-title a:hover, h1#blog-title a:active{
+	color:#FF6CFF;
+}
+h2.entry-title{
+	color:#0075C4;
+}
+h2.entry-title a:link, h2.entry-title a:visited{
+	color:#0075C4;
+}
+h2.entry-title a:hover, h2.entry-title a:active{
+	color:#FF6CFF;
+}
+
+
+div#blog-description{
+	font-size:2em;
+	color:#000000;
+	font-family:"Times New Roman", Times, serif;
+	text-align:right;
+	margin-right:250px;
+	margin-top:0;
+}
+div#content a, div#content a:link{
+	color:#000000;
+}
+div#content a:hover, div#content a:visited{
+	color:#0075C4;
+}
+div.skip-link a{
+	color:#000000;
+}
+div.skip-link a:link, div.skip-link a:visited{
+	color:#000000;
+}
+div.skip-link a:hover, div.skip-link a:active{
+	color:#0099ff;
+}
+
+h2, h3{
+	font-family:"Times New Roman", Times, serif;
+}
+input#s{
+	border:1px solid #0075C4;
+}
+input#searchsubmit{
+	background-color:#0075C4;
+	color:#ffffff;
+	border:1px solid #000;
+}
+div.entry-meta{
+	margin-bottom:3em;
+}
+div#wrapper a{
+	text-decoration:none;
+}
+
+/*sidebar*/
+div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
+div.sidebar h3{font-size:1.2em;}
+div.sidebar input#s{width:7em;}
+div.sidebar li{list-style:none;margin:0 0 1em;}
+div.sidebar li form{margin:0.2em 0 0;padding:0;}
+div.sidebar ul ul{margin:0 ;}
+div.sidebar ul ul li{list-style:none;margin:0;}
+div.sidebar ul ul ul{margin:0 ;}
+div.sidebar ul ul ul li{list-style:none;}
+
+/*sidebar menu*/
+div.sidebar a, div.sidebar a:link,div.sidebar a:visited{color:#0075C4;}
+div.sidebar a:hover, div.sidebar a:visited{color:#FF2BFF;}
+
+
+div.entry-meta{
+	margin-bottom:3em;
+}
+
+div#footer a:link, div#footer a:visited{	
+	color:#FFFFFF;
+}
+div#footer a:hover, div#footer a:active{	
+	color:#000;
+}

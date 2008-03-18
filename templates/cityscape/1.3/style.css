@@ -1,0 +1,552 @@
+/*
+THEME NAME: CITYscape
+THEME URI: http://geoffbrady.net/
+DESCRIPTION: Well it's like a city, innit?
+VERSION: 1.3b
+AUTHOR: Stephen Broughton
+AUTHOR URI: http://geoffbrady.net/
+TEMPLATE: sandbox
+*/
+
+body {
+ border-top: 4px #345 solid;
+ color: #123;
+ font-family: arial;
+ width: 800px;
+ margin: 20px 20px;
+ font-size: 0.7em;
+}
+
+#content {
+ margin: 0 350px 0 0;
+}
+
+.sidebar {
+ float: left;
+ overflow: hidden;
+ width: 150px;
+ padding: 1px 0;
+}
+
+#primary {
+ margin: 0 0 0 -320px;
+}
+
+#secondary {
+ margin: 0 0 0 -150px;
+}
+
+#wrapper {
+ padding: 10px 0;
+}
+
+#header {
+ background-color: #345;
+ height: 50px;
+ padding: 0 0;
+ margin: 0 0;
+ width: 100%;
+}
+
+h1#blog-title {
+ background-color: white;
+ height: 50px;
+ float: left;
+ text-transform: uppercase;
+ margin: 0 0 0 50px;
+ padding: 10px 10px 0 10px;
+ font-size: 200%;
+}
+
+h1#blog-title, h1#blog-title a {
+ color: #345;
+ text-decoration: none;
+}
+
+h1#blog-title a:hover, h1#blog-title a:active {
+ color: black;
+}
+
+#blog-description {
+ display: none;
+}
+
+#access {
+ margin: 10px 0 0 0;
+ clear: both;
+ height: 200px;
+ width: 800px;
+ background: url(images/header.gif) no-repeat center;
+}
+
+.skip-link, #menu {
+ display: none;
+}
+
+#container {
+ padding: 0 0;
+ margin: 0 0 20px 0;
+ float: left;
+}
+
+.navigation {
+ height: 30px;
+ margin: 0 0 10px 0;
+ padding: 10px 0 10px 0;
+ font-size: 150%;
+ clear: both;
+ border-bottom: 1px solid #89a;
+}
+
+.navigation a {
+ color: #345;
+ text-decoration: none;
+ text-transform: uppercase;
+ padding: 1px 5px;
+ font-weight: bold;
+ background-color: white;
+ height: 20px;
+}
+
+.nav-previous {
+ background-color: #345;
+ padding: 0 0 0 20px;
+ float: left;
+}
+
+.nav-next {
+ background-color: #345;
+ padding: 0 20px 0 0;
+ float: right;
+}
+
+.hentry {
+ border-bottom: 1px solid #89a;
+ padding: 0 0;
+ margin: 10px 0;
+ clear: both;
+ background-color: #345;
+}
+
+.single #nav-below {
+ display: none;
+}
+
+#nav-above {
+ padding: 10px 0 0 0;
+ margin: 10px 0 0 0;
+ border-top: 1px solid #89a;
+}
+
+h2.entry-title, h3.entry-title {
+ background-color: white;
+ color: #345;
+ text-transform: uppercase;
+ font-size: 160%;
+ margin: 0 0 0 23px;
+ padding: 1px 5px;
+}
+
+h2.entry-title a, h3.entry-title a {
+ color: #345;
+ text-decoration: none;
+ background-color: white;
+}
+
+.entry-content h2 {
+ text-transform: uppercase;
+ font-size: 130%;
+}
+
+.entry-content {
+ padding: 1px 0 1px 20px;
+ margin: 0 0;
+ font-size: 120%;
+ line-height: 150%;
+ background-color: white;
+}
+
+.entry-date {
+ text-align: right;
+ background-color: white;
+ margin: 0 0;
+ padding: 5px 0 10px 0;
+}
+
+abbr.published {
+ border-bottom: 1px #89a solid;
+}
+
+.meta-nav {
+ display: none;
+}
+
+.home .entry-meta {
+ display: none;
+}
+
+.entry-meta {
+ background-color: white;
+ padding: 20px 20px;
+ border-top: 1px solid #89a;
+ line-height: 140%;
+}
+
+.entry-meta a {
+ text-decoration: none;
+ color: #345;
+ font-weight: bold;
+}
+
+.entry-meta a:hover {
+ color: #678;
+}
+
+.entry-content a {
+ color: #345;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+.entry-content a:hover {
+ color: #678;
+}
+
+.entry-content h3 {
+ font-size: 160%;
+ color: #345;
+}
+
+.entry-content h4 {
+ font-size: 150%;
+ color: #345;
+}
+
+.entry-content h5 {
+ font-size: 140%;
+ color: #345;
+}
+
+.entry-content h6 {
+ font-size: 130%;
+ color: #345;
+}
+
+.entry-content h7 {
+ font-size: 160%;
+ color: #345;
+}
+
+.entry-content img {
+ max-width: 400px;
+}
+
+pre, tt, code {
+ font-family: 'Courier New', monospace;
+ font-size: 90%;
+}
+
+#footer {
+ clear: both;
+ border-top: 1px solid #89a;
+ padding: 10px 10px;
+ margin: 10px 0 0 0;
+ background-color: #345;
+ font-size: 120%;
+}
+
+#footer p {
+ margin: 2px 0;
+ padding: 0 0;
+}
+
+#footer, #footer a {
+ color: white;
+}
+
+#footer a {
+ text-decoration: none;
+ font-weight: bold;
+}
+
+#respond {
+ clear: both;
+ background-color: #345;
+ padding: 0 0;
+ margin: 0 0 20px 0;
+ color: #345;
+}
+
+#respond a {
+ color: #345;
+ text-decoration: none;
+}
+
+#respond a:hover {
+ color: #678;
+}
+
+#respond h3 {
+ background-color: white;
+ margin: 0 0 0 20px;
+ padding: 0 5px;
+ font-size: 150%;
+ text-transform: uppercase;
+}
+
+.formcontainer {
+ background-color: white;
+ padding: 0 0 0 20px;
+ margin: 0 0;
+}
+
+#respond form {
+ margin: 0 0 0 22px;
+ padding: 0 0;
+}
+
+#respond form p {
+ margin: 0 0;
+ padding: 10px 0;
+}
+
+.entry-content ul {
+ list-style-type: square;
+}
+
+#archives-page h3 {
+ margin: 20px 0 0 20px;
+ padding: 0 5px;
+ font-size: 140%;
+ text-transform: uppercase;
+}
+
+#links-page h3 {
+ margin: 20px 0 0 20px;
+ padding: 0 5px;
+ font-size: 120%;
+ text-transform: uppercase;
+ background-color: white;
+}
+
+h2.page-title {
+ text-transform: uppercase;
+ font-size: 180%;
+ color: #345;
+}
+
+.comment h2, .trackback h2, .pingback h2 {
+ padding: 0 0;
+ margin: 0 0;
+ background-color: white;
+ font-weight: normal;
+ color: #345;
+ text-transform: uppercase;
+ font-size: 140%;
+}
+
+.comment h2 a, .trackback h2 a, .pingback h2 a {
+ text-decoration: none;
+ color: #345;
+ font-weight: bold;
+}
+
+.comment, .trackback, .pingback {
+ clear: both;
+ background-color: white;
+ padding: 15px 0;
+ border-bottom: 1px solid #89a;
+ font-size: 120%;
+}
+
+.comments ol {
+ list-style-type: none;
+ margin: 0 0;
+ padding: 0 0;
+}
+
+.comments ol li {
+ padding: 10px 0 10px 0;
+}
+
+.comments {
+ clear: left;
+ background-color: #345;
+ margin: 20px 0;
+ padding: 0 0;
+}
+
+.comments h3 {
+ background-color: white;
+ text-transform: uppercase;
+ color: #345;
+ margin: 0 0 0 20px;
+ padding: 0 5px;
+ font-size: 140%;
+}
+
+.alignleft {
+ float: left;
+}
+
+.alignright {
+ float: right;
+}
+
+.center {
+ text-align: center;
+}
+
+dt {
+ border-bottom: 1px solid #89a;
+ margin: 10px 0 0 0;
+}
+
+dd {
+ margin: 0 0 0 30px;
+}
+
+.tags {
+ text-align: justify;
+ line-height: 200%;
+}
+
+.tags a {
+ color: #345;
+ text-decoration: none;
+}
+
+.tags a:hover {
+ color: #678;
+}
+
+ul#links-page, ul#archives-page {
+ padding: 10px 0 1px 0;
+ margin: 0 0 10px 0;
+ background-color: white !important;
+}
+
+.sidebar ul.xoxo {
+ padding: 0 0;
+ margin: 0 0 10px 0;
+}
+
+ul.xoxo {
+ list-style-type: none;
+ background-color: white !important;
+}
+
+ul.xoxo li {
+ margin: 20px 0 0 0;
+ background-color: #345;
+}
+
+ul.xoxo li li {
+ margin: 0 0 !important;
+ background-color: white;
+}
+
+ul.xoxo li h3 {
+ text-transform: uppercase;
+ margin: 0 0 0 20px;
+ padding: 0 5px;
+ font-size: 130%;
+ background-color: white;
+ color: #345;
+}
+
+ul.xoxo ul, ul.xoxo form {
+ background-color: white;
+ list-style-type: square;
+ padding: 10px 0 20px 20px;
+ margin: 0 0;
+ color: #345;
+ border-bottom: 1px solid #89a;
+}
+
+ul.xoxo ul ul {
+ padding: 5px 0 5px 10px !important;
+ border-bottom: none;
+}
+
+.sidebar a {
+ color: #345;
+ text-decoration: none;
+}
+
+.fn {
+ text-transform: uppercase;
+ color: #345;
+ font-size: 120%;
+}
+
+.fn a {
+ color: #345;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+.comment-meta {
+ margin: 0 0 0 40px;
+}
+
+.comment-meta a {
+ color: #345;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+.comment a {
+ color: #345;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+.comment-author a {
+ text-transform: uppercase;
+ font-weight: bold;
+ color: #345;
+ text-decoration: none;
+}
+
+.entry-content a img {
+ border: 1px solid #345;
+}
+
+.entry-content img {
+ margin: 5px 10px;
+}
+
+ins {
+ color: #567;
+}
+
+del {
+ color: #89a;
+}
+
+cite {
+ font-style: italic;
+ color: #89a;
+}
+
+.comment p, .trackback p, .pingback p {
+ padding: 5px 0 5px 40px;
+}
+
+.entry-content blockquote {
+ border-left: 1px solid #89a;
+ padding: 0 20px;
+ margin: 5px 20px;
+}
+
+.comment blockquote {
+ border-left: 1px solid #89a;
+ padding: 0 0;
+ margin: 5px 0 5px 60px;
+}
+
+.required {
+ font-weight: bold;
+ color: red;
+}

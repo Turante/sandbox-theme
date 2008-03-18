@@ -1,0 +1,367 @@
+/*
+THEME NAME: Fashionable
+THEME URI: http://www.bincangbincang.com/download.htm
+DESCRIPTION: A two-column design, possibly for a fashion Web site.
+VERSION: 1.0
+AUTHOR: Lidya
+AUTHOR URI: http://www.bincangbincang.com/
+TEMPLATE: sandbox
+*/
+
+/* main */
+
+* {
+margin: 0;
+padding: 0;
+
+}
+
+
+body {
+background: #010101 ;
+
+}
+
+img {
+border: 0;
+padding: 5px;
+}
+
+
+a img, :link img, :visited img {
+border:none 
+}
+
+p img {
+	max-width: 100%;
+	padding: 0;
+}
+
+/* typology */
+
+body {
+font: small Tahoma, Arial, Verdana, Sans-Serif;
+line-height: normal;
+text-align:left;
+color: #fff;
+margin:0;
+padding:0;
+}
+
+a {
+text-decoration: none;
+}
+
+h1, h2, h3 {
+	
+	font-weight: bold;
+}
+h1 {
+	font-size: 3em;
+	
+}
+h2 {
+	font-size: 1.6em;
+	
+}
+h3 {
+	font-size: 1.3em;
+	
+}
+
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, .sidebar h3, #wp-calendar caption, cite {
+	text-decoration: none;
+}
+
+
+div.page-link {
+	font-weight:bold;
+}
+
+blockquote {
+	border: 1px solid #555;
+	margin-top: 5px;
+	padding: 10px;
+	text-indent: 2em;
+	display: block;
+	}
+
+blockquote cite {
+	display: block;
+	margin: 5px 0 0;
+}
+
+
+p {
+text-indent: 2em;
+margin-top: 1.5em;
+}
+
+/*links */
+
+a {
+
+	text-decoration: none;
+}
+a:link, a:visited {
+	
+	color: #c9f;
+	text-decoration: none;
+}
+
+a:hover {
+color: #aa2ea0;
+}
+
+a:active {
+color: #FC0A0A;
+}
+
+
+/* structure */
+
+
+div#wrapper {
+width: 800px;
+margin: auto;
+padding: 0;
+
+}
+
+div#container {
+	float: left;
+	margin: 0 0 0 -230px;
+	width: 100%;
+}
+
+div#content {
+	margin: 0 0 0 230px;
+}
+div.sidebar {
+	float: right;
+	overflow: hidden;
+	width: 200px;
+}
+div#secondary	{
+	clear: right;
+}
+
+div#footer {
+width: 100%;
+clear: both;
+}
+
+/* header */
+
+#header {
+background: transparent url(img/header.jpg) bottom center no-repeat;
+height: 450px;
+width: 100%;
+clear: both;
+text-align: center;
+}
+
+#blog-title {
+display: block;
+padding-top: 10px;
+font-family: "Monotype corsiva", "Century Gothic", Arial;  
+font-size: 30px;
+color: #E693E1;
+}
+
+
+#blog-description {
+display: block;
+padding-top: 5px;
+clear: both;
+font-family: "Monotype corsiva", "Century Gothic", Arial;  
+font-size: 15px;;
+color: #C964C3;
+}
+
+
+#header h1,#header h1 a {
+	color: #fff;
+	text-decoration: none;
+	
+}
+
+
+/* sidebar */
+
+
+div.sidebar {
+	padding: 40px 0 100px 0;
+	font-size: small;
+	text-align: right;
+	background: transparent url(img/sidebot.jpg) bottom no-repeat;
+}
+
+div.sidebar h3 {
+	font-family: verdana, arial, sans-serif;
+	font-size: 1.2em;
+	margin: 50px 0 0 0;
+	padding: 0 10px 0 20px;
+	text-align: left;
+	background: url(img/side.gif) left no-repeat;
+	border-bottom: 1px dashed #111;
+}
+
+
+
+.widget {
+	width: 100%;
+	overflow: hidden;
+	
+}
+
+div.sidebar ul {
+list-style: none;
+
+}
+
+.xoxo {
+background: transparent url(img/sidetop.jpg) top no-repeat;
+
+}
+
+
+div.sidebar ul li {
+	list-style: none;
+	
+}
+
+div.sidebar ul ul {
+margin: 3px 25px 0 5px;
+
+}
+
+.sidebar li {
+display: block;
+
+}
+
+ol li, div.sidebar ul ol li {
+	list-style: decimal outside;
+}
+
+div#menu ul ul, div.skip-link, hr {
+	display: none;
+}
+
+#linkcats>li:before {
+	content: "";
+}
+
+/* content */
+
+
+div#content {
+	
+	line-height: 1.4em;
+	overflow: hidden;
+	
+		
+}
+
+div.navigation {
+	display: block;
+	margin: 50px 0 10px 0;
+	text-align: center;
+}
+
+div#nav-above {
+	display: none;
+}
+
+
+div.entry-content ol li, div.sidebar ul, div.sidebar ul ol {
+	margin: 0;
+	padding: 0;
+}
+div.entry-content form, .center {
+	text-align: center;
+}
+
+
+
+div.entry-content {
+	padding-bottom: 5px;
+	background: url(img/bg.jpg) center ;
+}
+
+div.entry-date {
+padding: 10px 5px 0 60px;
+height: 50px;
+font-size: 10px;
+text-align: left;
+background: transparent url(img/sidetitle.jpg) top left no-repeat;
+}
+
+div.entry-meta {
+	clear: both;
+	font-size: 90%;
+	line-height: 1.2em;
+	padding-top: 15px;
+	text-align: center;
+	background: url(img/divider.jpg) bottom center no-repeat;
+	padding-bottom: 4em;
+}
+
+div.comments ol li.alt {
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin: 0;
+	padding: 10px;
+}
+
+.entry-title {
+	text-align: left;
+	padding: 100px 10px 5px 0;		
+	background: #010101 url(img/title.jpg) top center no-repeat;
+
+	}
+
+
+.entry-title h2 {
+
+}
+
+html>body div.entry-content ul {
+	list-style: none;
+	margin-left: 0;
+	padding: 0 0 0 10px;
+	text-indent: -10px;
+}
+html>body div.entry-content li {
+	margin: 7px 0 8px 10px;
+}
+
+div.entry-meta ul, div.entry-meta li {
+	display: inline;
+	list-style: none;
+}
+
+div.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	padding: 10px;
+	
+}
+
+.entry-date:first-letter {
+	display: block;
+	float: left;
+	font-size: 2.4em;
+}
+
+/* footer */
+
+div#footer {
+padding: 10px;
+padding-bottom: 100px;
+font-size: small;
+text-align: center;
+background: transparent url(img/footer.jpg) bottom center no-repeat;
+}

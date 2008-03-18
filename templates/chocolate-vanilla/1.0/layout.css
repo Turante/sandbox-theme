@@ -1,0 +1,18 @@
+#container	{	float:	left;
+			clear:	left;
+			width:	450px;	}
+
+#footer	{	clear:	both;
+			padding:	10px 0;	}
+
+
+#header	{	height:	100px;
+			width:	350px;
+			float:	left;		}
+
+#menu		{	height:	100px;
+			width:	400px;	}
+
+.sidebar	{	width:	250px;	}
+
+#wrapper	{	width:	760px;	}

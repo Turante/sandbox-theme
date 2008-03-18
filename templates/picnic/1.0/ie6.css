@@ -1,0 +1,24 @@
+body {_margin-left:0px !important;}
+
+#container {_margin-left:300px !important}
+
+#header {_position:absolute;
+_top:0px;
+_left:0px;}
+
+#menu {_position:absolute;
+_top:0px;
+_left:300px;
+}
+
+
+div#menu ul li, div#menu ul ul{_display:inline !important;
+_border:1px #855 solid;}
+div#menu ul li{_float:none !important;}
+div#menu ul ul li{_float:none !important;}
+div#menu ul li ul li{_display:inline !important;
+ }
+
+div#menu ul li ul li a{_margin:0 !important;
+_padding:0.3em 0.5em !important;}
+

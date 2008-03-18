@@ -1,0 +1,923 @@
+/*
+THEME NAME: Crystal Liberty
+THEME URI: http://www.dianadesign.it/download.htm
+VERSION: 1.0
+DESCRIPTION: An submission set for the Sandbox Designs Competition
+AUTHOR: Diana Quarti
+AUTHOR URI: http://curiouspixel.dianadesign.it/
+TEMPLATE: sandbox
+*/
+
+/*
+LAYOUT: Three-Column (Left)
+DESCRIPTION: Three-column fluid layout with two sidebars left of content
+*/
+
+div#container {
+
+	float: right;
+
+	margin: 0 0 0 -380px;
+
+	width: 100%;
+
+}
+
+div#content {
+
+	margin: 0 0 0 380px;
+
+}
+
+div.sidebar {
+
+	float: right;
+
+	width: 160px;
+
+}
+
+div#footer {
+
+	clear: both;
+
+	width: 100%;
+
+}
+
+
+
+/*General layout*/
+
+* {
+
+padding:0px;
+
+margin:0px;
+
+}
+
+body {
+
+	background-image:url(background.gif);
+
+	background-repeat: repeat;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	color: #000000;
+
+	background-attachment: fixed;
+
+	background-color:#054f81;
+
+}
+
+blockquote {
+
+	margin:2em;
+
+	padding:2px 25px;
+
+	border-left:#9f9dae 3px solid;
+
+	color:#444444;
+
+}
+
+ul {
+
+	margin:3px;
+
+	padding:2px 25px;
+
+}
+
+ol {
+
+	margin:3px;
+
+	padding:2px 25px;
+
+}
+
+acronym {
+
+	font-variant: normal;
+
+	color: #fbf5ea;
+
+	background-color: #bc7139;
+
+	text-transform: uppercase;
+
+}
+
+a {
+
+	color:#bc7139;
+
+	text-decoration: underline;
+
+}
+
+a:hover {
+
+	color: #054f81;
+
+	text-decoration: underline;
+
+}
+
+a:visited {
+
+	color: #d09b74;
+
+}
+
+p {
+
+	padding-top:6px;
+
+	padding-bottom: 6px;
+
+}
+
+/*image*/
+
+p img {
+
+	padding: 0;
+
+	max-width: 100%;
+
+	}
+
+img.centered {
+
+	display: block;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+	}
+
+	
+
+img.alignright {
+
+	padding: 4px;
+
+	margin: 0 0 2px 7px;
+
+	display: inline;
+
+	}
+
+
+
+img.alignleft {
+
+	padding: 4px;
+
+	margin: 0 7px 2px 0;
+
+	display: inline;
+
+	}
+
+
+
+/*general, header and menu layout*/
+
+div#wrapper {
+
+	margin:0px;
+
+	margin-top:0px;
+
+	margin-bottom:0px;
+
+	margin-left:16%;
+
+	margin-right:16px;
+
+	border-top-color: #9f9dae;
+
+	border-right-color: #9f9dae;
+
+	border-bottom-color: #9f9dae;
+
+	border-left-color: #9f9dae;
+
+	border-top-width: 0px;
+
+	border-right-width: 3px;
+
+	border-bottom-width: 0px;
+
+	border-left-width: 3px;
+
+	background-image:  url(header_bg1.jpg);
+
+	background-repeat:repeat-x;
+
+	background-color:#ced8e4;
+
+	border-top-style: solid;
+
+	border-right-style: solid;
+
+	border-bottom-style: solid;
+
+	border-left-style: solid;
+
+}
+
+div#header {
+
+	background-image:  url(header_bg2.jpg);
+
+	background-repeat:no-repeat;
+
+	background-position: right 0px;
+
+	text-align:left;
+
+	margin-bottom:0px;
+
+	height: 160px;
+
+	padding-left:15px;
+
+}
+
+#blog-title, #blog-title a {
+
+	padding-top: 55px;
+
+	color: #054f81;
+
+	font-size: 40px;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+}
+
+div#blog-description {
+
+	text-align:left;
+
+	padding-top:10px;
+
+	color: #9f9dae;
+
+	font-size: 11px;
+
+	line-height: 16px;	
+
+	margin-bottom:0px;
+
+	width:400px;
+
+}
+
+
+
+div#access div.skip-link {
+
+	position:absolute;
+
+	top:1em;
+
+	right:1em;
+
+	padding-top: 0px;
+
+	padding-right: 20px;
+
+}
+
+.skip-link, .skip-link a  {
+
+	text-align: right;
+
+	font-size: 11px;
+
+	line-height: 16px;	
+
+	color: #054f81;
+
+	text-decoration: none;
+
+}
+
+
+
+div#menu {
+
+	font-size:16px;
+
+	height:28px;
+
+	color:#054f81;
+
+	background-color:#9f9dae;
+
+	width:100%;
+
+	padding-top:5px;
+
+}
+
+
+
+div#menu ul a {
+
+	color:#054f81;
+
+	font-size: 16px;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	text-decoration: none;
+
+}
+
+
+
+div#menu ul,div#menu ul ul,div#menu ul li{list-style:none;margin:0;padding:0;}
+
+div#menu ul li{float:left;}
+
+div#menu ul li a{padding:3px 15px;}
+
+div#menu ul ul{display:none;}
+
+div#menu ul ul li{float:none;}
+
+div#menu ul ul li a{margin:0;padding:0;}
+
+
+
+/*Content Layout*/
+
+.entry-title{clear:both;}
+
+
+
+/*div#container,div.sidebar{margin-top:0px;padding-top:0px;margin-bottom:0px;padding-bottom:0px;}*/
+
+div#container {
+
+	height:100%;
+
+}
+
+div#content {
+
+	background-color:#fbf5ea;
+
+	background-image:url(over_content.gif);
+
+	background-repeat: repeat-x;
+
+	background-position: left top;
+
+	padding-top:40px;
+
+	padding-right: 15px;
+
+	padding-bottom: 0px;
+
+	padding-left: 15px;
+
+	min-height:600px;
+
+	height:100%;
+
+}
+
+div#nav-above,div#nav-below,div#nav-above a,div#nav-below a {
+
+	font-size: 12px;
+
+	line-height:20px;
+
+	color: #bc7139;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+}
+
+div#nav-above a:hover, div#nav-below a:hover {
+
+	text-decoration: underline;
+
+}
+
+div#nav-above a:visited, div#nav-below a:visited {
+
+	color: #d99d71;
+
+}
+
+div#nav-above,div#nav-below{width:100%;}
+
+div#nav-above{padding-bottom:25px;}
+
+div#nav-below{padding-top:16px;padding-bottom:38px;}
+
+.alignleft,div.nav-previous{float: left;}
+
+.alignright,div.nav-next{float: right;}
+
+
+
+h2.entry-title {
+
+	font-size: 22px;
+
+	line-height:28px;
+
+	color: #054f81;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+	padding-bottom:6px;
+
+	padding-top:16px;
+
+}
+
+h2.entry-title  a {
+
+	color: #054f81;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+}
+
+h2.entry-title a:hover{
+
+	text-decoration: underline;
+
+}
+
+h2.entry-title a:visited{
+
+	color: #37729a;
+
+}
+
+
+
+h2.page-title  {
+
+	font-size: 22px;
+
+	line-height:28px;
+
+	color: #054f81;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+	padding-bottom:6px;
+
+	padding-top:16px;
+
+}
+
+
+
+
+
+h3.entry-title {
+
+	font-size: 20px;
+
+	line-height:28px;
+
+	color: #054f81;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+	padding-bottom:6px;
+
+	padding-top:16px;
+
+}
+
+h3.entry-title  a {
+
+	color: #054f81;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+}
+
+h3.entry-title a:hover{
+
+	text-decoration: underline;
+
+}
+
+h3.entry-title a:visited{
+
+	color: #37729a;
+
+}
+
+div.entry-date {
+
+	color:#bc7139;
+
+	font-size:11px;
+
+	line-height:15px;
+
+	padding-bottom:16px;
+
+}
+
+div.entry-content {
+
+	color:#000000;
+
+	font-size:12px;
+
+	line-height:18px;
+
+	padding-bottom:16px;
+
+}
+
+div.entry-meta {
+
+	color:#bc7139;
+
+	background-color:#386291;
+
+	font-size:10px;
+
+	line-height:16px;
+
+	margin-bottom:0px;
+
+	margin-top:6px;
+
+	margin-left:-15px;
+
+	margin-right:-15px;
+
+	padding-top:6px;
+
+	padding-bottom:6px;
+
+	padding-left:15px;
+
+	padding-right:74px;
+
+	background-image: url(metabg.gif);
+
+	background-repeat: no-repeat;
+
+	background-position: right bottom;
+
+}
+
+div.entry-meta  a {
+
+	color: #e9b678;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: underline;
+
+}
+
+div.entry-meta a:hover{
+
+	text-decoration: underline;
+
+}
+
+div.entry-meta a:visited{
+
+	color: #e9b678;
+
+}
+
+
+
+
+
+/*da editare*/
+
+form#commentform .form-label{margin:1em 0 0;}
+
+form#commentform span.req-field{background:#fff;color:red;}
+
+form#commentform,form#commentform p{padding:0;}
+
+input#author,input#email,input#url{width:50%;}
+
+input#author,input#email,input#url,textarea#comment{padding:0.2em;}
+
+div.comments ol li{
+
+	margin:0px 0px 16px 16px;
+
+	
+
+}
+
+.comments ol {
+
+	list-style-type: upper-roman;
+
+	list-style-position: inside;
+
+}
+
+.comments li {
+
+	color: #000000;
+
+	font-size: 10px;
+
+	padding-bottom:16px;
+
+	border-bottom:1px dotted #bc7139;
+
+}
+
+
+
+textarea#comment{height:13em;margin:0 0 0.5em;overflow:auto;width:66%;}
+
+
+
+div.comments {
+
+	color:#000000;
+
+	font-size:10px;
+
+	line-height:16px;
+
+}
+
+div.comments a {
+
+	color:#bc7139;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: underline;
+
+}
+
+div.comments a:hover{
+
+	color: #054f81;
+
+	text-decoration: underline;
+
+}
+
+div.comment-meta {
+
+	color: #054f81;
+
+	padding-bottom:6px;
+
+}
+
+div#comments-list h3, div#trackbacks-list h3, div#respond h3{
+
+	color: #054f81;
+
+	padding-top:16px;
+
+	padding-bottom:6px;
+
+	font-size: 16px;
+
+	line-height: 20px;
+
+	font-style: normal;
+
+	font-weight: lighter;
+
+	font-variant: normal;
+
+	text-decoration: none;
+
+
+
+}
+
+div#respond {
+
+	color:#000000;
+
+	font-size:10px;
+
+	line-height:16px;
+
+	padding-bottom:16px;
+
+}
+
+
+
+/*Sidebar Layout*/
+
+div.sidebar {
+
+	background-color:#ced8e4;
+
+	color: #054f81;
+
+	margin:0;	
+
+	font-size: 12px;
+
+	line-height: 20px;
+
+	padding-top:40px;
+
+	padding-right: 15px;
+
+	padding-bottom: 0px;
+
+	padding-left: 15px;
+
+	background-image:url(over_sidebar.gif);
+
+	background-repeat: repeat-x;
+
+	background-position: left top;
+
+}
+
+div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
+
+div.sidebar h3{
+
+	color:#bc7139;
+
+	font-size:16px;
+
+	line-height: 20px;
+
+	font-weight: lighter;
+
+	text-decoration: none;
+
+	padding-bottom:6px;
+
+}
+
+div.sidebar input#s{
+
+	width:7em;
+
+	}
+
+div.sidebar li{
+
+	list-style:none;
+
+	margin:0 0 15px;
+
+}
+
+div.sidebar li form{margin:0.2em 0 0;padding:0;}
+
+div.sidebar ul ul{margin:0 0 0 16px;}
+
+div.sidebar ul ul li{list-style:disc;margin:0;}
+
+div.sidebar ul ul ul{margin:0 0 0 14px;}
+
+div.sidebar ul ul ul li{list-style:disc;}
+
+
+
+div.sidebar  a {
+
+	color: #054f81;
+
+	font-weight: normal;
+
+	text-decoration: none;
+
+}
+
+div.sidebar a:hover{
+
+	text-decoration: underline ;
+
+}
+
+div.sidebar a:visited{
+
+	color: #37729a;
+
+}
+
+/*Footer Layout*/
+
+div#footer {
+
+	text-align:center;
+
+	background-color: #9f9dae;
+
+	padding-top:9px;
+
+	padding-bottom:9px;
+
+	color:#054f81;
+
+	font-size: 12px;
+
+	font-style: normal;
+
+	font-weight: lighter;	
+
+	background-image: url(footer_bg.gif);
+
+	background-repeat: no-repeat;
+
+	background-position: left bottom;
+
+}
+
+div#footer a {
+
+	color:#054f81;
+
+	font-size: 12px;
+
+	font-style: normal;
+
+	font-weight: lighter;	
+
+}
+

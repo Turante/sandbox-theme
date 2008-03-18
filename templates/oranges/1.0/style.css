@@ -1,0 +1,218 @@
+/*
+THEME NAME: Oranges
+THEME URI: http://o.rang.es/
+DESCRIPTION: A fun, simple, citrus-filled theme for sandbox v. 0.9.x.
+VERSION: 1.0
+AUTHOR: Chris V
+AUTHOR URI: http://o.rang.es/
+TEMPLATE: sandbox
+*/
+
+@import url('../sandbox-layouts/2c-l.css');
+
+body {
+	background: #f3f1e9;
+	font-family: Georgia,Times, serif;
+	margin: 0;
+}
+div#access div.skip-link{
+	position:absolute;
+	top:1em;
+	right:1em;
+}
+
+div#header {
+	background: #25221b;
+	/*border-bottom: 1px solid #77756d;*/
+	height: 134px;
+	text-align: left;
+	padding: 0;
+	margin: 0 0 3em 0;
+}
+
+div#menu {
+	display: none;
+}
+
+h1#blog-title {
+	margin:0;
+	width: 659px;
+	height: 134px;
+	font-size: 12px;
+	text-indent: -9000px !important;
+}
+
+h1#blog-title a {
+	display: block;
+	width: 659px;
+	height: 134px;
+	line-height: 134px;
+	padding: 0;
+	background: transparent url('images/logo.gif') no-repeat top left !important;
+}
+.post {
+	padding-bottom: 10px;
+}
+
+
+div#blog-description {
+	display: none;
+}
+
+a img {
+	border: 0;
+}
+
+a {
+	color: #cc6633;
+}
+a:hover {
+	color: #e26828;
+	text-decoration: none;
+}
+
+h2.entry-title {
+	clear: both;
+	margin-bottom: 10px;
+}
+
+h2.entry-title a {
+	color: #e26828;
+}
+
+div#container {
+	float: left;
+	margin: 0 0 0 4em;
+	width: 620px;
+	background: #f3f1e9 url('images/dash.gif') repeat-y scroll top right;
+}
+div#content {
+	margin: 0;
+	padding-right: 20px;
+}
+
+div.entry-content p {
+	line-height: 130%;
+}
+div.entry-date {
+	margin-bottom: 2px
+}
+
+div.entry-meta {
+	font-size: 12px;
+	font-style: italic;
+	background-color: #e8e5dc;
+	/*border: 1px solid #ccc8c0;*/
+	padding: 4px;
+}
+
+
+/* sidebar */
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	width: 180px;
+	padding-left: 10px;
+}
+
+div#secondary {
+	clear:none;
+}
+
+div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{
+	margin:0;
+	padding:0;
+}
+div.sidebar h3{
+	font-size:1.2em;
+}
+div.sidebar input#s{
+	width:7em;
+}
+div.sidebar li{
+	list-style:none;
+	margin:0 0 1em;
+}
+div.sidebar li form{
+	margin:0.2em 0 0;
+	padding:0;
+}
+div.sidebar ul ul{
+	margin:0 0 0 1em;
+}
+div.sidebar ul ul li{
+	list-style:none;
+	margin:0;
+}
+div.sidebar ul ul ul{
+	margin:0 0 0 0.5em;
+}
+div.sidebar ul ul ul li{
+	list-style:none;
+}
+/* footer */
+div#footer {
+	clear: both;
+	width: 100%;
+	background: transparent url('images/footer.gif') no-repeat center 10%;
+	height: 100px;
+	padding-top: 50px;
+	text-align: center;
+}
+
+/* comments */
+
+
+div.comments li.alt {
+	background-color: #e8e5dc;
+}
+div.comments li {
+	padding: 5px;
+}
+div.comment-meta {
+	font-size: 12px;
+	font-style: italic;
+	
+}
+
+form#commentform .form-label {
+	margin:1em 0 0;
+}
+form#commentform span.req-field{
+	background:#fff;
+	color:red;
+}
+form#commentform, form#commentform p {
+	padding:0;
+}
+input#author, input#email, input#url {
+	width:50%;
+}
+input#author, input#email, input#url, textarea#comment {
+	padding:0.2em;
+}
+
+textarea#comment {
+	height:13em;
+	margin:0 0 0.5em;
+	overflow:auto;
+	width:66%;
+}
+/* misc */
+.alignleft, div.nav-previous {
+	float: left;
+}
+.alignright, div.nav-next {
+	float: right;
+}
+
+div#nav-above,div#nav-below {
+	width:100%;
+	height:1em;
+}
+div#nav-above {
+	margin-bottom:1em;
+}
+div#nav-below {
+	margin-top:1em;
+}

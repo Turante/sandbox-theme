@@ -1,0 +1,17 @@
+#archives-page ul,
+.entry-content ul,
+#links-page ul		{	list-style-type:	square;	}
+.skip-link			{	display:		none;		}
+#comments-list li,
+#menu ul,
+#trackbacks-list li,
+.sidebar ul,
+ul#archives-page,
+ul#links-page		{	list-style-type:	none;		}
+ins				{	background-color:	#fbedda;
+					color:		#753;
+					text-decoration:	none;		}
+del				{	color:		#753;
+					background: url('bg.PNG');		}
+
+

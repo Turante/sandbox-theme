@@ -1,0 +1,450 @@
+/*
+THEME NAME: Lovely Green
+THEME URI: http://www.bincangbincang.com/download.htm
+DESCRIPTION: A two-column organic theme with soft rounded corners and colorful highlights
+VERSION: 1.0
+AUTHOR: Lidya
+AUTHOR URI: http://www.bincangbincang.com/
+TEMPLATE: sandbox
+*/
+
+/* Theme: Lovely green */
+
+/*main*/
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+	background: #79bc32;
+	margin: 0 0 20px;
+	padding: 0;
+	
+}
+
+#wrapper {	
+	background: url(img/bg.jpg) right repeat-y #79bc32;
+	text-align: left;
+	width: 100%;
+}
+
+
+p img {
+	max-width: 100%;
+	padding: 0;
+}
+
+/*main typology*/
+
+body {
+font-size: 62.5%;
+font-family: Verdana, Arial,Sans-Serif;
+color: #264A09;	
+}
+
+h1, h2, h3 {
+	
+	font-weight: bold;
+}
+h1 {
+	font-size: 3em;
+	
+}
+h2 {
+	font-size: 1.6em;
+	
+}
+h3 {
+	font-size: 1.3em;
+	
+}
+
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, .sidebar h3, #wp-calendar caption, cite {
+	text-decoration: none;
+}
+
+
+div.page-link {
+	font-weight:bold;
+}
+
+
+
+blockquote {
+	border: 1px solid #ddd;
+	margin: 15px 30px 0 10px;
+	padding: 10px;
+	text-indent: 2em;
+	font-size: 1.2em;
+	background: #99CC66;
+	}
+
+blockquote cite {
+	display: block;
+	margin: 5px 0 0;
+}
+a img {
+	border: none;
+}
+
+acronym, abbr, span.caps {
+	cursor: help;
+	font-size: 0.9em;
+	}
+
+p {
+text-indent: 2em;
+margin-top: 1.5em;
+}
+
+/*links */
+
+a {
+
+	text-decoration: none;
+}
+a:link, a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+border-bottom: 1px dashed #274A0A;	
+}
+
+a:active {
+color: #FC0A0A;
+}
+
+
+/*wp-calendar*/
+
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+}
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+}
+#wp-calendar td {
+	text-align: center;
+	padding: 3px 0;
+}
+
+#wp-calendar #prev a {
+	font-size: 9px;
+	padding-left: 10px;
+	text-align: left;
+}
+#wp-calendar a {
+	text-decoration: none;
+	display: block;
+}
+#wp-calendar caption {
+	font-size: 1.3em;
+	text-align: center;
+	width: 100%;
+}
+
+
+/*header*/
+
+div#header {
+	background: #79bc32 url(img/header.jpg) left bottom repeat-x;
+	height: 230px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: left;
+	padding-left: 10px;
+	
+}
+div#blog-description {
+	font-size: 1.5em;
+	color: #366312;	
+	}
+
+#header h1,#header h1 a {
+	color: #fff;
+	text-decoration: none;
+	
+}
+
+/*content*/
+div#container {
+	clear: left;
+	margin-top:20px;
+}
+div#content {
+	float: left;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0;
+	overflow: hidden;
+	padding: 0 0 20px 45px;
+	width: 450px;
+	
+}
+
+div.navigation {
+	display: block;
+	margin: 50px 0 10px 0;
+	text-align: center;
+}
+
+div#nav-above {
+	display: none;
+}
+
+
+div.entry-content ol li, div.sidebar ul, div.sidebar ul ol {
+	margin: 0;
+	padding: 0;
+}
+div.entry-content form, .center {
+	text-align: center;
+}
+
+
+
+div.entry-content {
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #333;
+}
+
+div.entry-date {
+padding: 0 10px 0 10px;
+font-size: 10px;
+}
+
+.entry-title:first-letter {
+	display: block;
+	float: left;
+	font-size: 2em;
+}
+
+div.entry-meta {
+	clear: both;
+	font-size: 90%;
+	line-height: 1.2em;
+	padding-top: 15px;
+	text-align: center;
+	background: url(img/divider.jpg) bottom center no-repeat;
+	padding-bottom: 4em;
+}
+
+div.comments ol li.alt {
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin: 0;
+	padding: 10px;
+}
+
+.entry-title {
+	text-align: left;
+	padding: 20px 10px 0 10px;	
+	background: url(img/title.gif) bottom right no-repeat;
+	}
+
+.entry-title h2 {
+
+}
+
+html>body div.entry-content ul {
+	list-style: none;
+	margin-left: 0;
+	padding: 0 0 0 10px;
+	text-indent: -10px;
+}
+html>body div.entry-content li {
+	margin: 7px 0 8px 10px;
+}
+
+div.entry-meta ul, div.entry-meta li {
+	display: inline;
+	list-style: none;
+}
+
+div.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	background: url(img/post.jpg) top no-repeat;
+	padding: 7px;
+	
+}
+
+/*comment*/
+
+div.comments ol .comment-author {
+	font-weight: bold;
+	font-size:110%;
+}
+div#trackbacks-list ol .comment-author {
+	font-weight: normal;
+	font-size:100%;
+}
+div#trackbacks-list ol .comment-author a{
+	font-weight:bold;
+}
+div.comments ol li, div.comments-list ol li.alt {
+	list-style: none;
+	margin: 0;
+	padding: 15px 10px 6px;
+}
+div.comments ol li.bypostauthor {
+	margin: 0;
+	padding: 15px 10px 6px;
+}
+div.comments ol cite, div.comments ol cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+}
+div.comments ol p {
+	line-height: 1.5em;
+	margin: 10px 5px 10px 0;
+	text-transform: none;
+}
+form#commentform p {
+	margin: 5px 0;
+}
+span.required {
+	color:#c30;
+}
+.comment-meta {
+	display: block;
+	font-weight: normal;
+	margin: 3px 0 0 0;
+}
+div.comments h3 {
+	margin: 40px auto 20px;
+	padding: 0;
+}
+form#commentform input {
+	margin: 5px 5px 1px 0;
+	padding: 2px;
+	width: 170px;
+}
+form#commentform textarea {
+	padding: 2px;
+	width: 98%;
+}
+form#commentform #submit {
+	float: right;
+	margin: 5px 0 0 0;
+}
+div.comments ol {
+	padding: 0;
+	text-align: justify;
+}
+.nocomments {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+/*sidebar*/
+
+div.sidebar {
+padding-bottom: 10px;
+}
+
+div.sidebar h3 {
+	font-family: verdana, arial, sans-serif;
+	font-size: 1.2em;
+	margin: 20px 0 0;
+	padding: 0;
+	}
+
+div.sidebar a {
+color: #c9f;
+}
+
+div.sidebar {
+	background: url(img/sidebarbg.jpg) top center repeat-y;
+	font-size: 1 em;
+	margin-top: 10px;
+	margin-left: 535px;
+	width: 200px;
+	text-align: center;
+}
+.widget {
+	width: 100%;
+	overflow: hidden;
+}
+
+div.sidebar ul {
+margin-left: 0;
+}
+
+.xoxo {
+margin-left: 0;
+padding-top: 10px;
+background: url(img/sidebarbgtop.jpg) top left no-repeat;
+}
+
+.xoxo ul{
+margin-top: 10px;
+}
+
+div.sidebar ul li {
+	list-style: none;
+	
+}
+div.sidebar ul p, div.sidebar ul select {
+	margin: 5px 0 8px;
+}
+div.sidebar ul ul, div.sidebar ul ol {
+	margin: 5px 0 0 8px;
+}
+
+ol li, div.sidebar ul ol li {
+	list-style: decimal outside;
+}
+div.sidebar ul ul li, div.sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+}
+form#searchform {
+	margin: 0 0 10px 0;
+	padding: 5px 3px;
+	text-align: center;
+}
+div.sidebar form#searchform #s {
+	width: 95px;
+	padding: 2px;
+}
+div.sidebar form#searchsubmit {
+	padding: 1px;
+}
+
+.alignright, .nav-next {
+	float: right;
+}
+.alignleft, .nav-previous {
+	float: left;
+}
+div#menu ul ul, div.skip-link, hr {
+	display: none;
+}
+#linkcats>li:before {
+	content: "";
+}
+
+/* footer */
+div#footer {
+	clear: both;
+	margin: 0 auto;
+	padding: 25px 0 0;
+	text-align: center;
+	width: 100%;
+	background: url(img/footer.jpg) bottom center no-repeat;
+	padding-bottom: 30px;
+}
+div#footer span.meta-sep { 
+	color: #777;
+}

@@ -1,0 +1,187 @@
+/*
+THEME NAME: Mom
+THEME URI: http://www.mom-blog.com/wp-content/themes/sandbox-mom/
+DESCRIPTION: A theme named Mom that lacks a description.
+VERSION: 1.0
+AUTHOR: Gina Badalaty
+AUTHOR URI: http://www.artbytech.com/
+TEMPLATE: sandbox
+*/
+
+/*
+LAYOUT: Two-Column (Right)
+*/
+
+/* body elements */
+body{
+	background-color:#412121;
+	margin-top:1em;
+	padding-top:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+/*layout elements*/
+div#wrapper{
+	width: 758px;
+	margin:0 auto;	
+	background: url("bg.gif") repeat;
+}
+div#access div.skip-link{
+	position:absolute;
+	top:1em;
+	right:1em;
+	color:#FFFFFF;
+}
+div#access {	
+	background-color:#e0b2c6;
+}
+div#header{
+	background-image:url("header1.jpg");
+	width:758px;
+	height:225px;
+}
+div#container {
+	float: left;
+	margin-top:10px;
+}
+div#content {
+	width:520px;
+	background-color:#fff;
+	margin-left:10px;
+}
+div.sidebar {
+	float:right;	
+	width:210px;
+	padding-left:10px;
+	padding-top:10px;
+}
+div#secondary	{
+	clear: right;
+	width:210px;
+}
+
+/* footer */
+div#footer{
+	text-align:center;
+	background-color:#a03139;
+	color:#d6d6d6;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	clear: both;
+	width:758px;
+	height:2em;
+	line-height:2em;
+	vertical-align:middle;
+}
+
+/* Top menu */
+div#menu{
+	font-size:0.9em;
+	padding:0 5px;
+	margin:0;
+	background:#B7E937;
+	color: #FFFFFF;
+	font-weight:bold;
+	height:2em;
+	line-height:2em;
+	vertical-align:middle;
+}
+
+div#menu li{
+	list-style:none;
+}
+div#menu  ul {
+	margin:0;
+	padding:0;
+}
+div#menu li{
+	list-style:none;
+}
+div#menu  ul {
+	margin:0;
+	padding:0;
+}
+li.page_item{
+	margin:0;
+	padding:0 5px;
+	width:100px;
+}
+div#menu li a, div#menu li a:link{
+	color:#a03139;
+}
+div#menu li a:hover, div#menu li a:visited{
+	color:#412121;
+}
+
+/*style elements*/
+
+div#content a, div#content a:link{
+	color:#a03139;
+}
+div#content a:hover, div#content a:visited{
+	color:#412121;
+}
+div.skip-link a{
+	color:#FFFFFF;
+}
+h1#blog-title {
+	color:#B7E937;
+	text-align:left;
+	font-family:"Times New Roman", Times, serif;
+	font-size:90px;
+	margin-left:10px;
+	margin-top:0;
+}
+h2, h3{
+	font-family:"Times New Roman", Times, serif;
+}
+div#blog-description{
+	color:#FFFFFF;
+	font-size:24px;
+	font-family:"Times New Roman", Times, serif;
+	text-align:left;
+	padding-left:10px;
+	position:absolute;
+	top:136px;
+}
+h1#blog-title a{	
+	text-decoration:none;
+	color:#B7E937;
+}
+input#s{
+	border:1px solid #412121;
+}
+input#searchsubmit{
+	background-color:#B7E937;
+	color:#412121;
+	border:1px solid #412121;
+}
+div.entry-meta{
+	margin-bottom:3em;
+}
+div#wrapper a{
+	text-decoration:none;
+}
+div#footer span{
+	color:#d6d6d6;
+}
+div#footer a{
+	color:#d6d6d6;
+}
+
+
+/*sidebar*/
+div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
+div.sidebar h3{font-size:1.2em;}
+div.sidebar input#s{width:7em;}
+div.sidebar li{list-style:none;margin:0 0 1em;}
+div.sidebar li form{margin:0.2em 0 0;padding:0;}
+div.sidebar ul ul{margin:0 ;}
+div.sidebar ul ul li{list-style:none;margin:0;}
+div.sidebar ul ul ul{margin:0 ;}
+div.sidebar ul ul ul li{list-style:none;}
+
+/*sidebar menu*/
+div.sidebar a, div.sidebar a:link,div.sidebar a:visited{color:#412121;}
+div.sidebar a:hover, div.sidebar a:visited{color:#a03139;}

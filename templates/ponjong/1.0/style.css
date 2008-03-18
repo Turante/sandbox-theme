@@ -1,0 +1,470 @@
+/*
+THEME NAME: Ponjong
+THEME URI: http://www.jauhari.net/themes/sandbox-ponjong/
+DESCRIPTION: This is my SandBox Ponjong Theme
+VERSION: 1.0
+AUTHOR: Nurudin Jauhari
+AUTHOR URI: http://www.jauhari.net/
+TEMPLATE: sandbox
+*/
+
+/*
+	Crafted on 20 July 2007
+	Last Edit: 29 July 2007 06.00  +7 GMT
+
+	This design is released under GPL: http://www.gnu.org/copyleft/gpl.html
+*/
+
+/* bases
+************************* */
+html
+{
+	height: 100%;
+	margin-bottom: 0.1em;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+}
+img
+{
+	border: 0;
+}
+p
+{
+	line-height: 1.6em;
+	margin: 0.7em 0;
+}
+dl
+{
+	margin: 1em 0;
+}
+dt
+{
+	font-weight: bold;
+}
+dd
+{
+	margin: 0.5em;
+	padding: 0;
+}
+img.right
+{
+	float: right;
+	margin: 10px 0 0 10px;
+}
+img.left
+{
+	float: left;
+	margin: 0 10px 0 0;
+}
+hr
+{
+	display: none;
+}
+body
+{
+	background: #222;
+	color: #ccc;
+	font: 72%/1.6em verdana, tahoma, arial, sans-serif; 
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+a
+{
+	text-decoration: none;
+}
+a:link, a:visited
+{
+	color: #666;
+}
+a:hover, a:active
+{
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: Arial, Verdana, Serif;
+}
+
+/* Etc
+******************** */
+br.clear {
+	clear: both;
+}
+
+#wrapper {
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+}
+div#container {
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+div#content {
+	margin: 0 410px 0 0;
+	text-align: left;
+}
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	width: 200px;
+	text-align: left;
+}
+div#primary {
+	margin: 0 0 0 -410px;
+}
+div#secondary {
+	margin: 0 0 0 -200px;
+}
+div#footer {
+	clear: left;
+	width: 100%
+}
+
+
+div#access div.skip-link{
+	position:absolute;
+	background: #333;
+	top:0;
+	padding: 0.3em 1em;
+	right:1em;
+	}
+div#access div.skip-link:hover{
+	background: #666;
+}
+div.skip-link a {
+	color: #efefef;
+}
+div.skip-link a:hover {
+	color: #fff;
+}
+
+
+/* header
+********** */
+div#header{
+	text-align:left;
+	margin-bottom:0;
+	padding: 2em;
+	background: #000;
+	}
+div#header h1{
+	font-size: 3em;
+}
+div#header h1 a:hover{
+	color: #fff;
+}
+
+/* menu
+********** */	
+div#menu{
+	font-size:1em;
+	height:2.3em;
+	background:#333;
+	padding: 0.7em;
+	margin-bottom: 2em;
+	position:relative;
+}
+div#menu ul a{
+	text-decoration:none;
+}
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 1.1em;
+}
+#menu ul li {
+	float: left;
+}
+#menu ul li a {
+	padding: 3px 10px;
+	display: block;
+	color: #F5FDF8;
+	border: 1px solid #ccc;
+	margin-right: 0.5em;
+	background: #666;
+}
+#menu ul li a:hover {
+	background: #333;
+	border: 1px solid #fff;
+	color: #fff;
+}
+#menu ul li.current_page_item a, #menu ul ul li.current_page_item a {
+	background: #333;
+	color: #fff;
+	font-weight: bold;
+}
+
+#menu ul ul{display:none;}
+#menu ul ul li{float:none;}
+#menu ul ul li a{margin:0;padding:0;}
+#menu ul li:hover ul{
+	display:block;
+	position:absolute;
+	}
+#menu ul li:hover ul li a{
+	border-top: 1px solid #ccc;
+	background:#666; 
+	color: #F5FDF8;
+	display:block;
+	padding: 3px 10px;
+	width:10em;
+}
+#menu ul li:hover ul li a:hover{
+	background: #333;
+	border-top: 1px solid #fff;
+	color: #fff;
+}
+
+/* post
+********** */
+#nav-above {
+	display: none;
+}
+h2.entry-title {
+	font-size: 1.9em;
+	clear:both;
+}
+h2.entry-title a:link, h2.entry-title a:visited {
+	color: #D4EE48;
+}
+h2.entry-title a:hover {
+	color: #B9D714;
+}
+.post {
+	border-bottom: 1px solid #B9D714;
+	margin-bottom: 20px;
+	margin-right: 1em;
+}
+blockquote {
+	padding-left: 1em;
+	margin-left: 2em;
+	border-left: 2px solid #FFD714;
+	color: #DFBA00;
+}
+.post ul, .post ol{
+	margin-left: 40px;
+}
+.entry-content a {
+	color: #efefef;
+	border-bottom: 1px solid #B9D714;
+}
+.entry-content a:hover {
+	color: #efefef;
+	border-bottom: 1px solid #D4EE48;
+}
+.entry-content img {
+	padding: 5px;
+	border: 1px solid #555;
+}
+.entry-meta {
+	border-top: 1px solid #B9D714;
+	padding: 0.5em 0;
+	color: #B9D714;
+}
+.entry-meta  a {
+	color: #fff;
+	text-decoration: underline;
+}
+.entry-meta  a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+div#nav-below{
+	width: 100%;
+	float: left;
+	margin-bottom: 1em;
+}
+.alignleft,div.nav-previous{float: left;}
+.alignright,div.nav-next{float: right;}
+
+ul#archives-page {
+	list-style: none;
+}
+ul#archives-page ul {
+	margin-left: 20px;
+}
+
+/* comment
+********** */
+#comments {
+}
+#comments a {
+	color: #fff;
+}
+#comments h3 {
+	font-size: 1.2em;
+	border-bottom: 1px solid #666;
+}
+#comments  ol{
+	list-style: none;
+	margin: 1em 0;
+}
+#comments  ol li{
+	background: #666;
+	padding: 5px;
+}
+#comments  ol li.alt{
+	background: #333;
+}
+#comments ol .comment-author {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+#comments #author , #comments #email, #comments #url{
+	border: 2px solid #ccc;
+	padding: 0.4em;
+	margin: 0.5em 0;
+	color: #ccc;
+	background: #333;
+}
+#comments #author:focus , #comments #email:focus, #comments #url:focus,#comments #author:hover , #comments #email:hover, #comments #url:hover {
+	border: 2px solid #fff;
+	color: #fff;
+}
+textarea#comment {
+	width: 95%;
+	border: 2px solid #ccc;
+	padding: 0.4em;
+	margin: 0.5em 0;
+	color: #ccc;
+	background: #333;
+}
+textarea#comment:focus,textarea#comment:hover {
+	border: 2px solid #fff;
+	color: #fff;
+}
+.form-submit input {
+	background: #666;
+	border: 2px solid #333;
+	padding: 0.2em 0.5em;
+	border-top: 2px solid #999;
+	border-left: 2px solid #999;
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 2em;
+}
+.form-submit input:focus, .form-submit input:hover {
+	background: #333;
+	border: 2px solid #000;
+	padding: 0.2em 0.5em;
+	border-top: 2px solid #666;
+	border-left: 2px solid #666;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* sidebar
+********** */
+.sidebar h3 {
+	background: #FFD714;
+	padding: 2px 5px;
+	font-size:1.2em;
+	color: #000;
+}
+div.sidebar input#s{width:92%;
+	border: 2px solid #ccc;
+	background: #333;
+	padding: 0.4em;
+	margin: 0.5em 0;
+}
+div.sidebar input#s:hover, div.sidebar input#s:focus {
+	border: 2px solid #fff;
+	background: #666;
+}
+input#searchsubmit {
+	background: #666;
+	border: 2px solid #333;
+	padding: 0.2em 0.5em;
+	border-top: 2px solid #999;
+	border-left: 2px solid #999;
+	color: #fff;
+	font-weight: bold;
+}
+input#searchsubmit:focus,input#searchsubmit:hover  {
+	background: #333;
+	border: 2px solid #000;
+	padding: 0.2em 0.5em;
+	border-top: 2px solid #666;
+	border-left: 2px solid #666;
+	color: #fff;
+	font-weight: bold;
+}
+div.sidebar li{
+	list-style:none;
+	margin:0 0 1em;
+	}
+div.sidebar li form {
+	margin:0.2em 0 0;
+	padding:0;}
+div.sidebar ul ul{
+	margin:0 0 0 1em;
+	}
+div.sidebar ul ul li{
+	list-style:square;
+	margin:0;}
+div.sidebar ul ul ul{
+	margin:0 0 0 0.5em;
+	}
+div.sidebar ul ul ul li{
+	list-style:square;
+}
+
+.sidebar a:link, .sidebar a:visited {
+	color: #C7A500;
+}
+.sidebar a:hover {
+	color: #DFBA00;
+	text-decoration: underline;
+}
+
+ul.xoxo li {
+	margin-left: 10px;
+}
+ul.xoxo li  ul li{
+	margin-left: 5px;
+	list-style: square;
+}
+
+
+
+/* footer
+********** */
+div#footer{
+	border-top: 2px solid #666;
+	text-align:center;
+	background: #333;
+	padding: 2em 0;
+}
+
+/* etc
+********** */
+form#commentform .form-label{
+margin:1em 0 0;}
+form#commentform span.req-field{
+background:#fff;color:red;
+}
+form#commentform,form#commentform p{
+padding:0;
+}
+input#author,input#email,input#url{
+width:50%;
+}
+input#author,input#email,input#url,textarea#comment{
+padding:0.2em;
+}
+div.comments ol li{
+margin:0 0 3.5em;
+}
+textarea#comment{
+height:13em;margin:0 0 0.5em;overflow:auto;width:66%;
+}
+

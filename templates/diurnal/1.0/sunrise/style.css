@@ -1,0 +1,45 @@
+/* Sunrise */
+
+body.h05, body.h06, body.h07, body.h08 {background:#fff url(header.png) top left repeat-x}
+
+body.h05 .meta-sep, body.h06 .meta-sep, body.h07 .meta-sep, body.h08 .meta-sep {
+background: url(dot.gif) center left no-repeat;}
+
+/* links */
+body.h05 a, body.h06 a, body.h07 a, body.h08 a {
+color:#c33}
+
+body.h05 a:hover, body.h06 a:hover, body.h07 a:hover, body.h08 a:hover {
+color:#f66}
+
+
+/* blockquote */
+body.h05 blockquote, body.h06 blockquote, body.h07 blockquote, body.h08 blockquote, 
+body.h05 blockquote p, body.h06 blockquote p, body.h07 blockquote p, body.h08 blockquote p{
+background:#fdd;
+}
+
+
+
+/* h3 styling */
+body.h05 h3, body.h06 h3, body.h07 h3, body.h08 h3,
+body.h05 #wp-calendar caption, body.h06 #wp-calendar caption, body.h07 #wp-calendar caption, body.h08 #wp-calendar caption {
+color:#f66;
+background: url(dot.gif) center left no-repeat;}
+
+body.h05 .hentry h3, body.h06 .hentry h3, body.h07 .hentry h3, body.h08 .hentry h3{
+background:#fbfbfb;
+color:#444}
+
+body.h05 h3.entry-title, body.h06 h3.entry-title, body.h07 h3.entry-title, body.h08 h3.entry-title{
+background:#f0f0f0 url(greybk.png) top left repeat-x;}
+
+
+/* menu tabs */
+body.h05 #menu ul li a, body.h06 #menu ul li a, body.h07 #menu ul li a, body.h08 #menu ul li a {
+background:url(tab.gif) top right no-repeat;
+}
+
+body.h05 #menu ul li a:hover, body.h06 #menu ul li a:hover, body.h07 #menu ul li a:hover, body.h08 #menu ul li a:hover {
+background:none;
+}

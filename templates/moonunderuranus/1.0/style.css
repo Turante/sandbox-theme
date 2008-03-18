@@ -1,0 +1,737 @@
+/*
+THEME NAME: Moon Under Uranus
+THEME URI: http://internetducttape.com/tools/wordpress/themes/moon-under-uranus-sandbox/
+DESCRIPTION: Fluid width dark blue text on yellow background with blue and silver highlights. 1 column with two bottom bars. Follows the 100E2R (100% Easy to Read) standard.
+VERSION: 1.0 (2007-07-28)
+AUTHOR: engtech
+AUTHOR URI: http://InternetDuctTape.com/
+TEMPLATE: sandbox
+*/
+
+@media print {
+#wrapper {
+width:100%;
+}
+
+#wrapper * {
+width:auto;
+}
+
+#footer,#globalnav,#menu,.sidebar,.navigation,.comments,#respond,.entry-meta {
+display:none !important;
+margin:0;
+padding:0;
+}
+
+.container {
+margin:0;
+padding:0;
+}
+
+#blog-title,#blog-description {
+color:#000;
+float:none !important;
+}
+
+#header {
+border-bottom:5px solid #000;
+}
+}
+
+/* LAYOUT */
+div#container {
+  margin: 0 auto;
+  width: 100%;
+}
+div#content {
+  margin: 0 auto;
+  max-width: 800px;
+  _width: 800px;
+}
+div.sidebar {
+  clear:both;
+  overflow: hidden;
+  width: 100%;
+padding: 1em 0;
+}
+
+div.sidebar ul li { width: 30%; float: left; } 
+div.sidebar ul li ul li { float:none; width: 100%;}
+
+div#footer {
+	clear: both;
+	width: 100%;
+}
+
+div#access { 
+clear:both;
+margin-top: 0.5em;
+ }
+
+div#footer { 
+padding: 0.5em 0 0.2em 0;
+ }
+
+.entry-title, .page-title, .entry-content, .entry-date, .entry-meta { 
+clear: both;
+ }
+
+.skip-link { 
+display:none;
+ }
+
+
+/* RESET */
+
+html,body,form,fieldset {
+font:100%/120% Verdana,"Bitstream Vera Sans",sans-serif;
+line-height:1.4;
+margin:0;
+padding:0;
+}
+
+html {
+font-size:100.01%;
+}
+
+body {
+color:black;
+font-size:1em;
+font:95%/120% Verdana,"Bitstream Vera Sans",sans-serif;
+margin:5px 2px;
+overflow:auto;
+text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6,p,pre,blockquote,ul,ol,dl,address {
+margin:0;
+padding:0;
+}
+
+li,dd,blockquote {
+margin-left:1em;
+}
+
+form label {
+cursor:pointer;
+}
+
+fieldset {
+border:none;
+}
+
+input,select,textarea {
+font-size:0.8em;
+font-family:inherit;
+}
+
+/* COLOURS */
+
+/* http://www.colourlovers.com/palette/92431/99 */
+
+body { 
+background-color: #4D6B83;
+ }
+
+div#access, div.navigation, div.entry-meta { 
+background-color: #1A3346;
+color:#F1E345;
+ }
+
+div.navigation, div.entry-meta { 
+background: #1A3346 url('nav-grad.png') repeat-y right top;
+ }
+
+div#access { 
+border-top: 3px solid #4D6B83;
+border-bottom: 20px solid #274358;
+width: 100%; 
+ }
+
+div.entry-date { 
+color: #F1E345;
+ }
+
+div#header, .entry-title, .page-title { 
+background-color: #1A3346;
+background: #1A3346 url('header-grad-rev.png') repeat-y left top;
+color:#F1E345;
+}
+
+div#header a { 
+display:block;
+ }
+
+.entry-title a {
+display: block;
+width: 70%;
+  }
+
+.page-title, .entry-title, div.entry-meta, div.navigation { 
+border-top: 3px solid #274358;
+border-bottom: 3px solid #4D6B83;
+}
+
+.page-title, .entry-title { 
+border-left: 3px solid #274358;
+ }
+
+div#access a { 
+border-bottom: 3px solid #274358;
+}
+
+div#access a:hover { 
+border-bottom: 3px solid #4D6B83;
+}
+
+div#container { 
+background: #4D6B83 url('top-margin.png') repeat-x left top;
+border-bottom: 3px solid #274358;
+ }
+
+div#content { 
+background-color: #F1E345;
+border-bottom: 20px solid #4D6B83;
+color: #274358;
+ }
+
+div.sidebar#primary { 
+background-color: #F0E785;
+border-top: 11px solid #F1E345;
+border-bottom: 11px solid #F1E345;
+color: #274358;
+ }
+
+div#footer { 
+border-top: 3px solid #1A3346;
+border-bottom: 3px solid #1A3346;
+background-color: #274358;
+color: #FFB148;
+ }
+
+div.sidebar#secondary { 
+border-top: 3px solid #274358;
+background-color: #274358;
+background: #274358 url('bottom-margin.png') repeat-x left top;
+color: #FFB148;
+ }
+
+div#header a, div#header a:visited { 
+color:#FFFFFF; }
+
+div#header a:hover { 
+color:#FFB148;
+ }
+
+
+div#access a, div#access a:visited, div.navigation a, div.navigation a:visited, div.entry-meta a, div.entry-meta a:visited { 
+color: #FFB148;
+ }
+
+div#access .current_page_item a{ 
+  color: #FFFFFF;
+ }
+
+div#access a:hover, div.navigation a:hover, div.entry-meta a:hover { 
+  color: #FFFFFF;
+}
+
+a {
+color: #2A52F8;
+  }
+
+div.entry-content a {  
+color: #2A52F8;
+font-weight: bold;
+}
+
+a:visited, div.entry-content a:visited {  
+color: #1F3DB8;
+}
+
+div.entry-content a:hover {  
+background: #fff url('edges-grad.png') repeat-y center top;
+color: #007BFF;
+}
+
+.page-title, .entry-title, .entry-title a {  
+color: #FFFFFF;
+padding-left: 15px;
+
+}
+
+.entry-title a:visited {  
+color: #FFFFFF;
+}
+
+.entry-title a:hover {  
+color: #FFB148;
+}
+
+
+div.sidebar#primary a, div.sidebar#primary a:visited { 
+color: #2A52F8;
+}
+
+div.sidebar#primary a:hover { 
+color: #FFB148;
+ }
+
+div.sidebar#secondary a, div#footer a, div.sidebar#secondary a:visited, div#footer a:visited { 
+color:#F1E345;
+}
+
+div.sidebar#secondary a:hover, div#footer a:hover { 
+color:#FFFFFF;
+}
+
+/* ELEMENTS */
+
+abbr,acronym {
+border:0;
+}
+
+.entry-date abbr,acronym {
+font-weight:bold;
+float:right;
+position: relative;
+top: -25px;
+padding-right: 0.1em;
+}
+
+.entry-content abbr,acronym {
+border-bottom:1px dotted #00f;
+cursor:help;
+}
+
+blockquote {
+background: #fff url('edges-grad-light.png') repeat-y center top;
+border-top: 1px solid #4D6B83;
+border-left: 1px solid #4D6B83;
+border-bottom: 1px solid #274358;
+color: #0d0d0d;
+padding:1px 5px;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+code,pre {
+background: #fff url('edges-grad.png') repeat-y center top;
+border-top: 1px solid #4D6B83;
+border-left: 1px solid #4D6B83;
+border-bottom: 1px solid #274358;
+border-right: 1px solid #274358;
+color: #0d0d0d;
+margin:0.5em 1em;
+overflow:auto;
+padding:2px 10px;
+}
+
+
+code a,pre a {
+font-weight:bolder;
+padding:2px;
+}
+
+dt {
+margin:1em;
+}
+
+dd {
+margin:1em 2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-family:Georgia, Verdana, serif;
+clear:both;
+}
+
+a { 
+text-decoration:none;
+ }
+
+/* FONTS */
+
+.entry-title, .sidebar a, .entry-meta a, .entry-date { 
+font-family:Georgia, Verdana, serif;
+font-variant: small-caps;
+ }
+
+a.more-link, .navigation a, #access a { 
+font-family:Georgia, Verdana, serif;
+font-variant: small-caps;
+letter-spacing: 0.3em;
+ }
+
+a.more-link:before { 
+content:"You Should ";
+ }
+
+code,pre { 
+font-family: "Bitstream Vera Sans Mono", "Lucida Console",monospaced;
+ }
+
+/* PADDING */
+
+#header { 
+border-top: 6px solid #4D6B83;
+ }
+
+#blog-title { 
+margin: 0 0.5em;
+padding: 0.8em 0 0.3em 0;
+ }
+
+#blog-description { 
+margin: 0 0.5em;
+padding: 0.3em 5em;
+ }
+
+
+div#access a { 
+padding: 0.2em 0.5em;
+ }
+
+div.entry-meta { 
+margin: 1em 0;
+ }
+
+/* ENTRY CONTENT */
+
+div.entry-content { 
+padding-left:0.5em;
+ }
+
+.entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6 {
+margin:1em 0 0.5em;
+}
+
+.entry-content h1 { 
+line-height: 0.9em;
+ }
+
+.entry-content h2 {
+font-size:1.3em;
+line-height:1.15em;
+margin:1.5em 0 0.4em;
+}
+
+.entry-content h3 {
+font-size:1.1em;
+line-height:1.1em;
+margin:1.5em 0 0.4em;
+}
+
+.entry-content h4,.entry-content h5,.entry-content h6 {
+font-size:1em;
+margin:1.5em 0 0.3em;
+}
+
+
+h4,h5,h6 {
+border:0;
+}
+
+hr {
+color:#369;
+background-color:#369;
+height:1px;
+clear:both;
+}
+
+p {
+margin:0;
+padding:0.6em 0.4em;
+}
+
+.entry-title,.page-title {
+line-height:1.3em;
+padding-top:7px;
+}
+
+div#content { 
+border-top: 3px solid #F1E345;
+ }
+
+div.post .entry-title { 
+margin-top: 20px;
+ }
+
+.entry-content li {
+margin:0.3em 0;
+}
+
+.entry-content ul,.entry-content ol {
+margin-left:3em;
+}
+
+.entry-content ul li {
+list-style:square;
+}
+
+.entry-content ul li ul {
+margin-bottom:0.3em;
+}
+
+.entry-content ul li ul li {
+list-style:circle;
+}
+
+/* ENTRY META */
+
+.entry-meta { 
+  text-align: right;
+  font-size:0.8em;
+  padding-right: 0.1em;
+} 
+
+
+body.single .entry-meta a {
+font-size:1.1em;
+}
+
+.entry-meta,.entry-category a,.entry-author a {
+font-weight:normal;
+letter-spacing:0;
+}
+
+div.archive-meta {
+margin:0 10px;
+}
+
+/* MENU */
+
+div#menu ul, div#menu li { 
+display: inline;
+ }
+
+#menu ul li ul {
+display:none;
+}
+
+
+/* SIDEBAR */
+
+.sidebar ul, .sidebar li { 
+list-style: none;
+ }
+
+
+/* NAVIGATION */
+
+.navigation a { 
+  display: block;
+  padding:0.1em 0.3em;
+}
+
+.navigation a:hover { 
+background: #1A3346 url('header-grad-rev.png') repeat-y left top;
+ }
+
+.nav-next { 
+text-align:right;
+ }
+
+/* COMMENTS */
+
+#comments h3 { 
+border-bottom: 2px solid #274358;
+clear: both;
+padding: 2em 0 0 1em;
+ }
+
+#comments div ol li { 
+  border-bottom: 2px solid #4D6B83;
+  clear: both;
+  list-style: none;
+ }
+
+
+#comments li >* { 
+float: right;
+width: 65%;
+ }
+
+#comments li div.comment-author, #comments li div.comment-meta, #comments li div.comment-meta a { 
+clear:left;
+float:left;
+font-family:Georgia, Verdana, serif;
+width: 30%;
+ }
+
+#comments #comments-list li div.comment-author { 
+  font-size: 1.3em;
+ }
+
+#comments li div.comment-meta a { 
+  font-size: 0.8em;
+  font-variant: small-caps;
+}
+
+#comments #trackbacks-list li div.comment-author a { 
+  font-variant: small-caps;
+ }
+
+#comments li div.comment-author { 
+  padding-top: 1em;
+}
+
+div.comment-meta span.meta-sep { 
+display:none;
+ }
+
+/* SPECIFIC INPUTS */
+
+input { 
+background: #fff url('text-area.jpg') no-repeat left top;
+border-top: 1px solid #4D6B83;
+border-left: 1px solid #4D6B83;
+border-bottom: 1px solid #274358;
+border-right: 1px solid #274358;
+ }
+
+
+
+textarea, input#s  { 
+background: #fff url('text-area.jpg') no-repeat left top;
+border-top: 1px solid #274358;
+border-left: 1px solid #274358;
+border-bottom: 1px solid #4D6B83;
+border-right: 1px solid #4D6B83;
+ }
+
+input:hover, input:active, textarea:hover, textarea:active, input#s:hover, input#s:active { 
+background: #fff url('text-area-light.jpg') no-repeat left top;
+}
+
+
+input#s { 
+width: 230px;
+background-position: -50px -80px;
+ }
+
+form#commentform { 
+  margin: 0 1em 2em 1em;
+  padding-bottom: 2em;
+ }
+
+textarea#comment { 
+padding: 0.2em;
+width: 90%;
+ }
+
+
+.home .category-asides .entry-title,.home .category-asides .entry-date,.home .category-asides .entry-meta {
+display:none;
+}
+
+.home .category-asides .entry-content {
+border:0;
+padding: 0.5em 0.5em;
+background:none;
+width:90%;
+}
+
+.archive .category-asides .entry-title {
+border:0;
+background:none;
+font-size:1em;
+}
+
+.archive .category-asides .entry-title a {
+color: #2A52F8;
+}
+
+.archive .category-asides .entry-title a:hover {
+background:#FFFFFF url(edges-grad.png) repeat-y scroll center top;
+color:#007BFF;
+}
+
+
+.page-link {
+border-top: 1px solid #4D6B83;
+}
+
+
+.archive .category-asides .entry-date {
+display:none;
+}
+
+.archive .category-asides .entry-content,.archive .category-asides .entry-meta {
+display:none;
+}
+
+
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 { 
+padding: 0.5em 0;
+ }
+
+.sidebar ul li ul li:before { 
+content:"\00BB \0020";
+ }
+
+.sidebar li.current-cat {
+background-color: #F1E345;
+}
+
+.sidebar li.current_page_item {
+background-color: #F1E345;
+}
+
+li#search { 
+background-color: #1A3346;
+width: 290px;
+z-index: 100;
+position: absolute;
+top: 50px;
+right: 20px;
+ }
+
+li#search h3 { 
+display:none;
+ }
+
+body.single div.navigation .meta-nav {
+display:none;
+}
+
+body.single .nav-next a:after {
+content:"\00BB \0020";
+}
+
+body.single .nav-previous a:before {
+content:"\00AB \0020";
+}
+
+#theme-link a:before {
+content:"Moon Under Uranus + ";
+}
+
+div#footer { 
+  text-align:center;
+ }
+
+a img {
+border:0;
+}
+
+.alignleft,#archives-by-category {
+font-size:1em;
+float:left;
+}
+
+.alignright,#archives-by-month {
+font-size:1em;
+float:right;
+font-weight:bold;
+}
+
+.center {
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+.entry-content img {
+max-width: 770px;
+overflow:auto;
+}

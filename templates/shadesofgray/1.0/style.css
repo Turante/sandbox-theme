@@ -1,0 +1,564 @@
+/*
+THEME NAME: Shades of Gray
+THEME URI: http://lesliefranke.com/
+DESCRIPTION: Shades of Gray is a CSS style theme designed for use with the Sandbox
+VERSION: 1.0
+AUTHOR: Leslie Franke
+AUTHOR URI: http://lesliefranke.com/
+TEMPLATE: sandbox
+*/
+
+/* Basic Styles
+================================================*/
+body {
+	background: #fff;
+	color: #333;
+	font: 76%/1.5em  Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+a, a:link, a:visited  {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover  {
+	color: #f60;
+	text-decoration: underline;
+}
+
+a img, img.wp-smiley {border: 0;}
+
+h1 a, h2 a, h3 a {font-family: Georgia, "Times New Roman", Times, serif;}
+
+h1 {font-size: 1.6em;}
+
+h2 {font-size: 1.5em;}
+
+h3 {font-size: 1.4em;}
+
+h4 {font-size: 1.3em;}
+
+h5 {font-size: 1.2em;}
+
+h6, h7 {font-size: 1.1em;}
+
+li, label, p, ol, table, ul  {font-size: 1em;}
+
+h1, h2, h3, p {margin: .5em 0;}
+
+abbr, acronym {
+	border-bottom: 1px dotted #ccc;
+	cursor: help;
+}
+
+blockquote {
+	background: url(images/quoteup.png) no-repeat;
+	padding-left: 32px;
+}
+
+blockquote blockquote{
+	background: none;
+	border-left: 1px solid #ccc;
+	padding-left: 8px;
+}
+
+cite {}
+
+code {
+	border: 1px solid #ccc;
+	background: #efefef;
+	padding: 0 2px;
+	font-size: 1.1em;
+}
+
+del {color: #ff999c;}
+
+dl {
+	margin: 0;
+	padding: 0;
+}
+
+dd {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+dt {
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	border: 0;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+ins {
+	border-bottom: 1px dotted #333;
+	text-decoration: none;
+}
+
+ins:after {/*Will not appear in versions of IE*/
+	content: " (Updated)";
+}
+
+label {/* The CSS standard dictates "pointer" as the value for a "pointer that indicates a link". Unfortunately, IE 5 and IE 5.5 for Windows don't understand this value, using "hand" to mean the same thing. By placing pointer first misbehaving Microsoft browsers ignore it and use the hand value, while better behaved browsers take pointer and ignore hand.*/
+	cursor: pointer;
+	display: inline;
+}
+
+pre {
+	border: 1px solid #ccc;
+	background: #efefef;
+	font-size: 1.1em;
+	padding: 8px;
+}
+
+table {}
+
+td, th {
+	padding: .2em;
+	text-align: left;
+	vertical-align: top;
+}
+
+tfoot td {
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #333;
+	font-weight: bold;
+}
+
+/*==============================================*/
+
+/* Basic Layout Styles
+================================================*/
+/*--- Wrapper ---*/
+#wrapper {
+	border-top: 3px solid #000;
+	margin: 32px 8px 16px 8px;
+	min-width: 700px;
+	max-width: 1000px;
+	position: relative;
+	width: expression(document.body.clientWidth > 1000? "980px": "auto" );  /*IE Max Width*/
+	text-align: left;
+}
+
+/*--- Page Header ---*/
+#header {
+	height: 3em;
+	overflow: hidden;
+	padding: 0 .5em;
+}
+
+#blog-title {
+	float: left;
+	margin: 5px 0 8px 0;
+	padding-bottom: 4px;
+	width: 49%;
+}
+
+#blog-title a {color: #000;}
+
+#blog-title a:hover {color: #f60;}
+
+#blog-description {
+	float: right;
+	padding-top: 6px;
+	text-align: right;
+	width: 49%;
+}
+
+#access {
+	background: url(images/mast.jpg) no-repeat;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+	clear: both;
+	float: left;
+	padding-top: 180px;
+	width: 100%;
+}
+
+#menu {
+	border: 1px solid #000;
+	border-width: 1px 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#menu ul {
+	background: #c00;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+#menu a:link, #menu a:visited {
+	border-right: 1px solid #42432d;
+	color: #000;
+	font: bold 1em/1em Arial, Helvetica, sans-serif;
+	float: left;
+	padding: 12px 8px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: auto;
+}
+
+#menu a:hover {
+	background: #ff9513;
+	color: #fff;
+}
+
+#menu ul li.page_item ul li {display: none;}
+
+/*--- Page Content ---*/
+
+#container {
+	float: left;
+	margin: 0 0 0 -240px;
+	overflow: hidden;
+	width: 100%;
+}
+
+#content {
+	margin: 0 0 0 240px;
+	padding: 8px;
+}
+
+#primary {
+	float: right;
+	overflow: hidden;
+	width: 240px;
+}
+
+#content a:hover  {color: #f60;}
+
+#primary ul li {list-style: none;}
+
+#primary ul li ul li {list-style: url(images/starbw.png);}
+
+#primary ul li ul li:hover {list-style: url(images/star.png);}
+
+.sidebar {}
+
+.sidebar a {color: #777;}
+
+.sidebar a:hover {color: #f60;}
+
+#secondary {clear: both;}
+
+#secondary ul {
+	margin: 0;
+	padding: 0;
+}
+
+#secondary li {
+	display: inline;
+	padding: 0 8px 0 0;
+	margin: 0;
+}
+
+/*--- Page Footer ---*/
+#footer {
+	font-size: .8em;
+	margin-top: 8px;
+	text-align: right;
+}
+
+#generator-link {}
+
+#theme-link {}
+
+/*--- Skip ---*/
+.skip-link {
+	background: url(images/favicon.png) no-repeat;
+	left: 0;
+	padding: 0 0 0 20px;
+	position: absolute;
+	top: -28px;
+}
+
+/*--- Search ---*/
+#search {
+	position: absolute;
+	right: 0px;
+	top: -30px;
+}
+
+#search h3 {display: none;}
+
+#s:focus {background: #ffeece;}
+
+.search .post {border-top: 0;}
+
+/*--- Other Styles ---*/
+#categories, #pages, #archives, #recent-posts, #recent-comments, #primary #rss-links, #primary #meta {
+	border-bottom: 1px solid #666;
+	padding: 0px 0 8px 0;
+}
+
+#categories h3, #pages h3, #archives h3, #recent-posts h3, #recent-comments h3, #primary #rss-links h3, #primary #meta h3 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 4px;
+}
+
+#rss-links, #meta {font-size: .95em; padding-bottom: 8px;}
+
+.linkcat h3 {
+	border-bottom: 1px solid #ccc; 
+	border-top: 2px solid #333;
+	font-size: 1.2em;
+	padding: 4px 0;	
+}
+
+.linkcat ul li a {
+	background: url(images/arrow_rightbw.png) no-repeat;
+	padding-left: 20px;
+}
+
+.linkcat ul li a:hover {
+	background: url(images/arrow_right.png) no-repeat;
+	padding-left: 20px;
+}
+
+#rss-links h3, #meta h3 {
+	border-bottom: 1px solid #ccc; 
+	border-top: 2px solid #ccc;
+	font-size: 1.2em;
+	padding: 4px 0;	
+}
+
+#rss-links ul li a {
+	background: url(images/feed-icon-14x14bw.png) no-repeat;
+	padding-left: 20px;
+}
+
+#rss-links ul li a:hover {
+	background: url(images/feed-icon-14x14.png) no-repeat;
+	padding-left: 20px;
+}
+
+#rss-links ul, #rss-links li, #rss-links a, #meta ul, #meta li, #meta a {
+	display: inline;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+#meta ul li a {
+	background: url(images/icon_padlockbw.png) no-repeat;
+	padding-left: 20px;
+}
+
+#meta ul li a:hover {
+	background: url(images/icon_padlock.png) no-repeat;
+	padding-left: 20px;
+}
+
+.home #nav-above {display: none;}
+
+.home .p1 {border-top: 0px;}
+
+.nav-previous, .nav-next {
+	display: inline;
+	margin-right: 16px;
+}
+
+.meta-sep {}
+
+img.alignleft {
+  float: left;
+  margin: .5em 1em .5em 0;
+}
+
+img.alignright {
+  float: right;
+  margin: .5em 0 .5em 1em;
+}
+
+img.center {
+	display: block;
+	margin: .5em auto;
+	text-align: center;
+}
+/*==============================================*/
+
+
+/* Posts
+================================================*/
+.post {
+	border-top: 1px solid #000;
+	margin-top: 5px;
+	padding: 10px 0;
+}
+
+.entry-title a {color: #000;}
+
+.entry-date {
+	background: url(images/datebw.png) no-repeat;
+	font-size: .9em;
+	padding-left: 20px;
+}
+
+.entry-content {}
+
+.entry-meta {
+	color: #666;
+	font-size: .9em;
+}
+
+.entry-meta a {color: #666;}
+
+/*==============================================*/
+
+/* Comments and Trackbacks
+================================================*/
+#comments {
+	border-top: 1px solid #000;
+	margin: 8px 0 0 0;
+}
+
+#trackbacks-list {border-top: 1px solid #333;}
+
+.comment, .trackback, .pingback {
+	border-top: 1px solid #ccc;
+	padding-top: 8px;
+}
+
+.comment-author, .comment-meta {display: inline;}
+
+.comment-meta {
+	margin-left: 100px;
+	text-align: right;
+}
+
+.comment-meta a {color: #666;}
+
+.comment p {margin: 12px 0;}
+
+#respond {
+	background: #efefef;
+	margin: 8px 0;
+	padding: 8px;
+}
+
+.bypostauthor {
+	background: #fffff0;
+	border: 3px solid #ffd700;
+	padding: .5em;
+}
+
+.required {color: #ff7f50;}
+
+#formcontainer {}
+
+.form-input input:focus, .form-textarea input:focus {background: #ffdab9;}
+
+.form-label label {font-weight: bold;}
+
+.important {color: #c00;}
+
+.caps {text-transform: uppercase;}
+
+.unapproved {
+	color: #c00;
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 8px 0 0 0;
+}
+
+/*==============================================*/
+
+/* Page
+================================================*/
+
+.page h2 {
+	margin-top: 12px;
+}
+
+/*==============================================*/
+
+/* Calendar Widget
+================================================*/
+
+#calendar_wrap {
+	border: 1px solid #333;
+	margin: 4px;
+	text-align: center;
+}
+
+#wp-calendar {
+	padding: 0;
+	width: 99%;
+}
+
+#wp-calendar caption {
+	font-weight: bold;
+}
+
+#wp-calendar thead tr th {
+	background-color: #efefef;
+	text-align: center;
+}
+
+#wp-calendar tbody tr td a {
+	font-weight: bold;
+	color: #f60; 
+}
+
+/*==============================================*/
+
+/* Asides
+================================================*/
+
+.home .category-asides {
+	background: url(images/quickly.png) no-repeat top left;
+	padding-left: 25px;
+	padding-top: 25px;
+}
+
+.home .category-asides .entry-date, .home .category-asides .entry-meta {
+	display: none;
+}
+
+/*==============================================*/
+
+/* Printing
+================================================*/
+@media print {
+    #footer, #primary, #secondary, .skip-link, #access, #respond, .navigation, #navigation-below, .edit-link {display: none;}
+	 #wrapper {border-top: 0;}
+	 #header {border-bottom: 3px solid #000;}
+	 #blog-title {
+		float: none;
+		margin: 0;
+		padding-bottom: 0;
+		}
+	#blog-description {display: none}
+	#container {
+		width: 99%;
+		margin: 0;
+		float: left;
+		overflow: visible;
+	}
+	#content {
+		margin: 0;
+	}
+	#primary {
+		width: 0%;
+		float: right;
+	}
+}
+/*==============================================*/

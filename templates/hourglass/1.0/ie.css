@@ -1,0 +1,26 @@
+
+
+/*Some tweaks for IE up to version 6*/
+
+* html #container{
+width:400px;
+margin-left:10px;
+margin-right:5px;
+}
+
+* html .sidebar h2{
+height:50px;
+}
+* html h2.page-title{
+font-size:1.4em;
+padding-right: 10px;
+}
+
+* html #primary{
+margin-left:8px;
+width:145px;
+}
+
+* html #secondary{
+margin-right:15px;
+}

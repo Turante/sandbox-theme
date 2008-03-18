@@ -1,0 +1,537 @@
+/*
+THEME NAME: Takimata
+THEME URI: http://www.upstartblogger.com/wordpress-sandbox-theme-upstart-blogger-takimata
+DESCRIPTION: A submission set for the Sandbox Designs Competition
+VERSION: 1.0
+AUTHOR: Robert Ellis
+AUTHOR URI: http://www.upstartblogger.com/
+TEMPLATE: sandbox
+*/
+
+#theme-link:after {
+	content: " Do blogs have to look like blogs?";
+	color: #666;
+}
+
+/* @group Layout */
+
+html * {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #B8B29A;
+	color: #444;
+	font: 101%/150% Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+#wrapper {
+	width: 962px;
+}
+
+#access {
+	margin-left: -9999px;
+}
+
+#menu {
+	display: none;
+}
+
+#blog-title {
+	font-size: 4em;
+	font-weight: bold;
+	letter-spacing: -.14em;
+	margin: .16em 0 0 -.2em;
+	text-transform: uppercase;
+	word-spacing: .2em;
+}
+
+#blog-title a:link, #blog-title a:visited {
+	color: #eaeaea;
+	text-decoration: none;
+}
+
+#blog-title a:hover {
+	color: #444;
+	letter-spacing: normal;
+}
+
+#blog-description {
+	color: #666;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: -.4em 0 0;
+	text-align: left;
+}
+
+#content {
+	float: left;
+	padding: 50px 0 100px 200px;
+}
+
+#primary {
+	float: left;
+	margin: 50px 0 0 200px;
+	text-transform: uppercase;
+}
+
+#secondary {
+	float: left;
+	margin: 0 0 0 200px;
+	text-transform: uppercase;
+}
+
+#footer {
+	clear: both;
+	font-size: .68em;
+	margin-left: 200px;
+	padding: 50px 0 25px;
+	text-align: left;
+}
+
+/* @end */
+
+/* @group Comments */
+
+#comments {
+	clear: both;
+	font-size: .8em;
+	margin: 0;
+	padding: 50px 0 0;
+	width: 468px;
+}
+
+form#commentform .form-label {
+	margin: 1em 0 0;
+}
+
+form#commentform span.req-field {
+	background: #fff;
+	color: red;
+}
+
+form#commentform,form#commentform p {
+	padding: 0;
+}
+
+input#author,input#email,input#url {
+	width: 50%;
+}
+
+input#author,input#email,input#url,textarea#comment {
+	padding: 0.2em;
+}
+
+.comments ol li {
+	line-height: 1.4em;
+	list-style-position: inside;
+}
+
+textarea#comment {
+	height: 13em;
+	margin: 0 0 0.5em;
+	overflow: auto;
+	width: 66%;
+}
+
+li.comment {
+	padding: 20px 0 0;
+}
+
+li.comment.bypostauthor {
+	background: #cbc4ab;
+	padding: 20px;
+}
+
+#respond {
+	padding-top: 50px;
+}
+
+#comments ol {
+	margin: 0;
+}
+
+.comment-author {
+	font-size: 1.2em;
+}
+
+/* @end */
+
+/* @group Entries */
+
+.entry-title:before {
+	color: #d4d4d4;
+	content: "__";
+}
+
+.entry-title {
+	clear: both;
+	color: #444;
+	font-size: 180%;
+	line-height: 140%;
+	padding: 50px 0 0;
+}
+
+.entry-content {
+	overflow: hidden;
+}
+
+.entry-date {
+	font-size: 76%;
+	line-height: 1.4em;
+}
+
+.entry-meta {
+	color: #5e5b50;
+	font-size: 76%;
+	line-height: 1.4em;
+}
+
+.meta-sep {
+	color: #eaeaea;
+}
+
+.comments-link {
+	color: #5e5e5e;
+}
+
+abbr.published {
+	border: none;
+	cursor: default;
+}
+
+/* @end */
+
+/* @group Archive & Search */
+
+.archive, .search {
+	background: #B8B8B8;
+}
+
+.archive .post, .search .post {
+	width: 468px;
+}
+
+.archive #nav-above, .search #nav-above {
+	position: absolute;
+	left: 720px;
+	top: 300px;
+	width: 242px;
+}
+
+.archive #nav-below, .search #nav-below {
+	padding-top: 50px;
+}
+
+.archive #search, .search #search {
+	background: #c4c4c4;
+}
+
+/* @end */
+
+/* @group Home */
+
+.home #content {
+	float: left;
+	padding: 50px 0 100px 175px;
+}
+
+.home .author {
+	padding-right: 10px;
+}
+
+.home .entry-content {
+	display: none;
+}
+
+.home .navigation {
+	display: none;
+}
+
+.home .edit-link {
+	display: none;
+}
+
+.home .post {
+	float: left;
+	padding: 0 25px 0;
+	width: 336px;
+}
+
+.home .cat-links {
+	display: none;
+}
+
+.home .meta-sep {
+	display: none;
+}
+
+.p3, .p5, .p7, .p9, .p11, .p13, .p15, .p17, .p19, .p21, .p23, .p25 {
+	clear: both;
+}
+
+/* @end */
+
+/* @group Single */
+
+.single .post {
+	float: left;
+	padding: 0;
+	width: 468px;
+}
+
+.single #nav-above {
+	position: absolute;
+	left: 720px;
+	top: 300px;
+	width: 200px;
+}
+
+.single #nav-below {
+	padding-top: 50px;
+}
+
+.single .entry-meta {
+	background: #cbc4ab;
+	line-height: 160%;
+	margin: 20px 0;
+	padding: 15px;
+}
+
+/* @end */
+
+/* @group Page */
+
+.page {
+	background: #9AAAB8;
+	width: 468px;
+	padding-left: 0;
+}
+
+.page #search {
+	background: #a4b5c4;
+}
+
+.page .entry-content ul li {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+/* @end */
+
+/* @group Images */
+
+img {
+	border: none;
+	overflow: hidden;
+}
+
+img.alignright {
+	margin-left: 15px;
+}
+
+img.alignleft {
+	margin-right: 15px;
+}
+
+img.center {
+	text-align: center;
+}
+
+/* @end */
+
+/* @group Links */
+
+a:link, a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #444;
+}
+
+a img {
+	border: 8px solid #eaeaea;
+}
+
+a:hover img {
+	border-color: #b5d5ff;
+}
+
+.entry-content a {
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group Lists */
+
+.entry-content ul, ol {
+	margin-left: 20px;
+}
+
+.entry-content ul li {
+	list-style-type: square;
+	margin-left: 20px;
+}
+
+.entry-content ol li {
+	margin-left: 20px;
+}
+
+dl {
+	padding: 0 40px 20px 0;
+}
+
+dt {
+	font-weight: bold;
+	padding: 20px 0 0 20px;
+}
+
+dd {
+	padding: 0 20px 10px 20px;
+}
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+	color: #eaeaea;
+	padding-top: 2em;
+}
+
+/* @end */
+
+/* @group Nav */
+
+.nav-previous {
+	float: left;
+}
+
+.nav-next {
+	float: right;
+}
+
+#nav-below {
+	clear: both;
+	width: 468px;
+}
+
+/* @end */
+
+/* @group Sidebars */
+
+.sidebar {
+	clear: both;
+	font-size: .72em;
+	line-height: 1.6em;
+	margin: 0 0 30px 200px;
+	width: 654px;
+}
+
+.sidebar, .sidebar ul,.sidebar li {
+	display: inline;
+}
+
+.sidebar li h3 {
+	color: #5e5e5e;
+	display: inline;
+	font-size: 1em;
+	padding-right: 5px;
+	text-transform: uppercase;
+}
+
+.sidebar input#s {
+	width: 10em;
+}
+
+.sidebar ul li ul li:before {
+	color: #eaeaea;
+	content: "_";
+}
+
+.sidebar ul li ul li {
+	padding-right: 5px;
+}
+
+li#pages, li#categories, li#archives, li.linkcat, li#rss-links, li#meta {
+	clear: both;
+	display: block;
+	float: left;
+	width: 654px;
+}
+
+#search {
+	background: #c4bea4;
+	float: left;
+	margin: 25px 0;
+	padding: 15px 0 15px 15px;
+	width: 684px;
+}
+
+/* @end */
+
+/* @group Etc. */
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+blockquote {
+	border-bottom: 3px solid #eaeaea;
+	border-right: 3px solid #eaeaea;
+	font-family: georgia;
+	font-weight: bold;
+	margin: 25px;
+	padding: 0 20px 5px;
+}
+
+.center {
+	text-align: center;
+}
+
+p {
+	padding: 10px 0;
+}
+
+code, pre {
+	background: #d4d4d4;
+	overflow: auto;
+	padding: 4px;
+}
+
+h2.page-title {
+	text-transform: uppercase;
+	color: #5e5e5e;
+}
+
+small {
+	font-size: 0.85em;
+}
+
+sub {
+	position: relative;
+	bottom: -0.2em;
+	vertical-align: baseline;
+}
+
+sup {
+	position: relative;
+	bottom: 0.3em;
+	vertical-align: baseline;
+}
+
+acronym, abbr {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* @end */

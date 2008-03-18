@@ -1,0 +1,405 @@
+/*  
+THEME NAME: Evening Grass
+THEME URI: http://geoffbrady.net/
+DESCRIPTION: Inspired by grass, fire, hair, dendrites and Mexican waves
+VERSION: 1.0
+AUTHOR: Stephen Broughton
+AUTHOR URI: http://geoffbrady.net/
+TEMPLATE: sandbox
+*/
+
+body {
+ background: url(images/body.gif) repeat-x #345;
+ color: #111;
+ font-family: 'Lucida Sans Unicode', Verdana, Tahoma, sans-serif;
+ font-size: 0.8em;
+ margin: 0 0;
+ padding: 0 0;
+}
+
+textarea {
+ border: 1px solid #345;
+ font-family: 'Lucida Sans Unicode', Verdana, Tahoma, sans-serif;
+ font-size: 100%;
+ padding: 3px 3px;
+}
+
+#wrapper {
+ background: url(images/wrapper.gif) left repeat-y #fff;
+ border-left: 3px solid #777;
+ border-right: 3px solid #777;
+ margin: 0 auto;
+ padding: 0 0;
+ width: 600px;
+}
+
+#header {
+ background: url(images/header.gif) #000 repeat-x;
+ height: 200px;
+ margin: 0 0;
+ padding: 0 0;
+ width: 100%;
+}
+
+#header h1 {
+ text-align: right;
+ text-transform: uppercase;
+ padding: 60px 0 0 0;
+ margin: 0 0;
+ font-size: 200%;
+}
+
+#header h1 a, #header h1 a:hover, #header h1 a:active, #header h1 a:visited {
+ text-decoration: none;
+ color: #fff;
+}
+
+#blog-description {
+ font-size: 180%;
+ font-family: arial;
+ letter-spacing: 0.1em;
+ text-transform: lowercase;
+ color: #eee;
+ background: url(images/blog-desc.gif) repeat-x top;
+ width: 100%;
+ height: 80px;
+ padding: 50px 0 0 0;
+ margin: 28px 0 0 0;
+}
+
+#menu {
+ margin: 0 0;
+}
+
+#menu ul {
+/* border-top: 3px solid #777;
+ border-bottom: 3px solid #777; */
+ padding: 0 0;
+ margin: 0 0;
+ height: 30px;
+ list-style-type: none;
+ background: url(images/menu.gif) repeat-x;
+}
+
+#menu ul li {
+ float: left;
+ height: 30px;
+ margin: 0 3px 0 0;
+}
+
+#menu li a {
+ color: #def;
+ text-transform: lowercase;
+ text-decoration: none;
+ padding: 6px 5px;
+}
+
+#menu ul li > a {
+ display: block;
+}
+
+#menu li.current_page_item {
+ background: url('images/menucurrent.gif') repeat-x;
+}
+
+#menu li:hover {
+ background: url('images/menuhover.gif') repeat-x;
+}
+
+.home .page-link, .home .entry-meta, .entry-date p, .single #nav-below, .skip-link, #menu ul ul, .sidebar {
+ display: none;
+}
+
+#container {
+ margin: 0 0;
+ padding: 0 0;
+}
+
+#footer {
+ clear: both;
+ background-color: #000;
+ border-top: 3px solid #777;
+ padding: 10px 10px;
+}
+
+#footer a img {
+ border: none;
+ float: left;
+ margin: 3px 5px 0 0;
+}
+
+#footer {
+ font-size: 110%;
+ text-transform: lowercase;
+}
+
+#footer a {
+ color: #fff;
+ text-decoration: none;
+}
+
+.edit-link {
+ text-align: center;
+}
+
+.edit-link a {
+ text-decoration: none;
+ color: #123;
+}
+
+.hentry, #comments, .post {
+/* border-bottom: 3px solid #777; */
+ padding: 20px 10px 20px 90px;
+ margin: 0 0;
+}
+
+h2.page-title {
+ margin: 0 0;
+ padding: 20px 10px 0 90px;
+ font-size: 170%;
+ font-weight: normal;
+ color: #678;
+}
+
+h2.page-title a {
+ color: #345;
+ text-decoration: none;
+}
+
+h2.entry-title, h3.entry-title {
+ margin: 0 0;
+ padding: 0 0;
+ line-height: 150%;
+ font-size: 150%;
+ border-bottom: 3px solid #789;
+}
+
+h2.entry-title > a:hover, h3.entry-title > a:hover {
+ background-color: #cde;
+ color: #345;
+}
+
+h2.entry-title, h2.entry-title a, h2.entry-title a:visited, h3.entry-title, h3.entry-title a, h3.entry-title a:visited {
+ color: #345;
+ font-weight: normal;
+ text-decoration: none;
+ width: 400px;
+ display: block;
+}
+
+h2.entry-title a:hover, h2.entry-title a:active {
+ text-decoration: none;
+}
+
+.navigation {
+ margin: 20px 100px;
+ padding: 10px 0;
+}
+
+.navigation a {
+ border-bottom: 1px solid #abc;
+ padding: 1px 1px;
+ text-decoration: none;
+}
+
+.navigation a:hover, .navigation a:active {
+ color: #123;
+}
+
+.entry-content, .tags, #respond {
+ max-width: 400px;
+ padding: 0 0;
+ text-align: justify;
+ font-size: 90%;
+ clear: left;
+}
+
+.entry-date {
+ max-width: 400px;
+ padding: 0 0;
+ margin: 0 0;
+ text-align: right;
+ font-size: 80%;
+}
+
+.entry-meta {
+ max-width: 380px;
+ padding: 10px 10px;
+ text-align: justify;
+ font-size: 90%;
+ clear: left;
+ background-color: #def;
+}
+
+.comment {
+ max-width: 380px;
+ padding: 10px 10px !important;
+ text-align: justify;
+ font-size: 90%;
+}
+
+.trackback, .pingback {
+ max-width: 380px;
+ padding: 10px 10px !important;
+ text-align: justify;
+ font-size: 80%;
+}
+
+.entry-content {
+ line-height: 150%;
+}
+
+#comments ol li {
+ padding: 10px 0;
+}
+
+.tags {
+ line-height: 220%;
+}
+
+.entry-meta a, #comments a {
+ text-decoration: none;
+ color: #345;
+}
+
+.entry-content a, .navigation a {
+ color: #345;
+ text-decoration: none;
+ border-bottom: #abc solid 1px;
+}
+
+.entry-content a:hover, .entry-meta a:hover, #comments a:hover {
+ color: #123;
+}
+
+.entry-content a:hover, .navigation a:hover {
+ background-color: #cde;
+}
+
+.tags a {
+ color: #345;
+ text-decoration: none;
+}
+
+.tags a:hover {
+ color: #678;
+}
+
+code, pre, tt {
+ font-family: 'Courier New', monospace;
+ font-size: 100%;
+}
+
+.nav-previous {
+ float: left;
+}
+
+.nav-next {
+ text-align: right;
+}
+
+.entry-content h3, #comments h3 {
+ font-size: 160%;
+ color: #456;
+ font-weight: normal;
+}
+
+.entry-content h4 {
+ font-size: 150%;
+ color: #456;
+ font-weight: normal;
+}
+
+.entry-content h5 {
+ font-size: 140%;
+ color: #456;
+ font-weight: normal;
+}
+
+.entry-content h6 {
+ font-size: 130%;
+ color: #456;
+ font-weight: normal;
+}
+
+.entry-content h7 {
+ font-size: 120%;
+ color: #456;
+ font-weight: normal;
+}
+
+.entry-content ul {
+ list-style-type: square;
+}
+
+blockquote {
+ border-left: 3px solid #777;
+ margin: 10px 10px;
+ padding: 0px 10px;
+}
+
+.entry-content img {
+ max-width: 380px;
+}
+
+ul#links-page {
+ list-style-type: none;
+ margin: 0 0;
+ padding: 0 0;
+}
+
+ul#links-page ul {
+ list-style-type: square;
+ color: #f30;
+}
+
+ul#links-page li a {
+ color: #333;
+ border-bottom: 1px solid #333;
+}
+
+ul#links-page li a:hover {
+ background-color: #ddd;
+}
+
+ul.xoxo {
+ list-style-type: none;
+ margin: 0 0;
+ padding: 10px 10px;
+}
+
+ul.xoxo ul {
+ list-style-type: square;
+ font-size: 90%;
+}
+
+ul.xoxo ul li {
+ margin: 2px 0;
+}
+
+ul.xoxo ul {
+ padding: 0 0 0 15px;
+}
+
+ul.xoxo ul ul {
+ padding: 0 0 0 15px;
+}
+
+.comments ol {
+ list-style-type: none;
+ margin: 0 0;
+ padding: 0 0;
+}
+
+.comment-author {
+ font-size: 140%;
+ color: #678;
+}
+
+.comment-meta {
+ font-size: 80%;
+}
+
+.comment-author-admin {
+ background-color: #cde;
+}

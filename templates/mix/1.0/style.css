@@ -1,0 +1,482 @@
+/*
+THEME NAME: MIX
+THEME URI: http://www.jauhari.net/themes/sandbox-mix/
+DESCRIPTION: This is my Sandbox Mix theme
+VERSION: 1.0
+AUTHOR: Nurudin Jauhari
+AUTHOR URI: http://www.jauhari.net/
+TEMPLATE: sandbox
+*/
+
+/*
+	Crafted on 25 July 2007
+	Last Edit: 28 July 2007 21.00  +7 GMT
+
+	This design is released under GPL: http://www.gnu.org/copyleft/gpl.html
+*/
+
+/* bases
+************************* */
+html
+{
+	height: 100%;
+	margin-bottom: 0.1em;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+}
+img
+{
+	border: 0;
+}
+p
+{
+	line-height: 1.6em;
+	margin: 0.7em 0;
+}
+dl
+{
+	margin: 1em 0;
+}
+dt
+{
+	font-weight: bold;
+}
+dd
+{
+	margin: 0.5em;
+	padding: 0;
+}
+img.right
+{
+	float: right;
+	margin: 10px 0 0 10px;
+}
+img.left
+{
+	float: left;
+	margin: 0 10px 0 0;
+}
+hr
+{
+	display: none;
+}
+body
+{
+	background: #fff url(bg.png) 0 0 repeat-x;
+	color: #333;
+/*	font: 74%/1.6em "Lucida Sans Unicode", "Lucida Grande", LucidaGrande, "Lucida Sans", Geneva,  verdana, tahoma, arial, sans-serif;  */
+	font: 72%/1.6em verdana, tahoma, arial, sans-serif; 
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+a
+{
+	text-decoration: none;
+}
+a:link, a:visited
+{
+	color: #015A1E;
+}
+a:hover, a:active
+{
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: Arial, Verdana, Serif;
+/*
+	font-family: garamond,georgia,times,serif;
+	font-weight:400;
+*/
+}
+
+/* Etc
+******************** */
+br.clear {
+	clear: both;
+}
+
+/* Layout
+******************** */
+
+#wrapper {
+	text-align: left;
+	width: 950px;
+	margin: 0 auto;
+	background: #fff url(bg.png) 0 0 repeat-x;
+	position: relative;
+}
+#header {
+	height: 100px;
+	padding: 1em 1em 1em 0;
+
+}	
+div#container {
+	float: left;
+	width: 100%;
+}
+div#content {
+	margin: 1em 200px 0;
+}
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	width: 180px;
+	padding-top: 1em;
+}
+div#primary {
+	margin: 0 0 0 -950px;
+}
+* html div#primary {
+	left: 20px;
+	position: relative;
+}
+div#secondary {
+	margin: 0 0 0 -180px;
+}
+div#footer { 
+	clear: left;
+	border-top: 1px solid #C7F1D5;
+	width: 100%;
+	padding: 1em 0;
+}
+
+.side1 {
+	width: 200px;
+	float: left;
+	color: #000;
+	background: #fff;
+	margin-left: -950px;
+}
+.side2 {
+	width: 200px;
+	float: left;
+	color: #000;
+	margin-left: -200px;
+}
+
+/* header
+********** */
+#header  h1#blog-title {
+	padding-top: 1em; 
+	font-size: 4em;
+	font-family: garamond,georgia,times,serif;
+}
+#blog-description {
+	padding-top: 4px;
+}
+.skip-link {
+	right: 0;
+	top: 5px;
+	position: absolute;
+}
+.skip-link a {
+	background: url(skip.png) 0 0 no-repeat;
+	height: 22px;
+	width:114px;
+	display: block;
+	text-indent: -9000px;
+}
+.skip-link a:hover {
+	background: url(skip.png) -115px 0 no-repeat;
+	height: 22px;
+	width:114px;
+	display: block;
+	text-indent: -9000px;
+}
+/* menu
+********** */
+#access {
+	border-bottom: 1px solid #C7F1D5;
+}
+#menu {
+	position: absolute;
+	right: 0;
+	top: 90px;
+}
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 1.1em;
+}
+#menu ul li {
+	float: left;
+}
+#menu ul li a {
+	padding: 3px 10px;
+	display: block;
+	color: #F5FDF8;
+	border-left: 1px solid #fff;
+	background: #5EB97C;
+}
+#menu ul li a:hover {
+	background: #333;
+	color: #fff;
+}
+#menu ul li.current_page_item a, #menu ul ul li.current_page_item a {
+	background: #2C7058;
+	color: #fff;
+	font-weight: bold;
+}
+
+#menu ul ul{display:none;}
+#menu ul ul li{float:none;}
+#menu ul ul li a{margin:0;padding:0;}
+#menu ul li:hover ul{
+	display:block;
+	position:absolute;
+	}
+#menu ul li:hover ul li a{
+	border-top: 1px solid #fff;
+	background:#5EB97C; 
+	color: #F5FDF8;
+	display:block;
+	padding: 3px 10px;
+	width:10em;
+}
+#menu ul li:hover ul li a:hover{
+	background: #333;
+	color: #fff;
+}
+/* post
+********** */
+#nav-above {
+	display: none;
+}
+.page-title {
+	font-size: 1.3em;
+	border-bottom: 1px solid #666;
+	margin-bottom: 1em;
+	color: #3A9476;
+}
+.page-title span {
+	color: #000;
+}
+.entry-title {
+	font-size: 1.9em;
+	clear:both;
+}
+.entry-title a:link, h2.entry-title a:visited {
+	color: #3A9476;
+}
+.entry-title a:hover {
+	color: #000;
+}
+.post {
+	margin-bottom: 20px;
+	margin-right: 1em;
+}
+.post ul, .post ol{
+	margin-left: 40px;
+}
+.entry-content a {
+	color: #333;
+	border-bottom: 1px solid #666;
+}
+.entry-content a:hover {
+	color: #000;
+	border-bottom: 1px solid #333;
+}
+.entry-content img {
+	padding: 5px;
+	border: 1px solid #C7F1D5;
+}
+.entry-meta {
+	border-top: 1px solid #C7F1D5;
+	color: #5EB97C;
+	font-size: 0.9em;
+}
+.entry-meta .author{
+	background: url(author.png) 0 0 no-repeat;
+	padding-left: 16px;
+}
+.entry-meta .cat-links{
+	background: url(tag_red.png) 0 0 no-repeat;
+	padding-left: 16px;
+}
+.entry-meta .edit-link{
+	background: url(pencil.png) 0 0 no-repeat;
+	padding-left: 16px;
+}
+.entry-meta .comments-link{
+	background: url(comment.png) 0 0 no-repeat;
+	padding-left: 16px;
+}
+
+.meta-sep {
+	visibility: hidden;
+}
+
+div#nav-below{
+	width: 100%;
+	float: left;
+	margin-bottom: 1em;
+}
+.alignleft,div.nav-previous{float: left;}
+.alignright,div.nav-next{float: right;}
+
+
+
+ul#archives-page {
+	list-style: none;
+}
+ul#archives-page ul {
+	margin-left: 20px;
+}
+
+/* comment
+********** */
+#comments {
+}
+#comments h3 {
+	font-size: 1.2em;
+	border-bottom: 1px solid #666;
+}
+#comments  ol{
+	list-style: none;
+	margin: 1em 0;
+}
+#comments  ol li{
+	background: #F5FDF8;
+	padding: 5px;
+}
+#comments  ol li.alt{
+	background: #C7F1D5;
+}
+#comments ol .comment-author {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+#comments #author , #comments #email, #comments #url{
+	border: 2px solid #C7F1D5;
+	padding: 0.4em;
+	margin: 0.5em 0;
+	color: #3A9476;
+}
+#comments #author:focus , #comments #email:focus, #comments #url:focus,#comments #author:hover , #comments #email:hover, #comments #url:hover {
+	border: 2px solid #5EB97C;
+}
+textarea#comment {
+	width: 530px;
+	border: 2px solid #C7F1D5;
+	padding: 0.4em;
+	margin: 0.5em 0;
+	color: #3A9476;
+}
+textarea#comment:focus,textarea#comment:hover {
+	border: 2px solid #5EB97C;
+}
+.form-submit input {
+	background: #3A9476;
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 2em;
+	padding: 0.2em 0.5em;
+	border: 2px solid #5EB97C;
+	border-right: 2px solid #2C7058;
+	border-bottom: 2px solid #2C7058;
+}
+.form-submit input:focus, .form-submit input:hover {
+	background: #2C7058;
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 2em;
+	padding: 0.2em 0.5em;
+	border: 2px solid #3A9476;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+/* sidebar
+********** */
+.sidebar h3 {
+	font-size:1.2em;
+	border-bottom: 1px solid #666;
+	color: #333;
+}
+
+div.sidebar input#s {
+	width: 145px;
+	border: 2px solid #C7F1D5;
+	padding: 0.4em 0.4em 0.4em 1.7em;
+	background: url(zoom.png) 0.4em center no-repeat;
+	margin: 0.5em 0;
+	color: #3A9476;
+}
+div.sidebar input#s:focus,div.sidebar input#s:hover {
+	border: 2px solid #5EB97C;
+}
+input#searchsubmit {
+	background: #666;
+	border: 2px solid #333;
+	padding: 0.1em 0.4em;
+	border-top: 2px solid #999;
+	border-left: 2px solid #999;
+	color: #fff;
+	font-weight: bold;
+}
+input#searchsubmit:focus, input#searchsubmit:hover {
+	background: #333;
+	border: 2px solid #000;
+	padding: 0.1em 0.4em;
+	border-top: 2px solid #666;
+	border-left: 2px solid #666;
+	color: #fff;
+	font-weight: bold;
+}
+div.sidebar li{list-style:none;margin:0 0 1em;}
+div.sidebar li form{margin:0.2em 0 0;padding:0;}
+div.sidebar ul ul{margin:0 0 0}
+.sidebar ul ul li{
+	margin:0;
+	border-bottom: 1px dashed #C7F1D5;
+	padding: 0.3em 0;
+}
+
+.sidebar ul ul li a:link, .sidebar ul ul li a:visited {
+	background: url(go.png) 0 0 no-repeat;
+	padding-left: 16px;
+}
+.sidebar ul ul li a:hover{
+	color: #000;
+}
+.sidebar .current_page_item {
+	font-weight: bold;
+}
+.sidebar ul li.linkcat ul li a{
+	background: url(link.png) 0 0 no-repeat;
+	padding-left: 16px;
+}
+.sidebar ul li#categories ul li a{
+	background: url(tag_red.png) 0 0 no-repeat;
+	padding-left: 16px;
+	color: #DA5F5D;
+}
+.current-cat {
+	font-weight: bold;
+}
+
+.sidebar ul li#archives ul li a{
+	background: url(archives.png) 0 0 no-repeat;
+	padding-left: 16px;
+	color: #4571AF;
+}
+.sidebar ul li#rss-links ul li a{
+	background: url(feed-icon.gif) 0 0 no-repeat;
+	padding-left: 16px;
+	color: #D1670C;
+}
+.sidebar ul ul ul li{
+	border: none;
+}
+div.sidebar ul ul ul{margin:0 0 0 1em;}
+div.sidebar ul ul ul li{}
+
+
+

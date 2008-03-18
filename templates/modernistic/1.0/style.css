@@ -1,0 +1,108 @@
+/*
+THEME NAME: Modernistic 
+THEME URI: http://resources.shogrenconsulting.com/downloadsndbxtheme/
+DESCRIPTION: This theme is designed as a no-image theme for fast loading times and yet still be aesthetically pleasing. It purposely makes use of white space and many different colors.
+VERSION: 1.0
+AUTHOR: W. Andrew Shogren
+AUTHOR URI: http://www.shogrenconsulting.com/
+TEMPLATE: sandbox
+*/
+
+/* 
+- LICENSE -
+
+The Modernistic design for Sandbox, by Andrew Shogren, is licensed under the GNU General Public License:
+
+    This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc, 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+*/
+ 
+ /* Body */
+body { position:relative; font-weight:bold; background: #fff url(images/background.gif) top center repeat-x; color:#006677; font:76% "Trebuchet MS", Tahoma, Arial; line-height:1.3em; padding:20px 0; z-index:10;}
+
+/* Containers */
+
+#wrapper {   position:relative; width:970px; z-index: 100;}
+#container { width: 970px; color: #205964; font-weight:500;  padding-right: 10px; padding-bottom: 10px; padding-top: -50px;}
+
+ /*header*/
+ 
+#header { margin-bottom: 0px; font: 76% "Trebuchet MS", Tahoma, Arial; height: 150px;}
+.page-title { margin-bottom: 50px; }
+#slogan {color:#808080; font-size:1.5em; font-weight:bold; letter-spacing:-1px; line-height:1.2em; margin:15px 75% 30px 35px; text-align:right; }
+.blogname:hover {text-decoration:none; }
+#blog-description { font-size: 14px; }
+
+/* Footer */
+
+#footer {border-top:2px solid #226699; clear:both; color:#808080; font-size:0.9em; line-height:1.6em; margin:0 auto; padding:8px 0; text-align:right;}
+
+/* Headers */
+h1 {color:#205964; font-size:3.6em; letter-spacing:-3px; margin:30px 0 20px 25px;}
+h1 a {color:#205; text-decoration:none;}
+h1 a:hover {text-decoration:underline;}
+h2 {border-bottom:2px solid #226699; color:#226699; font-size:1.4em; letter-spacing:-1px; margin:0 0 10px; padding:0 2px 2px 5px;}
+h2 a { color:#427B86; text-decoration:none; }
+h2 a:hover {color:#649DA8; text-decoration:underline;}
+h3 {border-bottom:1px solid #226699; color:#427B86; font-size:1.2em; font-weight:bold; margin:10px 0 8px; padding:1px 2px 2px 3px;}
+h4 {color:#316A75; text-decoration:none;}
+h5 {color:#205964; text-decoration:none; font-size:1.2em;}
+h5 a {text-decoration:none; color:#4488BB; font-size:1.2em;}
+h5 a:hover {text-decoration:underline;}
+
+/* Content */
+
+#content {float:right; line-height:1.5em; margin:-2px 0 10px; text-align:left; width:700px; font-weight:900;}
+
+/* Links */
+
+a { color: #BB6600; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* Searchbox */
+.searchbox {margin:8px 0 15px 10px;}
+.searchbox label {display:none;}
+.searchbox input {font-size:0.9em; padding:5px; width:166px; border:1px solid #ccc; color: #BB6600; font-weight:bold;}
+
+/* Post Stuff */
+
+.post {margin:0 0 15px;}
+.the_meta {color: #205964;}
+
+/* Comments */
+#content div.comment {margin-bottom:15px; color: #205964;}
+#content div.comment p {margin:0 0 4px 10px;}
+#comments p {margin:0 0 8px 10px; color: #205964;}
+#comments input,#comments textarea {padding:5px; width:330px;}
+#comments textarea.comment {width:730px;}
+#comments input#submit {width:75px;color:#333; background-color:#fff;}
+#comments input,#commentsection textarea,form div.searchbox input {font:94% Verdana,Tahoma,Arial,sans-serif; border:1px solid #ccc;}
+
+ /*LISTS */
+ 
+ul,ol,dl {margin:2px 0 16px 35px;  color:#FEFEFE;}
+ul ul,ol ol {margin:4px 0 4px 35px; color:#FEFEFE;}
+dl,ol,div.entry-content ul { color: #691010; background-color: #EFEFEF;  padding: 5px 3px 5px 0px;}
+
+ /*Sidebars */
+.sidebar { padding-right: 20px; padding-bottom: 10px; padding-top: 10px; width: 100px; position: absolute; z-index: 100; margin-top: 0px;}
+#primary { float: left; padding-right: 0px; border-right: 0px solid #205964; margin-top: -50px;}
+#secondary { float: right; padding-left: 0px;  margin-top: -50px;}
+.sidebar { float:left; margin:0 0 5px; padding:1px 0 0; width:195px;}
+#primary { position: relative; left: 0px; }
+#secondary { position: relative; left: 0px; }
+
+/*Hidden components */
+.skip-link { visibility: collapse; }
+#menu {visibility: collapse; }
+
+#access { height: 0px; position: relative; z-index: 0;}
+/* Extra Formatting */
+#nav-above { padding-top: 18px; margin-top: -75px;}
+dl,ol,div.entry-content ul { color: #691010; background-color: #EFEFEF;  padding: 5px 3px 5px 0px;}
+
+
+

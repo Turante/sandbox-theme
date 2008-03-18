@@ -1,0 +1,37 @@
+/*
+THEME NAME: Chocolate Vanilla
+THEME URI: http://geoffbrady.net/
+DESCRIPTION: A theme that concentrates on simple typography, colour
+VERSION: 1.0
+AUTHOR: Stephen Broughton
+AUTHOR URI: http://geoffbrady.net/
+TEMPLATE: sandbox
+*/
+
+/*
+
+CONTENTS
+
+1.....Layout
+2.....Margins and Padding
+3.....Typography
+4.....Colours and Borders
+5.....Other Stuff
+
+*/	/*
+
+
+1	Layout
+*/				@import url('layout.css');	/*
+
+2	Margins and Padding
+*/				@import url('margin.css');	/*
+
+3	Typography
+*/				@import url('typogr.css');	/*
+
+4	Colours and Borders
+*/				@import url('border.css');	/*
+
+5	Other Stuff
+*/				@import url('others.css');

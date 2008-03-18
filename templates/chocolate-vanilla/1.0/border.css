@@ -1,0 +1,86 @@
+/*		TEXT COLOUR		*/
+ a.more-link,
+#archives-page ul,
+#comments a,
+.entry-content a,
+.entry-meta a,
+.entry-title,
+.entry-title a,
+#footer a,
+ input,
+#link-page ul,
+#menu li a,
+.navigation a,
+.page-link a,
+.sidebar li a,
+.navigation a:hover,
+.page-link a:hover
+ textarea		{	color:		#530;			}
+ body			{	color:		#000;			}
+ a.more-link:hover,
+ h1#blog-title,
+ h1#blog-title a,
+ h1#blog-title a:hover,
+#menu li.current_page_item > a {color:	#fff;			}
+.tags a		{	color:		#530;			}
+
+
+/*	BACKGROUND COLOUR		*/
+
+ a.more-link,
+ #container,
+ #footer a:hover,
+.navigation a,
+.page-link a,
+#wrapper		{	background-color:	#edb;			}
+ a.more-link:hover,
+#comments a:hover,
+.entry-meta a:hover,
+.entry-content a:hover,
+#footer,
+.formcontainer a:hover,
+#header,
+#menu,
+#menu li a,
+.sidebar li a:hover,
+#comments-list li.alt,
+#trackbacks-list li.alt,
+.navigation a:hover,
+.page-link a:hover {	background-color:	#dca;			}
+ body,
+ input,
+ textarea		{	background-color:	#fbedda;		}
+#menu li a:hover,
+#menu li.current_page_item > a:hover { background-color: #a97; }
+#menu li.current_page_item > a {	background-color: #753;	}
+.sidebar		{	background:		url(bg.png);	}
+
+/*		BORDER		*/
+
+ a.more-link,
+.navigation a,
+.page-link a	{	border-bottom:	1px solid #edb;	}
+ a.more-link:hover,
+.navigation a:hover,
+.page-link a:hover {	border-bottom:	1px solid #a97;	}
+ blockquote		{	border-left:	4px solid #a97;	}
+#footer		{	border-top:		4px solid #a97;	}
+.entry-title a { 		border-bottom:	none !important;	}
+#comments h3,
+.entry-title,
+.entry-title a,
+.entry-title a:hover,
+#header,
+#menu,
+#primary,
+#respond h3,
+#trackbacks-list h3 {	border-bottom:	4px solid #a97;	}
+#comments a,
+ dt,
+.entry-meta a,
+.entry-content a,
+#footer a,
+.formcontainer a,
+.sidebar li a	{	border-bottom:	1px solid #a97;	}
+input,
+textarea		{	border:		1px solid #530;	}

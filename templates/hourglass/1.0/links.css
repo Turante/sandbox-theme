@@ -1,0 +1,147 @@
+/*Overall links*/
+a{
+text-decoration:none;
+
+}
+a:link{
+color:#7D9032;
+
+}
+a:hover{
+color:#EDBF32;
+}
+a:visited{
+color:#6F7F56;
+}
+/*End Overall links*/
+
+/*upper tab menu links*/
+
+#menu a{
+color:#EEF6FD;
+font-weight:bold;
+}
+#menu a:hover{
+text-decoration:underline;
+}
+
+#menu li.page_item a{
+background:url(images/nav_left.gif);
+background-repeat:no-repeat;
+background-position: top left;
+display:block;
+padding: 10px;
+}
+
+#menu li.current_page_item a{
+background:url(images/nav_left_current.gif);
+background-repeat:no-repeat;
+background-position: top left;
+
+
+}
+/*End upper tab menu links*/
+
+/*Sidebar*/
+
+.sidebar li a{
+font-weight:bold;
+padding:5px;
+}
+
+
+
+#primary a{
+
+}
+
+#primary a:link{
+color:#64920C;
+}
+#primary a:active{
+font-weight:normal;
+}
+#primary a:hover{
+color:#E4F3FE;
+}
+#primary a:visited{
+color:#8BB248;
+}
+#secondary a:link{
+color:#64920C;
+}
+#secondary a:active{
+font-weight:normal;
+}
+#secondary a:hover{
+color:#DEEEFB;
+}
+#secondary a:visited{
+color:#8BB248;
+}
+/*End sidebar*/
+
+
+.skip-link a:link{
+color:#E5EFF7;
+
+}
+.skip-link a:visited{
+color:#E7EAEC;
+}
+
+/*Blog title links*/
+h1#blog-title a{
+color:#F2F9FE;
+}
+h1#blog-title a:visited{
+color:#F2F9FE;
+}
+
+/*End Blog title links*/
+
+/*Entry title*/
+
+h2.entry-title a:link{
+color:#1C8FB9;
+}
+h2.entry-title a:active{
+color:#1C8FB9;
+}
+h2.entry-title a:hover{
+color:#1C8FB9;
+}
+h2.entry-title a:visited{
+color:#8FC560;
+}
+h2.entry-title{
+margin:25px 0 5px 0;
+font-weight:normal;
+
+
+}
+/*End Entry title*/
+
+#footer a{
+color:#D3EBFE;
+}
+
+
+.entry-content a{
+font-weight:bold;
+}
+
+.home .p1 a{
+color:#6FA32B;
+}
+.home .p1 .entry-title a{
+color:#E7822B;
+}
+
+a.more-link{
+
+padding:35px 0 0 0;
+
+
+
+}

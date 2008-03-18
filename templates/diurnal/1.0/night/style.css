@@ -1,0 +1,74 @@
+/* Night */
+
+body.h21, body.h22, body.h23, body.h00, 
+body.h01, body.h02, body.h03, body.h04 {
+background:#fff url(header.png) top left repeat-x;
+}
+
+body.h21 .meta-sep, body.h22 .meta-sep, body.h23 .meta-sep, body.h00 .meta-sep, 
+body.h01 .meta-sep, body.h02 .meta-sep, body.h03 .meta-sep, body.h04 .meta-sep {
+background: url(dot.gif) center left no-repeat;}
+
+
+/* links */
+body.h21 a, body.h22 a, body.h23 a, body.h00 a, 
+body.h01 a, body.h02 a, body.h03 a, body.h04 a {color:#008}
+
+body.h21 a:hover, body.h22 a:hover, body.h23 a:hover, body.h00 a:hover, 
+body.h01 a:hover, body.h02 a:hover, body.h03 a:hover, body.h04 a:hover {color:#36c}
+
+
+/* header */
+body.h21 #header h1 a, body.h22 #header h1 a, body.h23 #header h1 a, body.h00 #header h1 a, 
+body.h01 #header h1 a, body.h02 #header h1 a, body.h03 #header h1 a, body.h04 #header h1 a {color:#bfbfdb} 
+
+body.h21 #header h1 a:hover, body.h22 #header h1 a:hover body.h23 #header h1 a:hover, body.h00 #header h1 a:hover, 
+body.h01 #header h1 a:hover, body.h02 #header h1 a:hover, body.h03 #header h1 a:hover, body.h04 #header h1 a:hover {color:#fff} 
+
+body.h21 #header, body.h22 #header , body.h23 #header , body.h00 #header , 
+body.h01 #header , body.h02 #header , body.h03 #header , body.h04 #header {background:url(moon.png) top right no-repeat;} 
+
+
+/* blockquote */
+body.h21 blockquote, body.h22 blockquote, body.h23 blockquote, body.h00 blockquote, 
+body.h01 blockquote, body.h02 blockquote, body.h03 blockquote, body.h04 blockquote,
+body.h21 blockquote p, body.h22 blockquote p, body.h23 blockquote p, body.h00 blockquote p, 
+body.h01 blockquote p, body.h02 blockquote p, body.h03 blockquote p, body.h04 blockquote p{
+background:#008;
+color:#ccc
+}
+
+body.h21 blockquote a, body.h22 blockquote a, body.h23 blockquote a, body.h00 blockquote a, 
+body.h01 blockquote a, body.h02 blockquote a, body.h03 blockquote a, body.h04 blockquote a{
+color:#fff
+}
+
+
+
+ /* h3 styling */
+body.h21 h3, body.h22 h3, body.h23 h3, body.h00 h3, 
+body.h01 h3, body.h02 h3, body.h03 h3, body.h04 h3, 
+body.h21 #wp-calendar caption, body.h22 #wp-calendar caption, body.h23 #wp-calendar caption, body.h00 #wp-calendar caption, 
+body.h01 #wp-calendar caption, body.h02 #wp-calendar caption, body.h03 #wp-calendar caption, body.h04 #wp-calendar caption {
+color:#36c;
+background: url(dot.gif) center left no-repeat;}
+
+body.h21 .hentry h3, body.h22 .hentry h3, body.h23 .hentry h3, body.h00 .hentry h3, 
+body.h01 .hentry h3, body.h02 .hentry h3, body.h03 .hentry h3, body.h04 .hentry h3{
+background:#fbfbfb;
+color:#444;}
+
+body.h21 h3.entry-title, body.h22 h3.entry-title, body.h23 h3.entry-title, body.h00 h3.entry-title
+body.h01 h3.entry-title, body.h02 h3.entry-title, body.h03 h3.entry-title, body.h04 h3.entry-title{
+background:#f0f0f0 url(greybk.png) top left repeat-x;}
+
+
+/* menu tabs */
+body.h21 #menu ul li a, body.h22 #menu ul li a, body.h23 #menu ul li a, body.h00 #menu ul li a, 
+body.h01 #menu ul li a, body.h02 #menu ul li a, body.h03 #menu ul li a, body.h04 #menu ul li a
+{background:url(tab.gif) top right no-repeat;}
+
+body.h21 #menu ul li a:hover, body.h22 #menu ul li a:hover, body.h23 #menu ul li a:hover, body.h00 #menu ul li a:hover, 
+body.h01 #menu ul li a:hover, body.h02 #menu ul li a:hover, body.h03 #menu ul li a:hover, body.h04 #menu ul li a:hover 
+{background:none;}
+

@@ -1,0 +1,321 @@
+/*
+THEME NAME: Scrappr
+THEME URI: http://www.gordonbrander.com/files/scrappr_theme.zip
+DESCRIPTION: A simple, fun tumblog theme with fancy-shmancy features. Styled with the <a href="http://gordonbrander.com/taffy-framework">Taffy Framework</a>.
+VERSION: 1.0
+AUTHOR: Gordon Brander
+AUTHOR URI: http://gordonbrander.com/
+TEMPLATE: sandbox
+*/
+
+@import url("taffy.css");
+
+/* =hidden
+=================================*/
+.single .navigation,
+#nav-above,
+.sidebar #meta,
+.sidebar #rss-links h3,
+.sidebar #pages,
+.sidebar #meta h3,
+.sidebar #search h3,
+.meta-sep,
+.entry-meta .author,
+.cat-links{display:none}
+.skip-link,
+.entry-meta .meta-sep{text-indent:-32697px}
+
+/* =color index and design
+=================================*/
+
+/* You can change the header/footer pattern.. */
+#wrapper {background:url(images/warning.png)}
+
+#rss-links li a{
+	background-image:url(images/feed.gif);
+	background-position:3px center;
+	background-repeat:no-repeat;
+}
+.entry-title a{background:url(images/permalink.gif) 2px center no-repeat}
+.category-podcast .entry-content {
+	background:url(images/podcast.gif) no-repeat;
+	background-position:top left;
+}
+.category-photo .entry-content,
+.category-video .entry-content,
+.category-tip .entry-content,
+.category-note .entry-content {
+	background-image:url(images/page-curl.gif);
+	background-position:bottom right;
+	background-repeat:no-repeat;
+}
+.category-quote blockquote{background:url(images/quote.gif)top left no-repeat}
+.comment-author {background:url(images/says.gif) right center no-repeat}
+.unapproved,#login {background:url(images/warning.png)}
+
+/* Black */
+	body,.entry-title,.single .published{color:black}
+/* White */
+	#wrapper,#content,#menu li.current_page_item a,.entry-title a,#rss-links a{background-color:white}
+	#wrapper{border-color:#fff}
+/* Light Grey */
+	body,#footer,.category-photo .entry-content,.navigation .nav-next a,.navigation .nav-previous a,.formcontainer,.single .entry-meta{background-color:#eee}
+/* Darker Grey */
+	.edit-link a,.category-video .entry-content{background-color:#ddd}
+/* Dark Grey */
+	.comment-meta,.edit-link a,#respond #comment-note,.unapproved,#login,.published{color:#a0a0a0}
+/* Dark Blue */
+	a{color:#3d4e5e}
+	.navigation .nav-next a:hover,.navigation .nav-previous a:hover{background-color:#3d4e5e}
+/* Orange */
+	h1,h2,h3,h4,h5,h6{color:#ec5834}
+/* Light Tan */
+	.form-input input:focus,.form-textarea textarea:focus,.category-tip .entry-content,.category-note .entry-content{background-color:#ffffcc}
+
+/* =typography
+=================================*/
+body {
+	font-family: georgia, serif;
+}
+h1,h2,h3,h4,h5,h6,#blog-description,#menu li a,.published,.sidebar a,.comments-link,.comment-author, .category-quote .entry-content blockquote, .category-quote .entry-content blockquote p{
+	font-style:italic;
+	font-weight:bold;
+}
+h1{margin:1em 0}
+h2{margin:1.2em 0}
+h3,h4,h5,h6 {margin:1.5em 0}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{text-decoration:none}
+
+#blog-title {font-size:3em}
+.entry-title,
+.sidebar h3,
+.category-quote .entry-content,
+.category-link .entry-content,
+.category-links .entry-content,
+.category-linklist .entry-content {
+	font-size:1.5em;
+	line-height:1;
+	margin: 1em 0;
+}
+
+/* =structure
+=================================*/
+#wrapper{
+	border-style:solid;
+	border-width:0 1.5em;
+}
+#wrapper,#content {width:45.5em}
+
+#header {
+	margin:0;
+	padding:0 1.5em 1.5em 1.5em;
+}
+
+#blog-title {
+	margin:0;
+	padding-top:.5em;
+}
+
+.skip-link{
+	left:0;
+	position:absolute;
+	top:0;
+}
+
+#menu ul{
+	float:right;
+	list-style:none;
+	margin:0 1.5em 0 0;
+}
+#menu li {
+	float:left;
+}
+#menu li a {
+	display:block;
+	padding:.75em 1.5em;
+}
+
+.navigation {
+	margin-top:1.5em;
+}
+.navigation .nav-next a,
+.navigation .nav-previous a{
+	border:0;
+}
+
+#content {padding:0}
+.sidebar {
+	width:50%;
+	padding:1.5em 0;
+}
+.sidebar li {margin:0 1.5em;}
+#primary{float:left}
+#secondary{float:right}
+
+.sidebar ul {margin:0}
+
+.sidebar #search {
+	right:1.5em;
+	position:absolute;
+	top:1.5em;
+}
+.sidebar #search #s {width:7em}
+
+#rss-links {
+	position:absolute;
+	top:10.5em;
+	right:-12.5em;
+	width:11em;
+	margin:0;
+}
+#rss-links li{
+	clear:both;
+	float:left;
+	margin:0;
+}
+#rss-links a {
+	display:block;
+	margin-bottom:5px;
+	padding:3px 3px 3px 26px;
+}
+
+body.loggedin .sidebar #meta {
+	display:block;
+	margin:0;
+	position:absolute;
+	right:0;
+	top:0;
+}
+.sidebar #meta ul {
+	margin:0;
+	margin-right:1.5em;
+}
+.sidebar #meta li {
+	display:inline;
+	list-style:none;
+}
+
+#footer {
+	text-align:right;
+}
+
+/* =articles and comments
+=================================*/
+
+.hentry {
+	clear:both;
+	position:relative;
+	margin-bottom:1.5em;
+}
+.entry-title {
+	margin-top:2em;
+	width:100%;
+}
+.entry-title a{
+	display:block;
+	margin-left:-2em;
+	padding-left:2em;
+	width:100%;
+}
+.single .entry-meta {
+	padding:1.5em;
+}
+.edit-link {
+	bottom:0;
+	position:absolute;
+	right:.75em;
+}
+.published {
+	bottom:1.5em;
+	position:absolute;
+}
+.single .published{position:static}
+.single .entry-meta .author {display:inline}
+
+/* Special Article Styles */
+.category-podcast .entry-content {padding-left:3em}
+
+.category-photo img {
+	display:block;
+	margin:0 auto;
+}
+.category-photo .entry-content,
+.category-video .entry-content,
+.category-tip .entry-content,
+.category-note .entry-content{
+	padding:1.5em 1.5em 3em 1.5em;
+}
+.category-photo .entry-meta,
+.category-video .entry-meta,
+.category-tip .entry-meta,
+.category-note .entry-meta {
+	margin-top:1.5em;
+}
+
+.category-link ul,
+.category-links ul,
+.category-linklist ul{
+	list-style:none;
+}
+
+.category-quote blockquote{
+	margin:0;
+	padding:0 2em;
+}
+
+/* Comments */
+.comments h3,
+#respond h3 {
+	font-size:1.25em;
+	line-height:1.2;
+	margin: 1.2em 0;
+}
+.comment {
+	list-style:none;
+	margin-bottom:3em;
+	padding-left:1.5em;
+	position:relative;
+}
+.comment-author {
+	display:inline;
+	padding-right:50px;
+}
+.comment-meta {
+	bottom:-1.8em;
+	display:block;
+	font-size:.83333333333em;
+	line-height:1.8;
+	margin:0;
+	position:absolute;
+	width:100%;
+}
+.unapproved,#login {
+	display:block;
+	margin:1.5em;
+	padding:1.5em;
+}
+
+.formcontainer{
+	padding:1.5em;
+}
+.form-input input{
+	width:23em;
+}
+.form-textarea textarea{
+	height:14em;
+	width:33em;
+}
+
+/* =IE special rules
+=================================*/
+
+* html .sidebar {
+	display:inline;
+	overflow: visible;
+}
+
+/* =print rules
+=================================*/
+@media print {
+	.navigation, #menu {display:none;}
+}

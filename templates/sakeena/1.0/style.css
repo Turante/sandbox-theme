@@ -1,0 +1,84 @@
+/*
+THEME NAME: Sakeena
+THEME URI: http://wordpress.diy-template.com/
+DESCRIPTION: The Sakeena theme for WordPress.
+VERSION: 1.0
+AUTHOR: Shazia Mistry
+AUTHOR URI: http://www.shaziamistry.com/
+TEMPLATE: sandbox
+*/
+
+/* Two-column with sidebar on left from the /sandbox-layouts/ folder  */
+@import url('2c-r.css');
+body {border:0; margin: 0; background: #414851 url('images/body_bg.gif') repeat-y left top;}
+/* Just some example content */
+#content a, #footer a {color: #31363d; font-weight: bold; text-decoration:none;}
+#content a:hover {background-color: #c8d7d8;}
+div#access a {color: #c8d7d8; font-weight: bold; text-decoration:none;}
+div#access a:hover {background-color: #3b414a;}
+div#header{margin:1em .5em; height: 165px; background:url('images/bg_logo.jpg') no-repeat top left; padding-left: 260px; width: 545px;}
+div#access div.skip-link{position:absolute;top:1em;left:850px;}
+div#menu{font-size:0.9em;height:2em;padding-top:0.3em;background:#3b414a;width:416px;margin-left:545px;}
+div#menu ul a{font-weight:700;text-decoration:none;}
+div#menu ul,div#menu ul ul,div#menu ul li{list-style:none;margin:0;padding:0;}
+div#menu ul li{float:left;}
+div#menu ul li a{background:#3b414a;padding:0.3em 0.5em;color: #c8d7d8; text-decoration:none; font-size: 1em;}
+div#menu ul li a:hover{text-decoration: underline;}
+div#menu ul ul{display:none;}
+div#menu ul ul li{float:none;}
+div#menu ul ul li a{margin:0;padding:0;}
+div#menu ul li:hover ul{display:block;font-size:1em;padding-top:0.5em;position:absolute;}
+div#menu ul li:hover ul li a{background:#f5f5f5;border-bottom:solid 1px #3b414a;display:block;padding:0.1em;width:10em; color:#3b414a;}
+#wrapper {border:0; margin:0; font:.8em Geneva, Arial, Helvetica, sans-serif;}
+h1#blog-title {padding: 20px 0 0 0; margin:0;}
+h1#blog-title a {text-decoration:none; font: 1.3em georgia, times, serif; color: #31363d;}
+#blog-description {font: 1em georgia, times, serif; color:#454c57;}
+.entry-title{clear:both;}
+.entry-date{font-size:.8em; color:#ccc;}
+.entry-meta {border-top: dashed 1px #ccc; padding: 10px;} 
+h2.entry-title a {font: 1em georgia, times, serif; color: #31363d; text-decoration:none;}
+div#container {}
+div#primary { background: url('images/sidebar_bg.gif') no-repeat top left; padding-top: 145px;}
+div#content {padding: 0;}
+div#nav-above,div#nav-below{width:500px;height:1em;}
+div#nav-above{margin-bottom:1em;}
+div#nav-below{margin-top:1em;}
+.alignleft,div.nav-previous{float: left;}
+.alignright,div.nav-next{float: right;}
+form#commentform .form-label{margin:1em 0 0;}
+form#commentform span.req-field{background:#fff;color:red;}
+form#commentform,form#commentform p{padding:0;}
+input#author,input#email,input#url{width:50%;}
+input#author,input#email,input#url,textarea#comment{padding:0.2em;}
+div.comments ol li{margin:0 0 3.5em;}
+textarea#comment{height:13em;margin:0 0 0.5em;overflow:auto;width:66%;}
+
+div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding-left:10px;}
+div.sidebar h3{font-size:1.2em;}
+div.sidebar input#s{width:7em;}
+div.sidebar li{list-style:none;margin:0 0 1em;}
+div.sidebar li form{margin:0.2em 0 0;padding:0;}
+div.sidebar ul ul{margin:0;}
+div.sidebar ul ul li{list-style:none;margin:0;}
+div.sidebar ul ul ul{margin:0;}
+div.sidebar ul ul ul li{list-style:none;}
+li.widget ul li {color: #c8d7d8; text-decoration:none; font: 1em Geneva, Arial, Helvetica, sans-serif; padding: 5px 10px;}
+li.widget ul li a {color: #c8d7d8; text-decoration:none; font-size: 1em;}
+li.widget ul li:hover {background-color: #3b414a; text-decoration:none;}
+div#footer{text-align:right; background-color:#c8d7d8;}
+h3 {color: #c8d7d8; font:1.1em georgia, times, serif; font-weight: bold; border-bottom: solid 1px #3b414a; padding: 2px;}
+.p1 {background: url('images/header_bg.gif') no-repeat top left; }
+.post {padding: 0 5px 0 30px;}
+#content .page {background: none; padding: 0 5px 0 30px;}
+#content .category-asides {margin: 10px 30px; background: url('images/aside_bg.gif') no-repeat center left; border-left: solid 1px #c8d7d8;}
+div.category-asides h2 {display:none;}
+div.category-asides h3 {display:none;}
+abbr {border-bottom: none;}
+li.linkcat ul li {color: #c8d7d8; text-decoration:none; font: 1em Geneva, Arial, Helvetica, sans-serif; padding: 5px 10px;}
+li.linkcat ul li a {color: #c8d7d8; text-decoration:none; font-size: 1em;}
+li.linkcat ul li:hover {background-color: #3b414a; text-decoration:none;}
+#wp-calendar {color: #ccc;}
+#wp-calendar a {color: #c8d7d8; font-weight: bold; text-decoration:underline;}
+#wp-calendar a:hover {background-color: #3b414a; text-decoration:none;}
+#comments {padding: 20px;}
+input, textarea {border-bottom: solid 1px #3b414a; border-right: solid 1px #3b414a; border-left: solid 1px #c8d7d8; border-top: solid 1px #c8d7d8;}

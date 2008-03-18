@@ -1,0 +1,417 @@
+/*
+THEME NAME: SAZI
+THEME URI: http://rustykruffle.com/downloads/
+DESCRIPTION: Stone Age Zen Industrial is a rather simple design with a dark slate and solder background and an electrified 'enlightenment' Kanji glyph logo
+VERSION: 1.0
+AUTHOR: Krusty Ruffle
+AUTHOR URI: http://rustykruffle.com/
+TEMPLATE: sandbox
+*/
+
+/*-- Generic Defaults for everything --*/
+*{
+margin:0;
+padding:0;
+color:#aaa;
+text-decoration:none;
+}
+/*-- generic defaults for certain things --*/
+a, a:link, a:visited{
+color:#ccc;
+}
+a:hover{
+color:#fff;
+text-decoration: underline;
+}
+ul, ol{
+list-style:none;
+margin:.5em 0;
+}
+h2,h3,h4,h5,h6 {
+font-family:arial, helvetica, sans-serif;
+font-weight:400;
+line-height:130%;
+}
+h2{
+font-size:2.0em;
+}
+h3{
+font-size:1.6em;
+}
+p{ 
+margin:1em 0;
+}
+span.meta-sep{
+margin:0 0.2em;
+padding:0 0.2em;
+}
+code,pre{
+font-family:"courier new", courier, monospace;
+font-size:0.9em;
+}
+abbr,acronym{
+border-bottom:1px dotted #88807c;
+cursor:help;
+}
+strong{
+font-weight:700;
+}
+em{
+font-style:italic;
+}
+.caps{
+text-transform:uppercase;
+}
+
+/*-- Major parts of the page --*/
+body{
+line-height:140%;
+background:#444 url("images/circuit-tile.jpg");
+}
+
+/*-- Wraps the page in a div, mostly used for semantic purposes, used here to tell most browsers size boundries for the page --*/
+#wrapper{
+min-width:770px;
+max-width:1200px;
+margin:0 auto;
+}
+
+/*-- Header Stuff --*/
+div#header{ /* the main header div */
+margin:.5em auto;
+width:750px;
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+}
+h1#blog-title{ /* the title in the header that links to the home page */
+margin:.2em;
+padding:0 96px .6em 0;
+font:3em/140% arial, helvetica, sans-serif;
+background: url("images/sazi-icon.jpg") top right no-repeat;
+text-align:center;
+}
+div#blog-description{ /* the small sentance under the above title */
+margin:-2.5em .2em 1.3em;
+padding-right:96px;
+font:1em/120% verdana, geneva, sans-serif;
+text-align:center;
+}
+
+/*-- page navigation menu in the header this is hidden untill the item after the next comment is deleted --*/
+div#access{ /* this wraps the entire nav system */
+margin:-1em auto .5em;
+width:750px;
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+border-top:none;
+}
+div#access a{
+text-decoration:underline;
+}
+div#access a:hover{
+text-decoration:none;
+}
+div#access div.skip-link{ /* this is the 'skip to content' link */
+float:right;
+margin:0 .7em;
+}
+div#access div#menu{ /* this wraps the page menu */
+margin:.2em 0;
+}
+div#access div#menu li{ /*these are the individule page links in the menu */
+display:inline;
+margin:0 .5em;
+}
+/*-- delete this to show page nav menu in header --*/
+div#access{
+display:none;
+}
+
+/*-- Main div that contains the content of the page, works with the one below to help format the page --*/
+div#container{
+float:left;
+margin:0 0 0 -200px;
+width:100%;
+}
+/*-- Another div that wraps up the content, works with the one above to help format the page--*/
+div#content{
+margin:0 0 0 200px;
+}
+/*-- Navigation Links and page titles above/below content --*/
+h2.page-title{ /* titles on things like category pages etc... */
+text-align:center;
+background:#333;
+border:7px ridge #777;
+border-bottom:none;
+}
+div.archive-meta{ /* the category or author info on author and category pages */ 
+text-align:center;
+background:#333;
+border-left:7px ridge #777;
+border-right:7px ridge #777;
+margin:-1em 0;
+}
+div.navigation{ /* these wrap the navigation links above & below the content */
+font:1em/normal verdana, geneva, sans-serif;
+height:1.4em;
+padding:.5em;
+background:#333;
+border:7px ridge #777;
+}
+body.archive div#nav-above,body.search div#nav-above{ /* these wrap the navigation links above & below the content */
+border-top:none;
+}
+div.nav-previous,div.nav-next{ /* common things between the two following items */
+width:48%;
+overflow:hidden;
+white-space:nowrap;
+}
+div.nav-previous{ /* these are the 'older posts' links above and below the content */
+float:left;
+text-align:left;
+}
+div.nav-next{ /* these are the 'newer posts' links above and below the content */
+float:right;
+text-align:right;
+}
+div#nav-below{ /* the bottom Navigation bar, needs some space before footer */
+margin-bottom:1em;
+}
+
+/*-- this section deals with the main content --*/
+div#content{ /* this should justify the text in posts, as well as comments */
+text-align:justify;
+}
+div.hentry,body.search div.noresults{ /* the wrapper around each post */
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+margin:1em 0;
+padding:.5em 1em;
+clear:both;
+}
+body.search div.noresults{
+text-align:center;
+margin:0
+}
+abbr.published{ /* the date/time the post was published */
+cursor:help;
+display:block;
+font:.6em/normal verdana, geneva, sans-serif;
+border-bottom:3px groove #777;
+margin:.5em 0;
+padding-bottom:.5em;
+}
+div.entry-content p:first-letter{ /* The first letter of each paragraph in each post */
+text-transform:capitalize;
+font-size:1.5em;
+}
+div.hentry img,div#content .alignleft{ /* images in posts, & items with the 'alignleft' class */
+float:left;
+margin-right:1em;
+}
+div#content .alignright{ /* items with the 'alignright' class */
+float:right;
+margin-left:1em;
+text-align:right;
+}
+div#content .center{ /* items with the 'center' class */
+float:none;
+display:block;
+margin:0 auto;
+}
+div.entry-content ol{ /* indents ordered lists in posts */
+margin:0 0 0 1.5em;
+}
+div.entry-content ul{ /* indents unordered lists in the posts */
+margin:0 0 0 1em;
+}
+div.entry-meta{ /* the meta information found under each post */
+font:0.7em/150% verdana, geneva, sans-serif;
+margin:.8em 0;
+border-top:3px groove #777;
+padding-top:1em;
+}
+div.entry-content a.more-link{ /* the link that shows up when a post has been split to only show an excerpt */
+font:bold 0.7em/130% verdana, geneva, sans-serif;
+}
+div.entry-content div.page-link{ /* the section that shows up when a post has been split into multiple pages */
+font:bold 0.7em/130% verdana, geneva, sans-serif;
+margin:-0.5em 0 1em;
+}
+div#content div.page-link a,div#content div.page-link a:link,div#content div.page-link a:visited{ /* the links in the page link section */
+margin:-0.5em 0 1em;
+padding:0.2em;
+}
+div#content blockquote{ /* blockquotes onside the content */
+margin:.5em 0;
+padding:.5em 0 .5em 48px;
+border-top:1px dotted #777;
+border-bottom:1px dotted #777;
+background:url("images/quote.gif") top left no-repeat;
+min-height:48px;
+}
+div#content cite{ /* citations within the page */
+display:block;
+width:100%;
+text-align:right;
+}
+div#content ul{ /* unordered liststyles in the main content */
+list-style-type:disc;
+list-style-position:inside;
+}
+div#content ol{ /* ordered liststyles in the main content */
+list-style-type:decimal;
+list-style-position:inside;
+}
+body.single div.entry-meta abbr.published{ /* formats the posts date/time on single pages */
+display:inline;
+font-size:1em;
+border-bottom:1px dotted #aaa;
+padding-bottom:1px;
+}
+
+/*-- Stuff for real pages --*/
+body.page div.hentry{ /* the wrapper around each post - override most of this one for pages */
+background:none;
+Border:0;
+margin:0;
+padding:0;
+}
+body.page h2.entry-title{ /* the title on each page */
+background:#333;
+Border:7px ridge #777;
+text-align:center;
+}
+body.page div.entry-content{ /* the content on the pages */
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+margin:1em 0;
+padding:0 1em 1em;
+}
+body.page div.entry-content li.content-column{ /* the columns of links on the archives page */
+margin: 1em;
+}
+body.page span.edit-link{ /* this is the edit link on all of the pages */
+display:block;
+text-align:right;
+margin-right:1em;
+}
+body.page div#content ul{ /* kill the unordered liststyles on the pages */
+list-style-type:none;
+}
+
+
+/*-- Comments and stuff --*/
+div#comments-list{ /* this wraps all of the comments */
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+margin:1em 0;
+padding:.5em 1em;
+}
+div#comments-list h3{ /* the comment count at the top of the comments */
+text-align:center;
+}
+div#comments-list li.comment{ /* this wraps each individual comment */
+margin: 1em 0;
+border:5px groove #777;
+padding: 0 .5em;
+list-style:none;
+}
+div#comments-list li.bypostauthor{ /* comments made by the original poster */
+background:#333;
+}
+div#comments-list li.comment li{ /* list items in both ordered and unordered lists */
+margin-left:1em;
+}
+div#comments-list li div.comment-meta{ /* the information at the top of each comment */
+border-bottom:3px groove #777;
+margin-bottom: .75em;
+}
+div#respond{ /* this wraps the entire responce area */
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+margin:1em 0;
+padding:0 .75em .5em .5em;
+}
+div#respond div.formcontainer{ /* this wraps the form in the responce area , this needs to be here for the text area to work right in IE6 */
+width:100%;
+}
+div#respond h3,div#respond p#comment-notes{ /* the small statement about email addresses not being sold */
+text-align:center;
+}
+div#respond textarea#comment{ /* the area you type in when getting ready to comment */
+width:100%;
+}
+div#respond div.form-submit{ /* this wraps the below */
+margin-top:.5em;
+width:100%;
+height:1.5em;
+}
+div#respond input#submit{ /* the button you press to post your comment */
+float:right;
+width:9em;
+text-align:center;
+}
+
+/*-- sidebar stuff --*/
+div.sidebar{ /*this covers both sidebars */
+float:right;
+overflow:hidden;
+width:175px;
+margin-top:-.5em;
+}
+div#secondary{/* This is the second sidebar only */
+clear:right;
+}
+div.sidebar li { /*these are the individual things in the different sidebars */
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+margin:0 0 1em;
+padding:0 .5em .5em;
+}
+div.sidebar li ul{ /* this is to help format sublists */
+margin:0;
+}
+div.sidebar li li{ /* this needs to be here to counteract the cascade of the above formatting and to format actual lists in the sidebar */
+background:transparent;
+Border:none;
+margin:0;
+padding:0;
+}
+div.sidebar li li li{ /* this needs to be here so counteract the cascade of the above formatting and to format sub lists in the sidebar */
+padding:0 0 0 1em;
+}
+div.sidebar h3{ /* the title of the items in the sidebar */
+font-size:1em;
+border-bottom:2px groove #777;
+}
+div.sidebar li#search h3{ /* the underline looks dumb on the search form */
+border-bottom:none;
+}
+div.sidebar input#s{ /* the searchbar text input */
+width:100px;
+color:#000;
+}
+input#s, input#searchsubmit{ /* the search inputs, these are normally in the sidebar, but also show up when a search returns four04, which makes an illegal page when the id's are common... */
+color:#000;
+}
+
+/*-- The bar at the bottom of the page --*/
+div#footer{ /*wrapper around the entire footer */
+clear:both;
+font:bold .8em/normal verdana, geneva, sans-serif;
+width:500px;
+margin:1em auto;
+padding:.5em;
+text-align:center;
+background:#444 url("images/dark-tile.jpg") repeat;
+Border:7px ridge #777;
+}
+div#footer span#generator-link,div#footer span#theme-link{ /* the links in the footer */
+margin:1em;
+}
+
+/*
+Stone Age Zen Industrial v1 for SANDBOX
+by Krusty Ruffle http://rustykruffle.com
+*/

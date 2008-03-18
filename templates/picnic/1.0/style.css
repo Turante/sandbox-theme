@@ -1,0 +1,344 @@
+/*
+THEME NAME: Picnic
+THEME URI: http://ntuat.wordpress.com/
+DESCRIPTION: You could watch the sunrise and eat scotch eggs. Just be careful of those spiders.
+VERSION: 1.0
+AUTHOR: Carolyn Smith
+AUTHOR URI: http://not-that-ugly.co.uk/
+TEMPLATE: sandbox
+*/
+
+
+/* Let's push the sidebars to the bottom so we can focus on the pretty. 
+If you feel that SIDEbars should be on the SIDE, go ahead and substitute one of the 2-column configurations in sandbox/layouts. 
+(See, I am tolerant of other people's beliefs ) */
+@import url('../sandbox/sandbox-layouts/1c-b.css');
+
+@import url('ie6.css');
+
+body {margin:0 0 0 300px;
+padding:0;
+background:#fee url(images/background.gif) bottom left fixed no-repeat;
+font:0.75em 'verdana', sans-serif}
+
+
+div#header{position:fixed;
+top:0;
+left:0;
+width:275px;}
+
+#header h1 {font:2.4em 'georgia', serif;
+padding:0 10px 0 10px}
+
+#blog-description {padding:0 10px 0 10px;
+color:#543;
+font-variant: small-caps}
+
+abbr.published {border:0}
+.skip-link {display:none}
+
+div#menu{height:1.5em;
+padding-top:0.3em;
+margin-bottom:30px;
+font:1.2em 'georgia', serif;
+font-variant:small-caps}
+
+div#menu ul,div#menu ul ul,div#menu ul li{list-style:none;margin:0;padding:0;}
+div#menu ul li{float:left;}
+div#menu ul li a{padding:0.3em 0.5em;
+ border:1px #855 solid;
+background:#fee url(images/gradient.png) repeat-x;}
+div#menu ul ul{display:none;}
+div#menu ul ul li{float:none;}
+div#menu ul ul li a{margin:0;padding:0;}
+div#menu ul li:hover ul{display:block; padding-top:0.3em;position:absolute;}
+div#menu ul li:hover ul li a{background:#fee url(images/gradient.png) repeat-x;
+border:1px #855 solid;
+display:block;
+padding:0.1em;
+width:10em;}
+div#menu ul li:hover ul li:hover a:hover{background:#fdd;}
+
+div#menu a:hover {background:#fdd;}
+
+
+div#container,div.sidebar{margin-top:2em;}
+
+.post, body.page div.hentry {background:#a99 url(images/entrybk.png);
+color:#ffe}
+
+.hentry a {color:#fdd}
+
+.hentry a:hover {color:#fee}
+
+.entry-title{clear:both;
+background:url(images/entrytop.png) repeat-x;
+padding:30px 10px 0px 10px;
+font: 2.4em 'georgia', serif;
+font-weight:normal
+}
+
+.entry-date {margin:-20px 0 0 0;
+padding:0 10px 0 10px;
+font:1.2em 'georgia', serif;}
+
+body.home div.entry-date{float:right;
+height:100px;
+width:100px;
+margin:5px;
+border:#543 1px solid;
+color:#543;
+font:1.2em 'georgia', serif;
+text-align:center;
+background:#fdd url(images/datebk.gif) bottom right no-repeat}
+
+
+
+.entry-content {padding:0 10px 0 10px;
+line-height:1.4em
+}
+
+
+.entry-meta {font-size:0.95em;
+clear:right;
+background:url(images/entrybottom.png) bottom left repeat-x;
+padding:0 10px 30px 10px}
+
+
+/* let's style some asides  */
+
+body.home div.category-asides .entry-title, 
+body.home div.category-asides .entry-date,
+div.category-asides .author, 
+div.category-asides .meta-sep,
+div.category-asides .cat-links    
+{display:none}
+
+div.category-asides, div.category-asides .entry-title {background:#fee;
+color:#543}
+
+div.category-asides a {color:#855}
+
+div.category-asides a:hover {color:#633}
+
+div.category-asides .entry-meta {background:#fee;
+padding-bottom:0;}
+
+
+div#content {background:url(images/contentfooter.png) bottom center no-repeat;
+padding-bottom:50px;
+margin-right:10px}
+
+/* prev/next links */
+div#nav-above,div#nav-below{width:95%;
+height:1em;
+margin:auto}
+div#nav-above{margin-bottom:1em;}
+div#nav-below{margin-top:1em;}
+div.nav-previous {float:left;}
+div.nav-previous a{
+background:url(images/leftarrow.gif) left center no-repeat;
+padding-left:20px}
+div.nav-next {float:right}
+div.nav-next a
+{background:url(images/rightarrow.gif) right center no-repeat;
+padding-right:20px}
+.meta-nav {display:none}
+
+
+form#commentform .form-label{margin:1em 0 0;}
+form#commentform,form#commentform p{padding:0;}
+input#author,input#email,input#url{width:50%;}
+input#author,input#email,input#url,textarea#comment{padding:0.2em;}
+ol{list-style:none}
+ol.commentlist li{margin:0 0 3.5em;
+}
+
+textarea, input {font: 1em 'verdana', sans-serif;
+border:#543 1px solid;
+background:#fdd url(images/reversegradient.png) repeat-x;
+margin:10px 0 10px 0;
+padding:7px;
+line-height:1.4em}
+
+textarea:focus {background:#fdd url(images/datebk.gif) bottom right no-repeat}
+
+
+/* headers ! */
+
+h2.page-title, h3 {font:2em 'georgia', serif;
+font-variant:small-caps;
+line-height:1.5em;
+color:#543}
+
+.hentry h3 {color:#fee;
+font-variant:normal;
+font-family: 'georgia', sans-serif}
+
+h4, h5, h6 {color:#fee;
+font-family: 'georgia', sans-serif}
+
+
+/* comments & trackbacks */
+
+textarea#comment {width:40em;
+overflow:auto}
+
+.comment, .trackback, .pingback {border:#543 1px solid;
+background:#fee;
+margin:10px 0 10px 0;
+line-height:1.4em}
+
+.comment-author, .comment p, .comment-meta, .trackback p, .pingback p {padding: 0 7px 0 7px}
+
+.comment-author {padding-top:7px;
+background:#fdd url(images/reversegradient.png) repeat-x;
+font:2em 'georgia', serif;
+color:#a99}
+
+
+.comment-meta{border-bottom:#543 1px solid;
+padding-bottom:7px;
+background:#fdd;
+color:#543
+}
+
+.trackback div.comment-author, .pingback div.comment-author {border-bottom:#543 1px solid;
+padding-bottom:7px}
+
+.comment blockquote {background:#a99 url(images/entrybk.png);
+color:#ffe}
+
+.bypostauthor {border:#543 3px double;
+background:url(images/datebk.gif) bottom right no-repeat
+}
+
+
+/* sidebar stuff */
+
+div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
+
+div.sidebar h3{font:1.5em 'georgia', serif;
+font-variant:small-caps;
+background:url(images/spider.gif) center left no-repeat;
+padding-left:30px;
+line-height:1.5em;
+color:#543}
+
+
+div.sidebar ul li {border:#543 1px solid;
+background:#fdd url(images/reversegradient.png) repeat-x;
+padding-bottom:10px}
+
+div.sidebar input#s{width:10em;
+margin-left:20px;}
+div.sidebar li{list-style:none;margin:0 0 1em;}
+div.sidebar li form{margin:0.2em 0 0;padding:0;}
+div.sidebar ul ul{margin:0}
+div.sidebar ul ul li{margin:0; border:0; padding:0 0 0 2em; background:#fdd}
+
+div.sidebar ul ul li:hover {background:url(images/rightarrow.gif) top left no-repeat;}
+
+div.sidebar ul ul ul{margin:0 0 0 0.5em;}
+
+
+
+/* calendar */
+
+#calendar h3 {display:none}
+
+#wp-calendar {width:170px;
+padding-left:20px;
+color:#543}
+
+#wp-calendar caption {font:1.5em 'georgia', serif;
+font-variant:small-caps;
+background:url(images/spider.gif) center left no-repeat;
+padding-left:30px;
+line-height:1.5em;
+color:#543;
+text-align:left
+}
+
+#wp-calendar th {color:#543;}
+
+#wp-calendar td {text-align:center;
+border:#855 1px solid;
+background:#fee url(images/gradient.png) repeat-x;}
+
+#wp-calendar td a {font-weight:bold}
+
+#wp-calendar tfoot a {font-weight:normal;
+font-variant:small-caps;
+}
+
+#wp-calendar td.pad {border:0;
+background:#fdd}
+
+td#today {
+background:#a99 url(images/entrybk.png);
+color:#fee}
+
+#today a {color:#fdd}
+
+
+
+/* image handling */
+
+#content img {max-width:98%;}
+
+#content, .sidebar {overflow:hidden}
+
+a img {border:0}
+
+.alignright {
+float:right;
+margin:5px}
+
+.alignleft {
+float:left;
+margin:5px}
+
+.center {
+margin:auto;
+display:block;
+}
+
+/* html elements */
+
+a {color: #855;
+text-decoration:none}
+
+a:hover {color:#543}
+
+pre, code {width:90%;
+font-size:1.2em;
+overflow:auto}
+
+blockquote, .hentry dl {
+clear:right;
+padding:3px;
+background:#fdd url(images/datebk.gif) bottom right no-repeat;
+border:#543 1px solid;
+color:#543;
+font-family: 'georgia', serif;}
+
+blockquote blockquote {background:#fee url(images/gradient.png) repeat-x;}
+
+#content blockquote a, .hentry dl a {color:#a99}
+
+#content blockquote a:hover {text-decoration:underline}
+
+.hentry ol {list-style-type:upper-roman}
+
+.hentry ul {list-style-image:url(images/pinkarrow.gif)}
+
+dt {font-weight:bold;
+font-size:1.2em;
+margin-top:5px}
+
+
+div#footer{text-align:center;}
+
+
+

@@ -1,0 +1,14 @@
+/*
+THEME NAME: We Love WordPress
+THEME URI: http://www.odysseygate.com/
+DESCRIPTION: A theme featuring the movement known as <a href="http://www.flickr.com/photos/cafelog/sets/72157594207501792/">We Love WordPress</a> about WordPress in Japan and the penguin character called as "Warp"
+VERSION: 1.0
+AUTHOR: Odyssey
+AUTHOR URI: http://www.odysseygate.com/
+TEMPLATE: sandbox
+*/
+
+@import url('reset.css');
+@import url('font.css');
+@import url('layout.css');
+@import url('theme-weluvwp.css');

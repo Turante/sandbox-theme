@@ -1,0 +1,124 @@
+/*
+THEME NAME: Veracity
+THEME URI: http://www.ejecutive.co.uk/projects/veracity/
+DESCRIPTION: The Veracity design was developed for the Sandbox Designs Competition.
+VERSION: 1.0
+AUTHOR: Weiran Zhang
+AUTHOR URI: http://www.ejecutive.co.uk/
+TEMPLATE: sandbox
+*/
+
+/* Typography */
+body { font-family: "Lucida Grande", verdana, sans-serif; border-top: solid 4px #CED590; margin: 0; }
+p, ul, ol, dl, div.post { font-size: 9pt; }
+p, li, div.post { line-height: 14pt; }
+a { text-decoration: none; }
+h1, h2, h3, h4 { font-family: "Georgia", "Times New Roman", serif; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h2 { font-size: 18pt; letter-spacing: 0.5pt; margin: 5px 0 0 0; padding: 0 0 7px 0; line-height: 26px; }
+body.single h2 { margin-top: 20px; }
+h3 { font-size: 14pt; }
+h4 { font-size: 12pt; }
+h5 { font-size: 10pt; color: #CED590; }
+h6 { font-size: 10pt; font-weight: bold; }
+abbr { font-size: 10pt; color: #aaa; border: none; }
+blockquote { margin: 5px 0; padding: 0 0 0 10pt; border-left: solid 1px #5e6a6a; font-size: 9pt; line-height: 14pt; }
+ul, ol { padding: 0; }
+ul { list-style-type: square; margin-left: 16px; }
+ol { margin-left: 20px; }
+li h3 { margin-bottom: 5px; }
+code, pre { font-family: "Lucida Sans Typewriter", Monaco, "Courier", monospace; font-size: 8pt; line-height: 10pt; }
+em { font-family: "Lucida Sans"; }
+pre { padding: 10px 0; border-top: dotted 1px #5e6a6a; border-bottom: dotted 1px #5e6a6a; }
+img { max-width: 445px; margin: 10px 0; }
+img.alignleft { float: left; margin-right: 10px; }
+img.alignright { float: right; margin-left: 10px; }
+img.center { text-align: center; }
+
+dt { display: block; float: left; padding: 0 10px 0 0; margin: 0; }
+dd { display: block; margin: 0 0 0 80px; border-left: dotted 1px #aaa; padding: 0 0 10px 10px; }
+
+/* Content */
+div.post, div.page { border-top: solid 1px #aaa; margin: 0 0 20px 0; }
+body.single div.post, div.page { margin: 0 0 20px 0; }
+div.entry-date { text-align: right; margin: 0 0 10px 0;}
+div.entry-content { border-top: 1px solid #5e6a6a; padding: 10px; }
+body.single div.entry-content { margin-top: 20px; }
+span.edit-link { font-size: 10pt; padding: 10px; border-top: solid 1px #5e6a6a; display: block; margin: 20px -10px 0 -10px; }
+img { border: none; }
+div.footnotes { color: #aaa; margin: 20px 0 0 0; }
+div.footnotes ol li { margin: 0 0 10px 0; font-size: 8pt; line-height: 12pt; }
+div.skip-link, div.entry-meta, div#nav-above { display: none; }
+div.page-link { font-size: 10pt;  border-top: solid 1px #5e6a6a; padding: 10px; }
+div#blog-description { font-size: 10pt; margin: 0 0 0 2px; }
+
+/* Links */
+div.category-asides h2 { font-family: "Lucida Grande", verdana, sans-serif; font-size: 10pt; float: left; letter-spacing: normal; margin: 0 0 -10px 0;}
+div.category-asides abbr { font-size: 8pt; display: block; padding: 12px 0 0 0; margin: 0; line-height: 1pt; }
+div.category-asides div.entry-content { clear: left; padding-top: 0; }
+div.category-asides { margin: 0 0 10px 0; border-top: none; }
+
+/* Layout */
+div#wrapper { width: 665px; margin: 0 auto; }
+div#container {	float: left; width: 100%; margin: 0 0 0 -200px;  clear: both;}
+div#content { margin: 30px 0 0 200px;}
+div.sidebar { float: right; overflow: hidden; width: 180px; }
+div#secondary {	clear: right; }
+div#footer { clear: left; width: 100% }
+
+/* Sidebar */
+div.sidebar { margin: 30px 0 0 0; }
+div.sidebar ul, div.sidebar li { list-style-type: none; padding: 0; margin: 0; }
+div.sidebar li h3 { display: block; border-top: solid 1px #aaa; margin: 0; padding: 4px 0 6px 0; font-family: "Lucida Grande", verdana, sans-serif; font-size: 10pt; }
+div.sidebar ul.xoxo ul, div.sidebar div.textwidget, div.sidebar form { border-top: solid 1px #5e6a6a; }
+div.sidebar ul.xoxo li { margin: 0 0 40px 0 }
+div.sidebar ul.xoxo li ul li, div.sidebar ul.xoxo li form, div.sidebar ul.xoxo li p, div.sidebar div.textwidget { border-bottom: solid 1px #5e6a6a; padding: 4px 0 6px 5px; margin: 0; }
+div.sidebar ul li a { display: block; }
+div.sidebar li h3 a, div.sidebar li#tweets ul li a, div.sidebar div.textwidget a { display: inline; color: #87acd1; }
+div.sidebar ul li ul li ul { margin: 6px 0 -7px -5px; text-indent: 5px; }
+
+/* Menu */
+div#menu { padding: 7px 0 13px 0; margin: -10px 0; border-left: solid 1px #aaa; }
+div#menu ul { display: inline; margin: 0; padding: 0; }
+div#menu ul li { display:inline; }
+div#menu ul li a { padding: 10px 10px 15px 10px; border-right: solid 1px #aaa; }
+div#menu ul li ul { border-left: none; }
+div#menu ul li.current_page_item a { color: #fff; }
+div#menu ul li.current_page_item ul li a { color: #CED590; }
+
+/* Header */
+div#header { margin: 20px 0; }
+h1 { margin: 0; }
+
+/* Post Navigation */
+div.navigation { display: block; width: 100%; font-size: 9pt; border-top: solid 1px #5e6a6a; border-bottom: solid 1px #5e6a6a; padding: 10px 0; float: left; margin: 0 0 50px 0}
+div.navigation div.nav-previous, div.navigation div.nav-next { display: block; float: left; }
+div.navigation div.nav-previous { width: 224px; }
+div.navigation div.nav-next {  width: 225px; text-align: right; float: right; }
+
+/* Comments */
+div.comments { border-top: solid 1px #aaa; clear: both; margin: 0; }
+div.comments ol { list-style-type: none; margin: 0; padding: 0 20px; }
+div.comments ol div.comment-author, div.comments ol div.comment-meta { margin: 0 -20px; }
+div.comments ol div.comment-author { border-top: solid 1px #5e6a6a; font-weight: bold; padding: 10px 0 0 0; }
+div.comments ol div.comment-meta { color: #ccc; }
+div.comments ol li ol { list-style-type: decimal; margin: 0 0 10px 0; }
+div.comments ol li ul { margin: 0 0 10px 15px; }
+div.comments span.edit-link { float: none; border: none; padding: 0; margin: 0; display: inline; }
+
+div#respond { border-top: solid 1px #aaa; font-size: 10pt; clear: left; }
+div#respond h3 { border-bottom: solid 1px #5e6a6a; padding: 0 0 20px 0; margin: 20px 0 0 0; }
+div#respond p#comment-notes { display: none; }
+div#respond p#login { margin: 10px 0 0 10px; }
+div#respond div.form-label { float: left; clear: left; width: 80px; padding: 10px 0 0 10px; }
+div#respond div.form-input, div#respond div.form-textarea { padding: 10px 0; border-bottom: solid 1px #5e6a6a; }
+div#respond div.form-textarea textarea { width: 350px; }
+div#respond div.form-submit { clear: left; padding: 10px 5px 10px 0; text-align: right; }
+
+/* Footer */
+div#footer { display: block; clear: both; font-size: 10pt; border-top: solid 1px #aaa; padding: 10px; }
+
+/* Colours */
+body { background-color: #384949; color: #fff; }
+a { color: #87acd1; }
+h1 a, h1, h2 a, h2, h3 a, h3, h4 a, h4, div#menu ul li a, dt { color: #CED590; }

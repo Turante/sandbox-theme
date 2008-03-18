@@ -1,0 +1,348 @@
+@charset "utf-8";
+
+/*
+STYLE NAME: Reset Stylesheet
+DESCRIPTION: Reset Stylesheet.
+VERSION: 1.0
+AUTHOR: Odyssey
+AUTHOR URI: http://www.odysseygate.com/
+
+This Stylesheet proudly refered to 2xUP NUKAMISO.
+Original Credit Below.
+ * Style Name: Common Stylesheet (NUKAMISO)
+ * Style URL: http://2xup.org/common/css/common.css
+ * Description: Common Stylesheet.
+ * Version: 3.1
+ * Last Up Date: 2007-01-22T15:52:46+09:00
+ * Author: Taichi Kaminogoya
+ * Author URL: http://2xup.org/
+ * Author Email: mail[at]2xup.org
+ *
+ * The CSS and design is released under GPL: http://www.gnu.org/licenses/gpl.html
+ * 2xUP で利用している CSS ファイル、デザインは GPL ライセンス（クレジットを残し、第三者にも改変・再配布を認めるという条件で改変・再配布可）を適用しています。
+ *
+ * Markup Reference: http://2xup.org/common/css/style-guide.pdf
+ *
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+hr {
+  display: none;
+}
+
+/* block element */
+
+div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, address {
+  display: block;
+}
+
+/* p */
+p {
+  margin-bottom: 1.5em;
+  padding: 0;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* blockquote */
+blockquote {
+  margin: 1em 2em;
+  padding: 0 1em;
+}
+
+blockquote p {
+  margin: 1em 0;
+  padding: 0;
+}
+
+blockquote blockquote {
+  margin: 0.2em 0;
+  padding: 0.2em 0 0.2em 0.2em;
+}
+
+/* pre */
+pre {
+  clear: both;
+  width: 95%;
+  overflow: scroll;
+  margin: 1.5em 0;
+  padding: 0.5em 0.8em;
+  font-size: 95%;
+  /* \*//*/
+  overflow: visible;
+  /**/
+}
+
+/* del */
+del, 
+del * {
+  color: #CCC ! important;
+  font-weight: normal ! important;
+  text-decoration: line-through ! important;
+}
+
+/* ins */
+ins {
+  display: block;
+  margin: 0;
+  padding: 1em;
+  color: #333;
+}
+
+del ins {
+  text-decoration: line-through;
+}
+
+ins h1, ins h2, ins h3, ins h4, ins h5, ins h6, ins div, ins p, ins pre, ins address, ins blockquote, ins dl, ins form, ins fieldset, ins table{
+  margin: 0;
+  padding: 0;
+} 
+
+h1 ins, h2 ins, h3 ins, h4 ins, h5 ins, h6 ins, p ins, pre ins, address ins, li ins, dt ins, dd ins {
+  display: inline;
+  margin: 0;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+pre ins, code ins, samp ins, var ins, kbd ins {
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+
+
+/* inline element */
+a, abbr, acronym, bdo, big, cite, code, dfn, em, img, kbd, q, samp, small, span, strong, sub, sup, var {
+  display: inline;
+}
+
+abbr, abbr, acronym {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+  cursor: help;
+}
+
+dfn {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+}
+
+/* img */
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: text-bottom;
+}
+
+a img {
+  border: none;
+  text-decoration: none;
+}
+
+/* sub sup */
+sub, sup {
+  font-size: 50%;
+}
+
+/* q */
+q {
+  margin: 0 0.5em;
+  padding: 0;
+  font-style: italic;
+}
+
+/* strong */
+strong {
+  margin: 0 0.2em;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* em */
+em {
+  margin: 0 0.2em;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+/* button */
+button {
+  cursor: pointer;
+  border-color: #FAFAFA #848484 #848484 #FAFAFA;
+  border-width: 2px;
+  border-style: solid;
+  color: #333;
+  font-family: monospace;
+  font-size: 85%;
+  background-color: #F0F0F0;
+}
+
+button:active {
+  border-color: #848484 #FAFAFA #FAFAFA #848484;
+}
+
+
+/* list element */
+ul, ol {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 2em 0 2.5em 2.5em;
+}
+
+ol {
+  list-style-type: none;
+  margin: 2em 0 2.5em 3em;
+}
+
+li {
+/*
+  display: list-item;
+*/
+  list-style: none;
+  margin:0 0 0.5em 0;
+}
+
+ul ul, 
+ol ol, 
+ul ol, 
+ol ul { 
+  margin: 0.5em 0 0.5em 1.2em;
+}
+
+ul ul li, 
+ul ol li, 
+ol ol li, 
+ol ul li {
+  margin: 0 0 0.5em 0;
+}
+
+dl {
+  display: block;
+  line-height: 1.2;
+  margin: 0 0 0 1em;
+}
+
+dt {
+  clear: both;
+  margin: 1em 0 1em 0;
+  padding: 0;
+  border-bottom: 1px dotted black;
+  font-weight: normal;
+}
+
+dd {
+  margin: 0 0 2em 0;
+  padding-left: 1.5em;
+  line-height: 1.5;
+}
+
+
+/* form */
+
+form {
+  display: block;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+fieldset dt {
+  border: none;
+}
+
+fieldset ul,
+fieldset ol,
+fieldset dl {
+  display: block;
+  margin: 1em 0 1em 0.5em;
+}
+
+legend {
+  display: none;
+}
+
+label {
+  vertical-align: middle;
+  margin: 0 0.5em  0 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+input {
+  vertical-align: middle;
+}
+
+
+/* table */
+
+table {
+  margin: 1em 0 2.5em 1em;
+  border-width: 1px 0 0 1px;
+  border-color: black;
+  border-style: dotted;
+  border-spacing: 0;
+}
+
+table, th, td {
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+table a {
+  font-weight: normal !important;
+}
+
+caption {
+  display: none;
+}
+
+tr {
+  border: none;
+}
+
+th, td {
+  padding: 0.5em 4px;
+  border-width: 0 1px 1px 0;
+  border-color: black;
+  border-style: dotted;
+  text-align: center;
+}
+
+
+/* noscript */
+noscript {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+noscript p {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #d44;
+  color: #666;
+  text-align: center;
+  background-color: #fee;
+}
+

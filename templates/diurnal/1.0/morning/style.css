@@ -1,0 +1,57 @@
+/* Morning */
+
+body.h09, body.h10, body.h11, body.h12 {
+background:#fff url(header.png) top left repeat-x;
+}
+
+body.h09 .meta-sep, body.h10 .meta-sep, body.h11 .meta-sep, body.h12 .meta-sep{
+background:url(dot.gif) center left no-repeat;}
+
+
+/* links */
+body.h09 a, body.h10 a, body.h11 a, body.h12 a
+{color:#5ad}
+
+body.h09 a:hover, body.h10 a:hover, body.h11 a:hover, body.h12 a:hover {color:#3cf}
+
+
+/* header */
+body.h09 #header, body.h10 #header, body.h11 #header, body.h12 #header {background:url(sun.png) top left no-repeat} 
+
+body.h09 #header h1 a, body.h10 #header h1 a, body.h11 #header h1 a, body.h12 #header h1 a{color:#fff} 
+
+body.h09 #header h1 a:hover, body.h10 #header h1 a:hover, body.h11 #header h1 a:hover, body.h12 #header h1 a:hover{color:#ff9} 
+
+
+/* blockquote */
+body.h09 blockquote, body.h10 blockquote, body.h11 blockquote, body.h12 blockquote, 
+body.h09 blockquote p, body.h10 blockquote p, body.h11 blockquote p, body.h12 blockquote p{
+background:#aef;
+}
+
+body.h09 blockquote a, body.h10 blockquote a, body.h11 blockquote a, body.h12 blockquote a{
+color:#222;
+text-decoration:underline
+}
+
+
+/* h3 styling */
+body.h09 h3, body.h10 h3, body.h11 h3, body.h12 h3, 
+body.h09 #wp-calendar caption, body.h10 #wp-calendar caption, body.h11 #wp-calendar caption, body.h12 #wp-calendar caption{
+color:#3cf;
+background:url(dot.gif) center left no-repeat;}
+
+body.h09 .hentry h3, body.h10 .hentry h3, body.h11 .hentry h3, body.h12 .hentry h3 {
+background:#fbfbfb;
+color:#444;}
+
+body.h09 h3.entry-title, body.h10 h3.entry-title, body.h11 h3.entry-title, body.h12 h3.entry-title{
+background:#f0f0f0 url(greybk.png) top left repeat-x;}
+
+
+/* menu tabs */
+body.h09 #menu ul li a, body.h10 #menu ul li a, body.h11 #menu ul li a, body.h12 #menu ul li a
+{background:url(tab.gif) top right no-repeat;}
+
+body.h09 #menu ul li a:hover, body.h10 #menu ul li a:hover, body.h11 #menu ul li a:hover, body.h12 #menu ul li a:hover
+{background:none;}

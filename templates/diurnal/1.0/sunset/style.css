@@ -1,0 +1,35 @@
+/*Sunset */
+body.h17, body.h18, body.h19, body.h20 {background:#fff url(header.png) top left repeat-x}
+
+body.h17 span.meta-sep, body.h18 span.meta-sep, body.h19 span.meta-sep, body.h20 span.meta-sep{background:url(dot.gif) center left no-repeat;}
+
+
+/* links */
+body.h17 a, body.h18 a, body.h19 a, body.h20 a, body.h17 #header h1 a:hover, body.h18 #header h1 a:hover, body.h19 #header h1 a:hover, body.h20 #header h1 a:hover {color:#609}
+
+body.h17 a:hover, body.h18 a:hover, body.h19 a:hover, body.h20 a:hover, body.h17 #header h1 a, body.h18 #header h1 a, body.h19 #header h1 a, body.h20 #header h1 a {color:#f72}
+
+
+/* blockquote */
+body.h17 blockquote, body.h18 blockquote, body.h19 blockquote, body.h20 blockquote,
+body.h17 blockquote p, body.h18 blockquote p, body.h19 blockquote p, body.h20 blockquote p{background:#c21; 
+color:#fff}
+
+
+/* h3 styling */
+body.h17 h3, body.h18 h3, body.h19 h3, body.h20 h3,
+body.h17 #wp-calendar caption, body.h18 #wp-calendar caption, body.h19 #wp-calendar caption, body.h20 #wp-calendar caption{color:#C21;
+background:url(dot.gif) center left no-repeat;}
+
+body.h17 .hentry h3, body.h18 .hentry h3, body.h19 .hentry h3, body.h20 .hentry h3 {background:#fbfbfb;
+color:#444}
+
+body.h17 h3.entry-title, body.h18 h3.entry-title, body.h19 h3.entry-title, body.h20 h3.entry-title{background:#f0f0f0 url(greybk.png) top left repeat-x;}
+
+
+/* menu tabs */
+body.h17 #menu ul li a, body.h18 #menu ul li a, body.h19 #menu ul li a, body.h20 #menu ul li a {background:url(tab.gif) top right no-repeat;
+}
+
+body.h17 #menu ul li a:hover, body.h18 #menu ul li a:hover, body.h19 #menu ul li a:hover, body.h20 #menu ul li a:hover 
+{background:none;}

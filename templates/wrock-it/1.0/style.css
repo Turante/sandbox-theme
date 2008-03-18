@@ -1,0 +1,488 @@
+/*
+THEME NAME: Wrock It
+THEME URI: http://www.trotterclan.com/themes/sandbox-wrock_it.zip
+DESCRIPTION: A two-column design for the <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox</a>
+VERSION: 1.0
+AUTHOR: <a href="http://www.geeksmakemehot.com/">Jennifer Ledbetter</a> &amp; <a href="http://www.trotterclan.com/">Steven Trotter</a>
+AUTHOR URI: 
+TEMPLATE: sandbox
+ */
+ 
+body {
+background-color:#414141;
+font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+margin:0;
+}
+
+div#wrapper {
+margin:0;
+width:100%;
+}
+
+div#container {
+float:left;
+margin:0 0 0 -270px;
+width:100%;
+}
+
+div#content {
+margin:0 0 0 270px;
+}
+
+div.sidebar {
+float:right;
+overflow:hidden;
+width:250px;
+}
+
+div#secondary {
+clear:right;
+}
+
+div#nav-above,div#nav-below {
+height:1em;
+width:100%;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:18px;
+letter-spacing:-0.04em;
+color:#D4076F;
+}
+
+div#nav-above {
+margin-bottom:1em;
+}
+
+div#nav-below {
+margin-top:1em;
+}
+
+.alignleft,div.nav-previous {
+float:left;
+margin-left:25px;
+}
+
+.alignright,div.nav-next {
+float:right;
+margin-right:25px;
+}
+
+p {
+font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+a {
+color:#D4076F;
+text-decoration:none;
+}
+
+h3 {
+color:#E0DFE0;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:24px;
+letter-spacing:-0.08em;
+}
+
+blockquote {
+width:80%;
+margin:5px auto;
+padding:10px;
+background-color:#435059;
+border-top:2px solid #333;
+border-bottom:2px solid #333;
+}
+
+/* header  */
+div#header {
+background-color:#555;
+border-bottom:5px solid #222;
+height:180px;
+margin-top:40px;
+padding-top:20px;
+text-align:left;
+width:100%;
+background-image:url(header_bg.png);
+background-position:left;
+background-repeat:no-repeat;
+}
+
+h1#blog-title {
+color:#127AB3;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:54px;
+font-weight:700;
+margin:10px 0 0;
+padding-left:240px;
+padding-top:60px;
+}
+
+#blog-description {
+padding-left:75px;
+margin-left:240px;
+background-image:url(mini_swatch_lt.png);
+background-position:left;
+background-repeat:no-repeat;
+color:#E0DFE0;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:24px;
+font-weight:400;
+}
+
+div#access div.skip-link {
+position:absolute;
+right:1em;
+top:1em;
+}
+
+/* Top Navigation  */
+div#menu {
+background:#333;
+border-bottom:5px solid #222;
+height:35px;
+padding-top:0.3em;
+position:absolute;
+right:0;
+text-align:center;
+top:0;
+width:100%;
+}
+
+div#menu ul a {
+font-weight:400;
+text-decoration:none;
+}
+
+div#menu ul,div#menu ul ul,div#menu ul li {
+display:inline;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:24px;
+letter-spacing:-0.08em;
+list-style:none;
+margin:0 auto;
+padding:0;
+text-align:center;
+text-transform:lowercase;
+}
+
+div#menu ul li {
+text-align:center;
+}
+
+div#menu ul li a {
+color:#d4076f;
+padding:0.3em 0.5em;
+}
+
+div#menu ul li a:hover {
+color:#127ab3;
+padding:0.3em 0.5em;
+}
+
+/* Posts  */
+.entry-content {
+background-color:#555;
+border:2px solid #333;
+color:#E0DFE0;
+font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size:14px;
+letter-spacing:0.02em;
+line-height:19px;
+margin-left:25px;
+padding:10px;
+text-decoration:none;
+}
+
+.page-title {
+color:#127AB3;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:36px;
+font-weight:400;
+letter-spacing:-0.08em;
+margin:0 0 0 25px;
+text-decoration:none;
+}
+
+.entry-title {
+background-image:url(title_swatches.png);
+background-position:left;
+background-repeat:no-repeat;
+color:#D4076F;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:28px;
+font-weight:400;
+letter-spacing:-0.08em;
+margin:0 0 0 25px;
+padding-left:140px;
+text-decoration:none;
+}
+
+.entry-title:hover {
+background-image:url(title_swatches_hover.png);
+background-position:left;
+background-repeat:no-repeat;
+color:#127AB3;
+}
+
+.entry-date {
+color:#127AB3;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:16px;
+letter-spacing:-0.02em;
+margin-left:25px;
+text-decoration:none;
+}
+
+.published {
+border:none;
+}
+
+.entry-meta {
+color:#fff;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:14px;
+margin-bottom:25px;
+margin-left:25px;
+padding:3px;
+text-decoration:none;
+}
+
+.entry-content img {
+border:2px solid #333;
+background-color:#435059;
+padding:15px;
+margin:0 auto;
+}
+
+.entry-content img:hover {
+border:2px solid #333;
+background-color:#43586B;
+padding:15px;
+margin:0 auto;
+}
+
+/* Sidebar  */
+div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li {
+margin:0;
+padding:0;
+}
+
+div.sidebar h3 {
+background-image:url(mini_swatch.png);
+background-position:right;
+background-repeat:no-repeat;
+border:none;
+color:#D4076F;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:24px;
+font-weight:400;
+letter-spacing:-0.08em;
+margin:15px 0 0;
+padding:0;
+width:230px;
+}
+
+div.sidebar input#s {
+width:7em;
+}
+
+div.sidebar li {
+list-style:none;
+margin:0;
+}
+
+div.sidebar li form {
+margin:0.2em 0 0;
+padding:0;
+}
+
+div.sidebar ul ul {
+margin:0;
+}
+
+div.sidebar ul ul li {
+display:block;
+list-style:none;
+padding:0;
+}
+
+div.sidebar ul ul li a {
+border-bottom:1px solid #666;
+color:#E0DFE0;
+display:block;
+padding:2px;
+text-decoration:none;
+}
+
+div.sidebar ul ul li a:hover {
+background:#555;
+border-bottom:1px solid #08558E;
+color:#E0DFE0;
+display:block;
+text-decoration:none;
+}
+
+div.sidebar ul ul ul {
+margin:0 0 0 0.5em;
+}
+
+div.sidebar ul ul ul li {
+list-style:circle;
+}
+
+#comments {
+margin-left:25px;
+font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size:14px;
+color:#E0DFE0;
+width:75%;
+margin:0 auto;
+}
+
+.nopassword {
+color:#127AB3;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:36px;
+font-weight:700;
+}
+
+#comments-list ol {
+background-color:#43586B;
+padding:0;
+margin:0;
+font-family:verdana, Arial, Helvetica, sans-serif;
+text-align:right;
+}
+
+#comments-list ol li {
+list-style:none;
+padding:10px;
+}
+
+#comments .alt {
+background-color:#435059;
+padding:10px;
+border-top:2px solid #333;
+border-bottom:2px solid #333;
+text-align:left;
+}
+
+#commentform {
+background-color:#43586B;
+border:2px solid #333;
+color:#E0DFE0;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:14px;
+padding:10px;
+}
+
+form#commentform .form-label {
+margin:1em 0 0;
+}
+
+input#author,input#email,input#url {
+font-family:verdana, Arial, Helvetica, sans-serif;
+font-size:16px;
+background-color:#435059;
+border-bottom:1px solid #333;
+border-left:0;
+border-right:0;
+border-top:0;
+color:#E0DFE0;
+margin:5px;
+width:95%;
+}
+
+input#author,input#email,input#url,textarea#comment {
+padding:0.2em;
+}
+
+textarea#comment {
+font-family:verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+background-color:#435059;
+border:1px solid #333;
+color:#E0DFE0;
+height:13em;
+margin:5px;
+overflow:auto;
+width:95%;
+}
+
+.form-label {
+color:#D4076F;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:24px;
+font-weight:400;
+letter-spacing:-0.08em;
+}
+
+p#comment-notes {
+font-family:verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+}
+
+.comment-author {
+color:#D4076F;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:24px;
+font-weight:400;
+letter-spacing:-0.08em;
+padding:2px;
+text-decoration:none;
+}
+
+.comment-meta {
+color:#E0DFE0;
+font-family:verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+padding:2px;
+text-decoration:none;
+}
+
+#comments .alt .comment-author {
+background-image:url(cs_comments_darkbg_pink20.png);
+background-position:left;
+height:26px;
+padding:0 0 4px 25px;
+}
+
+#comments .comment-author {
+background-image:url(cs_comments_lightbg_lblue20.png);
+background-position:right;
+background-repeat:no-repeat;
+height:26px;
+padding:0 25px 0 0;
+}
+
+.comment meta {
+padding-right:75px;
+}
+
+div#footer {
+background:#333;
+border-top:5px solid #222;
+clear:both;
+color:#E0DFE0;
+font-family:"century gothic", Arial, Helvetica, sans-serif;
+font-size:24px;
+height:35px;
+letter-spacing:-0.08em;
+padding-top:0.3em;
+position:relative;
+right:0;
+text-align:center;
+text-transform:lowercase;
+width:100%;
+}
+
+div#nav-above a,div#nav-below a,.entry-meta a,#commentform a {
+color:#E0DFE0;
+}
+
+h1,#footer a,#blog-title a,.entry-title a:hover {
+color:#127AB3;
+}
+
+h2,#footer a:hover,.entry-title a,.entry-meta a:hover,.comment-author a,.comment-meta a {
+color:#D4076F;
+}

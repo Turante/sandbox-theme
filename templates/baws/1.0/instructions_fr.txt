@@ -1,0 +1,13 @@
+Instructions d'installation : 
+
+	- Télécharger et installer Sandbox
+	- Télécharger BAWS
+	- Dézipper BAWS -> vous obtenez alors le dossier sandbax-baws
+	- Placer ce dossier dans le repertoire racine de sandbox (à la même hauteur que tous les fichiers .php)
+	- Editer le fichier style.css du dossier racine de sandbox et NON celui de sandbox-baws : 
+		- remplacer la ligne  @import url('sandbox-layouts/2c-l.css');  par  @import url('sandbox-baws/style.css');
+		- effacer tout le texte qu'il y'a en dessous
+	- Activer le theme Sandbox dans les preferences WordPress
+	- Et voila!
+
+Pour tous problemes, merci de me contacter à yefrederic@gmail.com ;)

@@ -1,0 +1,195 @@
+/*
+THEME NAME: Blueberry
+THEME URI: http://www.deanjrobinson.com/
+VERSION: 1.0
+DESCRIPTION: A dark theme, based around a dark blue background with Green header and highlghts.
+AUTHOR: Dean Robinson
+AUTHOR URI: http://www.deanjrobinson.com/
+TEMPLATE: sandbox
+*/
+
+/*
+LAYOUT: BlueBerry Three-Column (Right)
+DESCRIPTION: Three-column fluid layout with two sidebars right of content
+*/
+
+/* @group Default 3 Column Structure */
+div#container 	{ background: transparent url(images/bottom_wide.gif) no-repeat center bottom; float: left; padding-bottom: 40px; width: 100%; }
+div#content 	{ margin: 0 400px 0 0; }
+div.sidebar 	{ float: left; overflow: hidden; width: 180px; }
+div#primary 	{ margin: 0 0 0 -400px; }
+div#secondary 	{ margin: 0 0 0 -200px; }
+div#footer 		{ clear: left; width: 100%; }
+/* @end */
+
+/* @group General and Resets */
+body 			{ background-color: #001020; color: #EEEEFF; font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; font-size: 80%; margin: 0; }
+h1, h2, h3, h4, h5, h6, p, ul, ol { margin: 0; padding: 0; }
+div#wrapper 	{ background: #000B16 url(images/byline.gif) no-repeat center bottom; margin: 0 auto; padding: 3em 0 2em 0; position: relative; width: 950px; }
+a 				{ color: #00BB44; text-decoration: none; }
+a:hover 		{ text-decoration: underline; }
+img 			{ border: 0; }
+blockquote 		{ background: transparent url(images/quote.gif) no-repeat 1em top; margin: 0; padding: 1em 2.5em; }
+/* @end */
+
+/* @group Header */
+div#header 		{ background: #00BB44 url(images/header.png) repeat-x top left; font-family: "Century Gothic", "Lucida Grande", Verdana, Arial; height: 10em; overflow: hidden; position: relative; width: 950px; }
+div#header h1#blog-title { font-size: 8em; left: -0.089em; letter-spacing: -0.15em; position: absolute; text-transform: uppercase; top: 0.25em; width: 100%; }
+div#header h1#blog-title a { color: #000B16; text-decoration: none; }
+div#header div#blog-description { color: #004F1C; font-size: 1.2em; position: absolute; right: 1.5em; text-transform: uppercase; top: 1.2em; }
+div.skip-link 	{ padding: 1.5em 1em 0.5em 0; position: absolute; right: 0; text-align: right; top: 0; }
+div.skip-link a { color: #CCEEFF; font-size: 0.8em; text-decoration: none; }
+div.skip-link a:hover { color: #00BB44; }
+div#menu 		{ left: 1em; position: absolute; top: 0; }
+div#menu ul 	{ list-style-type: none; }
+div#menu ul li.page_item { float: left; padding: 0.9em 1em; }
+div#menu ul li.page_item a { color: #CCEEFF; font-weight: bold; text-decoration: none; text-transform: uppercase; }
+div#menu ul ul 	{ display: none; visibility: hidden; }
+/* @end */
+
+/* @group Navigation */
+div#content div#nav-below { display: none; visibility: hidden; }
+div#content div#nav-above { font-size: 80%; font-weight: bold; height: 1.2em; margin-bottom: -1.5em; padding: 0.5em 2em; position: relative; top: -12.7em; }
+div#content div#nav-above a { color: #001020; padding: 0.2em 0.5em; text-decoration: none; }
+div#content div#nav-above a:hover { background-color: #000B16; color: #00BB44; padding: 0.4em 0.5em 0.4em 0.5em; text-decoration: none; }
+div#content div#nav-above div.nav-previous { float: left; }
+div#content div#nav-above div.nav-next { float: right; }
+span.meta-nav { color: #001020; }
+/* @end */
+
+/* @group Post Styles */
+div#content h2.page-title { background-color: #214284; color: #001020; font: bold 2em "Century Gothic", "Lucida Grande", Verdana, Arial; margin: 0.75em 1em 0 1em; padding: 0.2em 0; text-align: center; text-transform: uppercase; }
+div.hentry { padding: 1em 2em; position: relative; }
+div.hentry h2.entry-title { color: #00BB44; font: bold 1.75em "Century Gothic", "Lucida Grande", Verdana, Arial; text-transform: uppercase; }
+div.hentry h3.entry-title { font: bold 1.5em "Century Gothic", "Lucida Grande", Verdana, Arial; text-transform: uppercase; }
+div.hentry h2.entry-title a, div.hentry h3.entry-title a { color: #00BB44; text-decoration: none; }
+div.hentry div.entry-date { background: #001020; color: #214284; font-size: 90%; padding: 0.4em; text-align: right; text-transform: uppercase; }
+div.hentry div.entry-date abbr { border-bottom: none; color: #214284; text-decoration: none; text-transform: uppercase; }
+div.hentry div.entry-content { font-size: 1.1em; }
+div.hentry div.entry-content img { border: 0.3em solid #214284; border-left-width: 0; border-right-width: 0; margin: 0.7em 0; max-width: 499px; padding: 0.7em 0px; }
+div.hentry div.entry-content img.alignleft { border: 0.3em solid #214284; float: left; margin: 0.7em 1.4em 0.7em 0; padding: 0.7em; }
+div.hentry div.entry-content img.alignright { border: 0.3em solid #214284; float: right; margin: 0.7em 0 0.7em 1.4em; padding: 0.7em; }
+div.hentry div.entry-content img.center { border: 0.3em solid #214284; margin: 0.7em 1.4em; padding: 0.7em; }
+div.hentry div.entry-content h1 { font-size: 1.5em; color: #99CCFF; }
+div.hentry div.entry-content h2 { font-size: 1.4em; color: #99CCFF; }
+div.hentry div.entry-content h3 { font-size: 1.3em; color: #99CCFF; }
+div.hentry div.entry-content h4 { font-size: 1.2em; color: #99CCFF; }
+div.hentry div.entry-content h5 { font-size: 1.1em; color: #99CCFF; }
+div.hentry div.entry-content h6 { font-size: 1em; color: #99CCFF; }
+div.hentry div.entry-content p { margin: 1em 0;	text-align: justify; }
+div.hentry div.entry-content blockquote p { margin-top: 0; }
+div.hentry div.entry-content p del { color: #666666; }
+div.hentry div.entry-content p ins { color: #BBEEFF; }
+div.hentry div.entry-content ul, div.hentry div.entry-content ol { line-height: 1.4em; margin: 1em 0; text-align: justify; }
+div.hentry div.entry-content ul li, div.hentry div.entry-content ol li { margin-left: 1.4em; }
+div.hentry div.entry-content dl dt { font-size: 15px; font-style: italic; font-weight: bold; }
+div.hentry div.entry-content dl dd { margin: 0.1em 0.7em 0.7em 0.7em; }
+div.entry-content code, div.entry-content pre { color: #FFF; font-family: Monaco, Courier, mono; }
+div.entry-content .php { background-color: #110022; border: 0.05em solid #9900FF; color: #FFF; display: block; font-family: Monaco, Courier, mono; margin: 0.7em; padding: 0.4em 0.7em; }
+div.entry-content .html { border: 0.05em solid #0099FF; background-color: #001133; color: #FFF; display: block; font-family: Monaco, Courier, mono; margin: 0.7em; padding: 0.4em 0.7em; }
+div.entry-content .css { border: 0.05em solid #FF0000; background-color: #330000; color: #FFF; display: block; font-family: Monaco, Courier, mono; margin: 0.7em; padding: 0.4em 0.7em; }
+div.entry-content .javascript { border: 0.05em solid #FF6600; background-color: #331800; color: #FFF; display: block; font-family: Monaco, Courier, mono; margin: 0.7em; padding: 0.4em 0.7em; }
+div.entry-content .java { border: 0.05em solid #00FF00; background-color: #003300; color: #FFF; display: block; font-family: Monaco, Courier, mono; margin: 0.7em; padding: 0.4em 0.7em; }
+div.hentry div.entry-meta {	background: #001020; color: #214284; font-size: 90%; line-height: 1.4em; padding: 0.4em; text-align: right; text-transform: uppercase; }
+div.hentry div.entry-meta a { color: #214284; }
+div.page-link { background-color: #071530; margin-bottom: 0.4em; padding: 0.3em; text-align: center; text-transform: uppercase; }
+span.edit-link { display: block; font-weight: bold; position: absolute; right: 2.4em; text-align: right; text-transform: uppercase; top: 1em; }
+span.edit-link a { text-decoration: none; }
+/* @end */
+
+/* @group Comments */
+div#comments-list, div#trackbacks-list, div#respond { padding: 1em 2em; position: relative; }
+div#comments-list h3, div#trackbacks-list h3 { color: #214284; text-transform: uppercase; text-align: right; }
+div#comments li.comment, div#trackbacks li.trackback, div#trackbacks li.pingback { position: relative; }
+div#comments-list ol, div#trackbacks-list ol { line-height: 1.4em; margin: 1em 0; text-align: justify; }
+div#comments-list ol li { border-bottom: 0.05em solid #122448; color: #122448; list-style-type: none; margin-bottom: 0.7em; padding-bottom: 0.7em; }
+div#trackbacks-list ol li { border-bottom: 0.05em solid #122448; color: #122448; list-style-type: none; margin-bottom: 0.4em; padding-bottom: 0.4em; position: relative; }
+div#comments-list ol li p { color: #EEEEFF; font-size: 1em; margin: 0.7em 0 0.4em 0; }
+div#trackbacks-list ol li p { display: none; }
+div#comments-list div.comment-author { color: #99CCFF; display: inline; font-size: 1.3em; font-weight: bold; }
+div#trackbacks-list div.comment-author { display: inline; font-size: 1em; }
+div#trackbacks-list div.comment-author a { font-weight: bold; }
+div#comments-list div.comment-meta { display: inline; font-size: 1em; font-weight: normal; margin-left: 0.7em; }
+div#comments-list div.comment-meta span.edit-link, div#trackbacks-list div.comment-author span.edit-link { display: block; font-weight: bold; position: absolute; text-align: right; text-transform: uppercase; top: 0em; }
+div#comments-list div.comment-meta span.edit-link { right: 0em; }
+div#trackbacks-list div.comment-author span.edit-link { right: 2em; }
+div#comments-list div.comment-meta span.edit-link a, div#trackbacks-list div.comment-author span.edit-link a { text-decoration: none; }
+div#trackbacks-list div.comment-author span.meta-sep { display:none; }
+div#trackbacks-list ol li.pingback { background: url(images/pingback.gif) no-repeat 37.5em 0.1em; }
+div#trackbacks-list ol li.trackback { background: url(images/trackback.gif) no-repeat 37.5em 0.1em; }
+div#comments-list li.bypostauthor { background-color: #00BB44; border: 0.15em solid #00822F; color: #FFF; padding: 0.6em; }
+div#comments-list li.bypostauthor div.comment-author, div#comments-list li.comment-author-admin div.comment-meta { color: #001020; }
+div#comments-list li.bypostauthor div.comment-author a, div#comments-list li.comment-author-admin div.comment-meta a { color: #001020; }
+div#comments-list li.bypostauthor span.edit-link { right: 0.7em; top: 0.4em; }
+div#comments-list li.bypostauthor p { font-size: 1.1em; }
+div#respond h3 { background-color: #00822f; color: #001020; padding: 0.3em 0.7em; text-align: center; text-transform: uppercase; }
+div#respond form textarea { background-color: #001530; border: 1px solid #002142; color: #FFF; font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; padding: 0.2em 0.4em; width: 486px; }
+div#respond form textarea:focus { background-color: #FFF; color: #001020; }
+div#respond #login, div#respond .form-submit { margin: 0.7em 0; }
+div#respond #comment-notes { margin-top: 0.7em; }
+div#respond #login { font-size: 1.1em; text-align: center; text-transform: uppercase; }
+div#respond .form-label { color: #99CCFF; margin: 0.7em 0 0 0; text-transform: uppercase; }
+div#respond .form-input { margin-bottom: 0.7em; }
+div#respond .form-input input { background-color: #001530; border: 1px solid #002142; color: #FFF; padding: 0.2em 0.4em; width: 50%; }
+div#respond .form-input input:focus { background-color: #FFF; color: #001020; }
+div#respond .form-submit { text-align: right; }
+div#respond .form-submit input[type=submit] { background-color: #99CCFF; border: 1px solid #002142; color: #001020; padding: 0.3em 0.5em; text-transform: uppercase; }
+/* @end */
+
+/* @group Sidebars */
+ul.xoxo li h3 { background-color: #001020; color: #214284; margin-bottom: 0.7em; margin-top: 1.4em; padding: 0.3em 0.7em; }
+ul.xoxo li ul { line-height: 1.3em; list-style-type: none; padding: 0px 0.7em; }
+ul.xoxo li ul li a { color: #CCCCEE; }
+/* @end */
+
+/* @group Searchform */
+#searchform { padding: 0 0.7em; }
+#searchform input[type=text] { border: 0.05em solid #002142; width: 110px; }
+#searchform input[type=submit] { background: #99CCFF; border: 0.05em solid #002142; font-size: 1em; font-weight: bold; padding: 0.05em 0; text-transform: uppercase; width: 38px; }
+/* @end */
+
+/* @group Blogroll and RSS */
+li.linkcat ul li { list-style-type: none; }
+li.linkcat ul li a { margin-bottom: 0.2em; margin-left: 0.3em; }
+li#rss-links h3 { background: #001020 url(images/rss.gif) no-repeat 6em 0.5em;}
+/* @end */
+
+/* @group Page Menu */
+li#pages ul li.page_item, li#categories ul li { list-style-type: none; margin-top: 0.4em; }
+li#pages ul li.page_item ul, li#categories ul li ul { margin-left: 0.7em; margin-top: 0.4em; }
+li#pages ul li.page_item ul li, li#categories ul li ul li { list-style-type: none; margin-top: 0; }
+li#pages ul li.current_page_item a, li#categories ul li.current-cat a {	color: #00BB44; font-weight: bold; }
+/* @end */
+
+/* @group Page Specific */
+ul#archives-page, ul#links-page { list-style-type: none; }
+ul#archives-page li.content-column, ul#links-page li.linkcat { margin: 0; }
+ul#archives-page ul, ul#links-page ul {	margin: 0.4em 0 0.7em 0; padding: 0; }
+ul#archives-page ul li, ul#links-page ul li { margin-left: 0.7em; }
+/* @end */
+
+/* @group Widget Specific */
+table#wp-calendar { color: #CCCCEE; font-size: 1.1em; text-align: center; width: 100%; }
+table#wp-calendar caption { background-color: #214284; color: #001020; font-size: 1.2em; font-weight: bold; padding: 0.2em; }
+table#wp-calendar tfoot tr #prev { text-align: left; }
+table#wp-calendar tfoot tr #next { text-align: right; }
+li#recent-comments ul li, li#recent-posts ul li { border-bottom: 0.05em dotted #002142; margin-bottom: 0.4em; }
+/* @end */
+
+/* @group Category(Asides) */
+div.category-asides, div.category-sidenotes { border-left: 0.3em solid #00BB44; margin-left: 2em; }
+body.s-category-asides div.category-asides, body.s-category-sidenotes div.category-sidenotes { border-left: 0; margin-left: 0; }
+/* @end */
+
+/* @group Footer */
+div#footer { background: #001020 url(images/blueberry.gif) no-repeat center center; border-bottom: 0.15em solid #00BB44; font-size: 1em; font-weight: bold; padding: 2em 0; position: relative; }
+div#footer .meta-sep { display: none; }
+div#footer a { bottom: 0; color: #00BB44; font-size: 1.5em; text-decoration: none; text-transform: uppercase; }
+div#footer span#generator-link { bottom: -0.4em; display: block; left: 0; position: absolute; text-align: left; }
+div#footer span#theme-link { bottom: -0.4em; display: block; position: absolute; right: 0; text-align: right; }
+div#footer a:hover { text-decoration: underline; }
+/* @end */
+
+/* @group Float fix */
+li.linkcat ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+/* @end */

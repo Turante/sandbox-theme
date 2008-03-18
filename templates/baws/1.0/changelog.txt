@@ -1,0 +1,9 @@
+BAWS v1.0.1
+-----------
+
+* Added on the footer : Design by [Aqua-Ye Design]
+
+BAWS v1.0
+---------
+
+Original BAWS^^
