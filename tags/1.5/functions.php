@@ -265,7 +265,7 @@ function sandbox_commenter_link() {
 	}
 	$email = get_comment_author_email();
 	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( "$email", "64" ) );
-	echo $avatar . '<span class="fn n">' . $commenter . '</span>';
+	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }
 
 // Widget: Search; to match the Sandbox style and replace Widget plugin default
