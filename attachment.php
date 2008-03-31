@@ -10,10 +10,16 @@
 				<h3 class="entry-title"><?php the_title() ?></h3>
 				<div class="entry-content">
 					<div class="entry-attachment"><a href="<?php echo wp_get_attachment_url($post->ID); ?>" title="<?php echo wp_specialchars( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo wp_get_attachment_image( $post->ID, 'large' ); ?></a></div>
+					<div class="entry-caption"><?php if ( !empty($post->post_excerpt) ) the_excerpt(); ?></div>
 <?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'sandbox').''); ?>
 
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'sandbox') . '&after=</div>&next_or_number=number') ?>
 				</div>
+<?php if ( wp_attachment_is_image($post->ID) ) { ?>
+				<div id="nav-images" class="navigation">
+					<div class="nav-previous"><?php previous_image_link() ?></div>
+					<div class="nav-next"><?php next_image_link() ?></div>
+				</div>
+<?php } ?>
 				<div class="entry-meta">
 					<?php printf(__('Posted by %1$s, on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr>. Bookmark the <a href="%6$s" title="Permalink to %7$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%8$s" title="Comments RSS to %7$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox'),
 						'<span class="author vcard"><a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="' . sprintf(__('View all posts by %s', 'sandbox'), $authordata->display_name) . '">'.get_the_author().'</a></span>',
