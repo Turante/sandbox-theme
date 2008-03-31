@@ -40,16 +40,6 @@ input#author,input#email,input#url,textarea#comment{padding:0.2em;}
 div.comments ol li{margin:0 0 3.5em;}
 textarea#comment{height:13em;margin:0 0 0.5em;overflow:auto;width:66%;}
 
-/* New gallery feature styles; Can't use div.attachment because shortcodes can link to galleries in other posts */
-div.post div.gallery{clear:both;float:left;width:100%;}
-div.post div.gallery dl{float:left;margin:0.5em;padding:0.5em;text-align:center;}
-div.post div.gallery dl dt{margin:0;}
-div.post div.gallery dl dd{margin-left:0;}
-div.post div.entry-attachment,div.post div.entry-caption{margin:0 auto;text-align:center;}
-div.post div.entry-attachment img{max-width:99%;overflow:hidden;}
-div.post div#nav-images{clear:both;text-align:center;width:100%;}
-div.post div.entry-meta{clear:both;}
-
 div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
 div.sidebar h3{font-size:1.2em;}
 div.sidebar input#s{width:7em;}
@@ -61,3 +51,16 @@ div.sidebar ul ul ul{margin:0 0 0 0.5em;}
 div.sidebar ul ul ul li{list-style:circle;}
 
 div#footer{text-align:center;}
+
+/* New gallery feature styles; Can't use div.attachment because shortcodes can link to galleries in other posts */
+div.post div.gallery{clear:both;float:left;width:100%;}
+div.post div.gallery dl{float:left;margin:0.5em;padding:0.5em;text-align:center;}
+div.post div.gallery dl dt{margin:0;}
+div.post div.gallery dl dd{margin-left:0;}
+div.entry-attachment,div.post div.entry-caption{margin:0 auto;text-align:center;}
+div.entry-attachment img,div.post div#nav-images div img{overflow:hidden;}
+body.attachment div#nav-images{clear:both;width:100%;}
+body.attachment div#nav-images div{padding:1em 0;width:50%;}
+body.attachment div#nav-images div.nav-previous{text-align:left;}
+body.attachment div#nav-images div.nav-next{text-align:right;}
+body.attachment div#comments{clear:both;}
