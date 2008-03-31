@@ -53,12 +53,12 @@ div.sidebar ul ul ul li{list-style:circle;}
 div#footer{text-align:center;}
 
 /* New gallery feature styles; Can't use div.attachment because shortcodes can link to galleries in other posts */
-div.post div.gallery{clear:both;float:left;width:100%;}
-div.post div.gallery dl{float:left;margin:0.5em;padding:0.5em;text-align:center;}
-div.post div.gallery dl dt{margin:0;}
-div.post div.gallery dl dd{margin-left:0;}
-div.entry-attachment,div.post div.entry-caption{margin:0 auto;text-align:center;}
-div.entry-attachment img,div.post div#nav-images div img{overflow:hidden;}
+div.gallery{clear:both;float:left;width:100%;}
+div.gallery dl{float:left;text-align:center;}
+div.gallery dl dt{margin:0;}
+div.gallery dl dd{margin-left:0;}
+div.entry-attachment,div.entry-caption{text-align:center;}
+div.entry-attachment img,div#nav-images div img{overflow:hidden;}
 body.attachment div#nav-images{clear:both;width:100%;}
 body.attachment div#nav-images div{padding:1em 0;width:50%;}
 body.attachment div#nav-images div.nav-previous{text-align:left;}
