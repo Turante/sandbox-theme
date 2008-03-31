@@ -3,7 +3,7 @@ THEME NAME: Sandbox
 THEME URI: http://www.plaintxt.org/themes/sandbox/
 DESCRIPTION: Rich with powerful and dynamic semantic class selectors, Sandbox is a canvas for CSS artists
 TAGS:  widgets, sandbox, microformats, hcard, hatom, xoxo
-VERSION: 1.5.1
+VERSION: 1.5.2
 AUTHOR: <a href="http://andy.wordpress.com/">Andy Skelton</a> &amp; <a href="http://www.plaintxt.org/">Scott Allan Wallick</a>
 AUTHOR URI:
 */
@@ -39,6 +39,16 @@ input#author,input#email,input#url{width:50%;}
 input#author,input#email,input#url,textarea#comment{padding:0.2em;}
 div.comments ol li{margin:0 0 3.5em;}
 textarea#comment{height:13em;margin:0 0 0.5em;overflow:auto;width:66%;}
+
+/* New gallery feature styles; Can't use div.attachment because shortcodes can link to galleries in other posts */
+div.post div.gallery{clear:both;float:left;width:100%;}
+div.post div.gallery dl{float:left;margin:0.5em;padding:0.5em;text-align:center;}
+div.post div.gallery dl dt{margin:0;}
+div.post div.gallery dl dd{margin-left:0;}
+div.post div.entry-attachment,div.post div.entry-caption{margin:0 auto;text-align:center;}
+div.post div.entry-attachment img{max-width:99%;overflow:hidden;}
+div.post div#nav-images{clear:both;text-align:center;width:100%;}
+div.post div.entry-meta{clear:both;}
 
 div.sidebar div,div.sidebar h3,div.sidebar ul,div.sidebar li{margin:0;padding:0;}
 div.sidebar h3{font-size:1.2em;}

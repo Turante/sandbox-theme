@@ -15,16 +15,14 @@
 					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'sandbox') . '&after=</div>&next_or_number=number') ?>
 				</div>
 				<div class="entry-meta">
-					<?php printf(__('This entry was written by %1$s, posted on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr>, filed under %6$s and tagged %7$s. Bookmark the <a href="%8$s" title="Permalink to %9$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%10$s" title="Comments RSS to %9$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox'),
+					<?php printf(__('Posted by %1$s, on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr>. Bookmark the <a href="%6$s" title="Permalink to %7$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%8$s" title="Comments RSS to %7$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox'),
 						'<span class="author vcard"><a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="' . sprintf(__('View all posts by %s', 'sandbox'), $authordata->display_name) . '">'.get_the_author().'</a></span>',
 						get_the_time('Y-m-d'),
 						get_the_time('H:i:sO'),
-						the_date('', '', '', false),
+						the_date( '', '', '', false ),
 						get_the_time(),
-						get_the_category_list(', '),
-						get_the_tag_list(' '.__('and tagged', 'sandbox').' ', ', ', ''),
 						get_permalink(),
-						wp_specialchars(get_the_title(), 'double'),
+						wp_specialchars( get_the_title(), 'double' ),
 						comments_rss() ) ?>
 
 <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // Comments and trackbacks open ?>

@@ -1,477 +1,477 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=1; plural=0;\n"
-"Project-Id-Version: Sandbox SVN 简体中文语言包\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2008-03-15 13:13+0800\n"
-"Last-Translator: Dreamcolor <dreamcolor@gmail.com>\n"
-"Language-Team: WordPress 中文团队 <team@wpcng.com>\n"
+"Project-Id-Version: Sandbox 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-10 00:53-0500\n"
+"PO-Revision-Date: 2008-03-27 16:43+0800\n"
+"Last-Translator: Venj <ersaclarke@gmail.com>\n"
+"Language-Team: Scott Allan Wallick\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Chinese\n"
-"X-Poedit-Country: China\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: _e;__;__ngettext:1,2;_c\n"
-"X-Poedit-Basepath: D:\\Source.Code.SVN\\Sandbox\\trunk\n"
-"X-Poedit-SearchPath-0: D:\\Source.Code.SVN\\Sandbox\\trunk\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: D:\\scott\\files\\My SVNs\\sandbox-theme\\trunk\n"
+"X-Poedit-SearchPath-0: D:\\scott\\files\\My SVNs\\sandbox-theme\\trunk\n"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/404.php:7
-#: D:\Source.Code.SVN\Sandbox\trunk/header.php:4
+#: 404.php:7
+#: header.php:4
 msgid "Not Found"
 msgstr "未找到"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/404.php:9
+#: 404.php:9
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "抱歉，我们没有找到您需要的内容。也许您可以使用搜索功能进行查找。"
+msgstr "很抱歉, 未发现到你要寻找的东西. 也许你可以使用搜索功能. "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/404.php:14
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:271
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:53
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:39
+#: 404.php:14
+#: functions.php:271
+#: search.php:53
+#: sidebar.php:39
 msgid "Find"
-msgstr "查找"
+msgstr "搜索"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:9
+#: archive.php:9
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
-msgstr "按日期归档： <span>%s</span>"
+msgstr "按日存档: <span>%s</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:11
+#: archive.php:11
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
-msgstr "按月份归档： <span>%s</span>"
+msgstr "按月存档: <span>%s</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:13
+#: archive.php:13
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
-msgstr "按年份归档： <span>%s</span>"
+msgstr "按年存档: <span>%s</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:15
+#: archive.php:15
 msgid "Blog Archives"
-msgstr "Blog 归档"
+msgstr "日志存档"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:21
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:48
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:12
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:37
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:10
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:39
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:7
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:35
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:11
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:39
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:9
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:39
+#: archive.php:21
+#: archive.php:48
+#: author.php:12
+#: author.php:37
+#: category.php:10
+#: category.php:39
+#: index.php:7
+#: index.php:35
+#: search.php:11
+#: search.php:39
+#: tag.php:9
+#: tag.php:39
 msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> 较老日志"
+msgstr "<span class=\"meta-nav\">&laquo;</span> 更早的日志"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:22
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:49
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:13
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:38
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:11
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:40
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:8
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:36
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:12
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:40
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:10
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:40
+#: archive.php:22
+#: archive.php:49
+#: author.php:13
+#: author.php:38
+#: category.php:11
+#: category.php:40
+#: index.php:8
+#: index.php:36
+#: search.php:12
+#: search.php:40
+#: tag.php:10
+#: tag.php:40
 msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "较新日志 <span class=\"meta-nav\">&raquo;</span>"
+msgstr "更新的日志 <span class=\"meta-nav\">&raquo;</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:28
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:19
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:17
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:13
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:18
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:16
+#: archive.php:28
+#: author.php:19
+#: category.php:17
+#: index.php:13
+#: search.php:18
+#: tag.php:16
 #, php-format
 msgid "Permalink to %s"
 msgstr "%s 的永久链接"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:29
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:20
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:18
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:14
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:19
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:17
+#: archive.php:29
+#: author.php:20
+#: category.php:18
+#: index.php:14
+#: search.php:19
+#: tag.php:17
 #, php-format
 msgid "%1$s &#8211; %2$s"
 msgstr "%1$s &#8211; %2$s"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:31
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:13
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:22
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:20
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:16
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:21
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:15
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:19
+#: archive.php:31
+#: attachment.php:13
+#: author.php:22
+#: category.php:20
+#: index.php:16
+#: search.php:21
+#: single.php:15
+#: tag.php:19
 msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "阅读全文 <span class=\"meta-nav\">&raquo;</span>"
+msgstr "阅读更多 <span class=\"meta-nav\">&raquo;</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:35
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:24
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:21
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:25
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:23
+#: archive.php:35
+#: category.php:24
+#: index.php:21
+#: search.php:25
+#: tag.php:23
 #, php-format
 msgid "By %s"
-msgstr "作者： %s"
+msgstr "由 %s 撰写"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:35
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:19
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:24
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:21
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:25
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:21
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:23
+#: archive.php:35
+#: attachment.php:19
+#: category.php:24
+#: index.php:21
+#: search.php:25
+#: single.php:21
+#: tag.php:23
 #, php-format
 msgid "View all posts by %s"
-msgstr "查看 %s 的所有文章"
+msgstr "查看 %s 的所有日志"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:37
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:26
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:23
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:27
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:25
+#: archive.php:37
+#: author.php:26
+#: index.php:23
+#: search.php:27
+#: tag.php:25
 #, php-format
 msgid "Posted in %s"
-msgstr "分类： %s"
+msgstr "发表在 %s"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:39
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:28
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:30
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:25
+#: archive.php:39
+#: author.php:28
+#: category.php:30
+#: index.php:25
 msgid "<span class=\"tag-links\">Tagged "
-msgstr "<span class=\"tag-links\">标签： "
+msgstr "<span class=\"tag-links\">标签为 "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:40
-#: D:\Source.Code.SVN\Sandbox\trunk/archives.php:32
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:39
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:29
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:31
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:41
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:67
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:26
-#: D:\Source.Code.SVN\Sandbox\trunk/links.php:21
-#: D:\Source.Code.SVN\Sandbox\trunk/page.php:14
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:31
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:41
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:31
+#: archive.php:40
+#: archives.php:32
+#: attachment.php:39
+#: author.php:29
+#: category.php:31
+#: comments.php:41
+#: comments.php:67
+#: index.php:26
+#: links.php:21
+#: page.php:14
+#: search.php:31
+#: single.php:41
+#: tag.php:31
 msgid "Edit"
 msgstr "编辑"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:41
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:30
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:32
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:27
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:32
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:32
+#: archive.php:41
+#: author.php:30
+#: category.php:32
+#: index.php:27
+#: search.php:32
+#: tag.php:32
 msgid "Comments (0)"
-msgstr "评论（0）"
+msgstr "评论 (0)"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:41
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:30
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:32
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:27
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:32
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:32
+#: archive.php:41
+#: author.php:30
+#: category.php:32
+#: index.php:27
+#: search.php:32
+#: tag.php:32
 msgid "Comments (1)"
-msgstr "评论（1）"
+msgstr "评论 (1)"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archive.php:41
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:30
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:32
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:27
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:32
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:32
+#: archive.php:41
+#: author.php:30
+#: category.php:32
+#: index.php:27
+#: search.php:32
+#: tag.php:32
 msgid "Comments (%)"
-msgstr "评论（%）"
+msgstr "评论 (%)"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archives.php:20
+#: archives.php:20
 msgid "Archives by Category"
-msgstr "按分类归档"
+msgstr "分类归档"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/archives.php:26
+#: archives.php:26
 msgid "Archives by Month"
-msgstr "按月份归档"
+msgstr "按月归档"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:15
-#: D:\Source.Code.SVN\Sandbox\trunk/index.php:18
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:17
+#: attachment.php:15
+#: index.php:18
+#: single.php:17
 msgid "Pages:"
-msgstr "页面："
+msgstr "分页: "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:18
+#: attachment.php:18
 #, php-format
 msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s and tagged %7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
-msgstr "此篇日志作者： %1$s，发表于：<abbr class=\"published\" title=\"%2$s - %3$s\">%4$s - %5$s</abbr>，分类： %6$s%7$s 标签： %7$s。收藏本文<a href=\"%8$s\" title=\"%9$s 的永久链接\" rel=\"bookmark\">永久链接</a>。使用以下链接<a href=\"%10$s\" title=\"%9$s 的评论订阅地址\" rel=\"alternate\" type=\"application/rss+xml\">订阅本篇日志的评论</a>。"
+msgstr "这篇日志由 %1$s, 发表在 <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s 于 %5$s</abbr>, 文件归档于 %6$s 标签为 %7$s. 添加<a href=\"%8$s\" title=\"永久链接至 %9$s\" rel=\"bookmark\">永久链接</a>到书签中. 获得所有评论更新使用这里的 <a href=\"%10$s\" title=\"%9$s的评论RSS链接\" rel=\"alternate\" type=\"application/rss+xml\">日志RSS源</a>."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:25
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:27
+#: attachment.php:25
+#: single.php:27
 msgid "and tagged"
-msgstr "标签："
+msgstr "并标签为"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:31
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:33
+#: attachment.php:31
+#: single.php:33
 #, php-format
 msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"发表评论\">发表评论</a>或留下引用通告： <a class=\"trackback-link\" href=\"%s\" title=\"引用通告链接\" rel=\"trackback\">引用通告链接</a>。"
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"发表评论\">发表评论</a> 或者复制引用通告地址: <a class=\"trackback-link\" href=\"%s\" title=\"复制引用通告 URL\" rel=\"trackback\">引用通告 URL</a>."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:33
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:35
+#: attachment.php:33
+#: single.php:35
 #, php-format
 msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "评论已关闭，但是您可以留下引用信息：<a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">引用链接地址</a>。"
+msgstr "评论已关闭, 不过你可以添加引用通告: <a class=\"trackback-link\" href=\"%s\" title=\"复制引用通告 URL\" rel=\"trackback\">引用通告 URL</a>."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:35
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:37
+#: attachment.php:35
+#: single.php:37
 msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
-msgstr "引用已关闭，但是您可以<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">发表评论</a>。"
+msgstr "引用通告已关闭, 但是你可以<a class=\"comment-link\" href=\"#respond\" title=\"发表评论\">发表评论</a>."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/attachment.php:37
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:39
+#: attachment.php:37
+#: single.php:39
 msgid "Both comments and trackbacks are currently closed."
-msgstr "评论和引用当前都已关闭。"
+msgstr "评论和引用通告都已关闭."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/author.php:8
+#: author.php:8
 #, php-format
 msgid "Author Archives: <span class=\"vcard\">%s</span>"
-msgstr "按作者归档： <span class=\"vcard\">%s</span>"
+msgstr "按作者归档: <span class=\"vcard\">%s</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:6
+#: category.php:6
 msgid "Category Archives:"
-msgstr "分类归档："
+msgstr "分类归档: "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/category.php:27
+#: category.php:27
 #, php-format
 msgid "Also posted in %s"
-msgstr "并发表在 %s"
+msgstr "同时发表在 %s"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:11
+#: comments.php:11
 msgid "This post is protected. Enter the password to view any comments."
-msgstr "该篇日志受密码保护。查看任何评论内容请输入密码。"
+msgstr "本日志受密码保护. 请输入密码以查看所有评论. "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:30
+#: comments.php:30
 #, php-format
 msgid "<span>%d</span> Comments"
 msgstr "<span>%d</span> 条评论"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:30
+#: comments.php:30
 msgid "<span>One</span> Comment"
-msgstr "<span>1</span> 条评论"
+msgstr "<span>一</span> 条评论"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:37
+#: comments.php:37
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "发布于 %1$s - %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"此评论的永久链接\">永久链接</a>"
+msgstr "发表了 %1$s 在 %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"本评论的永久链接\">永久链接</a>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:42
+#: comments.php:42
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
-msgstr "\t\t\t\t\t<span class='unapproved'>您的评论正等待审核。</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>你的评论正在等待审核.</span>\n"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:56
+#: comments.php:56
 #, php-format
 msgid "<span>%d</span> Trackbacks"
-msgstr "<span>%d</span> 条引用"
+msgstr "<span>%d</span> 个引用通告"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:56
+#: comments.php:56
 msgid "<span>One</span> Trackback"
-msgstr "<span>1</span> 条引用"
+msgstr "<span>一</span> 个引用通告"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:63
+#: comments.php:63
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
-msgstr "作者 %1$s |分类 %2$s |时间 %3$s"
+msgstr "由 %1$s 发表在 %2$s 于 %3$s"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:68
+#: comments.php:68
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">您的引用正等待审核。</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">你的引用通告正在等待审核.</span>\\n"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:81
+#: comments.php:81
 msgid "Post a Comment"
 msgstr "发表评论"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:84
+#: comments.php:84
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "您必须先<a href=\"%s\" title=\"Log in\">登录</a>才可以发表评论。"
+msgstr "你必须在 <a href=\"%s\" title=\"Log in\">登录</a> 后才能发表评论."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:92
+#: comments.php:92
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">欢迎您 <a href=\"%1$s\" title=\"账户名称： %2$s\">%2$s</a>。</span> <span class=\"logout\"><a href=\"%3$s\" title=\"注销此帐户\">注销？</a></span>"
+msgstr "<span class=\"loggedin\">以 <a href=\"%1$s\" title=\"以 %2$s 的身份登录\">%2$s</a> 的身份登录.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">登出</a>?</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:99
+#: comments.php:99
 msgid "Your email is <em>never</em> published nor shared."
-msgstr "您的电子信箱<strong>绝对</strong>不会被公开。"
+msgstr "你的邮件地址 <em>不会</em> 被公开或共享."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:99
+#: comments.php:99
 msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "标记为 <span class=\"required\">*</span> 的区域必须填写"
+msgstr "标记为 <span class=\"required\">*</span> 的为必填项目"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:101
+#: comments.php:101
 msgid "Name"
-msgstr "姓名"
+msgstr "昵称"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:101
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:104
+#: comments.php:101
+#: comments.php:104
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:104
+#: comments.php:104
 msgid "Email"
-msgstr "电子信箱"
+msgstr "电邮"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:107
+#: comments.php:107
 msgid "Website"
-msgstr "网址"
+msgstr "网站"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:112
+#: comments.php:112
 msgid "Comment"
 msgstr "评论"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/comments.php:115
+#: comments.php:115
 msgid "Post Comment"
 msgstr "发表评论"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/footer.php:3
+#: footer.php:3
 msgid "WordPress"
 msgstr "WordPress"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/footer.php:5
+#: footer.php:5
 msgid "Sandbox for WordPress"
-msgstr "Sandbox for WordPress"
+msgstr "WordPress的Sandbox主题"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/footer.php:5
+#: footer.php:5
 msgid "Sandbox"
 msgstr "Sandbox"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:270
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:378
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:380
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:35
+#: functions.php:270
+#: functions.php:378
+#: functions.php:380
+#: sidebar.php:35
 msgid "Search"
 msgstr "搜索"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:299
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:352
+#: functions.php:299
+#: functions.php:352
 msgid "Title:"
-msgstr "标题："
+msgstr "标题: "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:300
+#: functions.php:300
 msgid "Button Text:"
-msgstr "按钮文字"
+msgstr "按钮文字: "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:309
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:387
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:389
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:55
+#: functions.php:309
+#: functions.php:387
+#: functions.php:389
+#: sidebar.php:55
 msgid "Meta"
-msgstr "其他"
+msgstr "Meta"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:328
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:396
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:397
+#: functions.php:328
+#: functions.php:396
+#: functions.php:397
 msgid "RSS Links"
-msgstr "订阅链接"
+msgstr "RSS链接"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:333
-#: D:\Source.Code.SVN\Sandbox\trunk/header.php:8
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:49
+#: functions.php:333
+#: header.php:8
+#: sidebar.php:49
 msgid "Posts RSS feed"
-msgstr "订阅日志"
+msgstr "的日志RSS源"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:333
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:49
+#: functions.php:333
+#: sidebar.php:49
 msgid "All posts"
-msgstr "全部日志"
+msgstr "所有日志"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:334
-#: D:\Source.Code.SVN\Sandbox\trunk/header.php:9
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:50
+#: functions.php:334
+#: header.php:9
+#: sidebar.php:50
 msgid "Comments RSS feed"
-msgstr "订阅评论"
+msgstr "的评论RSS源"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:334
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:50
+#: functions.php:334
+#: sidebar.php:50
 msgid "All comments"
-msgstr "全部评论"
+msgstr "所有评论"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:376
+#: functions.php:376
 msgid "A search form for your blog (Sandbox)"
-msgstr "您博客上的搜搜索框（Sandbox）"
+msgstr "你的博客的搜索表单(Sandbox)"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:385
+#: functions.php:385
 msgid "Log in/out and administration links (Sandbox)"
-msgstr "登录、注销和管理链接（Sandbox）"
+msgstr "登入/登出 和管理链接 (Sandbox)"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/functions.php:394
+#: functions.php:394
 msgid "RSS links for both posts and comments <small>(Sandbox)</small>"
-msgstr "日志和评论的 RSS 链接 <small>（Sandbox）</small>"
+msgstr "日志和评论的RSS链接 <small>(Sandbox)</small>"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/header.php:4
+#: header.php:4
 msgid " &raquo; "
 msgstr " &raquo; "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/header.php:25
+#: header.php:25
 msgid "Skip navigation to the content"
-msgstr "跳转导航到内容"
+msgstr "跳过导航至内容"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/header.php:25
+#: header.php:25
 msgid "Skip to content"
-msgstr "跳转到内容"
+msgstr "跳至内容"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/page.php:12
+#: page.php:12
 msgid "Pages: "
-msgstr "页面："
+msgstr "分页: "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:8
+#: search.php:8
 msgid "Search Results for:"
-msgstr "搜索结果："
+msgstr "搜索结果:"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:29
+#: search.php:29
 msgid "Tagged "
-msgstr "标签 "
+msgstr "已设置标签"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:46
+#: search.php:46
 msgid "Nothing Found"
-msgstr "未找到"
+msgstr "内容未找到"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/search.php:48
+#: search.php:48
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "对不起，没有符合条件的搜索结果。请尝试更换其他关键字再试。"
+msgstr "抱歉, 没有找到符合搜索条件的结果. 请尝试使用其他关键词再次搜索. "
 
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:6
+#: sidebar.php:6
 msgid "Pages"
-msgstr "页面"
+msgstr "分页"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:13
+#: sidebar.php:13
 msgid "Categories"
 msgstr "分类"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:21
+#: sidebar.php:21
 msgid "Archives"
-msgstr "归档"
+msgstr "存档"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/sidebar.php:47
+#: sidebar.php:47
 msgid "RSS Feeds"
-msgstr "RSS Feeds"
+msgstr "RSS源"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/single.php:20
+#: single.php:20
 #, php-format
 msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s%7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
-msgstr "此篇日志作者： %1$s，发表于：<abbr class=\"published\" title=\"%2$s - %3$s\">%4$s - %5$s</abbr>，分类： %6$s%7$s。收藏本文<a href=\"%8$s\" title=\"%9$s 的永久链接\" rel=\"bookmark\">永久链接</a>。使用以下链接<a href=\"%10$s\" title=\"%9$s 的评论订阅地址\" rel=\"alternate\" type=\"application/rss+xml\">订阅本篇日志的评论</a>。"
+msgstr "这篇日志由 %1$s, 发表在 <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s 于 %5$s</abbr>, 文件归档于 %6$s 标签为 %7$s. 添加<a href=\"%8$s\" title=\"永久链接至 %9$s\" rel=\"bookmark\">永久链接</a>到书签中. 获得所有评论更新使用这里的 <a href=\"%10$s\" title=\"%9$s的评论RSS链接\" rel=\"alternate\" type=\"application/rss+xml\">日志RSS源</a>."
 
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:6
+#: tag.php:6
 msgid "Tag Archives:"
-msgstr "按标签归档："
+msgstr "按标签归档"
 
-#: D:\Source.Code.SVN\Sandbox\trunk/tag.php:28
+#: tag.php:28
 #, php-format
 msgid "Also tagged %s"
-msgstr "标签为 %s"
+msgstr "同时设置标签为 %s"
 
