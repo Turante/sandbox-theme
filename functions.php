@@ -300,6 +300,7 @@ function sandbox_gallery($attr) {
 	$itemtag = tag_escape($itemtag);
 	$captiontag = tag_escape($captiontag);
 	$columns = intval($columns);
+	// Divides number of columns for even widths
 	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
 	// Let's begin our gallery
 	$output = apply_filters( "gallery_style", "<div class='gallery gallery-set-1'>" );
@@ -307,7 +308,7 @@ function sandbox_gallery($attr) {
 	foreach ( $attachments as $id => $attachment ) {
 		$link = wp_get_attachment_link( $id, $size, true );
 		// This is our 'wrapper' for each gallery item
-		$output .= "<{$itemtag} class='gallery-item'>";
+		$output .= "<{$itemtag} class='gallery-item' style='width:{$itemwidth}%;'>";
 		// And now we have the actual image link
 		$output .= "<{$icontag} class='gallery-icon'>$link</{$icontag}>";
 		// Next, show the image caption if present
