@@ -329,9 +329,6 @@ function sandbox_gallery($attr) {
 	return $output;
 }
 
-// Shortcodes
-add_shortcode( 'gallery', 'sandbox_gallery' );
-
 // Widget: Search; to match the Sandbox style and replace Widget plugin default
 function widget_sandbox_search($args) {
 	extract($args);
@@ -471,6 +468,9 @@ load_theme_textdomain('sandbox');
 
 // Runs our code at the end to check that everything needed has loaded
 add_action( 'init', 'sandbox_widgets_init' );
+
+// Add Sandbox function to gallery short code
+add_shortcode( 'gallery', 'sandbox_gallery' );
 
 // Adds filters so that things run smoothly
 add_filter( 'archive_meta', 'wptexturize' );
