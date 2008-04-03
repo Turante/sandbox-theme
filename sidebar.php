@@ -35,8 +35,8 @@
 				<h3><label for="s"><?php _e('Search', 'sandbox') ?></label></h3>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" name="s" class="text-input" type="text" value="<?php the_search_query() ?>" size="10" tabindex="1" accesskey="S" />
-						<input id="searchsubmit" class="submit-button" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
+						<input id="s" name="s" class="text" type="text" value="<?php the_search_query() ?>" size="10" tabindex="1" accesskey="S" />
+						<input id="searchsubmit" class="button" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
 					</div>
 				</form>
 			</li>

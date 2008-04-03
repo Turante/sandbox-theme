@@ -10,8 +10,8 @@
 				<div class="nav-next"><?php next_post_link('%link', '%title <span class="meta-nav">&raquo;</span>') ?></div>
 			</div>
 
-			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
-				<h2 class="entry-title"><?php the_title(); ?></h2>
+			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
+				<h2 class="entry-title"><?php the_title() ?></h2>
 				<div class="entry-content">
 <?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'sandbox').''); ?>
 
