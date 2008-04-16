@@ -1,14 +1,12 @@
-<?php
-	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
-		die ( 'Please do not load this page directly. Thanks!' );
-?>
 			<div id="comments">
 <?php
-	$req = get_option('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-)
-	if ( !empty($post->post_password) ) :
+	$req = get_settings('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-)
+	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
+		die ( 'Please do not load this page directly. Thanks!' );
+	if ( ! empty($post->post_password) ) :
 		if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
 ?>
-				<div class="nopassword"><?php _e('This post is protected. Enter the password to view any comments.', 'sandbox') ?></div>
+				<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'sandbox') ?></div>
 			</div><!-- .comments -->
 <?php
 		return;
@@ -33,7 +31,7 @@ foreach ( $comments as $comment )
 <?php foreach ($comments as $comment) : ?>
 <?php if ( get_comment_type() == "comment" ) : ?>
 						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
-							<div class="comment-author vcard"><?php sandbox_commenter_link() ?></div>
+							<div class="comment-author vcard"><span class="fn n"><?php comment_author_link() ?></span></div>
 							<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'sandbox'),
 										get_comment_date(),
 										get_comment_time(),
@@ -99,20 +97,20 @@ foreach ( $comments as $comment )
 							<p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'sandbox') ?> <?php if ($req) _e('Required fields are marked <span class="required">*</span>', 'sandbox') ?></p>
 
 							<div class="form-label"><label for="author"><?php _e('Name', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
-							<div class="form-input"><input id="author" class="required text" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
+							<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
 
 							<div class="form-label"><label for="email"><?php _e('Email', 'sandbox') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'sandbox') ?></div>
-							<div class="form-input"><input id="email" class="required text" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
+							<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
 
 							<div class="form-label"><label for="url"><?php _e('Website', 'sandbox') ?></label></div>
-							<div class="form-input"><input id="url" class="text" name="url" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" /></div>
+							<div class="form-input"><input id="url" name="url" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" /></div>
 
 <?php endif /* if ( $user_ID ) */ ?>
 
 							<div class="form-label"><label for="comment"><?php _e('Comment', 'sandbox') ?></label></div>
-							<div class="form-textarea"><textarea id="comment" class="required text" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
+							<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
 
-							<div class="form-submit"><input id="submit" class="button" name="submit" type="submit" value="<?php _e('Post Comment', 'sandbox') ?>" tabindex="7" accesskey="P" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
+							<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e('Post Comment', 'sandbox') ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
 
 							<?php do_action('comment_form', $post->ID); ?>
 

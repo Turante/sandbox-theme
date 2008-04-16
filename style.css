@@ -1,9 +1,8 @@
 /*
 THEME NAME: Sandbox
 THEME URI: http://www.plaintxt.org/themes/sandbox/
-DESCRIPTION: Rich with powerful and dynamic semantic class selectors, Sandbox is a canvas for CSS artists
-TAGS: widgets, sandbox, microformats, hcard, hatom, xoxo
-VERSION: 1.5.3 BETA
+DESCRIPTION: A theme rich with powerful and dynamic semantic class selectors; a canvas for CSS artists
+VERSION: 0.9.8
 AUTHOR: <a href="http://andy.wordpress.com/">Andy Skelton</a> &amp; <a href="http://www.plaintxt.org/">Scott Allan Wallick</a>
 AUTHOR URI:
 */
@@ -51,16 +50,3 @@ div.sidebar ul ul ul{margin:0 0 0 0.5em;}
 div.sidebar ul ul ul li{list-style:circle;}
 
 div#footer{text-align:center;}
-
-/* New gallery feature styles; Can't use div.attachment because shortcodes can link to galleries in other posts */
-div.gallery{clear:both;float:left;width:100%;}
-div.gallery dl{float:left;text-align:center;}
-div.gallery dl dt{margin:0;}
-div.gallery dl dd{margin-left:0;}
-div.entry-attachment,div.entry-caption{text-align:center;}
-div.entry-attachment img,div#nav-images div img{overflow:hidden;}
-body.attachment div#nav-images{clear:both;width:100%;}
-body.attachment div#nav-images div{padding:1em 0;width:50%;}
-body.attachment div#nav-images div.nav-previous{text-align:left;}
-body.attachment div#nav-images div.nav-next{text-align:right;}
-body.attachment div.entry-meta,body.attachment div#comments{clear:both;}
