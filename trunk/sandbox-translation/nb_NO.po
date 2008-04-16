@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Sandbox 1.2\n"
+"Project-Id-Version: Sandbox 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-10 00:53-0500\n"
-"PO-Revision-Date: 2008-03-10 14:31+0100\n"
+"PO-Revision-Date: 2008-04-08 18:50+0100\n"
 "Last-Translator: Kjell Knudsen <kjellkk@gmail.com>\n"
 "Language-Team: Norwegian Bokmal <kjellkk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -194,11 +194,11 @@ msgstr "Kommentarer (%)"
 
 #: archives.php:20
 msgid "Archives by Category"
-msgstr "Arkiver arkivert etter kategori"
+msgstr "Arkiv sortert på kategori"
 
 #: archives.php:26
 msgid "Archives by Month"
-msgstr "Arkivert etter måned"
+msgstr "Arkiv sortert på måned"
 
 #: attachment.php:15
 #: index.php:18
@@ -226,17 +226,17 @@ msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Legg til en kommenta
 #: single.php:35
 #, php-format
 msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "Kommentarer er stengt, men du kan legge igjen en tilbaketråkk: <a class=\"trackback-link\" href=\"%s\" title=\"Tilbaketråkk URL til ditt innlegg\" rel=\"trackback\">Tilbaketråkk URL</a>."
+msgstr "Vi tar ikke imot flere kommentarer, men du kan legge igjen ett tilbaketråkk: <a class=\"trackback-link\" href=\"%s\" title=\"Tilbaketråkk URL til ditt innlegg\" rel=\"trackback\">Tilbaketråkk URL</a>."
 
 #: attachment.php:35
 #: single.php:37
 msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
-msgstr "Tilbaketråkk er stengt, men du kan <a class=\"comment-link\" href=\"#respond\" title=\"Legg til kommentar\">kommentere</a>."
+msgstr "Vi tar ikke imot flere tilbaketråkk, men du kan <a class=\"comment-link\" href=\"#respond\" title=\"Legg til kommentar\">kommentere</a>."
 
 #: attachment.php:37
 #: single.php:39
 msgid "Both comments and trackbacks are currently closed."
-msgstr "Både kommentarer og tilbaketråkk er sperret."
+msgstr "Vi tar for tiden ikke imot kommentarer og tilbaketråkk på dette innlegget."
 
 #: author.php:8
 #, php-format
@@ -465,7 +465,7 @@ msgstr "RSS Feeder"
 #: single.php:20
 #, php-format
 msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s%7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
-msgstr "Dette innleget ble skrevet av %1$s, publisert <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s klokken %5$s</abbr>, arkivert under %6$s%7$s. Bookmerk <a href=\"%8$s\" title=\"Permalink til %9$s\" rel=\"bookmark\">permalinken</a>. Hold deg oppdatert på kommentarer: <a href=\"%10$s\" title=\"Kommentar RSS for %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for dette innlegget</a>."
+msgstr "Dette innlegget ble skrevet av %1$s, publisert <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s klokken %5$s</abbr> og arkivert i %6$s%7$s. Bookmerk <a href=\"%8$s\" title=\"Permalink til %9$s\" rel=\"bookmark\">permalinken</a>. Følg med på kommentarer: <a href=\"%10$s\" title=\"Kommentar RSS for %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for dette innlegget</a>."
 
 #: tag.php:6
 msgid "Tag Archives:"
