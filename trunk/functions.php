@@ -1,10 +1,10 @@
 <?php
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
-	echo '<div id="menu"><ul>';
-	$menu = wp_list_pages('title_li=&sort_column=menu_order&echo=0'); // Params for the page list in header.php
-	echo str_replace( array( "\r", "\n", "\t" ), '', $menu );
-	echo "</ul></div>\n";
+	$menu = '<div id="menu"><ul>';
+	$menu .= str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') );
+	$menu .= "</ul></div>\n";
+	echo apply_filters( 'sandbox_menu', $menu ); // Filter to override default globalnav
 }
 
 // Generates semantic classes for BODY element
@@ -94,6 +94,8 @@ function sandbox_body_class( $print = true ) {
 			$c[] = 'page-parent';
 		if ( $wp_query->post->post_parent )
 			$c[] = 'page-child parent-pageid-' . $wp_query->post->post_parent;
+		if ( is_page_template() )
+			$c[] = 'page-template page-template-' . str_replace( '.php', '-php', get_post_meta( $pageID, '_wp_page_template', true ) );
 		rewind_posts();
 	}
 
@@ -263,8 +265,9 @@ function sandbox_commenter_link() {
 	} else {
 		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
 	}
-	$email = get_comment_author_email();
-	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( "$email", "32" ) );
+	$avatar_email = get_comment_author_email();
+	$avatar_size = apply_filters( 'sandbox_avatar', '32' ); // Filter for changing avatar size
+	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, $avatar_size ) );
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }
 
