@@ -4,14 +4,14 @@
 		<div id="content">
 
 			<div id="post-0" class="post error404">
-				<h2 class="entry-title"><?php _e('Not Found', 'sandbox') ?></h2>
+				<h2 class="entry-title"><?php _e( 'Not Found', 'sandbox' ) ?></h2>
 				<div class="entry-content">
-					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'sandbox') ?></p>
+					<p><?php _e( 'Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'sandbox' ) ?></p>
 				</div>
-				<form id="error404-searchform" method="get" action="<?php bloginfo('home') ?>">
+				<form id="error404-searchform" class="blog-search" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="error404-s" class="text" name="s" type="text" value="<?php the_search_query() ?>" size="40" />
-						<input id="error404-searchsubmit" class="button" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" />
+						<input name="s" class="text" type="text" value="<?php the_search_query() ?>" size="40" />
+						<input name="searchsubmit" class="button" type="submit" value="<?php _e( 'Find', 'sandbox' ) ?>" />
 					</div>
 				</form>
 			</div><!-- .post -->
