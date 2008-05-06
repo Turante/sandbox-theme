@@ -4,9 +4,9 @@
 	<title>The Sandbox &middot; An explanation</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="content-language" content="en-us" />
-	<meta name="description" content="Sandbox: a highly semantic theme with powerful, dynamic class selectors" />
+	<meta name="description" content="Sandbox: A highly semantic theme with powerful, dynamic class selectors" />
 	<meta name="keywords" content="sandbox,xhtml,hatom,hcard,microformats,semantics,css,wordpress" />
-	<style type="text/css" media="all">
+	<style type="text/css" media="screen,projection">
 	/*<![CDATA[*/
 		body{background:#fcfcfc;color:#444;font:normal 70%/150% verdana,geneva,sans-serif;margin:0;padding:0;}
 		body blockquote{border-left:5px solid #f6f6f6;padding-left:0.5em;}
@@ -43,7 +43,7 @@
 	<div id="readme">
 		<div id="header">
 			<h1 id="title">The Sandbox</h1>
-			<div class="readme-version">Version 1.5.2</div>
+			<div class="readme-version">Version 1.6 RC2</div>
 			<div class="readme-subtitle">A theme rich and powerful with dynamic semantic class selectors</div>
 		</div><!-- #header -->
 		<ol id="menu" class="xoxo">
@@ -286,6 +286,16 @@
 									<td scope="row">page-parent</td>
 									<td><code>is_page()</code></td>
 									<td>When the page has one or more child pages</td>
+								</tr>
+								<tr>
+									<td scope="row">page-template</td>
+									<td><code>is_page()</code></td>
+									<td>When the page is using a page template</td>
+								</tr>
+								<tr class="alt">
+									<td scope="row">page-template-[name]</td>
+									<td><code>is_page()</code></td>
+									<td>When the page is using a page template, where <i>[name]</i> is the file name of the page template</td>
 								</tr>
 								<tr>
 									<td scope="row">paged</td>
@@ -729,7 +739,7 @@ TEMPLATE: sandbox
 			</li><!-- #license -->
 		</ol><!-- #readme .xoxo -->
 		<div id="footer">
-			<p>Last updated 31 March 2008</p>
+			<p>Last updated 05 May 2008</p>
 		</div><!-- #footer -->
 	</div><!-- #readme -->
 </body>

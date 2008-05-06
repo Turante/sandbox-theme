@@ -1,4 +1,86 @@
 <?php
+
+function sandbox_gallery($attr) {
+	$a_rel = 'attachment';
+	$a_class = 'bacon';
+	$cap_link = true;
+
+	if ( $output != '' )
+		return $output;
+
+	extract(shortcode_atts(array(
+		'orderby' => 'menu_order ASC, ID ASC',
+		'id' => $post->ID,
+		'itemtag' => 'dl',
+		'icontag' => 'dt',
+		'captiontag' => 'dd',
+		'columns' => 3,
+		'size' => 'thumbnail',
+	), $attr));
+
+	$id = intval($id);
+	$orderby = addslashes($orderby);
+	$attachments = get_children("post_parent=$id&post_type=attachment&post_mime_type=image&orderby=\"{$orderby}\"");
+
+	if ( empty($attachments) )
+		return '';
+
+	if ( is_feed() ) {
+		$output = "\n";
+		foreach ( $attachments as $id => $attachment )
+			$output .= wp_get_attachment_link($id, $size, true) . "\n";
+		return $output;
+	}
+
+	$listtag = tag_escape($listtag);
+	$itemtag = tag_escape($itemtag);
+	$captiontag = tag_escape($captiontag);
+	$columns = intval($columns);
+	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
+
+// Remove the style output
+// Why add style in the middle of a freakin' page?
+// This needs to be added to the header (width applied through CSS but limits it a bit)
+	$output = apply_filters('gallery_style', "<div class='gallery'>");
+
+	foreach ( $attachments as $id => $attachment ) {
+	// Larger image URL (Lightbox/Thickbox)
+		$a_img = wp_get_attachment_url($id);
+	// Attachment page ID
+		$att_page = get_attachment_link($id);
+	// Returns array
+		$img = wp_get_attachment_image_src($id, $size);
+		$img = $img[0];
+
+	// If using Lightbox, set the link to the img URL
+	// Else, set the link to the attachment URL
+		if($a_rel == true) $link = $a_img;
+		elseif($a_class == true) $link = $a_img;
+		else $link = $att_page;
+	// Open the gallery stuff
+		$output .= "<{$itemtag} class='gallery-item col-$columns'>";
+		$output .='<'.$icontag.' class="gallery-icon"><a';
+	// Image link and title
+		$output .= ' href="'.$link.'" title="'.$attachment->post_excerpt.'"';
+	// Set the "class" tag if using it
+		if($a_class == true) $output.= ' class="'.$a_class.'"';
+	// Set the "rel" tag if using it
+		if($a_rel == true) $output.= ' rel="' .$a_rel.'"';
+	// Output the image and close off some open tags
+		$output .= '><img src="'.$img.'" alt="'.$attachment->post_excerpt.'" class="'.$size.'" /></a></'.$icontag.'>';
+		if ( $cap_link == true && $captiontag && trim($attachment->post_excerpt) ) {
+			$output .= '<'.$captiontag.' class="gallery-caption"><a href="'.$att_page.'" title="'.$attachment->post_excerpt.'">'.$attachment->post_excerpt.'</a></'.$captiontag.'>';
+		}
+		$output .= "</{$itemtag}>";
+		if ( $columns > 0 && ++$i % $columns == 0 )
+			$output .= '<div style="clear:both;" class="clear"><!-- --></div>';
+	}
+	$output .= "</div>\n";
+	return $output;
+}
+
+add_filter( 'post_gallery', 'sandbox_gallery', $attr);
+
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
 	$menu = '<div id="menu"><ul>';
@@ -94,7 +176,7 @@ function sandbox_body_class( $print = true ) {
 			$c[] = 'page-parent';
 		if ( $wp_query->post->post_parent )
 			$c[] = 'page-child parent-pageid-' . $wp_query->post->post_parent;
-		if ( is_page_template() )
+		if ( is_page_template() ) // Hat tip to Ian, themeshaper.com
 			$c[] = 'page-template page-template-' . str_replace( '.php', '-php', get_post_meta( $pageID, '_wp_page_template', true ) );
 		rewind_posts();
 	}
@@ -271,68 +353,6 @@ function sandbox_commenter_link() {
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }
 
-// Sandbox gallery short code; styles used in style.css file
-function sandbox_gallery($attr) {
-	global $post;
-	// Sets our defaults for the Sandbox gallery short code
-	extract( shortcode_atts(
-		array(
-			'orderby'    => 'menu_order ASC, ID ASC',
-			'id'         => $post->ID,
-			'itemtag'    => 'dl',
-			'icontag'    => 'dt',
-			'captiontag' => 'dd',
-			'columns'    => 3,
-			'size'       => 'thumbnail',
-		),
-		$attr ) );
-	$id = intval($id);
-	$orderby = addslashes($orderby);
-	$attachments = get_children("post_parent=$id&post_type=attachment&post_mime_type=image&orderby=\"{$orderby}\"");
-	// If we have nothing, show nothing
-	if ( empty($attachments) )
-		return '';
-	// Shows simple image links when viewed in a feed
-	if ( is_feed() ) {
-		$output = "\n";
-		foreach ( $attachments as $id => $attachment )
-			$output .= wp_get_attachment_link( $id, $size, true ) . "\n";
-		return $output;
-	}
-	$listtag = tag_escape($listtag);
-	$itemtag = tag_escape($itemtag);
-	$captiontag = tag_escape($captiontag);
-	$columns = intval($columns);
-	// Divides number of columns for even widths
-	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
-	// Let's begin our gallery
-	$output = apply_filters( "gallery_style", "<div class='gallery gallery-set-1'>" );
-	// We're using pretty much the same code from ../wp-includes/media.php
-	foreach ( $attachments as $id => $attachment ) {
-		$link = wp_get_attachment_link( $id, $size, true );
-		// This is our 'wrapper' for each gallery item
-		$output .= "<{$itemtag} class='gallery-item' style='width:{$itemwidth}%;'>";
-		// And now we have the actual image link
-		$output .= "<{$icontag} class='gallery-icon'>$link</{$icontag}>";
-		// Next, show the image caption if present
-		if ( $captiontag && trim($attachment->post_excerpt) ) {
-			$output .= "<{$captiontag} class='gallery-caption'>{$attachment->post_excerpt}</{$captiontag}>";
-		}
-		// Close the gallery item 'wrapper'
-		$output .= "</{$itemtag}>";
-		// Start a new gallery set for our 'columns'
-		if ( $columns > 0 && ++$i % $columns == 0 ) {
-			$gallery_count = 2;
-			$output .= "\n</div>\n<div class='gallery gallery-set-" . $gallery_count . "'>\n";
-			$gallery_count++;
-		}
-	}
-	// Ends our gallery
-	$output .= "</div>\n";
-	// And spits out the chewed up code
-	return $output;
-}
-
 // Widget: Search; to match the Sandbox style and replace Widget plugin default
 function widget_sandbox_search($args) {
 	extract($args);
@@ -472,9 +492,6 @@ load_theme_textdomain('sandbox');
 
 // Runs our code at the end to check that everything needed has loaded
 add_action( 'init', 'sandbox_widgets_init' );
-
-// Add Sandbox function to gallery short code
-add_shortcode( 'gallery', 'sandbox_gallery' );
 
 // Adds filters so that things run smoothly
 add_filter( 'archive_meta', 'wptexturize' );

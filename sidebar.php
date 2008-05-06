@@ -1,16 +1,16 @@
 	<div id="primary" class="sidebar">
 		<ul class="xoxo">
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
 
 			<li id="pages">
-				<h3><?php _e('Pages', 'sandbox') ?></h3>
+				<h3><?php _e( 'Pages', 'sandbox' ) ?></h3>
 				<ul>
 <?php wp_list_pages('title_li=&sort_column=post_title' ) ?>
 				</ul>
 			</li>
 
 			<li id="categories">
-				<h3><?php _e('Categories', 'sandbox'); ?></h3>
+				<h3><?php _e( 'Categories', 'sandbox' ) ?></h3>
 				<ul>
 <?php wp_list_categories('title_li=&show_count=0&hierarchical=1') ?> 
 
@@ -18,7 +18,7 @@
 			</li>
 
 			<li id="archives">
-				<h3><?php _e('Archives', 'sandbox') ?></h3>
+				<h3><?php _e( 'Archives', 'sandbox' ) ?></h3>
 				<ul>
 <?php wp_get_archives('type=monthly') ?>
 
@@ -30,13 +30,13 @@
 
 	<div id="secondary" class="sidebar">
 		<ul class="xoxo">
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin  secondary sidebar widgets ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin  secondary sidebar widgets ?>
 			<li id="search">
-				<h3><label for="s"><?php _e('Search', 'sandbox') ?></label></h3>
-				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
+				<h3><label for="s"><?php _e( 'Search', 'sandbox' ) ?></label></h3>
+				<form id="searchform" class="blog-search" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" name="s" class="text" type="text" value="<?php the_search_query() ?>" size="10" tabindex="1" accesskey="S" />
-						<input id="searchsubmit" class="button" name="searchsubmit" type="submit" value="<?php _e('Find', 'sandbox') ?>" tabindex="2" />
+						<input id="s" name="s" class="text" type="text" value="<?php the_search_query() ?>" size="10" accesskey="S" />
+						<input name="searchsubmit" class="button" type="submit" value="<?php _e( 'Find', 'sandbox' ) ?>" />
 					</div>
 				</form>
 			</li>
@@ -44,15 +44,15 @@
 <?php wp_list_bookmarks('title_before=<h3>&title_after=</h3>&show_images=1') ?>
 
 			<li id="rss-links">
-				<h3><?php _e('RSS Feeds', 'sandbox') ?></h3>
+				<h3><?php _e( 'RSS Feeds', 'sandbox' ) ?></h3>
 				<ul>
-					<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'sandbox'); ?>" rel="alternate" type="application/rss+xml"><?php _e('All posts', 'sandbox') ?></a></li>
-					<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'sandbox'); ?>" rel="alternate" type="application/rss+xml"><?php _e('All comments', 'sandbox') ?></a></li>
+					<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" rel="alternate" type="application/rss+xml"><?php _e( 'All posts', 'sandbox' ) ?></a></li>
+					<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" rel="alternate" type="application/rss+xml"><?php _e( 'All comments', 'sandbox' ) ?></a></li>
 				</ul>
 			</li>
 
 			<li id="meta">
-				<h3><?php _e('Meta', 'sandbox') ?></h3>
+				<h3><?php _e( 'Meta', 'sandbox' ) ?></h3>
 				<ul>
 					<?php wp_register() ?>
 
