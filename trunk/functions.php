@@ -1,92 +1,20 @@
 <?php
+/*
+This file is part of SANDBOX.
 
-function sandbox_gallery($attr) {
-	$a_rel = 'attachment';
-	$a_class = 'bacon';
-	$cap_link = true;
+SANDBOX is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-	if ( $output != '' )
-		return $output;
+SANDBOX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-	extract(shortcode_atts(array(
-		'orderby' => 'menu_order ASC, ID ASC',
-		'id' => $post->ID,
-		'itemtag' => 'dl',
-		'icontag' => 'dt',
-		'captiontag' => 'dd',
-		'columns' => 3,
-		'size' => 'thumbnail',
-	), $attr));
+You should have received a copy of the GNU General Public License along with SANDBOX. If not, see http://www.gnu.org/licenses/.
+*/
 
-	$id = intval($id);
-	$orderby = addslashes($orderby);
-	$attachments = get_children("post_parent=$id&post_type=attachment&post_mime_type=image&orderby=\"{$orderby}\"");
-
-	if ( empty($attachments) )
-		return '';
-
-	if ( is_feed() ) {
-		$output = "\n";
-		foreach ( $attachments as $id => $attachment )
-			$output .= wp_get_attachment_link($id, $size, true) . "\n";
-		return $output;
-	}
-
-	$listtag = tag_escape($listtag);
-	$itemtag = tag_escape($itemtag);
-	$captiontag = tag_escape($captiontag);
-	$columns = intval($columns);
-	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
-
-// Remove the style output
-// Why add style in the middle of a freakin' page?
-// This needs to be added to the header (width applied through CSS but limits it a bit)
-	$output = apply_filters('gallery_style', "<div class='gallery'>");
-
-	foreach ( $attachments as $id => $attachment ) {
-	// Larger image URL (Lightbox/Thickbox)
-		$a_img = wp_get_attachment_url($id);
-	// Attachment page ID
-		$att_page = get_attachment_link($id);
-	// Returns array
-		$img = wp_get_attachment_image_src($id, $size);
-		$img = $img[0];
-
-	// If using Lightbox, set the link to the img URL
-	// Else, set the link to the attachment URL
-		if($a_rel == true) $link = $a_img;
-		elseif($a_class == true) $link = $a_img;
-		else $link = $att_page;
-	// Open the gallery stuff
-		$output .= "<{$itemtag} class='gallery-item col-$columns'>";
-		$output .='<'.$icontag.' class="gallery-icon"><a';
-	// Image link and title
-		$output .= ' href="'.$link.'" title="'.$attachment->post_excerpt.'"';
-	// Set the "class" tag if using it
-		if($a_class == true) $output.= ' class="'.$a_class.'"';
-	// Set the "rel" tag if using it
-		if($a_rel == true) $output.= ' rel="' .$a_rel.'"';
-	// Output the image and close off some open tags
-		$output .= '><img src="'.$img.'" alt="'.$attachment->post_excerpt.'" class="'.$size.'" /></a></'.$icontag.'>';
-		if ( $cap_link == true && $captiontag && trim($attachment->post_excerpt) ) {
-			$output .= '<'.$captiontag.' class="gallery-caption"><a href="'.$att_page.'" title="'.$attachment->post_excerpt.'">'.$attachment->post_excerpt.'</a></'.$captiontag.'>';
-		}
-		$output .= "</{$itemtag}>";
-		if ( $columns > 0 && ++$i % $columns == 0 )
-			$output .= '<div style="clear:both;" class="clear"><!-- --></div>';
-	}
-	$output .= "</div>\n";
-	return $output;
-}
-
-add_filter( 'post_gallery', 'sandbox_gallery', $attr);
-
-// Produces a list of pages in the header without whitespace -- er, I mean negative space.
+// Produces a list of pages in the header without whitespace
 function sandbox_globalnav() {
-	$menu = '<div id="menu"><ul>';
-	$menu .= str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') );
-	$menu .= "</ul></div>\n";
-	echo apply_filters( 'sandbox_menu', $menu ); // Filter to override default globalnav
+	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') ) )
+		$menu = '<ul>' . $menu . '</ul>';
+	$menu = '<div id="menu">' . $menu . "</div>\n";
+	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav
 }
 
 // Generates semantic classes for BODY element
@@ -100,8 +28,8 @@ function sandbox_body_class( $print = true ) {
 	sandbox_date_classes( time(), $c );
 
 	// Generic semantic classes for what type of content is displayed
-	is_front_page()  ? $c[] = 'home'       : null; // New 'front' class for WP 2.5
-	is_home()        ? $c[] = 'blog'       : null; // Class for the posts, if set
+	is_front_page()  ? $c[] = 'home'       : null; // For the front page, if set
+	is_home()        ? $c[] = 'blog'       : null; // For the blog posts page, if set
 	is_archive()     ? $c[] = 'archive'    : null;
 	is_date()        ? $c[] = 'date'       : null;
 	is_search()      ? $c[] = 'search'     : null;
@@ -206,7 +134,7 @@ function sandbox_body_class( $print = true ) {
 	}
 
 	// Separates classes with a single space, collates classes for BODY
-	$c = join( ' ', apply_filters( 'body_class',  $c ) );
+	$c = join( ' ', apply_filters( 'body_class',  $c ) ); // Available filter: body_class
 
 	// And tada!
 	return $print ? print($c) : $c;
@@ -246,7 +174,7 @@ function sandbox_post_class( $print = true ) {
 		$c[] = 'alt';
 
 	// Separates classes with a single space, collates classes for post DIV
-	$c = join( ' ', apply_filters( 'post_class', $c ) );
+	$c = join( ' ', apply_filters( 'post_class', $c ) ); // Available filter: post_class
 
 	// And tada!
 	return $print ? print($c) : $c;
@@ -286,7 +214,7 @@ function sandbox_comment_class( $print = true ) {
 		$c[] = 'alt';
 
 	// Separates classes with a single space, collates classes for comment LI
-	$c = join( ' ', apply_filters( 'comment_class', $c ) );
+	$c = join( ' ', apply_filters( 'comment_class', $c ) ); // Available filter: comment_class
 
 	// Tada again!
 	return $print ? print($c) : $c;
@@ -348,24 +276,91 @@ function sandbox_commenter_link() {
 		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
 	}
 	$avatar_email = get_comment_author_email();
-	$avatar_size = apply_filters( 'sandbox_avatar', '32' ); // Filter for changing avatar size
+	$avatar_size = apply_filters( 'avatar_size', '32' ); // Available filter: avatar_size
 	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, $avatar_size ) );
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
+}
+
+// Function to filter the default gallery shortcode
+function unboxed_post_gallery($attr) {
+	global $post;
+	if ( isset($attr['orderby']) ) {
+		$attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+		if ( !$attr['orderby'] )
+			unset($attr['orderby']);
+	}
+
+	extract(shortcode_atts(array(
+		'orderby'     =>  'menu_order ASC, ID ASC',
+		'id'          =>  $post->ID,
+		'itemtag'     =>  'dl',
+		'icontag'     =>  'dt',
+		'captiontag'  =>  'dd',
+		'columns'     =>  3,
+		'size'        =>  'thumbnail',
+	), $attr));
+
+	$id           =  intval($id);
+	$orderby      =  addslashes($orderby);
+	$attachments  =  get_children("post_parent=$id&post_type=attachment&post_mime_type=image&orderby={$orderby}");
+
+	if ( empty($attachments) )
+		return null;
+
+	if ( is_feed() ) {
+		$output = "\n";
+		foreach ( $attachments as $id => $attachment )
+			$output .= wp_get_attachment_link( $id, $size, true ) . "\n";
+		return $output;
+	}
+
+	$listtag     =  tag_escape($listtag);
+	$itemtag     =  tag_escape($itemtag);
+	$captiontag  =  tag_escape($captiontag);
+	$columns     =  intval($columns);
+	$itemwidth   =  $columns > 0 ? floor(100/$columns) : 100;
+
+	$output = apply_filters( 'gallery_style', "\n" . '<div class="gallery">', 9 ); // Available filter: gallery_style
+
+	foreach ( $attachments as $id => $attachment ) {
+		$img_lnk = get_attachment_link($id);
+		$img_src = wp_get_attachment_image_src( $id, $size );
+		$img_src = $img_src[0];
+		$img_alt = $attachment->post_excerpt;
+		if ( $img_alt == null )
+			$img_alt = $attachment->post_title;
+		$img_rel = apply_filters( 'gallery_img_rel', 'attachment'); // Available filter: gallery_img_rel
+		$img_class = apply_filters( 'gallery_img_class', 'gallery-image'); // Available filter: gallery_img_class
+
+		$output  .=  "\n\t" . '<' . $itemtag . ' class="gallery-item gallery-columns-' . $columns .'">';
+		$output  .=  "\n\t\t" . '<' . $icontag . ' class="gallery-icon"><a href="' . $img_lnk . '" title="' . $img_alt . '" rel="' . $img_rel . '"><img src="' . $img_src . '" alt="' . $img_alt . '" class="' . $img_class . ' attachment-' . $size . '" /></a></' . $icontag . '>';
+
+		if ( $captiontag && trim($attachment->post_excerpt) ) {
+			$output .= "\n\t\t" . '<' . $captiontag . ' class="gallery-caption">' . $attachment->post_excerpt . '</' . $captiontag . '>';
+		}
+
+		$output .= "\n\t" . '</' . $itemtag . '>';
+		if ( $columns > 0 && ++$i % $columns == 0 )
+			$output .= "\n</div>\n" . '<div class="gallery">';
+	}
+	$output .= "\n</div>";
+
+	return $output;
 }
 
 // Widget: Search; to match the Sandbox style and replace Widget plugin default
 function widget_sandbox_search($args) {
 	extract($args);
 	$options = get_option('widget_sandbox_search');
-	$title = empty($options['title']) ? __( 'Search', 'sandbox' ) : $options['title'];
-	$button = empty($options['button']) ? __( 'Find', 'sandbox' ) : $options['button'];
+	$title = empty($options['title']) ? __( 'Search', 'sandbox' ) : attribute_escape($options['title']);
+	$button = empty($options['button']) ? __( 'Find', 'sandbox' ) : attribute_escape($options['button']);
 ?>
 			<?php echo $before_widget ?>
 				<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" class="text" name="s" type="text" value="<?php the_search_query() ?>" size="10" tabindex="1" accesskey="S" />
-						<input id="searchsubmit" class="button" name="searchsubmit" type="submit" value="<?php echo $button ?>" tabindex="2" />
+						<input id="s" name="s" type="text" class="text" value="<?php the_search_query() ?>" size="10" tabindex="1" />
+						<input type="submit" class="button" value="<?php echo $button ?>" tabindex="2" />
 					</div>
 				</form>
 			<?php echo $after_widget ?>
@@ -376,19 +371,19 @@ function widget_sandbox_search($args) {
 function widget_sandbox_search_control() {
 	$options = $newoptions = get_option('widget_sandbox_search');
 	if ( $_POST['search-submit'] ) {
-		$newoptions['title'] = strip_tags( stripslashes( $_POST['search-title'] ) );
-		$newoptions['button'] = strip_tags( stripslashes( $_POST['search-button'] ) );
+		$newoptions['title'] = strip_tags(stripslashes( $_POST['search-title']));
+		$newoptions['button'] = strip_tags(stripslashes( $_POST['search-button']));
 	}
 	if ( $options != $newoptions ) {
 		$options = $newoptions;
 		update_option( 'widget_sandbox_search', $options );
 	}
-	$title = attribute_escape( $options['title'] );
-	$button = attribute_escape( $options['button'] );
+	$title = attribute_escape($options['title']);
+	$button = attribute_escape($options['button']);
 ?>
-			<p><label for="search-title"><?php _e( 'Title:', 'sandbox' ) ?> <input class="widefat" id="search-title" name="search-title" type="text" value="<?php echo $title; ?>" /></label></p>
-			<p><label for="search-button"><?php _e( 'Button Text:', 'sandbox' ) ?> <input class="widefat" id="search-button" name="search-button" type="text" value="<?php echo $button; ?>" /></label></p>
-			<input type="hidden" id="search-submit" name="search-submit" value="1" />
+	<p><label for="search-title"><?php _e( 'Title:', 'sandbox' ) ?> <input class="widefat" id="search-title" name="search-title" type="text" value="<?php echo $title; ?>" /></label></p>
+	<p><label for="search-button"><?php _e( 'Button Text:', 'sandbox' ) ?> <input class="widefat" id="search-button" name="search-button" type="text" value="<?php echo $button; ?>" /></label></p>
+	<input type="hidden" id="search-submit" name="search-submit" value="1" />
 <?php
 }
 
@@ -396,7 +391,7 @@ function widget_sandbox_search_control() {
 function widget_sandbox_meta($args) {
 	extract($args);
 	$options = get_option('widget_meta');
-	$title = empty($options['title']) ? __( 'Meta', 'sandbox' ) : $options['title'];
+	$title = empty($options['title']) ? __( 'Meta', 'sandbox' ) : attribute_escape($options['title']);
 ?>
 			<?php echo $before_widget; ?>
 				<?php echo $before_title . $title . $after_title; ?>
@@ -415,7 +410,7 @@ function widget_sandbox_meta($args) {
 function widget_sandbox_rsslinks($args) {
 	extract($args);
 	$options = get_option('widget_sandbox_rsslinks');
-	$title = empty($options['title']) ? __( 'RSS Links', 'sandbox' ) : $options['title'];
+	$title = empty($options['title']) ? __( 'RSS Links', 'sandbox' ) : attribute_escape($options['title']);
 ?>
 		<?php echo $before_widget; ?>
 			<?php echo $before_title . $title . $after_title; ?>
@@ -437,10 +432,10 @@ function widget_sandbox_rsslinks_control() {
 		$options = $newoptions;
 		update_option( 'widget_sandbox_rsslinks', $options );
 	}
-	$title = attribute_escape( $options['title'] );
+	$title = attribute_escape($options['title']);
 ?>
-			<p><label for="rsslinks-title"><?php _e( 'Title:', 'sandbox' ) ?> <input class="widefat" id="rsslinks-title" name="rsslinks-title" type="text" value="<?php echo $title; ?>" /></label></p>
-			<input type="hidden" id="rsslinks-submit" name="rsslinks-submit" value="1" />
+	<p><label for="rsslinks-title"><?php _e( 'Title:', 'sandbox' ) ?> <input class="widefat" id="rsslinks-title" name="rsslinks-title" type="text" value="<?php echo $title; ?>" /></label></p>
+	<input type="hidden" id="rsslinks-submit" name="rsslinks-submit" value="1" />
 <?php
 }
 
@@ -466,7 +461,7 @@ function sandbox_widgets_init() {
 		'description'  =>  __( "A search form for your blog (Sandbox)", "sandbox" )
 	);
 	wp_register_sidebar_widget( 'search', __( 'Search', 'sandbox' ), 'widget_sandbox_search', $widget_ops );
-	unregister_widget_control('search');
+	unregister_widget_control('search'); // We're being Sandbox-specific; remove WP default
 	wp_register_widget_control( 'search', __( 'Search', 'sandbox' ), 'widget_sandbox_search_control' );
 
 	// Sandbox Meta widget
@@ -475,8 +470,8 @@ function sandbox_widgets_init() {
 		'description'  =>  __( "Log in/out and administration links (Sandbox)", "sandbox" )
 	);
 	wp_register_sidebar_widget( 'meta', __( 'Meta', 'sandbox' ), 'widget_sandbox_meta', $widget_ops );
-	unregister_widget_control('meta');
-	wp_register_widget_control( 'meta', __('Meta'), 'wp_widget_meta_control' );
+	unregister_widget_control('meta'); // We're being Sandbox-specific; remove WP default
+	wp_register_widget_control( 'meta', __( 'Meta', 'sandbox' ), 'wp_widget_meta_control' );
 
 	//Sandbox RSS Links widget
 	$widget_ops = array(
@@ -493,7 +488,10 @@ load_theme_textdomain('sandbox');
 // Runs our code at the end to check that everything needed has loaded
 add_action( 'init', 'sandbox_widgets_init' );
 
-// Adds filters so that things run smoothly
+// Registers our function to filter default gallery shortcode
+add_filter( 'post_gallery', 'sandbox_gallery', $attr );
+
+// Adds filters for the description/meta content in archives.php
 add_filter( 'archive_meta', 'wptexturize' );
 add_filter( 'archive_meta', 'convert_smilies' );
 add_filter( 'archive_meta', 'convert_chars' );
