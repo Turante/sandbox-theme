@@ -5,7 +5,7 @@
 			<li id="pages">
 				<h3><?php _e( 'Pages', 'sandbox' ) ?></h3>
 				<ul>
-<?php wp_list_pages('title_li=&sort_column=post_title' ) ?>
+<?php wp_list_pages('title_li=&sort_column=menu_order' ) ?>
 				</ul>
 			</li>
 
@@ -30,13 +30,13 @@
 
 	<div id="secondary" class="sidebar">
 		<ul class="xoxo">
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin  secondary sidebar widgets ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin secondary sidebar widgets ?>
 			<li id="search">
 				<h3><label for="s"><?php _e( 'Search', 'sandbox' ) ?></label></h3>
 				<form id="searchform" class="blog-search" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" name="s" class="text" type="text" value="<?php the_search_query() ?>" size="10" accesskey="S" />
-						<input name="searchsubmit" class="button" type="submit" value="<?php _e( 'Find', 'sandbox' ) ?>" />
+						<input id="s" name="s" type="text" class="text" value="<?php the_search_query() ?>" size="10" tabindex="1" />
+						<input type="submit" class="button" value="<?php _e( 'Find', 'sandbox' ) ?>" tabindex="2" />
 					</div>
 				</form>
 			</li>

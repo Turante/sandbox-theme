@@ -1,10 +1,9 @@
 <?php
 	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
-		die ( 'Please do not load this page directly. Thanks!' );
+		die ( 'Please do not load this page directly. Thanks.' );
 ?>
 			<div id="comments">
 <?php
-	$req = get_option('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-)
 	if ( !empty($post->post_password) ) :
 		if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
 ?>
@@ -77,6 +76,8 @@ foreach ( $comments as $comment )
 <?php endif // REFERENCE: if ( $ping_count ) ?>
 <?php endif // REFERENCE: if ( $comments ) ?>
 <?php if ( 'open' == $post->comment_status ) : ?>
+<?php $req = get_option('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-) ?>
+
 				<div id="respond">
 					<h3><?php _e( 'Post a Comment', 'sandbox' ) ?></h3>
 
@@ -110,9 +111,9 @@ foreach ( $comments as $comment )
 <?php endif // REFERENCE: * if ( $user_ID ) ?>
 
 							<div class="form-label"><label for="comment"><?php _e( 'Comment', 'sandbox' ) ?></label></div>
-							<div class="form-textarea"><textarea id="comment" name="comment" class="text" cols="45" rows="8" tabindex="6"></textarea></div>
+							<div class="form-textarea"><textarea id="comment" name="comment" class="text required" cols="45" rows="8" tabindex="6"></textarea></div>
 
-							<div class="form-submit"><input id="submit" name="submit" class="button" type="submit" value="<?php _e( 'Post Comment', 'sandbox' ) ?>" tabindex="7" accesskey="P" /><input type="hidden" name="comment_post_ID" value="<?php echo $id ?>" /></div>
+							<div class="form-submit"><input id="submit" name="submit" class="button" type="submit" value="<?php _e( 'Post Comment', 'sandbox' ) ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id ?>" /></div>
 
 							<div class="form-option"><?php do_action( 'comment_form', $post->ID ) ?></div>
 
