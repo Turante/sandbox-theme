@@ -5,7 +5,7 @@
 
 <?php the_post() ?>
 
-			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
+			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'sandbox' ), wp_specialchars( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
 
 			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
 				<h3 class="entry-title"><?php the_title() ?></h3>
@@ -15,12 +15,7 @@
 <?php the_content() ?>
 
 				</div>
-<?php if ( wp_attachment_is_image($post->ID) ) { ?>
-				<div id="nav-images" class="navigation">
-					<div class="nav-previous"><?php previous_image_link() ?></div>
-					<div class="nav-next"><?php next_image_link() ?></div>
-				</div>
-<?php } ?>
+
 				<div class="entry-meta">
 					<?php printf( __( 'Posted by %1$s on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr>. Bookmark the <a href="%6$s" title="Permalink to %7$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%8$s" title="Comments RSS to %7$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox' ),
 						'<span class="author vcard"><a class="url fn n" href="' . get_author_link( false, $authordata->ID, $authordata->user_nicename ) . '" title="' . sprintf( __( 'View all posts by %s', 'sandbox' ), $authordata->display_name ) . '">' . get_the_author() . '</a></span>',
@@ -45,6 +40,11 @@
 
 				</div>
 			</div><!-- .post -->
+
+			<div id="nav-images" class="navigation">
+				<div class="nav-previous"><?php previous_image_link() ?></div>
+				<div class="nav-next"><?php next_image_link() ?></div>
+			</div>
 
 <?php comments_template() ?>
 

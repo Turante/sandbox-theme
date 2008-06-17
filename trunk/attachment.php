@@ -5,7 +5,7 @@
 
 <?php the_post() ?>
 
-			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'sandbox' ), wp_specialchars( get_the_title($post->post_parent), 1 ) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
+			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'sandbox' ), wp_specialchars( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
 
 			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
 				<h3 class="entry-title"><?php the_title() ?></h3>

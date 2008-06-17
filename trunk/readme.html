@@ -32,6 +32,7 @@
 		body ol#menu li ol li ol li,body ol li#functions ol li,body ol li#features ol li{list-style:lower-roman;}
 		body pre span,body span.bold{font-weight:700;}
 		body p span.vcard span.family-name,body p span.vcard span.additional-name{display:none;}
+		table {width:100%;}
 		table *{border:none;}
 		table tbody th,table tfoot th{background:#ddd;text-align:left;}
 		table tbody tr.alt{background:#eee;}
@@ -43,7 +44,7 @@
 	<div id="readme">
 		<div id="header">
 			<h1 id="title">The Sandbox</h1>
-			<div class="readme-version">Version 1.6 RC3</div>
+			<div class="readme-version">Version 1.6.0</div>
 			<div class="readme-subtitle">A theme rich and powerful with dynamic semantic class selectors</div>
 		</div><!-- #header -->
 		<ol id="menu" class="xoxo">
@@ -657,11 +658,76 @@ TAGS: one column, two columns, three columns, awesome, blue, pink
 TEMPLATE: sandbox
 */</pre>
 				<p>The line <code>TEMPLATE: sandbox</code> tells WordPress to use the theme files installed in the <code>/sandbox/</code> folder with the &quot;My Design&quot; <code>style.css</code> style sheet.</p>
-				<p>You can read more detailed information about developing <a href="http://codex.wordpress.org/Theme_Development#Theme_Style_Sheet" title="WordPress Theme Development - Theme Style Sheets" rel="external">WordPress Theme Style Sheets</a> on the WordPress Codex.</p>
+				<p>You can read more detailed information about developing <a href="http://codex.wordpress.org/Theme_Development#Theme_Style_Sheet" title="WordPress Theme Development - Theme Style Sheets" rel="external">WordPress Theme Style Sheets</a> or in <a href="http://forums.sndbx.org/viewtopic.php?id=4" title="Creating Sandbox-based theme templates" rel="external">Creating Sandbox-based theme templates</a> in the Sandbox Forums.</p>
 			</li><!-- #creating -->
 			<li id="filters">
 				<h2>Using filters</h2>
-				<p><strong>TK</strong>. Information to come on filters in the Sandbox theme.</p>
+				<p>Filters allow plugins and theme templates to change the data that the Sandbox returns to the browser without having to alter the theme fiiles. Filters provide a simple, clean way of altering what the Sandbox does without modifying the actual theme files.</p>
+				<p>For example, if you wanted to add a link to globalnav page list, you would have to edit the theme files. When you upgrade the theme files (or accidentally break something), you will have to go back and make this change again. By using the <code>globalnav_menu</code> filter, however, you can alter the output of the <code>sandbox_globalnav()</code> without changing a single theme file.</p>
+				<p>The chart below lists the filters available in the Sandbox theme.</p>
+				<table id="filters-table" summary="Filters available in the Sandbox theme for use by plugins and theme templates">
+					<thead>
+						<tr>
+							<th colspan="3" scope="colgroup">Sandbox filters</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<th colspan="3" scope="colgroup">Filter examples</th>
+						</tr>
+						<tr>
+							<td colspan="3" scope="row" abbr="Filter example"><pre>// Sandbox produces 32px avatars -- too small!
+function make_avatars_big() {
+	return '64';
+}
+// Add our function to the filter in Sandbox
+add_filter( 'avatar_size', 'make_avatars_big' );</pre></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr class="alt">
+							<th scope="col" abbr="filter">Filter</th>
+							<th scope="col" abbr="ref">Reference</th>
+							<th scope="col" abbr="use">Usage</th>
+						</tr>
+						<tr>
+							<td scope="row">avatar_size</td>
+							<td><code>functions.php</code>, 280</td>
+							<td>Sets avatar image dimenions in pixels</td>
+						</tr>
+						<tr class="alt">
+							<td scope="row">body_class</td>
+							<td><code>functions.php</code>, 143</td>
+							<td>Adds classes to the <code>body</code> element</td>
+						</tr>
+						<tr>
+							<td scope="row">comment_class</td>
+							<td><code>functions.php</code>, 222</td>
+							<td>Adds classes to a comment <code>li</code> element</td>
+						</tr>
+						<tr class="alt">
+							<td scope="row">gallery_img_class</td>
+							<td><code>functions.php</code>, 280</td>
+							<td>Adds classes to gallery images</td>
+						</tr>
+						<tr>
+							<td scope="row">gallery_img_rel</td>
+							<td><code>functions.php</code>, 334</td>
+							<td>Adds <code>rel</code> attributes to gallery images</td>
+						</tr>
+						<tr class="alt">
+							<td scope="row">globalnav_menu</td>
+							<td><code>functions.php</code>, 23</td>
+							<td>Echos list of pages without white space</td>
+						</tr>
+						<tr>
+							<td scope="row">post_class</td>
+							<td><code>functions.php</code>, 183</td>
+							<td>Adds classes to a post <code>div</code> element</td>
+						</tr>
+					</tbody>
+				</table><!-- #filters-table -->
+				<p>For more information on using filters, see <a href="http://codex.wordpress.org/Plugin_API#Filters" title="Plugin API - Filters" rel="external">Plugin API: Filters</a> on the WordPress Codex. The initial discussion about <a href="http://forums.sndbx.org/viewtopic.php?id=8" title="Using filters in the Sandbox" rel="external">filters in the Sandbox</a> on the Sandbox Forums may be also useful.</p>
 			</li><!-- #filters -->
 			<li id="translations">
 				<h2>Translations</h2>
@@ -744,7 +810,7 @@ TEMPLATE: sandbox
 			</li><!-- #license -->
 		</ol><!-- #readme .xoxo -->
 		<div id="footer">
-			<p>Last updated 05 May 2008</p>
+			<p>Last updated 17 June 2008</p>
 		</div><!-- #footer -->
 	</div><!-- #readme -->
 </body>

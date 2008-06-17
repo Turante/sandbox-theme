@@ -2,7 +2,7 @@
 /*
 This file is part of SANDBOX.
 
-SANDBOX is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+SANDBOX is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
 
 SANDBOX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
@@ -14,7 +14,7 @@ function sandbox_globalnav() {
 	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') ) )
 		$menu = '<ul>' . $menu . '</ul>';
 	$menu = '<div id="menu">' . $menu . "</div>\n";
-	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav
+	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
 }
 
 // Generates semantic classes for BODY element
@@ -200,7 +200,6 @@ function sandbox_comment_class( $print = true ) {
 	// If the comment author has an id (registered), then print the log in name
 	if ( $comment->user_id > 0 ) {
 		$user = get_userdata($comment->user_id);
-
 		// For all registered users, 'byuser'; to specificy the registered user, 'commentauthor+[log in name]'
 		$c[] = 'byuser comment-author-' . sanitize_title_with_dashes(strtolower( $user->user_login ));
 		// For comment authors who are the author of the post
@@ -234,14 +233,12 @@ function sandbox_cats_meow($glue) {
 	$current_cat = single_cat_title( '', false );
 	$separator = "\n";
 	$cats = explode( $separator, get_the_category_list($separator) );
-
 	foreach ( $cats as $i => $str ) {
 		if ( strstr( $str, ">$current_cat<" ) ) {
 			unset($cats[$i]);
 			break;
 		}
 	}
-
 	if ( empty($cats) )
 		return false;
 
@@ -253,14 +250,12 @@ function sandbox_tag_ur_it($glue) {
 	$current_tag = single_tag_title( '', '',  false );
 	$separator = "\n";
 	$tags = explode( $separator, get_the_tag_list( "", "$separator", "" ) );
-
 	foreach ( $tags as $i => $str ) {
 		if ( strstr( $str, ">$current_tag<" ) ) {
 			unset($tags[$i]);
 			break;
 		}
 	}
-
 	if ( empty($tags) )
 		return false;
 
@@ -282,7 +277,7 @@ function sandbox_commenter_link() {
 }
 
 // Function to filter the default gallery shortcode
-function unboxed_post_gallery($attr) {
+function sandbox_gallery($attr) {
 	global $post;
 	if ( isset($attr['orderby']) ) {
 		$attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
@@ -290,15 +285,15 @@ function unboxed_post_gallery($attr) {
 			unset($attr['orderby']);
 	}
 
-	extract(shortcode_atts(array(
-		'orderby'     =>  'menu_order ASC, ID ASC',
-		'id'          =>  $post->ID,
-		'itemtag'     =>  'dl',
-		'icontag'     =>  'dt',
-		'captiontag'  =>  'dd',
-		'columns'     =>  3,
-		'size'        =>  'thumbnail',
-	), $attr));
+	extract(shortcode_atts( array(
+		'orderby'    => 'menu_order ASC, ID ASC',
+		'id'         => $post->ID,
+		'itemtag'    => 'dl',
+		'icontag'    => 'dt',
+		'captiontag' => 'dd',
+		'columns'    => 3,
+		'size'       => 'thumbnail',
+	), $attr ));
 
 	$id           =  intval($id);
 	$orderby      =  addslashes($orderby);
@@ -329,8 +324,8 @@ function unboxed_post_gallery($attr) {
 		$img_alt = $attachment->post_excerpt;
 		if ( $img_alt == null )
 			$img_alt = $attachment->post_title;
-		$img_rel = apply_filters( 'gallery_img_rel', 'attachment'); // Available filter: gallery_img_rel
-		$img_class = apply_filters( 'gallery_img_class', 'gallery-image'); // Available filter: gallery_img_class
+		$img_rel = apply_filters( 'gallery_img_rel', 'attachment' ); // Available filter: gallery_img_rel
+		$img_class = apply_filters( 'gallery_img_class', 'gallery-image' ); // Available filter: gallery_img_class
 
 		$output  .=  "\n\t" . '<' . $itemtag . ' class="gallery-item gallery-columns-' . $columns .'">';
 		$output  .=  "\n\t\t" . '<' . $icontag . ' class="gallery-icon"><a href="' . $img_lnk . '" title="' . $img_alt . '" rel="' . $img_rel . '"><img src="' . $img_src . '" alt="' . $img_alt . '" class="' . $img_class . ' attachment-' . $size . '" /></a></' . $icontag . '>';
@@ -343,7 +338,7 @@ function unboxed_post_gallery($attr) {
 		if ( $columns > 0 && ++$i % $columns == 0 )
 			$output .= "\n</div>\n" . '<div class="gallery">';
 	}
-	$output .= "\n</div>";
+	$output .= "\n</div>\n";
 
 	return $output;
 }
@@ -357,7 +352,7 @@ function widget_sandbox_search($args) {
 ?>
 			<?php echo $before_widget ?>
 				<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
-				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
+				<form id="searchform" class="blog-search" method="get" action="<?php bloginfo('home') ?>">
 					<div>
 						<input id="s" name="s" type="text" class="text" value="<?php the_search_query() ?>" size="10" tabindex="1" />
 						<input type="submit" class="button" value="<?php echo $button ?>" tabindex="2" />
@@ -476,7 +471,7 @@ function sandbox_widgets_init() {
 	//Sandbox RSS Links widget
 	$widget_ops = array(
 		'classname'    =>  'widget_rss_links',
-		'description'  =>  __( "RSS links for both posts and comments <small>(Sandbox)</small>", "sandbox" )
+		'description'  =>  __( "RSS links for both posts and comments (Sandbox)", "sandbox" )
 	);
 	wp_register_sidebar_widget( 'rss_links', __( 'RSS Links', 'sandbox' ), 'widget_sandbox_rsslinks', $widget_ops );
 	wp_register_widget_control( 'rss_links', __( 'RSS Links', 'sandbox' ), 'widget_sandbox_rsslinks_control' );
