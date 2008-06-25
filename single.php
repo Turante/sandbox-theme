@@ -25,7 +25,7 @@
 						the_date( '', '', '', false ),
 						get_the_time(),
 						get_the_category_list(', '),
-						get_the_tag_list( __( 'and tagged ', 'sandbox' ), ', ', '' ),
+						get_the_tag_list( __( ' and tagged ', 'sandbox' ), ', ', '' ),
 						get_permalink(),
 						the_title_attribute('echo=0'),
 						comments_rss() ) ?>
