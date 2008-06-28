@@ -100,12 +100,23 @@ function sandbox_body_class( $print = true ) {
 		$c[] = 'page pageid-' . $pageID;
 		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		// Checks to see if the page has children and/or is a child page; props to Adam
-		if ( $page_children != '' )
+		if ( $page_children )
 			$c[] = 'page-parent';
 		if ( $wp_query->post->post_parent )
 			$c[] = 'page-child parent-pageid-' . $wp_query->post->post_parent;
 		if ( is_page_template() ) // Hat tip to Ian, themeshaper.com
 			$c[] = 'page-template page-template-' . str_replace( '.php', '-php', get_post_meta( $pageID, '_wp_page_template', true ) );
+		rewind_posts();
+	}
+
+	// Search classes for results or no results
+	elseif ( is_search() ) {
+		the_post();
+		if ( have_posts() ) {
+			$c[] = 'search-results';
+		} else {
+			$c[] = 'search-no-results';
+		}
 		rewind_posts();
 	}
 
