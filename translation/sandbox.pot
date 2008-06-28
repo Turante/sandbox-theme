@@ -1,23 +1,23 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Sandbox 1.5\n"
+"Project-Id-Version: Sandbox 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-10 00:53-0500\n"
-"PO-Revision-Date: 2008-03-10 00:53-0500\n"
-"Last-Translator: Scott Allan Wallick <swallick@gmail.com>\n"
-"Language-Team: Scott Allan Wallick\n"
+"POT-Creation-Date: 2008-06-28 01:04-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Scott Allan Wallick <s@scottwallick.com>\n"
+"Language-Team: Scott Wallick <s@plaintxt.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Language: English\n"
 "X-Poedit-Country: UNITED STATES\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: D:\\scott\\files\\My SVNs\\sandbox-theme\\trunk\n"
-"X-Poedit-SearchPath-0: D:\\scott\\files\\My SVNs\\sandbox-theme\\trunk\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-SearchPath-0: \n"
 
 #: 404.php:7
-#: header.php:4
 msgid "Not Found"
 msgstr ""
 
@@ -26,8 +26,8 @@ msgid "Apologies, but we were unable to find what you were looking for. Perhaps 
 msgstr ""
 
 #: 404.php:14
-#: functions.php:271
-#: search.php:53
+#: functions.php:362
+#: search.php:56
 #: sidebar.php:39
 msgid "Find"
 msgstr ""
@@ -54,140 +54,121 @@ msgstr ""
 #: archive.php:21
 #: archive.php:48
 #: author.php:12
-#: author.php:37
-#: category.php:10
-#: category.php:39
+#: author.php:39
+#: category.php:11
+#: category.php:40
 #: index.php:7
-#: index.php:35
-#: search.php:11
-#: search.php:39
-#: tag.php:9
-#: tag.php:39
+#: index.php:37
 msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
 msgstr ""
 
 #: archive.php:22
 #: archive.php:49
 #: author.php:13
-#: author.php:38
-#: category.php:11
-#: category.php:40
+#: author.php:40
+#: category.php:12
+#: category.php:41
 #: index.php:8
-#: index.php:36
-#: search.php:12
-#: search.php:40
-#: tag.php:10
-#: tag.php:40
+#: index.php:38
 msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
 #: archive.php:28
-#: author.php:19
-#: category.php:17
-#: index.php:13
+#: author.php:21
+#: category.php:18
+#: index.php:14
 #: search.php:18
-#: tag.php:16
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
 #: archive.php:29
-#: author.php:20
-#: category.php:18
-#: index.php:14
+#: author.php:22
+#: category.php:19
+#: index.php:15
 #: search.php:19
-#: tag.php:17
 #, php-format
 msgid "%1$s &#8211; %2$s"
 msgstr ""
 
 #: archive.php:31
-#: attachment.php:13
-#: author.php:22
-#: category.php:20
-#: index.php:16
+#: author.php:24
+#: category.php:21
+#: index.php:17
 #: search.php:21
-#: single.php:15
-#: tag.php:19
 msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
 #: archive.php:35
-#: category.php:24
-#: index.php:21
-#: search.php:25
-#: tag.php:23
+#: category.php:25
+#: index.php:22
+#: search.php:27
 #, php-format
 msgid "By %s"
 msgstr ""
 
 #: archive.php:35
-#: attachment.php:19
-#: category.php:24
-#: index.php:21
-#: search.php:25
-#: single.php:21
-#: tag.php:23
+#: attachment.php:20
+#: category.php:25
+#: image.php:21
+#: index.php:22
+#: search.php:27
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
 #: archive.php:37
-#: author.php:26
-#: index.php:23
-#: search.php:27
-#: tag.php:25
+#: author.php:28
+#: index.php:24
+#: search.php:29
 #, php-format
 msgid "Posted in %s"
 msgstr ""
 
 #: archive.php:39
-#: author.php:28
-#: category.php:30
-#: index.php:25
+#: author.php:30
+#: category.php:31
+#: index.php:26
+#: search.php:31
 msgid "<span class=\"tag-links\">Tagged "
 msgstr ""
 
 #: archive.php:40
 #: archives.php:32
-#: attachment.php:39
-#: author.php:29
-#: category.php:31
-#: comments.php:41
-#: comments.php:67
-#: index.php:26
-#: links.php:21
-#: page.php:14
-#: search.php:31
-#: single.php:41
-#: tag.php:31
+#: attachment.php:38
+#: author.php:31
+#: category.php:32
+#: comments.php:40
+#: comments.php:66
+#: image.php:39
+#: index.php:27
+#: links.php:22
+#: page.php:15
+#: search.php:32
 msgid "Edit"
 msgstr ""
 
 #: archive.php:41
-#: author.php:30
-#: category.php:32
-#: index.php:27
-#: search.php:32
-#: tag.php:32
+#: author.php:32
+#: category.php:33
+#: index.php:28
+#: search.php:33
 msgid "Comments (0)"
 msgstr ""
 
 #: archive.php:41
-#: author.php:30
-#: category.php:32
-#: index.php:27
-#: search.php:32
-#: tag.php:32
+#: author.php:32
+#: category.php:33
+#: index.php:28
+#: search.php:33
 msgid "Comments (1)"
 msgstr ""
 
 #: archive.php:41
-#: author.php:30
-#: category.php:32
-#: index.php:27
-#: search.php:32
-#: tag.php:32
+#: author.php:32
+#: category.php:33
+#: index.php:28
+#: search.php:33
 msgid "Comments (%)"
 msgstr ""
 
@@ -199,41 +180,37 @@ msgstr ""
 msgid "Archives by Month"
 msgstr ""
 
-#: attachment.php:15
-#: index.php:18
-#: single.php:17
-msgid "Pages:"
-msgstr ""
-
-#: attachment.php:18
+#: attachment.php:8
+#: image.php:8
 #, php-format
-msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s and tagged %7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
+msgid "Return to %s"
 msgstr ""
 
-#: attachment.php:25
-#: single.php:27
-msgid "and tagged"
+#: attachment.php:19
+#: image.php:20
+#, php-format
+msgid "Posted by %1$s on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>. Bookmark the <a href=\"%6$s\" title=\"Permalink to %7$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%8$s\" title=\"Comments RSS to %7$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
 msgstr ""
 
-#: attachment.php:31
-#: single.php:33
+#: attachment.php:30
+#: image.php:31
 #, php-format
 msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
 msgstr ""
 
-#: attachment.php:33
-#: single.php:35
+#: attachment.php:32
+#: image.php:33
 #, php-format
 msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
 msgstr ""
 
-#: attachment.php:35
-#: single.php:37
+#: attachment.php:34
+#: image.php:35
 msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
 msgstr ""
 
-#: attachment.php:37
-#: single.php:39
+#: attachment.php:36
+#: image.php:37
 msgid "Both comments and trackbacks are currently closed."
 msgstr ""
 
@@ -246,95 +223,95 @@ msgstr ""
 msgid "Category Archives:"
 msgstr ""
 
-#: category.php:27
+#: category.php:28
 #, php-format
 msgid "Also posted in %s"
 msgstr ""
 
-#: comments.php:11
+#: comments.php:10
 msgid "This post is protected. Enter the password to view any comments."
 msgstr ""
 
-#: comments.php:30
+#: comments.php:29
 #, php-format
 msgid "<span>%d</span> Comments"
 msgstr ""
 
-#: comments.php:30
+#: comments.php:29
 msgid "<span>One</span> Comment"
 msgstr ""
 
-#: comments.php:37
+#: comments.php:36
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
 msgstr ""
 
-#: comments.php:42
+#: comments.php:41
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
 msgstr ""
 
-#: comments.php:56
+#: comments.php:55
 #, php-format
 msgid "<span>%d</span> Trackbacks"
 msgstr ""
 
-#: comments.php:56
+#: comments.php:55
 msgid "<span>One</span> Trackback"
 msgstr ""
 
-#: comments.php:63
+#: comments.php:62
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
 msgstr ""
 
-#: comments.php:68
+#: comments.php:67
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
 msgstr ""
 
-#: comments.php:81
+#: comments.php:82
 msgid "Post a Comment"
 msgstr ""
 
-#: comments.php:84
+#: comments.php:85
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
 msgstr ""
 
-#: comments.php:92
+#: comments.php:93
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
 msgstr ""
 
-#: comments.php:99
-msgid "Your email is <em>never</em> published nor shared."
+#: comments.php:100
+msgid "Your email is <em>never</em> shared."
 msgstr ""
 
-#: comments.php:99
+#: comments.php:100
 msgid "Required fields are marked <span class=\"required\">*</span>"
 msgstr ""
 
-#: comments.php:101
+#: comments.php:102
 msgid "Name"
 msgstr ""
 
-#: comments.php:101
-#: comments.php:104
+#: comments.php:102
+#: comments.php:105
 msgid "<span class=\"required\">*</span>"
 msgstr ""
 
-#: comments.php:104
+#: comments.php:105
 msgid "Email"
 msgstr ""
 
-#: comments.php:107
+#: comments.php:108
 msgid "Website"
 msgstr ""
 
-#: comments.php:112
+#: comments.php:113
 msgid "Comment"
 msgstr ""
 
-#: comments.php:115
+#: comments.php:116
 msgid "Post Comment"
 msgstr ""
 
@@ -343,105 +320,112 @@ msgid "WordPress"
 msgstr ""
 
 #: footer.php:5
-msgid "Sandbox for WordPress"
+msgid "Sandbox theme for WordPress"
 msgstr ""
 
 #: footer.php:5
 msgid "Sandbox"
 msgstr ""
 
-#: functions.php:270
-#: functions.php:378
-#: functions.php:380
+#: functions.php:361
+#: functions.php:469
+#: functions.php:471
 #: sidebar.php:35
 msgid "Search"
 msgstr ""
 
-#: functions.php:299
-#: functions.php:352
+#: functions.php:390
+#: functions.php:443
 msgid "Title:"
 msgstr ""
 
-#: functions.php:300
+#: functions.php:391
 msgid "Button Text:"
 msgstr ""
 
-#: functions.php:309
-#: functions.php:387
-#: functions.php:389
+#: functions.php:400
+#: functions.php:478
+#: functions.php:480
 #: sidebar.php:55
 msgid "Meta"
 msgstr ""
 
-#: functions.php:328
-#: functions.php:396
-#: functions.php:397
+#: functions.php:419
+#: functions.php:487
+#: functions.php:488
 msgid "RSS Links"
 msgstr ""
 
-#: functions.php:333
-#: header.php:8
-#: sidebar.php:49
+#: functions.php:424
 msgid "Posts RSS feed"
 msgstr ""
 
-#: functions.php:333
+#: functions.php:424
 #: sidebar.php:49
 msgid "All posts"
 msgstr ""
 
-#: functions.php:334
-#: header.php:9
-#: sidebar.php:50
+#: functions.php:425
 msgid "Comments RSS feed"
 msgstr ""
 
-#: functions.php:334
+#: functions.php:425
 #: sidebar.php:50
 msgid "All comments"
 msgstr ""
 
-#: functions.php:376
+#: functions.php:467
 msgid "A search form for your blog (Sandbox)"
 msgstr ""
 
-#: functions.php:385
+#: functions.php:476
 msgid "Log in/out and administration links (Sandbox)"
 msgstr ""
 
-#: functions.php:394
-msgid "RSS links for both posts and comments <small>(Sandbox)</small>"
+#: functions.php:485
+msgid "RSS links for both posts and comments (Sandbox)"
 msgstr ""
 
-#: header.php:4
-msgid " &raquo; "
+#: header.php:8
+#: sidebar.php:49
+#, php-format
+msgid "%s latest posts"
 msgstr ""
 
-#: header.php:25
-msgid "Skip navigation to the content"
+#: header.php:9
+#: sidebar.php:50
+#, php-format
+msgid "%s latest comments"
 msgstr ""
 
-#: header.php:25
+#: header.php:23
 msgid "Skip to content"
 msgstr ""
 
-#: page.php:12
-msgid "Pages: "
+#: index.php:19
+#: page.php:13
+msgid "Pages:"
 msgstr ""
 
 #: search.php:8
 msgid "Search Results for:"
 msgstr ""
 
-#: search.php:29
-msgid "Tagged "
+#: search.php:11
+#: search.php:42
+msgid "<span class=\"meta-nav\">&laquo;</span> Older results"
 msgstr ""
 
-#: search.php:46
+#: search.php:12
+#: search.php:43
+msgid "Newer results <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: search.php:49
 msgid "Nothing Found"
 msgstr ""
 
-#: search.php:48
+#: search.php:51
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr ""
 
@@ -461,9 +445,13 @@ msgstr ""
 msgid "RSS Feeds"
 msgstr ""
 
-#: single.php:20
+#: single.php:21
 #, php-format
 msgid "This entry was written by %1$s, posted on <abbr class=\"published\" title=\"%2$sT%3$s\">%4$s at %5$s</abbr>, filed under %6$s%7$s. Bookmark the <a href=\"%8$s\" title=\"Permalink to %9$s\" rel=\"bookmark\">permalink</a>. Follow any comments here with the <a href=\"%10$s\" title=\"Comments RSS to %9$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>."
+msgstr ""
+
+#: single.php:28
+msgid " and tagged "
 msgstr ""
 
 #: tag.php:6
@@ -474,3 +462,4 @@ msgstr ""
 #, php-format
 msgid "Also tagged %s"
 msgstr ""
+
