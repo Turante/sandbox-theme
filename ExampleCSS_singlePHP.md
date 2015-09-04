@@ -1,0 +1,143 @@
+# About this CSS #
+
+The CSS below is to be used as a reference tool for designing for the Sandbox. It is not complete as the Sandbox creates a great number of dynamic classes, so this list is purposely incomplete. But it should be useful as a reference.
+
+## Based on **single.php** ##
+
+```
+/*	SAMPLE OF SELECTORS FOR SINGLE POST, eg, SINGLE.PHP VIEWS */
+body {}	body.single {} /* IMPORTANT, DYNAMIC CLASSES HERE */
+	div#wrapper {}	.hfeed {}
+		div#header {}
+			h1#blog-title {}
+			div#blog-description {}
+		div#access {}
+			div.skip-link{}
+				div.skip-link a{}
+			div#menu {}
+				div#menu ul {}
+					div#menu ul li {}
+		div#container {}
+			div#content {}
+				div#nav-above {}	.navigation {}
+					div.nav-previous {}
+						div.nav-previous span.meta-nav {}
+						div.nav-previous a {}
+					div.nav-next {}
+						div.nav-next a {}
+						div.nav-next span.meta-nav {}
+				div.hentry	/* IMPORTANT, DYNAMIC CLASSES HERE */
+					h2.entry-title {}
+					div.entry-content {}
+						a.more-link {}
+						div.page-link {}
+					div.entry-meta {}
+						span.author {}
+							span.author a.fn {}
+						abbr.published {}
+						a.comment-link {}
+						a.trackback-link {}
+				div#nav-below {}	.navigation {}
+					div.nav-previous {}
+						div.nav-previous a {}
+							div.nav-previous a span.meta-nav {}
+					div.nav-next {}
+						div.nav-next a {}
+							div.nav-next a span.meta-nav {}
+				div#comments {}
+					div.comments {}
+						div.comments h3 {}
+							div.comments h3 span {}
+						div.comments ol {}
+							div.comments ol li.comment {}	/* IMPORTANT, DYNAMIC CLASSES HERE */
+								div.comments ol li.comment div.comment-author {}
+									div.comments ol li.comment div.comment-author span.fn {}
+										div.comments ol li.comment div.comment-author span.fn a {}
+								div.comments ol li.comment div.comment-meta {}
+									div.comments ol li.comment div.comment-meta span.meta-sep {}
+					div#comments-list {}
+						div#comments-list h3 {}
+							div#comments-list h3 span {}
+						div#comments-list ol {}
+							div#comments-list ol li.comment {}	/* IMPORTANT, DYNAMIC CLASSES HERE */
+								div#comments-list ol li.comment div.comment-author {}
+									div#comments-list ol li.comment div.comment-author span.fn {}
+										div#comments-list ol li.comment div.comment-author span.fn a {}
+								div#comments-list ol li.comment div.comment-meta {}
+									div#comments-list ol li.comment div.comment-meta span.meta-sep {}
+					div#trackbacks-list {}
+						div#trackbacks-list h3 {}
+							div#trackbacks-list h3 span {}
+						div#trackbacks-list ol {}
+							div#trackbacks-list ol li.comment {}	/* IMPORTANT, DYNAMIC CLASSES HERE */
+								div#trackbacks-list ol li.comment div.comment-author {}
+									div#trackbacks-list ol li.comment div.comment-author span.fn {}
+										div#trackbacks-list ol li.comment div.comment-author span.fn a {}
+								div#trackbacks-list ol li.comment div.comment-meta {}
+									div#trackbacks-list ol li.comment div.comment-meta span.meta-sep {}
+				div#respond {}
+					div#respond h3 {}
+					p#login-req{}
+					div.formcontainer {}
+						form#commentform {}
+							p#login {}
+								span.loggedin {}
+								span.logout {}
+							p#comment-notes {}
+								span.required {}
+							div.form-label {}
+								div.form-label label {}
+								div.form-label span.required {}
+							div.form-input {}
+								div.form-input input#author {}
+							div.form-label {}
+								div.form-label label {}
+								div.form-label span.required {}
+							div.form-input {}
+								div.form-input input#email {}
+							div.form-label {}
+								div.form-label label {}
+								div.form-label span.required {}
+							div.form-input {}
+								div.form-input input#url {}
+							div.form-label {}
+								div.form-label label {}
+							div.form-textarea {}
+								div.form-input textarea#comment {}
+							div.form-submit {}
+								div.form-submit input#submit {}
+		div#primary {}	.sidebar {}
+			div.sidebar ul.xoxo {}
+				div.sidebar ul.xoxo li {}
+					div.sidebar ul.xoxo li h3 {}
+					div.sidebar ul.xoxo li ul
+						div.sidebar ul.xoxo li ul li
+							div.sidebar ul.xoxo li ul li ul
+								div.sidebar ul.xoxo li ul li ul li
+			div#primary ul.xoxo {}
+				div#primary ul.xoxo li {}
+					div#primary ul.xoxo li h3 {}
+					div#primary ul.xoxo li ul
+						div#primary ul.xoxo li ul li
+							div#primary ul.xoxo li ul li ul
+								div#primary ul.xoxo li ul li ul li
+		div#secondary {}	.sidebar {}
+			div.sidebar ul.xoxo {}
+				div.sidebar ul.xoxo li {}
+					div.sidebar ul.xoxo li h3 {}
+					div.sidebar ul.xoxo li ul
+						div.sidebar ul.xoxo li ul li
+							div.sidebar ul.xoxo li ul li ul
+								div.sidebar ul.xoxo li ul li ul li
+			div#secondary ul.xoxo {}
+				div#secondary ul.xoxo li {}
+					div#secondary ul.xoxo li h3 {}
+					div#secondary ul.xoxo li ul
+						div#secondary ul.xoxo li ul li
+							div#secondary ul.xoxo li ul li ul
+								div#secondary ul.xoxo li ul li ul li
+		div#footer {}
+			div#generator-link {}
+			div.meta-sep {}
+			div#theme-link {}
+```
